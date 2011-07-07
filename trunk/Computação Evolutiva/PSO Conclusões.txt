@@ -1,0 +1,17 @@
+Teste inicial 
+weight(fator de inércia) - até 0.72, após isso o valor diverge ao invés de convergir(com termos social e cognitivo = 2)
+população - não é tão determinante, pois a otimização acontece sob números inteiros. A convergência nesse caso depende mais do número de iterações e dos termos social e cognitivo, 
+que já é satisfatória entre 10 e 15 iterações para uma população de 50 soluções com termos social e cognitivo = 2.
+Entretanto, o uso de uma população muito baixa influencia na convergência de sua solução ótima
+termos social e cognitivo - com a diminuição desses termos, a taxa de convergência diminui também. Isso significa que é necessário mais iterações(gerações),
+o fator de inércia pode ser aumentado. Com ambos <= 1, o número nunca é convergido. Com ambos > 1, o número de iterações diminui exponencialmente
+com o aumento, a convergência é quase imediata mas acaba influenciando no fator de inércia, que pode "estragar" o algoritmo
+
+Teste padrão:
+
+fator de inércia(constante) - 0.7
+população - 50
+termo social - 2
+termo cognitivo - 2
+nº de iterações - 1000
+

@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Estrutura dos frames*/
+.frame_esquerda, .frame_direita{
+	display:block;
+	float:top;
+}
+
+/*Menu*/
+
+.link_clientes, .link_funcionarios, .link_outros_pedidos{
+	cursor:pointer;
+}
+
+.servicos_clientes, .servicos_funcionarios, .servicos_outros_pedidos{
+	display:none;
+}
+
+/*Login, Senha e Operações de funcionário*/
+.senha{
+	padding-top:5px;
+	padding-left:38px;
+}
+
+.acesso{
+	padding-top:10px;
+	padding-left:162px;
+	padding-bottom: 15px;
+}
+
+.cpf{
+	padding-left:46px;
+}
+
+.nome{
+	padding-top:5px;
+	padding-left:37px;
+}
+
+.confirma_senha{
+	padding-top:5px;
+	padding-right:26px;
+}
+
+.endereco{
+	padding-top:5px;
+	padding-left:15px;
+}
+
+.cadastro, .localizar{
+	margin-top:10px;
+	margin-left:10px;
+}
+
+/*Saques, depósitos e empréstimos*/
+.saques, .depositos, .emprestimos{
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+.opcoes{
+	list-style-type: none;
+}
+
+.sacar_dinheiro, .depositar_dinheiro, .emprestar_dinheiro{
+	margin-top:10px;
+	margin-left:85px;
+}
+
+#qualquer_valor, #conta{
+	width:50px;
+}
+
+/*Extrato*/
+tr, td{
+	vertical-align:center;
+	/*width:350px;*/
+}
+
+table, tr, td{
+	border-width:thin;
+	border-style:double;
+}
+
+.thead, .total{
+	text-align:center;
+	font-weight:bold;
+}
+
+.valor{
+	text-align:right;
+}
+
+/*tabelas de edição,remoção e localização*/
+.busca{
+	padding-bottom:10px;
+}
+
+.expandir{
+	cursor:pointer;
+	text-align:center;
+}
+
+.conta{
+	text-align:center;
+}
+ 
+.marTop{
+	margin-top:15px;
+}  
+ 
+.textoNormal{
+	font-family: Arial;
+	color: #86C6E8; 
+}    
+ 
+.fundoLogo{
+	background: #FE0000;
+}  

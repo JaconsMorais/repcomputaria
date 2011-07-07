@@ -1,0 +1,19 @@
+Como este compilador foi desenvolvido em ambiente windows. 
+Para a execução deste trabalho pode-se utilizar por exemplo
+os compiladores Turbo C ou Borland C++ .
+Para funcionar todos os arquivos listados abaixo devem ser movidos 
+para a pasta BIN do compilador utilizado.
+
+mainob.c;
+parserob.c;
+lexerob.c;
+global.h;
+simbolo.c;
+entrada.pas.
+
+Tentamos passar o compilador para o C do Linux porem com a falta de 
+conhecimento nesse ambiente e um certo aperto no calendario
+não foi possivel. Contudo em ambiente windows o projeto funcionou
+corretamente, passando o arquivo entrada.pas para codigo assembler
+armazenando em objeto.s.
+Esperamos a compreensão do Professor para essa nossa Falha.

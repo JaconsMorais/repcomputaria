@@ -1,0 +1,13 @@
+PROGRAM TESTE;
+VAR X, Y: INTEGER;
+    Z: REAL;
+BEGIN
+    WHILE X > 0 DO
+    BEGIN
+	IF X > Y THEN
+		X := 3
+	ELSE
+		IF Y = X THEN 
+			Y := 4
+    END
+END.

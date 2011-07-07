@@ -1,0 +1,18 @@
+Manual do sistema bancario (Desktop).
+
+
+Requisitos: Ter o mysql instalado.
+
+1. Realizada a instalação do mysql fazer:
+
+2. Adicionar o arquivo tabela_mydb5_5.sql encontrado nessa pasta no mysql através do comando: SOURCE <caminho do arquivo>;
+
+3. Feito isso basta fazer a conexão na tela inicial do programa.
+
+Sistema desktop : Parte de cadastro de clientes e funcionarios.
+
+Sistema Online: Transações financeiras.
+
+  Descrição do programa: O sistema teria 3 bancos de dados. Um responsavel apenas pelas informações do usuário, e outro apenas de senhas,  otmizando assim o nível de segurança do sistema e outro para guardar dados de movimentação financeira. O cadastro de clientes e funcionarios é feito na aplicação desktop, as consultas de saldo e movimentação financeira são feitas no sistema web.
+  A aplicação desktop é apenas de uso dos funcionários do banco, sendo possível a realização de cadastros e exclusão de ambos no sistema.  O cadastro de senhas não foi implementado.
+  Na parte WEB, o usuario necessitaria de um login e senha, as informações seriam consultadas nos dois bancos de dados citados anteriormente, feito o login, seria possível ao cliente fazer suas movimentações financeiras , como saque, saldo, transações e etc.

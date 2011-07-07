@@ -1,0 +1,14 @@
+1. se houver algum problema de biblioteca va em 
+projetos bibliotecas clique com o botao direito e adicionar
+jar Vá ate a pasta lib e mande importar as bibliotecas 
+mysql-connector-java-5.1.7-bin.jar(Mysql)
+jfreechart-1.0.13.jar(Grafico)
+jcommon-1.0.16.jar
+
+2. se houver algum problema de conexao 
+use o arquivo tabela_mydb5_5.sql no Mysql
+(depois do login e senha do mysql
+coloque  \.    diretoriodotabela_mydb5_5\tabela_mydb5_5.sql
+SEM ASPAS("))
+
+
