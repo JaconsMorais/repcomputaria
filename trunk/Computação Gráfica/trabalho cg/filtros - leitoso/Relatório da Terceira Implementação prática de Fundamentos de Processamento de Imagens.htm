@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.inf.ufrgs.br/~crdias/relatorio_3TFPI.htm -->
+<HTML><HEAD><TITLE>Relatório da Terceira Implementação prática de Fundamentos de Processamento de Imagens</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.6000.16830" name=GENERATOR>
+<STYLE>@page Section1 {size: 595.3pt 841.9pt; margin: 70.85pt 3.0cm 70.85pt 3.0cm; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 0cm; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: left
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 0cm; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: left
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 0cm; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: left
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN: 12pt 0cm 3pt; TEXT-INDENT: 0cm; FONT-FAMILY: Arial; TEXT-ALIGN: left
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14pt; MARGIN: 12pt 0cm 3pt; TEXT-INDENT: 0cm; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: left
+}
+H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13pt; MARGIN: 12pt 0cm 3pt 39.6pt; TEXT-INDENT: -21.6pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: left
+}
+P {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 9pt; TEXT-INDENT: 36pt; MARGIN-RIGHT: 0cm; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify
+}
+DIV.Section1 {
+	page: Section1
+}
+OL {
+	MARGIN-BOTTOM: 0cm
+}
+UL {
+	MARGIN-BOTTOM: 0cm
+}
+</STYLE>
+</HEAD>
+<BODY lang=PT-BR>
+<DIV class=Section1>
+<H1 style="TEXT-ALIGN: center" align=center>Relatório do Terceiro Trabalho 
+Prático de Implementação de Fundamentos de Processamento de Imagens</H1>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B>Cássio Rampelotto 
+Dias - N.º Cartão: 141029&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>INF01046 - 
+Fundamentos de Processamento de Imagens - Turma A <BR>Professor Manuel Oliveira 
+<BR>22 de outubro de 2007</B></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B></B>&nbsp;</P>
+<H4>1.<SPAN style="FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp; </SPAN>Introdução</H4>
+<P class=MsoNormal>&nbsp;</P>
+<P>O trabalho tem por objetivo a implementação das operações de rotacionamento, 
+redimensionamento e aplicação de filtros de imagens. A intenção &nbsp;é 
+implementar uma extensão ao resultado dos dois trabalhos anteriores. Para 
+&nbsp;rotação de uma imagem, procurou-se realizá-la tanto no sentido horário 
+como no sentido anti-horário. Para o redimencionamento de uma imagem, simula-se 
+<I>zoom in</I> e <I>zoom out</I>. Na filtragem de imagens a partir da aplicação 
+(convolução) de filtros matriciais (kernels) , o objetivo é atingir imagens no 
+domínio espacial para kernels predefinidos e arbitrários.</P>
+<H4>2.<SPAN style="FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp; </SPAN>Interface </H4>
+<P>Um dos problemas enfrentados foi a criação de uma interface simples. Como o 
+programa passou a implementar inúmeras funções além das que já possuía, foi 
+necessário um planejamento anterior, minimizando o número de componentes e a 
+área da tela ocupada pelos comandos. </P>
+<P>A solução foi criar subjanelas para as novas funcionalidades de 
+redimensionamento e de filtragem. O resultado é apresentado a seguir:</P>
+<P><IMG height=239 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image001.jpg" 
+width=500></P>
+<P><B>&nbsp;Interface principal remodelada.</B></P>
+<TABLE class=MsoNormalTable 
+style="MARGIN-LEFT: 44.6pt; WIDTH: 579.9pt; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 width=773 border=0>
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 3.5pt; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; WIDTH: 192.9pt; PADDING-TOP: 0cm" 
+    vAlign=top width=257>
+      <P style="MARGIN-LEFT: 0cm; TEXT-INDENT: 0cm"><IMG height=256 
+      src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image002.jpg" 
+      width=189></P></TD>
+    <TD 
+    style="PADDING-RIGHT: 3.5pt; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; WIDTH: 387pt; PADDING-TOP: 0cm" 
+    vAlign=top width=516 colSpan=2>
+      <P style="MARGIN-LEFT: 0cm; TEXT-INDENT: 0cm"><IMG height=252 
+      src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image003.jpg" 
+      width=482></P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 3.5pt; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; WIDTH: 192.9pt; PADDING-TOP: 0cm" 
+    vAlign=top width=257>
+      <P style="MARGIN-LEFT: 0cm; TEXT-INDENT: 0cm"><B></B>&nbsp;</P></TD>
+    <TD 
+    style="PADDING-RIGHT: 3.5pt; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; WIDTH: 194.7pt; PADDING-TOP: 0cm" 
+    vAlign=top width=260>
+      <P style="MARGIN-LEFT: 0cm; TEXT-INDENT: 0cm"><B></B>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none" 
+    width=256>
+      <P class=MsoNormal>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 3.5pt; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; WIDTH: 192.9pt; PADDING-TOP: 0cm" 
+    vAlign=top width=257>
+      <P style="MARGIN-LEFT: 0cm; TEXT-INDENT: 0cm; TEXT-ALIGN: left" 
+      align=left><B>&nbsp;Subjanela de redimensionamento.</B></P></TD>
+    <TD 
+    style="PADDING-RIGHT: 3.5pt; PADDING-LEFT: 3.5pt; PADDING-BOTTOM: 0cm; WIDTH: 194.7pt; PADDING-TOP: 0cm" 
+    vAlign=top width=260>
+      <P style="MARGIN-LEFT: 0cm; TEXT-INDENT: 0cm"><B>Subjanela de 
+      filtragem.</B></P></TD>
+    <TD 
+    style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0cm; BORDER-TOP: medium none; PADDING-LEFT: 0cm; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none" 
+    width=256>
+      <P class=MsoNormal>&nbsp;</P></TD></TR></TBODY></TABLE>
+<H4>3.<SPAN style="FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp; </SPAN>Rotação</H4>
+<P>A rotação de 90º da imagem, seja no sentido horário, seja no sentido 
+anti-horário, permite que sejam feitas rotações de 90º, 180º e 270º na imagem 
+através da composição de rotações. Essa operação é implementada por um algoritmo 
+que varre a imagem e cria uma espécie de "matriz transposta" com os pixels da 
+imagem. O resultado das operações de rotação pode ser observado nas imagens 
+abaixo. </P>
+<P><IMG height=394 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image004.jpg" 
+width=546></P>
+<P><B>Imagem de usada para os testes (sofá de casa).</B></P>
+<P><B></B>&nbsp;</P>
+<P><IMG height=572 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image005.jpg" 
+width=369></P>
+<P><B>Rotação no sentido horário.</B></P>
+<P><B></B>&nbsp;</P>
+<P><B><IMG height=573 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image006.jpg" 
+width=366></B></P>
+<P><B></B>&nbsp;</P>
+<P><B>Rotação no sentido anti-horário.</B></P>
+<P><IMG height=392 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image007.jpg" 
+width=545></P>
+<P><B>Sucessivas rotações no sentido anti-horário/horário</B></P>
+<H4>4.&nbsp;&nbsp;&nbsp;&nbsp; Redimensionamento</H4>
+<P>O redimensionamento da imagem foi feito com a implementação de duas operações 
+sobre a imagem: zoom in e zoom out. As implementações são feitas com o cálculo 
+da média de vizinhança para criar o suprimir pixels da imagem. O resultado das 
+operações de ampliação e redução da imagem são mostrados a seguir.</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image008.jpg" 
+width=566></P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image009.jpg" 
+width=566></P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image010.jpg" 
+width=566></P>
+<P>A operação de zoom out&nbsp; é flexível. Apesar de não se poder entrar com 
+uma percentagem arbitrária de redução, é possível entrar com uma valor que 
+representa proporção de redução no eixo horizontal ou vertical. No algoritmo que 
+realiza essa operação, essa taxa inteira (que pode ser especificada na direção 
+horizontal e vertical independentemente) significa o número de pixels da imagem 
+original que irá formar um único pixel na imagem reduzida através do cálculo da 
+média naquela área.</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image011.jpg" 
+width=566></P>
+<P>A operação de zoom in foi realizada apenas com proporção fixa de 100%, isto 
+é, produz efeito 2X diretamente, o zoom in não pode ser genérico para qualquer 
+taxa de aumento da imagem. A operação foi implementada utilizando-se um 
+algoritmo de interpolação, que inclui entre cada par de pixels uma nova coluna 
+ou linha que contém a média dos pixels ao seu redor.</P>
+<H4>5.<SPAN style="FONT-SIZE: 7pt">&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>Filtragem</H4>
+<P>A característica da filtragem de uma imagem é a aplicação de um filtro para 
+expressar determinada característica ou simplesmente criar algum efeito sobre a 
+imagem. A convolução é uma operação que aplica um <I>kernel de convolução</I> a 
+cada pixel. Conforme figuras de interface para convolução apresentadas no inicio 
+pode estabelecer kernels arbitrários ou pré-determinados. Os testes executados 
+são mostrados &nbsp;abaixo:</P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image012.jpg" 
+width=566></P>
+<P><B>Aplicação de filtro gaussiano 8x (produz borramento)</B></P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image013.jpg" 
+width=566></P>
+<P><B>Aplicação de filtro Laplaciano (detecta arestas importantes)</B></P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image014.jpg" 
+width=566></P>
+<P><B>Aplicação de filtro passa altas (detector de arestas mais 
+sensitivo)</B></P>
+<P>Aplicação de clampping . Soma-se 127 ao resultado da convolução . Percebe-se 
+o resultado com maior nitidez.</P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image015.jpg" 
+width=566></P>
+<P><B>Aplicação de filtro Prewitt Hx (gradiente dos tons cinzas na direção 
+horizontal-efeito de relevo)</B></P>
+<P>Percebe-se nitidamente o efeito de relevo acentuado nas arestas da direção do 
+eixo x, ou&nbsp; seja horizontal.</P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image016.jpg" 
+width=566></P>
+<P><B>Aplicação de filtro Prewitt Hy (gradiente dos tons cinzas na direção 
+vertical-efeito de relevo)</B></P>
+<P>Percebe-se nitidamente o efeito de relevo acentuado nas arestas orientadas na 
+direção do eixo y, ou&nbsp; seja vertical.</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image017.jpg" 
+width=566></P>
+<P><B>Aplicação de filtro Sobel Hx (mais sensível ao gradiente dos tons cinzas 
+na direção horizontal-efeito de relevo)</B></P>
+<P><B></B>&nbsp;</P>
+<P><IMG height=425 
+src="Relatório%20da%20Terceira%20Implementação%20prática%20de%20Fundamentos%20de%20Processamento%20de%20Imagens_arquivos/image018.jpg" 
+width=566></P>
+<P>&nbsp;</P>
+<P><B>Aplicação de filtro Sobel Hy (mais sensível ao gradiente dos tons cinzas 
+na direção vertical-efeito de relevo)</B></P>
+<P>&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P></DIV></BODY></HTML>

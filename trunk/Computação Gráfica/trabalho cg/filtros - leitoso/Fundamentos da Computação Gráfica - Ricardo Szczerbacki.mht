@@ -1,0 +1,2463 @@
+From: "Salvo pelo Microsoft Internet Explorer 7"
+Subject: =?Windows-1252?Q?Fundamentos_da_Computa=E7=E3o_Gr=E1fica_-_Ricardo_Szczer?=
+	=?Windows-1252?Q?backi?=
+Date: Tue, 2 Jun 2009 11:38:19 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_001F_01C9E376.A05E9910"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6000.16669
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/source/t2-segmentacao/t2-metodologia.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Fundamentos da Computa=E7=E3o Gr=E1fica - Ricardo =
+Szczerbacki</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"><LINK=20
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/mystyle.css"=20
+type=3Dtext/css rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.6000.16830" name=3DGENERATOR></HEAD>
+<BODY bottomMargin=3D0 leftMargin=3D0=20
+background=3Dhttp://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20=
+Szczerbacki/img/background.jpg=20
+topMargin=3D0 rightMargin=3D0 marginwidth=3D"0" marginheight=3D"0">
+<CENTER>
+<TABLE height=3D"100%" cellSpacing=3D0 cellPadding=3D0 width=3D765=20
+background=3Dhttp://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20=
+Szczerbacki/img/mainbackground.jpg=20
+border=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD bgColor=3D#d2dad1>
+      <TABLE height=3D97 cellSpacing=3D0 cellPadding=3D0 width=3D764 =
+border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D248 bgColor=3D#1e5979><!-- logo image --><IMG =
+height=3D97=20
+            alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/shield.jpg"=20
+            width=3D248 border=3D0> <!-- end logo image --></TD>
+          <TD width=3D"100%"=20
+          =
+background=3Dhttp://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20=
+Szczerbacki/img/topbg.jpg><IMG=20
+            height=3D97 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/topbg.jpg"=20
+            width=3D22 border=3D0></TD></TR></TBODY></TABLE>
+      <TABLE height=3D42 cellSpacing=3D0 cellPadding=3D0 width=3D764 =
+border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D169><IMG height=3D42 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/altbg.jpg"=20
+            width=3D169 border=3D0></TD>
+          <TD width=3D"100%"=20
+          =
+background=3Dhttp://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20=
+Szczerbacki/img/sidel2.jpg><IMG=20
+            height=3D42 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/sidel2.jpg"=20
+            width=3D20 border=3D0></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D764 border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D150 bgColor=3D#d2dad1><!-- menu below, copy and =
+paste the menudivider.jpg code as necessary --><!-- the &nbsp; is code =
+for a one letter space --><IMG=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp; <A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/index.html">P=E1gina=20
+            Inicial</A><BR><IMG height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp; <A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t1-espectro/espectro.html">Rendering=20
+            de Cores</A><BR><IMG height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp; <A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/segmentacao.html">Segmenta=E7=E3o</A><BR><IM=
+G=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp; <A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/t2-motivacao.html">&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;Motiva=E7=E3o</A><BR><IMG=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp; <A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/t2-metodologia.html">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;Metodologia</A><BR><IMG=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/t2-resultados.html">&nbsp;=20
+            =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultados</A><BR><IMG=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp;=20
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/t2-proximos.html">Pr=F3ximos=20
+            Passos</A><BR><IMG height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp;=20
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/T2-SZCZERBACKI-Segmentation.zip">Download</A=
+><BR><IMG=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp;=20
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/index.html"=20
+            target=3D_blank>Documenta=E7=E3o</A><BR><IMG height=3D6 =
+alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR>&nbsp; <A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/links.html">Links</A><BR><IMG=20
+            height=3D6 alt=3D""=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/menudivider.jpg"=20
+            width=3D150 border=3D0><BR><!-- end menu --></TD>
+          <TD width=3D19 bgColor=3D#ffffff>&nbsp;</TD>
+          <TD width=3D590 bgColor=3D#ffffff><!-- add your content below =
+--><IMG=20
+            height=3D21=20
+            =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/metodologia.jpg"=20
+            width=3D122>=20
+            <P align=3Djustify>Primeiramente definiremos o problema =
+proposto e=20
+            seus par=E2metros, bem como crit=E9rios objetivos para a =
+avalia=E7=E3o dos=20
+            resultados obtidos.</P>
+            <P align=3Djustify><STRONG>PROBLEMA: </STRONG>Para uma =
+imagem de uma=20
+            transmiss=E3o de uma partidada de futebol, disponibilizada =
+no formato=20
+            TGA, o objetivo proposto =E9 a exclus=E3o dos pixels =
+correspondentes ao=20
+            campo de futebol, buscando maximizar a precis=E3o do =
+resultado e=20
+            reduzir o custo de sua obten=E7=E3o. Linhas, =E1reas e =
+obejtos externos ao=20
+            campo, gol e jogadores n=E3o ser=E3o identificados =
+separadamente neste=20
+            momento, n=E3o sendo sua diferencia=E7=E3o o foco deste =
+problema.</P>
+            <P align=3Djustify>Partindo do enuciado apresentado, podemos =
+definir=20
+            os par=E2metros para a avalia=E7=E3o do resultado obtido =
+como sendo a sua=20
+            precis=E3o, isto =E9, o qu=E3o pr=F3ximo do campo =
+conseguimos chegar na=20
+            exclus=E3o, e o custo, que pode ser medido pelo tempo de =
+execu=E7=E3o dos=20
+            m=E9todos que ser=E3o propostos. </P>
+            <P align=3Djustify>A medida exata da dist=E2ncia entre o =
+campo=20
+            identificado no processo e o campo real na imagem n=E3o =
+ser=E1 realizada=20
+            neste problema, sendo sua avalia=E7=E3o feita subjetivamente =
+pela=20
+            observa=E7=E3o das imagens obtidas. Esta m=E9trica de =
+quantica=E7=E3o poder=E1=20
+            ser implementada em um momento posterior, com a evolu=E7=E3o =
+do=20
+            trabalho.</P>
+            <P align=3Djustify>Tempos de execu=E7=E3o de diferentes =
+m=E9todos ser=E3o=20
+            medidos e comparados no trabalho.</P>
+            <P align=3Djustify>Este trabalho busca analisar a =
+aplica=E7=E3o de m=E9todos=20
+            conhecidos de Processamento de Imagens na obten=E7=E3o do =
+resultado=20
+            proposto.</P>
+            <P align=3Djustify>&nbsp;</P>
+            <P align=3Djustify><STRONG>ABORDAGAGEM</STRONG></P>
+            <P align=3Djustify>O problema descrito pode ser visto como =
+um problema=20
+            de segmenta=E7=E3o e extra=E7=E3o de carater=EDsticas =
+morfol=F3gicas das imagens=20
+            fornecidas como entrada.</P>
+            <P align=3Djustify>Como passo incial foi escolhida a =
+gera=E7=E3o de uma=20
+            imagem monocrom=E1tica, atrav=E9s do c=E1lculo da =
+lumin=E2ncia, para a=20
+            posterior aplica=E7=E3o do diversos processamentos, sorbre =
+esta imagem=20
+            obtida.</P>
+            <P align=3Djustify>Para esta abordgem estamos descartando as =
+
+            informa=E7=F5es de cromaticidade, perdendo parte da =
+informa=E7=E3o que=20
+            poderia aumentar a precis=E3o do resultado, mas reduzindo =
+assim o=20
+            custo de processamento necess=E1rio.</P>
+            <P align=3Djustify>Algoritmos de segmenta=E7=E3o, voltados =
+para imagens=20
+            monocrom=E1ticas, utilizam, normalmente, os conceitos de=20
+            descontinuidade e similaridade. Na busca por =
+descontinuidades o foco=20
+            est=E1 a detec=E7=E3o de pontos isolados, linhas e bordas. =
+Quando se busca=20
+            por similaridades, podem ser utilizados os conceitos de=20
+            limiariza=E7=E3o, crescimento de regi=F5es e divis=E3o e =
+fus=E3o de=20
+            regi=F5es.</P>
+            <P align=3Djustify>No nosso problema, independente da =
+abordagem=20
+            utilizada, devemos ser capazes de identificar as =
+descontinuidades no=20
+            campo causadas por outros componentes, como jogadores e =
+linhas de=20
+            marca=E7=E3o, e classificar inteiramente a =E1rea =
+correspondente ao campo,=20
+            por similaridade, possibilitando a sua remo=E7=E3o posterior =
+da imagem=20
+            original, como demandado em nosso problema.</P>
+            <P align=3Djustify>&nbsp;</P>
+            <P align=3Djustify><STRONG>PR=C9-PROCESSAMENTO</STRONG></P>
+            <P align=3Djustify>Antes de efetivamente identificar os =
+compoentes da=20
+            imagem, devemos realizar as opera=E7=F5es adequadas para a =
+prepara=E7=E3o da=20
+            imagem para o processamento desejado.</P>
+            <P align=3Djustify><STRONG>PASSO 1: </STRONG>O primeiro =
+passo nesta=20
+            etapa =E9 a obten=E7=E3o e armazenamento da imagem obtida em =
+mem=F3ria, para=20
+            o processamento posterior. </P>
+            <P align=3Djustify>A imagem, ap=F3s a sua obten=E7=E3o, =E9 =
+armazenada em um=20
+            objeto que contem utiliza um vetor com seq=FC=EAncias de =
+quatro n=FAmeros=20
+            para cada pixel, representando os quatro canais presentes na =
+imagem=20
+            (vermelho, verde, azul e alpha).</P>
+            <P align=3Djustify><STRONG>PASSO 2:</STRONG> O passo =
+seguinte =E9 a=20
+            gera=E7=E3o da imagem monocrom=E1tica atrav=E9s do =
+<STRONG>c=E1lculo da=20
+            lumin=E2ncia</STRONG>, a partir dos valores de vermelho, =
+verde e azul=20
+            (RGB) conhecidos, como descrito abaixo:</P>
+            <BLOCKQUOTE>
+              <P align=3Djustify><FONT color=3D#339966>lumin=E2ncia =3D =
+0.30 x vermelho=20
+              + 0.59 x verde + 0.11 x azul</FONT></P></BLOCKQUOTE>
+            <P align=3Djustify>A lumin=E2ncia =E9 uma representa=E7=E3o =
+da quantidade de=20
+            energia que um observador percebe da fonte de luz [Gon92].=20
+            Percebemos, por=E9m, cada cor b=E1sica (vermelho, verde e =
+azul) com=20
+            diferentes participa=E7=F5es, ou pesos. Os pesos utilizados =
+no padr=E3o=20
+            NTSC e indicados no livro "OpenGL Programming Guide" =
+[Nei96], s=E3o os=20
+            apresentados acima. Por=E9m, estes valores devem ser =
+considerados como=20
+            aproximados, pois sabemos que a resposta de intensidade das =
+cores=20
+            b=E1sicas, para valores espec=EDficos de destas tr=EAs =
+cores, ir=E3o variar=20
+            de acordo com os dispositivos utilizados, suas curvas de =
+corre=E7=E3o de=20
+            gamma e mesmo ajustes de contraste e brilho. </P>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00044"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o da=20
+            lumin=E2ncia na ferramenta desenvolvida.</P>
+            <P align=3Djustify><STRONG>PASSO 3:</STRONG> Uma vez que em =
+alguns=20
+            casos a imagem pode ser ruidosa, e tamb=E9m, porque podemos =
+observar=20
+            que alguns campos possuem grande varia=E7=E3o de cores =
+pontuais, com um=20
+            comportamento an=E1logo ao ru=EDdo, pode ser interessante a =
+aplica=E7=E3o de=20
+            um filtro para a redu=E7=E3o de ru=EDdo da imagem.</P>
+            <P align=3Djustify>Deve-se, entretanto, ter sempre em mente =
+que este =E9=20
+            um processo custoso, e deve ser aplicado com bastante =
+crit=E9rio.</P>
+            <P align=3Djustify>Na aplica=E7=E3o foram implementados dois =
+filtros para=20
+            a elimina=E7=E3o de ru=EDdo: o filtro de passa-baixas e o =
+filtro de=20
+            mediana.</P>
+            <P align=3Djustify>Um <STRONG>filtro espacial de =
+passa-baixas</STRONG>=20
+            pode ser implementado como uma janela de tamanho n x n, com =
+n=20
+            definido pelo usu=E1rio, que =E9 passada por toda a imagem,=20
+            utilizando-se uma m=E1scara de tamanho n x n, como a =
+apresentada a=20
+            figura abaixo.</P>
+            <TABLE borderColor=3D#ffffff width=3D"100%" border=3D1>
+              <TBODY>
+              <TR>
+                <TD width=3D"32%">&nbsp;</TD>
+                <TD width=3D"34%">
+                  <DIV align=3Dcenter><IMG height=3D103=20
+                  =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/mascaraPassaBaixas.gif"=20
+                  width=3D142></DIV></TD>
+                <TD width=3D"34%">&nbsp;</TD></TR>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <DIV align=3Dcenter><FONT size=3D-2>m=E1scara de um =
+filtro=20
+                  passa-baixas 3x3</FONT></DIV></TD>
+                <TD>&nbsp;</TD></TR></TBODY></TABLE>
+            <P align=3Djustify>Os valores dos pixels na janela s=E3o =
+multiplicados=20
+            pelos pesos correspondentes na m=E1scara, somados e depois=20
+            normalizados, dividindo-se o resultado pela soma dos valores =
+da=20
+            m=E1scara. </P>
+            <P align=3Djustify>Um filtro na forma apresentada acima =E9 =
+tamb=E9m=20
+            referenciado como <EM>m=E9dia na vizinhan=E7a</EM> [Gon92]. =
+</P>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00232"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o do=20
+            filtro espacial passa-baixas na ferramenta desenvolvida.</P>
+            <P> </P>
+            <P align=3Djustify>A aplica=E7=E3o do filtro de passa-baixas =
+tem custo=20
+            muito inferior ao do filtro de mediana, entretanto sua =
+aplica=E7=E3o=20
+            afeta diretamente as bordas, dificultando processos =
+posteriores de=20
+            detec=E7=E3o de bordas, de extrema import=E2ncia para o =
+problema.</P>
+            <P align=3Djustify>O <STRONG>filtro de mediana</STRONG> =
+consiste na=20
+            substitui=E7=E3o do valor de cada pixel pelo valor =
+correspondente =E0=20
+            mediana dos valores dos pixels da vizinhan=E7a. Este =
+m=E9todo tem como=20
+            caracter=EDstica uma atua=E7=E3o efetiva para componentes =
+<EM>spike</EM>=20
+            do ru=EDdo, preservando, entretanto, a agudeza das bordas, =
+como=20
+            desejado para o problema.</P>
+            <P align=3Djustify>A implementa=E7=E3o utilizou, para o =
+c=E1lculo da=20
+            mediana, o algoritmo do k-=E9simo elemento (select algorithm =
+[Cor01])=20
+            que possui complexidade menor que as ordena=E7=F5es =
+conhecidas.</P>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00186"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o do=20
+            filtro de mediana na ferramenta desenvolvida.</P>
+            <P align=3Djustify>&nbsp;</P>
+            <P align=3Djustify><STRONG>PROCESSAMENTO</STRONG></P>
+            <P align=3Djustify><STRONG>PASSO 4:</STRONG> A seguir =
+ser=E3o aplicados=20
+            os operadores de gradiente para a detec=E7=E3o de bordas, =
+que foram=20
+            implementados no sistema atrav=E9s dos<STRONG> filtros de =
+Prewitt e=20
+            Sobel</STRONG>.</P>
+            <P align=3Djustify>Ambos os filtros utilizam a mesma teoria =
+para o=20
+            realce de bordas, baseando-se na aplica=E7=E3o do gradiente =
+para cada=20
+            posi=E7=E3o da imagem.</P>
+            <P align=3Djustify>Podemos dizer que o gradiente de uma =
+imagem f(x,y)=20
+            na posi=E7=E3o (x,y) pode ser representado pelo vetor:</P>
+            <TABLE borderColor=3D#ffffff width=3D"100%" border=3D1>
+              <TBODY>
+              <TR>
+                <TD width=3D"32%" height=3D75>&nbsp;</TD>
+                <TD width=3D"34%">
+                  <DIV align=3Dcenter><IMG height=3D94=20
+                  =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/equacaoGradiente1.gif"=20
+                  width=3D125></DIV></TD>
+                <TD width=3D"34%">&nbsp;</TD></TR></TBODY></TABLE>
+            <P align=3Djustify>Queremos, entretanto, com o objetivo de =
+detectar=20
+            bordas, calcular a magnitude deste vetor, que chamaremos =
+apenas de=20
+            gradiente, e calcularemos da forma demonstrada abaixo:</P>
+            <TABLE borderColor=3D#ffffff width=3D"100%" border=3D1>
+              <TBODY>
+              <TR>
+                <TD width=3D"32%" height=3D37>&nbsp;</TD>
+                <TD width=3D"34%">
+                  <DIV align=3Dcenter><IMG height=3D33=20
+                  =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/equacaoGradiente2.gif"=20
+                  width=3D262></DIV></TD>
+                <TD width=3D"34%">&nbsp;</TD></TR></TBODY></TABLE>
+            <P>A aproxima=E7=E3o, com a utiliza=E7=E3o da soma dos =
+m=F3dulos, no lugar da=20
+            ra=EDz da soma dos quadrados, contibrui significativamente =
+com a=20
+            performance, sem afetar de forma relevante a qualidade do =
+resultado=20
+            obtido.</P>
+            <P>A diferen=E7a, ent=E3o, na implementa=E7=E3o dos =
+m=E9todos de Prewitt e=20
+            Sobel, est=E1 na m=E1scara utilizada para a aproxima=E7=E3o =
+dos valores de=20
+            Gx e Gy utilizados no c=E1lculo demonstrado.</P>
+            <P>As m=E1scaras utilizadas para os operadores de Prewitt e =
+Sobel=20
+            s=E3o:</P>
+            <TABLE borderColor=3D#ffffff width=3D"100%" border=3D1>
+              <TBODY>
+              <TR>
+                <TD width=3D"5%">&nbsp;</TD>
+                <TD width=3D"41%">
+                  <DIV align=3Dcenter><IMG height=3D83=20
+                  =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/mascarasPrewitt.gif"=20
+                  width=3D216></DIV></TD>
+                <TD width=3D"8%">&nbsp;</TD>
+                <TD width=3D"40%">
+                  <DIV align=3Dcenter><IMG height=3D83=20
+                  =
+src=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczer=
+backi/img/mascarasSobel.gif"=20
+                  width=3D215></DIV></TD>
+                <TD width=3D"6%">&nbsp;</TD></TR>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <DIV align=3Dcenter><FONT size=3D-2>m=E1scaras para o =
+c=E1lculo de Gx=20
+                  e Gy por Prewitt</FONT></DIV></TD>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <DIV align=3Dcenter><FONT size=3D-2>m=E1scaras para o =
+c=E1lculo de Gx=20
+                  e Gy por Sobel</FONT></DIV></TD>
+                <TD>&nbsp;</TD></TR></TBODY></TABLE>
+            <P><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00329"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o dos=20
+            filtros de Prewitt e Sobel na ferramenta desenvolvida.</P>
+            <P>Apesar da maior precis=E3o do algoritmo de Sobel, os =
+resultados s=E3o=20
+            pouco influenciados pela escolha de um ou de outro, tanto =
+quanto =E0=20
+            qualidade quanto ao tempo de execu=E7=E3o utilizado.</P>
+            <P align=3Djustify><STRONG>PASSO 5:</STRONG> Neste ponto =
+pode-se=20
+            perceber uma gande diferen=E7a de intensidade das regi=F5es =
+com maiores=20
+            varia=E7=F5es (bordas) para as demais. Com a aplica=E7=E3o =
+de uma=20
+            limiariza=E7=E3o da intensidade, tornamos preto todo o pixel =
+com valor=20
+            menor que o limiar informado, e branco os pixels com valor =
+maior.=20
+            Conseguimos, assim, criar uma m=E1scara bin=E1ria (em preto =
+e branco)=20
+            pr=F3xima =E0 regi=E3o dos jogadores, por=E9m com bastante =
+ru=EDdo resultante=20
+            do processo, ou buracos muito grandes nas =E1reas de =
+interesse.</P>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00347"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o da=20
+            limiariza=E7=E3o na ferramenta desenvolvida.</P>
+            <P align=3Djustify><STRONG>PASSO 6: </STRONG>Para tratar o =
+ru=EDdo na=20
+            m=E1scara bin=E1ria ateramos o algoritmo de mediana para o =
+problema=20
+            bin=E1rio, ganhando performance e eliminando grande parte do =
+ru=EDdo=20
+            indesejado.</P>
+            <P align=3Djustify>O algoritmo de mediana tem performance =
+bastante=20
+            reduzida para o caso de muitos valores repetidos, que =
+carateriza a=20
+            imagem preto e branco deste passo. Mas, como temos apenas =
+dois=20
+            valores (preto ou branco), para os pixels, o c=E1lculo =
+poderia ser=20
+            extremamente otimizado, bastando contar a cor predominante =
+em uma=20
+            varredura apenas, tornando-a a mediana da =E1rea analisada. =
+Esta foi a=20
+            l=F3gica utilizada para o c=E1lculo da mediana para o =
+problema=20
+            bin=E1rio.</P>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00172"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o do=20
+            algoritmo de mediana para o problema bin=E1rio na ferramenta =
+
+            desenvolvida.</P>
+            <P align=3Djustify><STRONG>PASSO 7:</STRONG> como resultado =
+ainda=20
+            vemos muitas descontinuidades nas regi=F5es dos jogadores, =
+que podem=20
+            ser amenizadas atrav=E9s de uma opera=E7=E3o de =
+preenchimento de buracos.=20
+            </P>
+            <P align=3Djustify>A t=E9cnica escolhida para o peenchimento =
+de buracos,=20
+            na aplica=E7=E3o, foi a do sequenciamento de uma =
+opera=E7=E3o de dilata=E7=E3o e=20
+            uma de eros=E3o. </P>
+            <P align=3Djustify>A opera=E7=E3o de dilata=E7=E3o da =
+regi=E3o dos jogadores =E9=20
+            efetuada comum c=E1lculo pr=E9vio das dist=E2ncias de =
+manhattan sobre a=20
+            imagem bin=E1ria, apropriadas para o c=E1lculo de =
+dist=E2ncias entre=20
+            pixels em quest=E3o, possibilitando o preenchimento da =
+=E1rea com=20
+            dist=E2ncia menor que um valor informado, em rela=E7=E3o a =
+=E1rea definida=20
+            originalmente.</P>
+            <P align=3Djustify>A opera=E7=E3o de eros=E3o foi =
+implementada como uma=20
+            dilata=E7=E3o da =E1rea complementar, ou seja, a regi=E3o =
+esperada do=20
+            campo.</P>
+            <P align=3Djustify>Com esta abordagem, parte dos buracos =
+s=E3o=20
+            extra=EDdos, por=E9m um pouco da forma do contorno dos =
+jogadores se=20
+            perde no processo.</P>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/doxygen/iptools_8cpp-source.html#l00402"=20
+            target=3D_blank>Clique aqui </A>para visualizar a =
+implementa=E7=E3o da=20
+            dilata=E7=E3o e eros=E3o na ferramenta desenvolvida.</P>
+            <P align=3Djustify><STRONG>PASSO 8: </STRONG>neste momento =
+temos como=20
+            resultado uma m=E1scara que pode ser uilizada no momento do =
+desenho da=20
+            image, de modo que apenas as regi=F5es de interesse (com cor =
+branca)=20
+            sejam desenhadas como resultado.</P>
+            <P align=3Djustify>Assim =E9 finalizado o procedimento, =
+deixando como=20
+            resultado uma aproxima=E7=E3o da cena sem o campo, =
+substitu=EDdo por=20
+            pixels brancos para a apresenta=E7=E3o final. </P>
+            <P align=3Djustify>&nbsp;</P>
+            <P align=3Djustify><STRONG>BIBLIOGRAFIA</STRONG></P>
+            <TABLE borderColor=3D#ffffff cellSpacing=3D5 width=3D"100%" =
+border=3D1>
+              <TBODY>
+              <TR>
+                <TD width=3D"13%">Gon92</TD>
+                <TD width=3D"87%">Gonzalez, R., e Woods, R., =
+<EM>Processamento=20
+                  de Imagens Digitais</EM>, Terceira Edi=E7=E3o, Editora =
+Edgard=20
+                  Bl=FCcher, 1992.</TD></TR>
+              <TR>
+                <TD>Nei96</TD>
+                <TD>Neider, J., e Davis, T., <EM>OpenGL Programming=20
+                  Guide</EM>, Segunda Edi=E7=E3o, Addison-Wesley, =
+1996.</TD></TR>
+              <TR>
+                <TD>Cor01</TD>
+                <TD>Cormen, T., <EM>Introduction to Algorithms</EM>, =
+Segunda=20
+                  Edi=E7=E3o, MIT Press, 2001.</TD></TR>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD>&nbsp;</TD></TR></TBODY></TABLE>
+            <P align=3Djustify><A=20
+            =
+href=3D"http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szcze=
+rbacki/source/t2-segmentacao/t2-metodologia.html"=20
+            target=3D_top>[topo]</A></P></TD>
+          <TD width=3D5=20
+bgColor=3D#ffffff>&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TAB=
+LE></CENTER></BODY></HTML>
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/shield.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4Q/ERXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA2OjA1
+OjIzIDAyOjI4OjQxAAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAPigAwAEAAAAAQAAAGEAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAAOlgAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+ADIAgAMBIgACEQEDEQH/3QAEAAj/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AOf9Gium7Jv3CnHa11npgF8Oc2luxryxv0n/ALyeOmjGycpzsitmIKnXU2VN
+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
+Rse37Gx2T+g9L1Mr7N+gru/R/a5Z2L9WG1Ofj5dbLa8Ygsx7AGepWLxi3tY4W/bbc+xmIy6j9Fbj
+V5Hr3U0/pPsa92Fj0p9mevqa1ma+wNBDWtZO1jGhrRuMvdtb+c9303Kbeo2gM3MqsdUIqfbUyx7A
+Pc0V2WNc9u38xPQzodmPV9pvooxxXjuLm6Zjr529Sqstl11Pue/7Pvxr8D7Gyr0v1v1ERtf1Vqwa
+/Vtqdk5FGyyzd6prLgzIde2vY7flNfbbh/pvQtZ9n/Rf9ybl7sduDqr2ZXfEiPU7XR6zashzZ2vy
+KmWubJ3HbZc1zvpO3bUOzLfY91lji97zLnHkkol+J0GvFzLK82LamThsGSLi9w2+ibK/Rp/ptZ/m
+Weq/Et/pH2T+ZWV6ifCUZXQpZOEo1Zt//9Hh+m4Izsk0OtFDG12WvsOzQVge39YuxKG7t30rcmpW
+sr6u5ePkCk3VHe99dRfuYX+k5zMh7WMbf7MZjW2X7/8A0G+0M/SLL1giSJEGDEg8td+81GZm9QrB
+FeXkMB2yBa+Ds/mp93+D3exXJRndg6dmtGUKojV0T9VOqC8Y73UC97Zqra8vL3uZddjUs2sFbftV
+eM+xlllnp1Vfzv6T9Eh4XQjk5D6X5LGDZW7GfS31Be64ubVXR9odhN3/AKOz9A9/223Z+q4uQqJz
+M8+rOXefXaGXTa/3tE7WW+73tbuUhn9RF1uQMzIF+Q3Zfd6r99jYDfTtfu3WM9v0HJvDl7hdxY+z
+Zf0TKYKCbseckVekxrrXPLrtW0+i2h1zbmV7L31ur99NtPoet6iK36tZhsYDfiek9+0XV3eqNpt+
+xV3111t9S2m/Ia9lG3/rvo/o1SHUuqtMtz8oGGiRdZwz+a/P/wAF/g1B+Xm2NDbMq97Q7eGuseQH
+Eh2/V30t7WvS4cvcIvF2LdH1d6g+r12vx30bTa27e4NdS2PWzGB1QsdRj/4duz7R/wACo53Q8rCx
+WZdj2PpsrptrLBo5l3t3Tu+iyz6P+Es/nPSqr9NVjn9SLy85uSXl4tLja+fUbt2Wzu/nG+mz3fyE
+N9+TYHC2+2xr3B7w97nBzwNrbHtc73P2/nIiOS9SE8WPWgwgcRoVZ6d0y/qBvqxBN1FQtrqDZNhN
+ldLqm6+zZU+3J/6wqydrnsO6t7q3cbmOLTH9ghPkCRpoWOJAOuodj/mjnXX2VU249lbbHMpseXMN
+gFv2aiz09r/SZl7X21P3vq/R/pFmYWLXlZPoeqGVsZdbZcxpf+jorfk2Ppqs+zusdZVX+gZb6H/C
++kmbmZ7Q1rcu9ra52AWvAbunfsh3t37nKNV19NrLqbbK7qi013McWvaWjZX6dgO5mxnsYmCOTWyN
+tF5lj00O7r5H1XspcGHLY+wMtfY1tZOwsqtzMSl0WerXbm0UPf8ArNVFdP6T+e9NDxvq79ppFlWW
+0vfisy62Co6gtybMis77GXO+z/YbqmPopv8AtGR6X+Bf66zXZWY9jK35Nz66t5qY6x5DDb/SDWC7
+2faN36f/AEqTcjKZW6qvItZU8Na+ttjg0tYTZWxzA7bsrsdvr/cQ4Mv7yeLH2bud0arFw35bco2N
+ip+PvpDG2stax+1lrL7muyqd9nr04/2iin0LPWy67/TpWd2Rr87qOSxzMnMyL2Pdve2217w53t97
+mvdt3exiDCfASHzG1szE1win/9Lz5JZaSvtJ1EllpJKdRJZaSSnUSWWkip1EllpJKdRJZaSSnUSW
+Wkkp1EllpJKf/9n/7RSQUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAccAgAAAgACADhCSU0EJQAA
+AAAAEEYM8okmuFbasJwBobCnkHc4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQmAAAA
+AAAOAAAAAAAAAAAAAD+AAAA4QklNBA0AAAAAAAQAAAB4OEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAA
+AAAACQAAAAAAAAAAAQA4QklNBAoAAAAAAAEAADhCSU0nEAAAAAAACgABAAAAAAAAAAE4QklNA/UA
+AAAAAEgAL2ZmAAEAbGZmAAYAAAAAAAEAL2ZmAAEAoZmaAAYAAAAAAAEAMgAAAAEAWgAAAAYAAAAA
+AAEANQAAAAEALQAAAAYAAAAAAAE4QklNA/gAAAAAAHAAAP////////////////////////////8D
+6AAAAAD/////////////////////////////A+gAAAAA/////////////////////////////wPo
+AAAAAP////////////////////////////8D6AAAOEJJTQQAAAAAAAACAAI4QklNBAIAAAAAAAgA
+AAAAAAAAADhCSU0ECAAAAAAAEAAAAAEAAAJAAAACQAAAAAA4QklNBB4AAAAAAAQAAAAAOEJJTQQa
+AAAAAANDAAAABgAAAAAAAAAAAAAAYQAAAPgAAAAHAHMAaABpAGUAbABkADIAAAABAAAAAAAAAAAA
+AAAAAAAAAAAAAAEAAAAAAAAAAAAAAPgAAABhAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA
+AAAAAAAAEAAAAAEAAAAAAABudWxsAAAAAgAAAAZib3VuZHNPYmpjAAAAAQAAAAAAAFJjdDEAAAAE
+AAAAAFRvcCBsb25nAAAAAAAAAABMZWZ0bG9uZwAAAAAAAAAAQnRvbWxvbmcAAABhAAAAAFJnaHRs
+b25nAAAA+AAAAAZzbGljZXNWbExzAAAAAU9iamMAAAABAAAAAAAFc2xpY2UAAAASAAAAB3NsaWNl
+SURsb25nAAAAAAAAAAdncm91cElEbG9uZwAAAAAAAAAGb3JpZ2luZW51bQAAAAxFU2xpY2VPcmln
+aW4AAAANYXV0b0dlbmVyYXRlZAAAAABUeXBlZW51bQAAAApFU2xpY2VUeXBlAAAAAEltZyAAAAAG
+Ym91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcA
+AAAAAAAAAEJ0b21sb25nAAAAYQAAAABSZ2h0bG9uZwAAAPgAAAADdXJsVEVYVAAAAAEAAAAAAABu
+dWxsVEVYVAAAAAEAAAAAAABNc2dlVEVYVAAAAAEAAAAAAAZhbHRUYWdURVhUAAAAAQAAAAAADmNl
+bGxUZXh0SXNIVE1MYm9vbAEAAAAIY2VsbFRleHRURVhUAAAAAQAAAAAACWhvcnpBbGlnbmVudW0A
+AAAPRVNsaWNlSG9yekFsaWduAAAAB2RlZmF1bHQAAAAJdmVydEFsaWduZW51bQAAAA9FU2xpY2VW
+ZXJ0QWxpZ24AAAAHZGVmYXVsdAAAAAtiZ0NvbG9yVHlwZWVudW0AAAARRVNsaWNlQkdDb2xvclR5
+cGUAAAAATm9uZQAAAAl0b3BPdXRzZXRsb25nAAAAAAAAAApsZWZ0T3V0c2V0bG9uZwAAAAAAAAAM
+Ym90dG9tT3V0c2V0bG9uZwAAAAAAAAALcmlnaHRPdXRzZXRsb25nAAAAAAA4QklNBBEAAAAAAAEB
+ADhCSU0EFAAAAAAABAAAAAY4QklNBAwAAAAADrIAAAABAAAAgAAAADIAAAGAAABLAAAADpYAGAAB
+/9j/4AAQSkZJRgABAgEASABIAAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwI
+CAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwBDQsLDQ4NEA4OEBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDP/AABEIADIAgAMBIgACEQEDEQH/3QAEAAj/xAE/AAABBQEBAQEBAQAAAAAA
+AAADAAECBAUGBwgJCgsBAAEFAQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggF
+AwwzAQACEQMEIRIxBUFRYRMicYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNU
+ZEXCo3Q2F9JV4mXys4TD03Xj80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH
+1+f3EQACAgECBAQDBAUGBwcGBTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNT
+FWNzNPElBhaisoMHJjXC0kSTVKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaW
+prbG1ub2JzdHV2d3h5ent8f/2gAMAwEAAhEDEQA/AOf9Gium7Jv3CnHa11npgF8Oc2luxryxv0n/
+ALyeOmjGycpzsitmIKnXU2VNbcWX/wBHupHqem+t25jvpfQsrSy3g9H6kP8Ag6v/AD/Umz6W1dCz
+32XvysvIxunlxLBWyupor9Kpu1zvW9NnoU+r+j/8EVwk3oev/etSEYkCxulfjYDX5bDbY0dPqZkZ
+L3MaRst9IVMoax+59zn5NVfv9Nn/AAiGyvFu3spbfVdXU3J9LIa0F9L9pZfU+pzvzba37Hf4NNc9
+lo+stlThYz7Dh+9h3N0t6fu9zf3dj/8AMVluXgWObXRS05dPSsY3Z7bS4Fgqx63YbscfomPa9zaf
+9JvYmiUtP5fupMIgHTo1vRprpuyb9wpx2tdZ6YBfDnNpbsa8sb9J/wC8pV14FteTa05FYwqW5N9V
+1TWWml5rbXbR+kdXZu9en6fp+yxE6g9p6P1Tacb0fTr9IV+t9oj7RT6f2n1f1b+b/nPR/wAIh0j0
+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
+OSxzMnMyL2Pdve2217w53t97mvdt3exiDCfASHzG1szE1win/9Lz5JZaSvtJ1EllpJKdRJZaSSnU
+SWWkip1EllpJKdRJZaSSnUSWWkkp1EllpJKf/9k4QklNBCEAAAAAAFUAAAABAQAAAA8AQQBkAG8A
+YgBlACAAUABoAG8AdABvAHMAaABvAHAAAAATAEEAZABvAGIAZQAgAFAAaABvAHQAbwBzAGgAbwBw
+ACAANwAuADAAAAABADhCSU0EBgAAAAAABwAFAQEAAQEA/+ESSGh0dHA6Ly9ucy5hZG9iZS5jb20v
+eGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtj
+OWQnPz4KPD9hZG9iZS14YXAtZmlsdGVycyBlc2M9IkNSIj8+Cjx4OnhhcG1ldGEgeG1sbnM6eD0n
+YWRvYmU6bnM6bWV0YS8nIHg6eGFwdGs9J1hNUCB0b29sa2l0IDIuOC4yLTMzLCBmcmFtZXdvcmsg
+MS41Jz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJk
+Zi1zeW50YXgtbnMjJyB4bWxuczppWD0naHR0cDovL25zLmFkb2JlLmNvbS9pWC8xLjAvJz4KCiA8
+cmRmOkRlc2NyaXB0aW9uIGFib3V0PSd1dWlkOjQ2N2ZhZWQ5LWVhMWItMTFkYS1iMzg4LWQ5OGJm
+Zjc3YTZjZScKICB4bWxuczp4YXBNTT0naHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyc+
+CiAgPHhhcE1NOkRvY3VtZW50SUQ+YWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjQzY2RiYzQ4LWVhMTUt
+MTFkYS1iMzg4LWQ5OGJmZjc3YTZjZTwveGFwTU06RG9jdW1lbnRJRD4KIDwvcmRmOkRlc2NyaXB0
+aW9uPgoKPC9yZGY6UkRGPgo8L3g6eGFwbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9J3cnPz7/7gAhQWRvYmUAZEAAAAAB
+AwAQAwIDBgAAAAAAAAAAAAAAAP/bAIQABAMDAwMDBAMDBAYEAwQGBwUEBAUHCAYGBwYGCAoICQkJ
+CQgKCgwMDAwMCgwMDAwMDAwMDAwMDAwMDAwMDAwMDAEEBQUIBwgPCgoPFA4ODhQUDg4ODhQRDAwM
+DAwREQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8IAEQgAYQD4AwERAAIRAQMR
+Af/EAOMAAAEFAQEBAAAAAAAAAAAAAAUAAgMEBgEHCAEAAwEBAQEAAAAAAAAAAAAAAAIDAQQFBhAA
+AQMEAgIBAwMDAwUBAAAAAQACAxEEBQYUBxITECEzCDEiMiAjNEEVNzBQYBY4FxEAAgIBBAEDAQQH
+BQMHDQAAAgMBBAUAERIGEyExFCJBUTIHEGFxQlIjFZFicjMWgZK1YLHBsnS0doKiQ2ODk7MlVWV1
+hSYSAAECAwQHBQUIAgMAAAAAAAEAESExAhBBURIgYXGBkSIy8KGxwULR4VJiAzBAYHKCkqKy8cLS
+8hP/2gAMAwEBAhEDEQAAAPEPsfirKM4OA4I9ywrD3RBcVo9x2bwJcKNFsKzTJs1gWl0fRb82H0Xh
+lxGqvl+bUKKQmw6iN0Lo/ePtDjHJtU00smw3RPbU5h9ZgubtLIw9s0kWyN019uQZK+lXPP8Aa77l
+r5n1y9E53836U2uSJPMJK9tkyJXfc746uaenOI6uaYBPL2gt03Nxjro4v6RyVD+hwBh8Czn5OHop
+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
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/topbg.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QPORXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA2OjA1
+OjIzIDAyOjMxOjUzAAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAABagAwAEAAAAAQAAAGEAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAACoAAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+AGEAFgMBIgACEQEDEQH/3QAEAAL/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AOa9NL01Y2pbVftz6a/ppKxtSStVP//QxNyW5B9RL1FeaCbckg+okkp//9Hl
+PUS9RVvUS9RaFOc2fUSVb1EkqU//0uD3JbkLcluWg0OFLuSQtySSuF//0/PUkklfaSkkkklP/9Tz
+1JJJaDSUkkkkp//V8+SWWktBpOokstJBT//Z/+0IhlBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAH
+HAIAAAIAAgA4QklNBCUAAAAAABBGDPKJJrhW2rCcAaGwp5B3OEJJTQPtAAAAAAAQAEgAAAABAAIA
+SAAAAAEAAjhCSU0EJgAAAAAADgAAAAAAAAAAAAA/gAAAOEJJTQQNAAAAAAAEAAAAeDhCSU0EGQAA
+AAAABAAAAB44QklNA/MAAAAAAAkAAAAAAAAAAAEAOEJJTQQKAAAAAAABAAA4QklNJxAAAAAAAAoA
+AQAAAAAAAAABOEJJTQP1AAAAAABIAC9mZgABAGxmZgAGAAAAAAABAC9mZgABAKGZmgAGAAAAAAAB
+ADIAAAABAFoAAAAGAAAAAAABADUAAAABAC0AAAAGAAAAAAABOEJJTQP4AAAAAABwAAD/////////
+////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP//////////
+//////////////////8D6AAAAAD/////////////////////////////A+gAADhCSU0ECAAAAAAA
+EAAAAAEAAAJAAAACQAAAAAA4QklNBB4AAAAAAAQAAAAAOEJJTQQaAAAAAANRAAAABgAAAAAAAAAA
+AAAAYQAAABYAAAAOAEMA8wBwAGkAYQAgAGQAZQAgAHQAbwBwAGIAZwAAAAEAAAAAAAAAAAAAAAAA
+AAAAAAAAAQAAAAAAAAAAAAAAFgAAAGEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA
+AAAQAAAAAQAAAAAAAG51bGwAAAACAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAA
+VG9wIGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAAAGEAAAAAUmdodGxvbmcA
+AAAWAAAABnNsaWNlc1ZsTHMAAAABT2JqYwAAAAEAAAAAAAVzbGljZQAAABIAAAAHc2xpY2VJRGxv
+bmcAAAAAAAAAB2dyb3VwSURsb25nAAAAAAAAAAZvcmlnaW5lbnVtAAAADEVTbGljZU9yaWdpbgAA
+AA1hdXRvR2VuZXJhdGVkAAAAAFR5cGVlbnVtAAAACkVTbGljZVR5cGUAAAAASW1nIAAAAAZib3Vu
+ZHNPYmpjAAAAAQAAAAAAAFJjdDEAAAAEAAAAAFRvcCBsb25nAAAAAAAAAABMZWZ0bG9uZwAAAAAA
+AAAAQnRvbWxvbmcAAABhAAAAAFJnaHRsb25nAAAAFgAAAAN1cmxURVhUAAAAAQAAAAAAAG51bGxU
+RVhUAAAAAQAAAAAAAE1zZ2VURVhUAAAAAQAAAAAABmFsdFRhZ1RFWFQAAAABAAAAAAAOY2VsbFRl
+eHRJc0hUTUxib29sAQAAAAhjZWxsVGV4dFRFWFQAAAABAAAAAAAJaG9yekFsaWduZW51bQAAAA9F
+U2xpY2VIb3J6QWxpZ24AAAAHZGVmYXVsdAAAAAl2ZXJ0QWxpZ25lbnVtAAAAD0VTbGljZVZlcnRB
+bGlnbgAAAAdkZWZhdWx0AAAAC2JnQ29sb3JUeXBlZW51bQAAABFFU2xpY2VCR0NvbG9yVHlwZQAA
+AABOb25lAAAACXRvcE91dHNldGxvbmcAAAAAAAAACmxlZnRPdXRzZXRsb25nAAAAAAAAAAxib3R0
+b21PdXRzZXRsb25nAAAAAAAAAAtyaWdodE91dHNldGxvbmcAAAAAADhCSU0EEQAAAAAAAQEAOEJJ
+TQQUAAAAAAAEAAAAAjhCSU0EDAAAAAACvAAAAAEAAAAWAAAAYQAAAEQAABnEAAACoAAYAAH/2P/g
+ABBKRklGAAECAQBIAEgAAP/tAAxBZG9iZV9DTQAC/+4ADkFkb2JlAGSAAAAAAf/bAIQADAgICAkI
+DAkJDBELCgsRFQ8MDA8VGBMTFRMTGBEMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAENCwsNDg0QDg4QFA4ODhQUDg4ODhQRDAwMDAwREQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwM/8AAEQgAYQAWAwEiAAIRAQMRAf/dAAQAAv/EAT8AAAEFAQEBAQEBAAAAAAAAAAMA
+AQIEBQYHCAkKCwEAAQUBAQEBAQEAAAAAAAAAAQACAwQFBgcICQoLEAABBAEDAgQCBQcGCAUDDDMB
+AAIRAwQhEjEFQVFhEyJxgTIGFJGhsUIjJBVSwWIzNHKC0UMHJZJT8OHxY3M1FqKygyZEk1RkRcKj
+dDYX0lXiZfKzhMPTdePzRieUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9jdHV2d3h5ent8fX5/cR
+AAICAQIEBAMEBQYHBwYFNQEAAhEDITESBEFRYXEiEwUygZEUobFCI8FS0fAzJGLhcoKSQ1MVY3M0
+8SUGFqKygwcmNcLSRJNUoxdkRVU2dGXi8rOEw9N14/NGlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW
+5vYnN0dXZ3eHl6e3x//aAAwDAQACEQMRAD8A5r00vTVjaltV+3Ppr+mkrG1JK1U//9DE3JbkH1Ev
+UV5oJtySD6iSSn//0eU9RL1FW9RL1FoU5zZ9RJVvUSSpT//S4PcluQtyW5aDQ4Uu5JC3JJK4X//T
+89SSSV9pKSSSSU//1PPUkkloNJSSSSSn/9Xz5JZaS0Gk6iSy0kFP/9k4QklNBCEAAAAAAFUAAAAB
+AQAAAA8AQQBkAG8AYgBlACAAUABoAG8AdABvAHMAaABvAHAAAAATAEEAZABvAGIAZQAgAFAAaABv
+AHQAbwBzAGgAbwBwACAANwAuADAAAAABADhCSU0EBgAAAAAABwAFAQEAAQEA/+ESSGh0dHA6Ly9u
+cy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhp
+SHpyZVN6TlRjemtjOWQnPz4KPD9hZG9iZS14YXAtZmlsdGVycyBlc2M9IkNSIj8+Cjx4OnhhcG1l
+dGEgeG1sbnM6eD0nYWRvYmU6bnM6bWV0YS8nIHg6eGFwdGs9J1hNUCB0b29sa2l0IDIuOC4yLTMz
+LCBmcmFtZXdvcmsgMS41Jz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8x
+OTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjJyB4bWxuczppWD0naHR0cDovL25zLmFkb2JlLmNvbS9p
+WC8xLjAvJz4KCiA8cmRmOkRlc2NyaXB0aW9uIGFib3V0PSd1dWlkOjJkY2IzY2M3LWVhMWQtMTFk
+YS1iMzg4LWQ5OGJmZjc3YTZjZScKICB4bWxuczp4YXBNTT0naHR0cDovL25zLmFkb2JlLmNvbS94
+YXAvMS4wL21tLyc+CiAgPHhhcE1NOkRvY3VtZW50SUQ+YWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjJk
+Y2IzY2M1LWVhMWQtMTFkYS1iMzg4LWQ5OGJmZjc3YTZjZTwveGFwTU06RG9jdW1lbnRJRD4KIDwv
+cmRmOkRlc2NyaXB0aW9uPgoKPC9yZGY6UkRGPgo8L3g6eGFwbWV0YT4KICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9J3cnPz7/7gAh
+QWRvYmUAZEAAAAABAwAQAwIDBgAAAAAAAAAAAAAAAP/bAIQABAMDAwMDBAMDBAYEAwQGBwUEBAUH
+CAYGBwYGCAoICQkJCQgKCgwMDAwMCgwMDAwMDAwMDAwMDAwMDAwMDAwMDAEEBQUIBwgPCgoPFA4O
+DhQUDg4ODhQRDAwMDAwREQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8IAEQgA
+YQAWAwERAAIRAQMRAf/EAHYAAQEAAgMAAAAAAAAAAAAAAAAFAQMCBAcBAQEBAAMAAAAAAAAAAAAA
+AAACAQMEBhABAAMAAwADAAAAAAAAAAAAABETFDABEiBAMREBAQACAwAAAAAAAAAAAAAAMQAQASAw
+gRIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQECEQMRAAAA8Q9j4oCvFgbgCZsgRKgCFcgR1gdKe0Br
+zkAAAAzuAcgD/9oACAECAAEFAOGEI+5//9oACAEDAAEFAIQjllKXh4eHl5eeKfl//9oACAEBAAEF
+AMrKyqFChb0t6W9NLS0tTU1tbW1rly5YtW8UIQ6/ev1//9oACAECAgY/AB//2gAIAQMCBj8AH//a
+AAgBAQEGPwAiIiODMzOGZmZwz26tXt//2Q==
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/altbg.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QQPRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA2OjA1
+OjIzIDAyOjE2OjMwAAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAKmgAwAEAAAAAQAAACoAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAAC4QAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+ACAAgAMBIgACEQEDEQH/3QAEAAj/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AOkxHZn2TH2/R9GqPhsajbs5WcH+gYn/AIXp/wDPbEdNWufuzUt2ctBJBTn7
+s5LdnLQSSU5+7OS3Zy0EklOfuzkt2ctBJJTn7s1LdnLQSSU5+7OS3Zy0EklOfuzkt2atBJKlP//Q
+7PB/oOJ/4Xp/89sR0DB/oOJ/4Xp/89sR01apJJJJSkkkklKSSSSUpJJJJSkkkklKSSSSUu1rnODW
+iXHQAK5X04kTa+D+63/yRUun1AVm0/SfoPIBXEQEgP8A/9n/7Qi2UGhvdG9zaG9wIDMuMAA4QklN
+BAQAAAAAAAccAgAAAgACADhCSU0EJQAAAAAAEEYM8okmuFbasJwBobCnkHc4QklNA+0AAAAAABAA
+SAAAAAEAAgBIAAAAAQACOEJJTQQmAAAAAAAOAAAAAAAAAAAAAD+AAAA4QklNBA0AAAAAAAQAAAB4
+OEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAAAAAAAAAAAQA4QklNBAoAAAAAAAEAADhCSU0n
+EAAAAAAACgABAAAAAAAAAAE4QklNA/UAAAAAAEgAL2ZmAAEAbGZmAAYAAAAAAAEAL2ZmAAEAoZma
+AAYAAAAAAAEAMgAAAAEAWgAAAAYAAAAAAAEANQAAAAEALQAAAAYAAAAAAAE4QklNA/gAAAAAAHAA
+AP////////////////////////////8D6AAAAAD/////////////////////////////A+gAAAAA
+/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAOEJJ
+TQQIAAAAAAAQAAAAAQAAAkAAAAJAAAAAADhCSU0EHgAAAAAABAAAAAA4QklNBBoAAAAAAz8AAAAG
+AAAAAAAAAAAAAAAqAAAAqQAAAAUAYQBsAHQAYgBnAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAA
+AAAAAAAAAACpAAAAKgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAA
+AAAAbnVsbAAAAAIAAAAGYm91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAA
+AAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0b21sb25nAAAAKgAAAABSZ2h0bG9uZwAAAKkAAAAGc2xp
+Y2VzVmxMcwAAAAFPYmpjAAAAAQAAAAAABXNsaWNlAAAAEgAAAAdzbGljZUlEbG9uZwAAAAAAAAAH
+Z3JvdXBJRGxvbmcAAAAAAAAABm9yaWdpbmVudW0AAAAMRVNsaWNlT3JpZ2luAAAADWF1dG9HZW5l
+cmF0ZWQAAAAAVHlwZWVudW0AAAAKRVNsaWNlVHlwZQAAAABJbWcgAAAABmJvdW5kc09iamMAAAAB
+AAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9u
+ZwAAACoAAAAAUmdodGxvbmcAAACpAAAAA3VybFRFWFQAAAABAAAAAAAAbnVsbFRFWFQAAAABAAAA
+AAAATXNnZVRFWFQAAAABAAAAAAAGYWx0VGFnVEVYVAAAAAEAAAAAAA5jZWxsVGV4dElzSFRNTGJv
+b2wBAAAACGNlbGxUZXh0VEVYVAAAAAEAAAAAAAlob3J6QWxpZ25lbnVtAAAAD0VTbGljZUhvcnpB
+bGlnbgAAAAdkZWZhdWx0AAAACXZlcnRBbGlnbmVudW0AAAAPRVNsaWNlVmVydEFsaWduAAAAB2Rl
+ZmF1bHQAAAALYmdDb2xvclR5cGVlbnVtAAAAEUVTbGljZUJHQ29sb3JUeXBlAAAAAE5vbmUAAAAJ
+dG9wT3V0c2V0bG9uZwAAAAAAAAAKbGVmdE91dHNldGxvbmcAAAAAAAAADGJvdHRvbU91dHNldGxv
+bmcAAAAAAAAAC3JpZ2h0T3V0c2V0bG9uZwAAAAAAOEJJTQQRAAAAAAABAQA4QklNBBQAAAAAAAQA
+AAACOEJJTQQMAAAAAAL9AAAAAQAAAIAAAAAgAAABgAAAMAAAAALhABgAAf/Y/+AAEEpGSUYAAQIB
+AEgASAAA/+0ADEFkb2JlX0NNAAL/7gAOQWRvYmUAZIAAAAAB/9sAhAAMCAgICQgMCQkMEQsKCxEV
+DwwMDxUYExMVExMYEQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQ0LCw0ODRAO
+DhAUDg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/
+wAARCAAgAIADASIAAhEBAxEB/90ABAAI/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwABAgQFBgcICQoL
+AQABBQEBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEAAhEDBCESMQVB
+UWETInGBMgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0NhfSVeJl8rOE
+w9N14/NGJ5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEAAgIBAgQEAwQF
+BgcHBgU1AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTxJQYWorKDByY1
+wtJEk1SjF2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9ic3R1dnd4eX
+p7fH/9oADAMBAAIRAxEAPwDpMR2Z9kx9v0fRqj4bGo27OVnB/oGJ/wCF6f8Az2xHTVrn7s1LdnLQ
+SQU5+7OS3Zy0EklOfuzkt2ctBJJTn7s5LdnLQSSU5+7NS3Zy0EklOfuzkt2ctBJJTn7s5LdmrQSS
+pT//0Ozwf6Dif+F6f/PbEdAwf6Dif+F6f/PbEdNWqSSSSUpJJJJSkkkklKSSSSUpJJJJSkkkklLt
+a5zg1olx0ACuV9OJE2vg/ut/8kVLp9QFZtP0n6DyAVxEBID/AP/ZADhCSU0EIQAAAAAAVQAAAAEB
+AAAADwBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBoAG8AcAAAABMAQQBkAG8AYgBlACAAUABoAG8A
+dABvAHMAaABvAHAAIAA3AC4AMAAAAAEAOEJJTQQGAAAAAAAHAAUBAQABAQD/4RJIaHR0cDovL25z
+LmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlI
+enJlU3pOVGN6a2M5ZCc/Pgo8P2Fkb2JlLXhhcC1maWx0ZXJzIGVzYz0iQ1IiPz4KPHg6eGFwbWV0
+YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycgeDp4YXB0az0nWE1QIHRvb2xraXQgMi44LjItMzMs
+IGZyYW1ld29yayAxLjUnPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3JnLzE5
+OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnIHhtbG5zOmlYPSdodHRwOi8vbnMuYWRvYmUuY29tL2lY
+LzEuMC8nPgoKIDxyZGY6RGVzY3JpcHRpb24gYWJvdXQ9J3V1aWQ6NDY3ZmFlZDItZWExYi0xMWRh
+LWIzODgtZDk4YmZmNzdhNmNlJwogIHhtbG5zOnhhcE1NPSdodHRwOi8vbnMuYWRvYmUuY29tL3hh
+cC8xLjAvbW0vJz4KICA8eGFwTU06RG9jdW1lbnRJRD5hZG9iZTpkb2NpZDpwaG90b3Nob3A6Y2Rj
+MTNjMTYtZWExNi0xMWRhLWIzODgtZDk4YmZmNzdhNmNlPC94YXBNTTpEb2N1bWVudElEPgogPC9y
+ZGY6RGVzY3JpcHRpb24+Cgo8L3JkZjpSREY+CjwveDp4YXBtZXRhPgogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0ndyc/Pv/uACFB
+ZG9iZQBkQAAAAAEDABADAgMGAAAAAAAAAAAAAAAA/9sAhAAEAwMDAwMEAwMEBgQDBAYHBQQEBQcI
+BgYHBgYICggJCQkJCAoKDAwMDAwKDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQQFBQgHCA8KCg8UDg4O
+FBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wgARCAAq
+AKkDAREAAhEBAxEB/8QAmAABAQADAAMAAAAAAAAAAAAAAAUBBAcCAwYBAQEBAQEAAAAAAAAAAAAA
+AAABAwIEEAACAQMDBQADAAAAAAAAAAAAERUBBAVAAwYQMQIUNmAhNREAAgEDAQILCQAAAAAAAAAA
+AQIAMgMzBEARITFBUWFxIrQFdQYQIIGh0RITkzQSAQEBAAMAAAAAAAAAAAAAAAFAIFBgIf/aAAwD
+AQECEQMRAAAA7F5sqvIKQAAAApAAUhSKOkuQEAAAAADBkAAVL6XgAAAAAAAAACCXgAAAAAAAAbyf
+W66bbrjeWV4AAAAAAAA8pz0fbf32jiOON4AAAAAAAA3XPQ9vQB//2gAIAQIAAQUArX9sYxjGMYxj
+GMYxjGMYyvVCEIQhCEIQhCEIQule+lr30VPGtSlKUEV76GlGU6176Hx79f/aAAgBAwABBQBCEIQh
+CEIQhCEIQhCEL8ApRlPGgqaOtSlFqf/aAAgBAQABBQDjOYvtrjc5kScyJOZAnMiTmRJzIk5kScyJ
+OZEnMiTmRJzIk5kCcyJOZEnMiTmRJzIk5kScyBOZE4dY23nxGPtT0LUjrUjrUjrUjrUjrUjrUjrU
+jrUjrUjrUjrUjrU9C0I61I61I61I61I61PQtThvx+l4b8fosZibjKblrx3F23jGY04b8fodnZ8t/
+es7Xasrbpw34/Q4T+t1//9oACAECAgY/AGZmZmZmYjH/2gAIAQMCBj8A6r5xZj//2gAIAQEBBj8A
+8HtojFE0GlVT0CyoEoaUNKGlDShpQ0oaUNKGlDShpQ0oaUNKGlDShpQ0oaUNKGngLsm9m8N0ZJ6T
+YSYxMYmMTGJjExiYxMYmMTGJjExiYxMYmMTGJjExiYxMYmMT0/5Zou7ps3p/yzRd3TYytrsWlrun
+iHQOcwfda/PcHCXu9rf8OL5T+Ox+pPpPT/lmi7umxW7Fvhe6wResndLemsjciDcTznlJ6/b6f8s0
+Xd02LS8WTl6j7n//2Q==
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/sidel2.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QOdRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA2OjA1
+OjIzIDAyOjE2OjAzAAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAABSgAwAEAAAAAQAAACoAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAACbwAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+ACoAFAMBIgACEQEDEQH/3QAEAAL/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AOo+1XeCX2q7wV/0a/BL0a/BMWtD7Vd4JK/6Nfgkkp//0O6SWv6FH+jb9wS9
+Cj/Rt+4IUinISWv6FH+jb9wSSpVP/9H1VJJJJSkkkklP/9n/7QhGUGhvdG9zaG9wIDMuMAA4QklN
+BAQAAAAAAAccAgAAAgACADhCSU0EJQAAAAAAEEYM8okmuFbasJwBobCnkHc4QklNA+0AAAAAABAA
+SAAAAAEAAgBIAAAAAQACOEJJTQQmAAAAAAAOAAAAAAAAAAAAAD+AAAA4QklNBA0AAAAAAAQAAAB4
+OEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAAAAAAAAAAAQA4QklNBAoAAAAAAAEAADhCSU0n
+EAAAAAAACgABAAAAAAAAAAE4QklNA/UAAAAAAEgAL2ZmAAEAbGZmAAYAAAAAAAEAL2ZmAAEAoZma
+AAYAAAAAAAEAMgAAAAEAWgAAAAYAAAAAAAEANQAAAAEALQAAAAYAAAAAAAE4QklNA/gAAAAAAHAA
+AP////////////////////////////8D6AAAAAD/////////////////////////////A+gAAAAA
+/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAOEJJ
+TQQIAAAAAAAQAAAAAQAAAkAAAAJAAAAAADhCSU0EHgAAAAAABAAAAAA4QklNBBoAAAAAA0EAAAAG
+AAAAAAAAAAAAAAAqAAAAFAAAAAYAcwBpAGQAZQBsADIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAAAAAAAAAABQAAAAqAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEA
+AAAAAABudWxsAAAAAgAAAAZib3VuZHNPYmpjAAAAAQAAAAAAAFJjdDEAAAAEAAAAAFRvcCBsb25n
+AAAAAAAAAABMZWZ0bG9uZwAAAAAAAAAAQnRvbWxvbmcAAAAqAAAAAFJnaHRsb25nAAAAFAAAAAZz
+bGljZXNWbExzAAAAAU9iamMAAAABAAAAAAAFc2xpY2UAAAASAAAAB3NsaWNlSURsb25nAAAAAAAA
+AAdncm91cElEbG9uZwAAAAAAAAAGb3JpZ2luZW51bQAAAAxFU2xpY2VPcmlnaW4AAAANYXV0b0dl
+bmVyYXRlZAAAAABUeXBlZW51bQAAAApFU2xpY2VUeXBlAAAAAEltZyAAAAAGYm91bmRzT2JqYwAA
+AAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0b21s
+b25nAAAAKgAAAABSZ2h0bG9uZwAAABQAAAADdXJsVEVYVAAAAAEAAAAAAABudWxsVEVYVAAAAAEA
+AAAAAABNc2dlVEVYVAAAAAEAAAAAAAZhbHRUYWdURVhUAAAAAQAAAAAADmNlbGxUZXh0SXNIVE1M
+Ym9vbAEAAAAIY2VsbFRleHRURVhUAAAAAQAAAAAACWhvcnpBbGlnbmVudW0AAAAPRVNsaWNlSG9y
+ekFsaWduAAAAB2RlZmF1bHQAAAAJdmVydEFsaWduZW51bQAAAA9FU2xpY2VWZXJ0QWxpZ24AAAAH
+ZGVmYXVsdAAAAAtiZ0NvbG9yVHlwZWVudW0AAAARRVNsaWNlQkdDb2xvclR5cGUAAAAATm9uZQAA
+AAl0b3BPdXRzZXRsb25nAAAAAAAAAApsZWZ0T3V0c2V0bG9uZwAAAAAAAAAMYm90dG9tT3V0c2V0
+bG9uZwAAAAAAAAALcmlnaHRPdXRzZXRsb25nAAAAAAA4QklNBBEAAAAAAAEBADhCSU0EFAAAAAAA
+BAAAAAI4QklNBAwAAAAAAosAAAABAAAAFAAAACoAAAA8AAAJ2AAAAm8AGAAB/9j/4AAQSkZJRgAB
+AgEASABIAAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoL
+ERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4N
+EA4OEBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DP/AABEIACoAFAMBIgACEQEDEQH/3QAEAAL/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJ
+CgsBAAEFAQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIx
+BUFRYRMicYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXy
+s4TD03Xj80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQD
+BAUGBwcGBTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMH
+JjXC0kSTVKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3
+h5ent8f/2gAMAwEAAhEDEQA/AOo+1XeCX2q7wV/0a/BL0a/BMWtD7Vd4JK/6Nfgkkp//0O6SWv6F
+H+jb9wS9Cj/Rt+4IUinISWv6FH+jb9wSSpVP/9H1VJJJJSkkkklP/9kAOEJJTQQhAAAAAABVAAAA
+AQEAAAAPAEEAZABvAGIAZQAgAFAAaABvAHQAbwBzAGgAbwBwAAAAEwBBAGQAbwBiAGUAIABQAGgA
+bwB0AG8AcwBoAG8AcAAgADcALgAwAAAAAQA4QklNBAYAAAAAAAcABQEBAAEBAP/hEkhodHRwOi8v
+bnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2Vo
+aUh6cmVTek5UY3prYzlkJz8+Cjw/YWRvYmUteGFwLWZpbHRlcnMgZXNjPSJDUiI/Pgo8eDp4YXBt
+ZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJyB4OnhhcHRrPSdYTVAgdG9vbGtpdCAyLjguMi0z
+MywgZnJhbWV3b3JrIDEuNSc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcv
+MTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIycgeG1sbnM6aVg9J2h0dHA6Ly9ucy5hZG9iZS5jb20v
+aVgvMS4wLyc+CgogPHJkZjpEZXNjcmlwdGlvbiBhYm91dD0ndXVpZDpmNmM0ZTg2Ny1lYTE4LTEx
+ZGEtYjM4OC1kOThiZmY3N2E2Y2UnCiAgeG1sbnM6eGFwTU09J2h0dHA6Ly9ucy5hZG9iZS5jb20v
+eGFwLzEuMC9tbS8nPgogIDx4YXBNTTpEb2N1bWVudElEPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDpj
+ZGMxM2MxOC1lYTE2LTExZGEtYjM4OC1kOThiZmY3N2E2Y2U8L3hhcE1NOkRvY3VtZW50SUQ+CiA8
+L3JkZjpEZXNjcmlwdGlvbj4KCjwvcmRmOlJERj4KPC94OnhhcG1ldGE+CiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSd3Jz8+/+4A
+IUFkb2JlAGRAAAAAAQMAEAMCAwYAAAAAAAAAAAAAAAD/2wCEAAQDAwMDAwQDAwQGBAMEBgcFBAQF
+BwgGBgcGBggKCAkJCQkICgoMDAwMDAoMDAwMDAwMDAwMDAwMDAwMDAwMDAwBBAUFCAcIDwoKDxQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/CABEI
+ACoAFAMBEQACEQEDEQH/xAByAAEBAQEAAAAAAAAAAAAAAAAABAcGAQEAAwEAAAAAAAAAAAAAAAAA
+AQIDBBAAAgMBAQAAAAAAAAAAAAAAABEgBRUBBBEAAQIHAAAAAAAAAAAAAAAAAAECINEyAzOTNBIB
+AAAAAAAAAAAAAAAAAAAAQP/aAAwDAQECEQMRAAAA3fkyA6y1QKrgNH12AqmQAB//2gAIAQIAAQUA
+YxiEKCEKf//aAAgBAwABBQBCFNcFwXJ//9oACAEBAAEFANuxNuxNuxM/ymf5TP8ALDMrTMrTMrZ/
+/9oACAECAgY/ABf/2gAIAQMCBj8AF//aAAgBAQEGPwChxQ4ocY0MaGNIOOxqZI47GpkjjsamSj//
+2Q==
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/menudivider.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QQnRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA2OjA1
+OjIzIDAyOjExOjMwAAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAJagAwAEAAAAAQAAAAYAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAAC+QAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+AAUAgAMBIgACEQEDEQH/3QAEAAj/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AOjwjb9ixob1GPRrj03M2fQZ/N+3+b/cRpu/d6n/AJzP/ILwFJNQ+/Td+71P
+/OZ/5BKbv3ep/wCcz/yC8BSSU+/Td+71P/OZ/wCQSm793qf+cz/yC8BSSU+/Td+71P8Azmf+QSm7
+93qf+cz/AMgvAUklPv03fu9T/wA5n/kEpu/d6n/nM/8AILwFJJT79N37vU/85n/kEpu/d6n/AJzP
+/ILwFJJT79N37vU/85n/AJBKbv3ep/5zP/ILwFJJT79N37vU/wDOZ/5BODdI9vU/m5kfP2LwBJJT
+/9n/7QjaUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAccAgAAAgACADhCSU0EJQAAAAAAEEYM8okm
+uFbasJwBobCnkHc4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQmAAAAAAAOAAAAAAAA
+AAAAAD+AAAA4QklNBA0AAAAAAAQAAAB4OEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAAAAAA
+AAAAAQA4QklNBAoAAAAAAAEAADhCSU0nEAAAAAAACgABAAAAAAAAAAE4QklNA/UAAAAAAEgAL2Zm
+AAEAbGZmAAYAAAAAAAEAL2ZmAAEAoZmaAAYAAAAAAAEAMgAAAAEAWgAAAAYAAAAAAAEANQAAAAEA
+LQAAAAYAAAAAAAE4QklNA/gAAAAAAHAAAP////////////////////////////8D6AAAAAD/////
+////////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP//////
+//////////////////////8D6AAAOEJJTQQIAAAAAAAQAAAAAQAAAkAAAAJAAAAAADhCSU0EHgAA
+AAAABAAAAAA4QklNBBoAAAAAA0sAAAAGAAAAAAAAAAAAAAAGAAAAlgAAAAsAbQBlAG4AdQBkAGkA
+dgBpAGQAZQByAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACWAAAABgAAAAAAAAAA
+AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAbnVsbAAAAAIAAAAGYm91bmRz
+T2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAA
+AEJ0b21sb25nAAAABgAAAABSZ2h0bG9uZwAAAJYAAAAGc2xpY2VzVmxMcwAAAAFPYmpjAAAAAQAA
+AAAABXNsaWNlAAAAEgAAAAdzbGljZUlEbG9uZwAAAAAAAAAHZ3JvdXBJRGxvbmcAAAAAAAAABm9y
+aWdpbmVudW0AAAAMRVNsaWNlT3JpZ2luAAAADWF1dG9HZW5lcmF0ZWQAAAAAVHlwZWVudW0AAAAK
+RVNsaWNlVHlwZQAAAABJbWcgAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9w
+IGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAAAAYAAAAAUmdodGxvbmcAAACW
+AAAAA3VybFRFWFQAAAABAAAAAAAAbnVsbFRFWFQAAAABAAAAAAAATXNnZVRFWFQAAAABAAAAAAAG
+YWx0VGFnVEVYVAAAAAEAAAAAAA5jZWxsVGV4dElzSFRNTGJvb2wBAAAACGNlbGxUZXh0VEVYVAAA
+AAEAAAAAAAlob3J6QWxpZ25lbnVtAAAAD0VTbGljZUhvcnpBbGlnbgAAAAdkZWZhdWx0AAAACXZl
+cnRBbGlnbmVudW0AAAAPRVNsaWNlVmVydEFsaWduAAAAB2RlZmF1bHQAAAALYmdDb2xvclR5cGVl
+bnVtAAAAEUVTbGljZUJHQ29sb3JUeXBlAAAAAE5vbmUAAAAJdG9wT3V0c2V0bG9uZwAAAAAAAAAK
+bGVmdE91dHNldGxvbmcAAAAAAAAADGJvdHRvbU91dHNldGxvbmcAAAAAAAAAC3JpZ2h0T3V0c2V0
+bG9uZwAAAAAAOEJJTQQRAAAAAAABAQA4QklNBBQAAAAAAAQAAAACOEJJTQQMAAAAAAMVAAAAAQAA
+AIAAAAAFAAABgAAAB4AAAAL5ABgAAf/Y/+AAEEpGSUYAAQIBAEgASAAA/+0ADEFkb2JlX0NNAAL/
+7gAOQWRvYmUAZIAAAAAB/9sAhAAMCAgICQgMCQkMEQsKCxEVDwwMDxUYExMVExMYEQwMDAwMDBEM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQ0LCw0ODRAODhAUDg4OFBQODg4OFBEMDAwMDBER
+DAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAFAIADASIAAhEBAxEB/90A
+BAAI/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwABAgQFBgcICQoLAQABBQEBAQEBAQAAAAAAAAABAAID
+BAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEAAhEDBCESMQVBUWETInGBMgYUkaGxQiMkFVLBYjM0
+coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0NhfSVeJl8rOEw9N14/NGJ5SkhbSVxNTk9KW1xdXl
+9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEAAgIBAgQEAwQFBgcHBgU1AQACEQMhMRIEQVFhcSIT
+BTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTxJQYWorKDByY1wtJEk1SjF2RFVTZ0ZeLys4TD03Xj
+80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9ic3R1dnd4eXp7fH/9oADAMBAAIRAxEAPwDo8I2/
+YsaG9Rj0a49NzNn0Gfzft/m/3Eabv3ep/wCcz/yC8BSTUPv03fu9T/zmf+QSm793qf8AnM/8gvAU
+klPv03fu9T/zmf8AkEpu/d6n/nM/8gvAUklPv03fu9T/AM5n/kEpu/d6n/nM/wDILwFJJT79N37v
+U/8AOZ/5BKbv3ep/5zP/ACC8BSSU+/Td+71P/OZ/5BKbv3ep/wCcz/yC8BSSU+/Td+71P/OZ/wCQ
+Sm793qf+cz/yC8BSSU+/Td+71P8Azmf+QTg3SPb1P5uZHz9i8ASSU//ZADhCSU0EIQAAAAAAVQAA
+AAEBAAAADwBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBoAG8AcAAAABMAQQBkAG8AYgBlACAAUABo
+AG8AdABvAHMAaABvAHAAIAA3AC4AMAAAAAEAOEJJTQQGAAAAAAAHAAUBAQABAQD/4RJIaHR0cDov
+L25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENl
+aGlIenJlU3pOVGN6a2M5ZCc/Pgo8P2Fkb2JlLXhhcC1maWx0ZXJzIGVzYz0iQ1IiPz4KPHg6eGFw
+bWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycgeDp4YXB0az0nWE1QIHRvb2xraXQgMi44LjIt
+MzMsIGZyYW1ld29yayAxLjUnPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3Jn
+LzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnIHhtbG5zOmlYPSdodHRwOi8vbnMuYWRvYmUuY29t
+L2lYLzEuMC8nPgoKIDxyZGY6RGVzY3JpcHRpb24gYWJvdXQ9J3V1aWQ6ZjZjNGU4NjUtZWExOC0x
+MWRhLWIzODgtZDk4YmZmNzdhNmNlJwogIHhtbG5zOnhhcE1NPSdodHRwOi8vbnMuYWRvYmUuY29t
+L3hhcC8xLjAvbW0vJz4KICA8eGFwTU06RG9jdW1lbnRJRD5hZG9iZTpkb2NpZDpwaG90b3Nob3A6
+ZjZjNGU4NjMtZWExOC0xMWRhLWIzODgtZDk4YmZmNzdhNmNlPC94YXBNTTpEb2N1bWVudElEPgog
+PC9yZGY6RGVzY3JpcHRpb24+Cgo8L3JkZjpSREY+CjwveDp4YXBtZXRhPgogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0ndyc/Pv/u
+ACFBZG9iZQBkQAAAAAEDABADAgMGAAAAAAAAAAAAAAAA/9sAhAAEAwMDAwMEAwMEBgQDBAYHBQQE
+BQcIBgYHBgYICggJCQkJCAoKDAwMDAwKDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQQFBQgHCA8KCg8U
+Dg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wgAR
+CAAGAJYDAREAAhEBAxEB/8QAfQABAAMAAAAAAAAAAAAAAAAAAAIFBwEBAAMAAAAAAAAAAAAAAAAA
+AAECAxAAAgMBAAMAAAAAAAAAAAAAAAEREgUVAgMGEQABBAIBAwQDAAAAAAAAAAAFAJPUNgECAxEh
+BDFhEiJiJCYSAQEBAAAAAAAAAAAAAAAAAAAxQP/aAAwDAQECEQMRAAAA3zClugAAAAAAACR//9oA
+CAECAAEFAIIIIIIIIIIIIIIIIIIIP//aAAgBAwABBQB+SLIsiyLIsiyLIsiyLIsiyLIsiyLIsiyP
+/9oACAEBAAEFAPk8fQ9vyvE0jiaRxNI4mkcTSOJpHE0jiaRxNI4mkcTSOJpHE0jiaRxNI4mkcTSF
+i6KX/9oACAECAgY/AMf/2gAIAQMCBj8AiIiIiIiIiIiIj//aAAgBAQEGPwAHyaH/AD+HTcf4m2vD
+pp4GdNMZ4NPrr8/E226Y/LbbPurIRbHQ1ZCLY6GrIRbHQ1ZCLY6GrIRbHQ1ZCLY6GrIRbHQ1ZCLY
+6GrIRbHQ1ZCLY6GrIRbHQ1ZCLY6GrIRbHQ1ZCLY6GrIRbHQ1ZCLY6GrIRbHQ1n+iIZ6+mc8Y/t36
+9v01/9k=
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/metodologia.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QlJRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAMAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAAAcAAAAAQAAABwAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA2OjA1
+OjIzIDA0OjAyOjE1AAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAHqgAwAEAAAAAQAAABUAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAAIGwAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+ABUAegMBIgACEQEDEQH/3QAEAAj/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AOVqyXYf1qGbw3G6gHud20tL4P8AWaxyXWsl2Z9Z8rM5Zdmv2Hya/wBg/wC2
+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
+/wPoAAAAAP////////////////////////////8D6AAAAAD/////////////////////////////
+A+gAADhCSU0EAAAAAAAAAgABOEJJTQQCAAAAAAAEAAAAADhCSU0ECAAAAAAAEAAAAAEAAAJAAAAC
+QAAAAAA4QklNBB4AAAAAAAQAAAAAOEJJTQQaAAAAAANNAAAABgAAAAAAAAAAAAAAFQAAAHoAAAAM
+AFMAZQBtACAAdADtAHQAdQBsAG8ALQAxAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA
+AAB6AAAAFQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAbnVs
+bAAAAAIAAAAGYm91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAA
+TGVmdGxvbmcAAAAAAAAAAEJ0b21sb25nAAAAFQAAAABSZ2h0bG9uZwAAAHoAAAAGc2xpY2VzVmxM
+cwAAAAFPYmpjAAAAAQAAAAAABXNsaWNlAAAAEgAAAAdzbGljZUlEbG9uZwAAAAAAAAAHZ3JvdXBJ
+RGxvbmcAAAAAAAAABm9yaWdpbmVudW0AAAAMRVNsaWNlT3JpZ2luAAAADWF1dG9HZW5lcmF0ZWQA
+AAAAVHlwZWVudW0AAAAKRVNsaWNlVHlwZQAAAABJbWcgAAAABmJvdW5kc09iamMAAAABAAAAAAAA
+UmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAAABUA
+AAAAUmdodGxvbmcAAAB6AAAAA3VybFRFWFQAAAABAAAAAAAAbnVsbFRFWFQAAAABAAAAAAAATXNn
+ZVRFWFQAAAABAAAAAAAGYWx0VGFnVEVYVAAAAAEAAAAAAA5jZWxsVGV4dElzSFRNTGJvb2wBAAAA
+CGNlbGxUZXh0VEVYVAAAAAEAAAAAAAlob3J6QWxpZ25lbnVtAAAAD0VTbGljZUhvcnpBbGlnbgAA
+AAdkZWZhdWx0AAAACXZlcnRBbGlnbmVudW0AAAAPRVNsaWNlVmVydEFsaWduAAAAB2RlZmF1bHQA
+AAALYmdDb2xvclR5cGVlbnVtAAAAEUVTbGljZUJHQ29sb3JUeXBlAAAAAE5vbmUAAAAJdG9wT3V0
+c2V0bG9uZwAAAAAAAAAKbGVmdE91dHNldGxvbmcAAAAAAAAADGJvdHRvbU91dHNldGxvbmcAAAAA
+AAAAC3JpZ2h0T3V0c2V0bG9uZwAAAAAAOEJJTQQRAAAAAAABAQA4QklNBBQAAAAAAAQAAAACOEJJ
+TQQMAAAAAAg3AAAAAQAAAHoAAAAVAAABcAAAHjAAAAgbABgAAf/Y/+AAEEpGSUYAAQIBAEgASAAA
+/+0ADEFkb2JlX0NNAAL/7gAOQWRvYmUAZIAAAAAB/9sAhAAMCAgICQgMCQkMEQsKCxEVDwwMDxUY
+ExMVExMYEQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAQ0LCw0ODRAODhAUDg4O
+FBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAV
+AHoDASIAAhEBAxEB/90ABAAI/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwABAgQFBgcICQoLAQABBQEB
+AQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEAAhEDBCESMQVBUWETInGB
+MgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0NhfSVeJl8rOEw9N14/NG
+J5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEAAgIBAgQEAwQFBgcHBgU1
+AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTxJQYWorKDByY1wtJEk1Sj
+F2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm9ic3R1dnd4eXp7fH/9oA
+DAMBAAIRAxEAPwDlasl2H9ahm8NxuoB7ndtLS+D/AFmscl1rJdmfWfKzOWXZr9h8mv8AYP8AtvYp
+XY/qnr9kT9neLPhOSyj/ANHKD6PTwOkWnU5N11hPcxZVT/6JV3Tf/B/7pqeH1/Y+h/WH/GPmYfWr
++k9Iwq8l2I17r7bXEA+lW7IydjGln8xXW/8AP/M/m1V6v9e8zqv1Jt6h05j8PMpya6co1vj02ul7
+bq3+1zmWuaynZ/LXM9QxBl/X3qeO+2yhhszXvfUYeWMpvufWJ/NvrZ6L/wDg7EXGHTv+Y3Wzgevs
+9fE3+vtmd5+h6Sj4IgR019P4snHI8Wv734O70D69dT6b9UruodUqfluFwqwr7LJNz3+o61j/AKT6
+68VtX9verXRf8ZuZf1TEwer4NePXn7PQuqcdBadtLntcX+x7/wCVXsXKZwP/AI23TT2/aFv/AFNi
+rQT1z6ugCSa8IAD/AIxLgib06n8EcchWvQfi9j9YPr/n2dW6h9XsLAZdU2u+l7y/bYdlVj77W7or
+21NbY/0/8JsWR/i36xR0TpP1g6ne0vZjtxSKwYLnOORXWyf5T3KnZ/8AlC6p/wC1H/22ylQ6OD/z
+P+sXk/An/ty9HhHDVb8F/ariPFfbi/J6vF/xsZ7Lce7qXTq2dPyXEMsqed4a07LHwd+/0/3dlSoW
+kO/xuNc0yDksII4j0Wrluof8h9J/9CP/AD41dKwEf41KQRBF9QIP/EMS4QLIFemX4K4ias3rH8XX
+6l/jTz252ZX0vAruw8CTbba47nMFjMb1WhpZsa666trf536a08//ABjV1fVSjruJjB1+Td9n+zvd
+LWPaHPs3vbt3t2t9v/GLzTEBFX1gB0IxR/7fYCv5DH/+Nziv2naOqWaxprV/5igccNNOoChklrr0
+eoZ/jS6sMjBou6ZVUc1tbg/1CZbY91Ytra36LdPoPQOl5fTh/jPsrGHsyG5GVOUbXHiq9z3ej9D3
+NXKXZNGR1HoIpeH+jTjVWR+a9try5h/zlvdNLW/4173PG5oyMwuHiPRyJSMAAaFemShIkizfqDo5
+P+NfqT3X5XT+nVu6bj2MrdZa47/0nqejuDSNnq+hb+ZZsWl/47HSP+47v6L6/wBMfz//AHC+j/4N
+/wCArz3LyrepdMzsvHqp6fg03Y7XYWO2A9zxk+g+yx0vf6LK7v8At1YaPtw/d8Fe5Lv4v//Qlif8
+x/8Ash2/tOPRf9u3+hx69f8ARNn5/wBo2bPW9npoed/zF/ZvQfU/anobLfsWz0N38+/1ftW/877R
+v/mf8GvLElPrf6e/h+6w6f1f5F9c+vI+o567Z65zW9T2/rR6eGFv0Pd63ruZ7/Q/nPS/M/nlo9P/
+AOYf/MTK9L1f2XuH2v1I+1etLPS3en7fV3en6fp/oP8AwVeJJIa8Mfn6J/Sl8vV9S6d/zB/YPUPU
+/an2DdVH2n0p9abPT+weh+j9fb6nq+p/g1L6nD6hjr+LsOe7LkfYvt4rFW//AAW37O536T/Q7/0e
+/wD4ReVpJxupfP8AggVY+R9W+sf/ADC/51Zf2k9Q+0+/7UMUM9L1NjvWhxP2j/jf8Fv/AOB3qz9V
+f+Yv7D696P279n+nR9v+2+nMTd9n+zfZP8J6n7/+E9JeQJIG+EfP07KFcR+Tq+jdHH+Ln9qYxuPU
+jT6n6EZYqGODP+FdQ42env8A/Uy6G3/mn/44w3ftD9seu3j0fsu/027f+7Gz014wklK7Pz/KeyhV
+fo7h9L+sY/xfHrWZtPUg7e77WMMVGku3j1Nn2hzXt/Tf9Z3/AM2uh6yMb/mHj/8ANQ1jBD/0gyBj
+lhb7vV+1/tMhrb/W2/Q/Sep9D9GvE0kjfp+bcfP8qh+ltt+j8z2rw49f6R+0XY7a9tEHpwrc2N7t
+HClzMb7R6u77R6fsXY9P/wCaP/jh2en9v/a3rZO/1fR+ybvTu+0cfrHpen6nprxlJOn9flPy7Ih9
+PmHzbvoLv/G425e09XNPqN2isUho1fs9Pef6+37R+l2f9cVf/wBdr/5u/wD2VXDJJa/6z/mq0/qf
+i//ZADhCSU0EIQAAAAAAVQAAAAEBAAAADwBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBoAG8AcAAA
+ABMAQQBkAG8AYgBlACAAUABoAG8AdABvAHMAaABvAHAAIAA3AC4AMAAAAAEAOEJJTQQGAAAAAAAH
+AAUBAQABAQD/4RJIaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49
+J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pgo8P2Fkb2JlLXhhcC1maWx0ZXJz
+IGVzYz0iQ1IiPz4KPHg6eGFwbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycgeDp4YXB0az0n
+WE1QIHRvb2xraXQgMi44LjItMzMsIGZyYW1ld29yayAxLjUnPgo8cmRmOlJERiB4bWxuczpyZGY9
+J2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnIHhtbG5zOmlYPSdo
+dHRwOi8vbnMuYWRvYmUuY29tL2lYLzEuMC8nPgoKIDxyZGY6RGVzY3JpcHRpb24gYWJvdXQ9J3V1
+aWQ6Nzg2N2Q2ZGEtZWEyNi0xMWRhLThiYmItZGM4YTEzYjEyYWZlJwogIHhtbG5zOnhhcE1NPSdo
+dHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vJz4KICA8eGFwTU06RG9jdW1lbnRJRD5hZG9i
+ZTpkb2NpZDpwaG90b3Nob3A6Nzg2N2Q2ZDgtZWEyNi0xMWRhLThiYmItZGM4YTEzYjEyYWZlPC94
+YXBNTTpEb2N1bWVudElEPgogPC9yZGY6RGVzY3JpcHRpb24+Cgo8L3JkZjpSREY+CjwveDp4YXBt
+ZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94
+cGFja2V0IGVuZD0ndyc/Pv/uACFBZG9iZQBkQAAAAAEDABADAgMGAAAAAAAAAAAAAAAA/9sAhAAE
+AwMDAwMEAwMEBgQDBAYHBQQEBQcIBgYHBgYICggJCQkJCAoKDAwMDAwKDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMAQQFBQgHCA8KCg8UDg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAz/wgARCAAVAHoDAREAAhEBAxEB/8QAywAAAwEBAQEAAAAAAAAAAAAABQYH
+BAgDAAEAAwEBAQEAAAAAAAAAAAAAAgMEAQUABhAAAQIEBQIEBAcAAAAAAAAAAgEDEwQGCAAREgUH
+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
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/mascaraPassaBaixas.gif
+
+R0lGODlhjgBnAMQAANT//3IAm//quv//1Oq6cur//5sAAAAAm+rU1HKbm7rq/5sAcpvU/wCb1HIA
+AAByunK61NSbAHK66v/Um7pyAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAACOAGcAAAX/oCWOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRK
+rVqv2FFly+16v+CweEwum8XKClD9Y/vcRzhPvqPr7EM8Tn/j2/xta4KBSYA0hjOIMop1g2+OcZBz
+kkWMAgEALZaYmjCXmSyMdy8DBgegK4qlp50uq6gqojmIBBUJnKEutbewKbS2uKlpLggFn60sxce5
+LcrBscMvy8LSz76e1iiye9i92t3ILdPQheDMLuPX1d4n233m1OjZ7fDkSJvsJvjhLOnf5ev4rfBH
+L+C5SIQeJUSosGEPd38ojVpoBGK8hxLzZORGsdLGdx2JWLSHMaRGkxwd/1Y8w7Kly5cwo6lshDLI
+SHUzJ977GLEmzxo3/+U8OTRlyZ0+gf4sCpJpT6Ty8pXYd7DfPH0yWbwSmGJrVRVeL1bUBUwqiV+8
+uJ7YdXVqVhXOzGohZqztWboEsQKMqhZFXrcGxab4C4OqYBWE5wYm2dWUXBeGGQ+0q5jvVxNsH/c9
+kVhEZJziKHtOVlfz5cGiLXwWGlozos6bTcBeXdDyYc6pTxudlFREYjV+gtY+ShyxaEDC9TpV2lp3
+5eI0l/umDPz27ujQRS5NxBPMdZ3ZZ73Fzlv6Q5jo06t3OR58+fBCkgM2v6i9+N7cBzqo8KDAffox
+yHcXWAZIYAEBDfwHX+dTC1pwzAALKPCdgu9VKBsnEErIoIXukWdCKQwcWEGIG07mWj2gWXWifhVA
+QAGJT2nlWGwkhCVZY6w4V0KGE2JWFo0iZAakiGnpSAJs1pUQ15BLGilCk0lawGMECfaI24q23Yga
+lilMsEV/FJo45HRcqjimh8aVKaaTI8xmn1+p0aZcc2xyuOWZbi6Wokd6smZmnQ7G+WaJHRZKVIPM
+AWiolTHaGd929eHnKKFhLmoTpAFiammjaFZ66KScbtrGeqSWaqqAWaSq6qqsturqq7DGKuustNZq
+66245qrrrrz26uuvwAb7QggAOw==
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/equacaoGradiente1.gif
+
+R0lGODlhfQBeANUAAACb1P/qutT//+r//5vU///Um///6v//1NSbAAAAm7rq/7pyAHK66gByuuq6
+cpsAAHIAAAAAcuq6m3IAm7qbuptyunIAcur/6nJyutTU6psAcnK6utTUutS6ctTU1Jubcuq6urpy
+curU1NT/6rq66pu66tT/1HKb1Lpym9SbmwAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAB9AF4AAAb/wJVw
+SCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16h6pweCoef8/nsopcRru75mv8TbfOwffV4aFiFPN1gU95
+a0KFQgcaCgUNA0SAgpFKkIZECH5HlJKbj4eZQwUJAkianJyAY2sGC2GimZ6msXhGhXEIAEmlsoJ3
+noV7BLmwu6a9j0IBE6Okw8SbxpVCDo3CzrvQK4WrmMzWsoRxARYKk83egboOuOXnxeYr6snL1e3P
+7wUqrku69V78TP/6bQnITiCvd1AI+msjRU2VOGoiSuz0jWEUh1QUdosFCYEYAAYoONrIJotGLnnw
+UVuBj9urhwgHxXxzB18wIg5ukmw4s8nJ/4GeAkBYR0QCOXolsfzUMgeBvoQ9d3aKutTkoVUrV4l5
+SivqS1pgfHr9EmcPUSEt9439E7NnVaWHzBZxwPVr0lxiK1qKcHTFqrNSoXZTgY8vSxUrDa2F42mP
+PqE6kfL8lK2QOnV2Tw3zKGblrVDzFMMEG3aFUJcUOY7tcCLzxWG+hKyKnNodFKOuBf8pvULCB8Cz
+VD85EIK26IywSxdgEADDANy12Uo0w9m4TCfJTDxAXXl01zUOVODSyp1Ss0KXViBI/Nqqdznvzut5
+YL093Pd2EMIqBPm+/7v5TbJbeGEYxgxG0eGHB4IJIrcPb/3B556D/5ECIQT1LWhRcBJ+t/8hhwE+
+GBSGFSqoW4cCjpjhdSWeGOKDRET44oz2oSggKB/ZaCKL0hmxRx9s6XUEZ+KFNFJuPPLWmCKMHNmd
+cEWoNFJaktVImRDpIXlQlCrQllNBAJLGUl0g2hPjUEZAF1iSs6jCSj6hlSlJU2QCtJictRxyS5Vz
+XrVAVm/CySebsc2X4VsoykUElYM6gU02yCjTKDpxPQAYXXF2peAhh0zjZJBQYmmgXwsApymFSsq2
+AHcNRjKHY8vIOKmd3w0hTl9aUmoEkYg58tcBFXy6VDqmtrqlE8AOIIKwdx53RDySgqnZEyFdkMGp
+YS4qqFpCNmEAChzg6uxkLbo61p7YkqvJY59OpDDCtbnSWu6xTCAwKqh3TaevL80y1a+xec2rq8Dy
+rmuuGGwgjCqNfSr8msPqMmwQGog+OTEdqARU8cUFpxowx25oQtW/IH98JbclU3zeGmt4RE2T+Ka8
+EGlmgOaXSDHLjNJ+x5g2jh4kpKszULuVBswKIGS68dAJcjoEMAGUEC/TYTqt6gbBTk21lYp5skqd
+Fm9NMBEeSCu2xLZicMECKy69tSZC3av12SbvSDfXC9+d7d56ywSx325TzSDgJPdt+OGIOxMEADs=
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/equacaoGradiente2.gif
+
+R0lGODlhBgEhANUAANT//5vU///quv//1P/UmwCb1Lrq/+r//3IAANSbAAAAm///6psAAOq6cnK6
+6rpyAAByugAAcnIAm5sAm3IAcrqbuuq6m5sActTU6ptyutS6urrq6tSbcnKb1Oq6utT/6tTUutS6
+crpym9Sbm7pycur/6pu6uurU1NT/1Lq61JvU1HKbmwAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAGASEAAAb/wJZw
+SCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otDrJarvf8Lh8Tp+v7/j8l6Xv+/+AUHyB
+hEODUoeFilGJSQMMLA5ej5GLhlSNlppsTR4AAxMAXZ6golOZTahKqkysm68trkYcBmC0mKeMuEZ1
+iZSSfaC9QwltAS2lXo3FbQULFQdDGtFUzCzO0NLUiEbW2NtCsrzdbt/jR6i+FwYEEOBrBAqi6cSS
+Ce4tAhS1XIcELPha/AMm8NiUfwEHDiFgMNdCgNQUFhE3kQjCiJXOaSSSKAFBPclioRPyqOEQARJM
+aRn0z2SLBgYJFFiVpGURmEJkWvHHwiXO/4ojgwrsedNlOE4cLcr74zGp03wIjL6cuVKIAARUiVio
+1cCNVJFHrmYdsvWlVzasBok1UhboRqdri7R1+3bQggdtlqKLU4RAhA14nQUW0rVZzjd6B6x7etRs
+mwj8TqacyDeVkAR6d3XL7HBQo0GYVS5RRfoy59E0GxMbG+UqC8j/YEO+esyvgZIvAwo8fSgR7SO4
+s/C5G/Cum9OU4RAhTs14XtGr+LQZx1yIcxa8k7+pWL3FdeSuehMJjkROkd/o9w3pOls9SpUNsquG
+KvXRx1iVWyFjwFqiZSOP9JfRf55VFGBfAzKm4CUHWpTgghU18p4V6EVFn1kO6GPAXZK0s/9NfNCJ
+JKGFADJwXxV8NLgeckgVoSJhLLaSSYr83cRiaSO9+FKMskh3k25TVHgMbfGIouFQ2IlW5Dgj1sfA
+V9y0kABkQ9zFGmpHTBmZlf1cRqV1D1w5H4RgaVllmC2m6d0DJ7ZmoZC2vQRZSC4u9taFRkyISCKH
+PKLXb1j4aQqgVe33J4l3YimoVYgmSlc+6lVBCQsmINBGpa8B1sYKlqoAiRsfNfXWP4bdJKZ+fBZh
+DUSXFbDkFKviY+UAGbwjCBGxUpOAq0tRxFiuaxZAKzW+EtHAqWIskIJkKikW2RR0OgRWEyF08MWw
+J9j6hK/VXnIrE9gS+8SxeqLRQEAN3HeaJLRPXiGeE3Nx8UwJGOwEb2TFjonEvPXqW1OSa1zXZrRO
+ECytrwOQAKUVC4gAwrNRLpFwQ/lOq0TDD3sLCywFMoESCiZ+sau7HksAMjAV+zqyxhtv4qMeI3zQ
+r70ROyFOzDP723IhL+dhJsk1/6fEzyzvbMl0RutRcdFJK7J0011KC/XUVFdt9dVYZ6311lx37fXX
+YIct9hRBAAA7
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/mascarasPrewitt.gif
+
+R0lGODlh2ABTAMQAANT//3IAm//quv//1Lrq/5sAcgCb1AAAm9SbAOq6cpsAAOrU1HKbm+r/////
+6rpyAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAADYAFMAAAX/YCSOZGmeaKqubOu+cCzPdG3feK7vPA/9wKBwSCwaj8ik0shaOp/QqBRC
+ovZE1mu2t0V1d19dOLcd48w3tE0dYdPcM7isfMXW23e2PLaH9V90dX8ugy16eYiCVYlajCmFTY4+
+i4qVjSuQmJJglJeeXJGWoKJ/AgEAmjGmqCqlp6mtMquwKw4PEAestCyzoXYwAwq5uyzBw7HAwrpe
+vi7GyydwCAYR04Yvz9cjewkQDK/ILt3f0Cbc3uCPzSzj6czFBQQRveEr7eXRnS0LDfTvLvz85XsR
+0N3AeiwK4tOXYtaAeOtSKNT2C4ZAc7IMYlSlscQhjgu3tXAIkZiKiwfx/4A0uQIlw5EdX260GFMk
+r1cP5bFE4dKjTBLdIFAT0bMiiqBD59U0egLpiKIqEZpwSnRp1JM4S0rFGlKfq65XXUD9utMmTbBu
+cioFG7alVaNkt7pFm5FuWZ5WpVGzFpErxbY37Z69e2Js37mERQTDxRZww7dXM8k9s2nmqE+TzF7e
+nHlymspkflIW1VkdaU6kQI/GnLK0a9RMYXOW/W+2GEeSTbO+nTiO6s+aX/Pe7fP08M25awsP3XvO
+7zVVpkifTl1Jk+rYs1cXDZz4at22mX9K3pq2ecvLv5cmj/68ePDpuyN/XoN9cc/Qjb+3zz2/9+Du
+qScbfwAeF19sBgYoH/+BCL53oGMCJngcHLYw9pcKFR7TW4aNfTQYfiNweCFizehVTVIgimANX72t
+iCJ85a2QTYon1njYCTPSkhZEUEFIglo97ihPkDc2hY5gKgD5Fhz3/OUGSTqlCGWRT2UVJYztqTCR
+lFZSOcKWOsKEilqJTVlml4TFhaUJZtJYVYf9vRkBmVyOqdWaJbSJZ4Ek7lmlnVcq12c9T6JZ55x3
+ClqYoX76GAFVa50JqJck9BhZC0qyJWSkiWXqpZqKmuBpc5yG2YKLI6KAKqU1sggiqDGesCqplgZS
+jAIWsrqYhjTuCiepcvaKK6+NVgqZreFF6GCsyja7IH1v0Mego/XhBq3/b/rFGW22z3LrX7J8Ovvt
+etc65y212/737bTsSlsuH9aemy64DYpbbWryYqsuuvrSey8W2gUssBPXDWzwwUJo2++D84Zqb8MD
+vuuHu/maO57EgFC8L8QTYkyIxv5yvJ/HqS6bpckof9duxfACmzHLE4crH8MLMzuzgut+SOuxOr9a
+14a3EOvwor/WK6oyJeOINKtzLp1mDDkOTcKsbkYNHpNHJl1Ck6xy/fQLXkutGI9LipN1iQD1w/M+
+ahe9Apg+E9S2pIgGajMJcF/dc7F/as3m2m72fSidfAdrqliAi+l3nomL/TeSj026s9t71Lq344J/
+nQKkhgVWN9OlEnr5jd2Mu+35pz+nOGrglsv8+OLGmj5oo7CebALVhYeu9wutIy67X6ivJGyukztJ
+MugxB558yP2uvHHNtt8s4cgwv7yv88xbzK/2NHNPusgPN3+8yx+TDzv01D/v/fQKr59yt+q3fP34
+ylu/vfzZ44+5++Frj/D/CCsYAAeYnTsY8IAITKACF8jABjrwgTsIAQA7
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/mascarasSobel.gif
+
+R0lGODlh1wBTAMQAANT////qunIAm///1Lrq/5sAcgCb1Oq6cgAAm9SbAJsAAJvU/+r//7pyAP//
+6gAAcnKbm+rU1AByuv/Um3IAAHIAcgAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAADXAFMAAAX/4CWOZGmeaKqubOu+cCzPdG3feK7vvG79wKBwSCwaj8ik0rhaOp/QqNRC
+ovZE1mu2tz11d1/fFVsdX8I5NE5NHrNt79o2TqPP7LI3PraH9V9zZn8ugy16gohuZYqMWk2Jjo1n
+kFyUXpZglIUsm4+Sl5+Zkn8BAgCeLgEUPwuoL6WnKocxsK4qDg0WCLG2K7Wciy8DCru9KcOtEw8E
+sjHDxc3RwsS8KHYJBhfYhtPQrnsHFhCmxigTEgwXuK0p4OLk0tYw4ePVoCsDBcy/8Sr08N9gRGDA
+T54MZP1WDCx4z6CLhQAdqqiVj1k5ExDtSSQVseGLA+gSsmBoYhYMkiXo/1DUB+xVx40yUAb76E1i
+qpcpL6aQOUIluYotb2ps+CachWwieLZJYRTpgWVBUTQdoXSSSBJTk+KcufMnS50mqi61enJrz3k1
+28U0O9Zji6p0gIrdI5asXaFgSQSoYDEq3qtnabG9m2LbNr++Bo/lOJSrigRC2Nl8O9iky8aBWQzT
+hdnxRMV2OwG+IVrtaDiYxGSuFEq16UiwWbcVFZuHZdup03jW3Zr3a9nAca8WXpv2ZNfBjZc+7jt5
+zt5rNOWODn02cuLAl7u9bnx7c+zYp4gfT35Jk/Lo05ffTb049+fuvyufTpo+4ffykWsvaV9O3jr9
+AThcdwTiN6CB9Y0S4P8d9u0Hn3PNOchegvEdmN+F7d2HIYUQWpghePO1gAtn3IiYS1rMmTAiit55
+eIIqrPynzomduajXKhZIFs812Rwmo2FI/dhjkKfhgZAyfbVYApAl4qNAMlAFpBlLc7Ugl2JxUYml
+jBeck846p4lwZY0aluDljDrCNJJXSaaoF5uIvQgnWIMg9FtXpwDFpZhPRuVTnl+FecFKbSpJ1ZxF
+zgBSOneiQGic/oQkZWKAFsrfmpVCWsKjdMpwAIsTHprpnp+SGRplowrKqaqINvrgCVk9Zemrjrbq
+ZgmyEhKqmFqSmeU+W04JrK+kgkrrCWNqiquxl1p3ApPKkgCtkNoQ6er/rlTxpWsL06qqLSDYXrAZ
+szaOMK6pdpzb5K3SRiaouAqQGK0IkAWRJlEL5tFgvnxIVx1q/0pYroCxCezshwWGq++//g3MIMME
+sxsxiPrx68e+ED9csMXgBszxthtnvHCFB3NIcYQfr3uywyN3yKF6MMf8xHky12yzEAr3K7LO1yKM
+IMAlA+2y0IY2TLLQBpdpcsIs8zy00UoTzfTSx24odcU7X+xx1h2HfDTUKwcN9tRIpzzvxM0+jTbW
+f8kIY44qUxp31Z/VaMeK6JaVN8vP7O0klLMq3PfcOcNLLo/VEo4sNeva8Y/fKpwJpoyPKy42Vu/Y
+bWWvZ19QuZ8PEQRa5x92vpuR5VGXcDqrqfasuuiQ0zV6DIt2rhXkRYdVGariBuq67rHrjfqyuMsd
+LWP/rfr7prM3XRceuQ7/ZvF0i5DVoLtj2nvgzjd/uajSe05uzs/veft/ye5ZfvfUh/UtyLwfv5bm
+3A4Z/vmgXyZ9vUDcm7b28hMM/TQTr/GlbnqNM5v5uiYxjanNgUmLIMa+tjaUcQ1+YTugAzMINQle
+EHUepCAEFfiuluVug2TrIAmXV8GmaU2ELQvhA034vxS28GUrbCANq3c1q3XwZkC0Gc2CSMT0mOGI
+SEyiEpfIxCY68YlQzEEIAAA7
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/background.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QNXRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA1OjAz
+OjIyIDE2OjIxOjQ5AAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAASgAwAEAAAAAQAAAAMAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAACKQAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+AAMABAMBIgACEQEDEQH/3QAEAAH/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/APSkl8wJJKf/2f/tCBRQaG90b3Nob3AgMy4wADhCSU0EJQAAAAAAEAAAAAAA
+AAAAAAAAAAAAAAA4QklNA+0AAAAAABAASAAAAAEAAQBIAAAAAQABOEJJTQQmAAAAAAAOAAAAAAAA
+AAAAAD+AAAA4QklNBA0AAAAAAAQAAAB4OEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAAAAAA
+AAAAAQA4QklNBAoAAAAAAAEAADhCSU0nEAAAAAAACgABAAAAAAAAAAE4QklNA/UAAAAAAEgAL2Zm
+AAEAbGZmAAYAAAAAAAEAL2ZmAAEAoZmaAAYAAAAAAAEAMgAAAAEAWgAAAAYAAAAAAAEANQAAAAEA
+LQAAAAYAAAAAAAE4QklNA/gAAAAAAHAAAP////////////////////////////8D6AAAAAD/////
+////////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP//////
+//////////////////////8D6AAAOEJJTQQAAAAAAAACAAI4QklNBAIAAAAAAAYAAAAAAAA4QklN
+BAgAAAAAABAAAAABAAACQAAAAkAAAAAAOEJJTQQeAAAAAAAEAAAAADhCSU0EGgAAAAADSQAAAAYA
+AAAAAAAAAAAAAAMAAAAEAAAACgBVAG4AdABpAHQAbABlAGQALQAxAAAAAQAAAAAAAAAAAAAAAAAA
+AAAAAAABAAAAAAAAAAAAAAAEAAAAAwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA
+ABAAAAABAAAAAAAAbnVsbAAAAAIAAAAGYm91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABU
+b3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0b21sb25nAAAAAwAAAABSZ2h0bG9uZwAA
+AAQAAAAGc2xpY2VzVmxMcwAAAAFPYmpjAAAAAQAAAAAABXNsaWNlAAAAEgAAAAdzbGljZUlEbG9u
+ZwAAAAAAAAAHZ3JvdXBJRGxvbmcAAAAAAAAABm9yaWdpbmVudW0AAAAMRVNsaWNlT3JpZ2luAAAA
+DWF1dG9HZW5lcmF0ZWQAAAAAVHlwZWVudW0AAAAKRVNsaWNlVHlwZQAAAABJbWcgAAAABmJvdW5k
+c09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAA
+AABCdG9tbG9uZwAAAAMAAAAAUmdodGxvbmcAAAAEAAAAA3VybFRFWFQAAAABAAAAAAAAbnVsbFRF
+WFQAAAABAAAAAAAATXNnZVRFWFQAAAABAAAAAAAGYWx0VGFnVEVYVAAAAAEAAAAAAA5jZWxsVGV4
+dElzSFRNTGJvb2wBAAAACGNlbGxUZXh0VEVYVAAAAAEAAAAAAAlob3J6QWxpZ25lbnVtAAAAD0VT
+bGljZUhvcnpBbGlnbgAAAAdkZWZhdWx0AAAACXZlcnRBbGlnbmVudW0AAAAPRVNsaWNlVmVydEFs
+aWduAAAAB2RlZmF1bHQAAAALYmdDb2xvclR5cGVlbnVtAAAAEUVTbGljZUJHQ29sb3JUeXBlAAAA
+AE5vbmUAAAAJdG9wT3V0c2V0bG9uZwAAAAAAAAAKbGVmdE91dHNldGxvbmcAAAAAAAAADGJvdHRv
+bU91dHNldGxvbmcAAAAAAAAAC3JpZ2h0T3V0c2V0bG9uZwAAAAAAOEJJTQQRAAAAAAABAQA4QklN
+BBQAAAAAAAQAAAADOEJJTQQMAAAAAAJFAAAAAQAAAAQAAAADAAAADAAAACQAAAIpABgAAf/Y/+AA
+EEpGSUYAAQIBAEgASAAA/+0ADEFkb2JlX0NNAAL/7gAOQWRvYmUAZIAAAAAB/9sAhAAMCAgICQgM
+CQkMEQsKCxEVDwwMDxUYExMVExMYEQwMDAwMDBEMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+AQ0LCw0ODRAODhAUDg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAz/wAARCAADAAQDASIAAhEBAxEB/90ABAAB/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwAB
+AgQFBgcICQoLAQABBQEBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEA
+AhEDBCESMQVBUWETInGBMgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0
+NhfSVeJl8rOEw9N14/NGJ5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEA
+AgIBAgQEAwQFBgcHBgU1AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTx
+JQYWorKDByY1wtJEk1SjF2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm
+9ic3R1dnd4eXp7fH/9oADAMBAAIRAxEAPwD0pJfMCSSn/9kAOEJJTQQhAAAAAABVAAAAAQEAAAAP
+AEEAZABvAGIAZQAgAFAAaABvAHQAbwBzAGgAbwBwAAAAEwBBAGQAbwBiAGUAIABQAGgAbwB0AG8A
+cwBoAG8AcAAgADcALgAwAAAAAQA4QklNBAYAAAAAAAcABQEBAAEBAP/hEkhodHRwOi8vbnMuYWRv
+YmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVT
+ek5UY3prYzlkJz8+Cjw/YWRvYmUteGFwLWZpbHRlcnMgZXNjPSJDUiI/Pgo8eDp4YXBtZXRhIHht
+bG5zOng9J2Fkb2JlOm5zOm1ldGEvJyB4OnhhcHRrPSdYTVAgdG9vbGtpdCAyLjguMi0zMywgZnJh
+bWV3b3JrIDEuNSc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8w
+Mi8yMi1yZGYtc3ludGF4LW5zIycgeG1sbnM6aVg9J2h0dHA6Ly9ucy5hZG9iZS5jb20vaVgvMS4w
+Lyc+CgogPHJkZjpEZXNjcmlwdGlvbiBhYm91dD0ndXVpZDo1ZDJmOWU2Ny05YjE4LTExZDktYTY3
+ZS04NjAwMGMyNDYwNjEnCiAgeG1sbnM6eGFwTU09J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
+MC9tbS8nPgogIDx4YXBNTTpEb2N1bWVudElEPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDo1ZDJmOWU2
+NS05YjE4LTExZDktYTY3ZS04NjAwMGMyNDYwNjE8L3hhcE1NOkRvY3VtZW50SUQ+CiA8L3JkZjpE
+ZXNjcmlwdGlvbj4KCjwvcmRmOlJERj4KPC94OnhhcG1ldGE+CiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSd3Jz8+/+4AIUFkb2Jl
+AGRAAAAAAQMAEAMCAwYAAAAAAAAAAAAAAAD/2wCEAAQDAwMDAwQDAwQGBAMEBgcFBAQFBwgGBgcG
+BggKCAkJCQkICgoMDAwMDAoMDAwMDAwMDAwMDAwMDAwMDAwMDAwBBAUFCAcIDwoKDxQODg4UFA4O
+Dg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/CABEIAAMABAMB
+EQACEQEDEQH/xABcAAEAAAAAAAAAAAAAAAAAAAAIAQEAAAAAAAAAAAAAAAAAAAAAEAEAAAAAAAAA
+AAAAAAAAAAAAEQEAAAAAAAAAAAAAAAAAAAAAEgEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAQIRAxEA
+AABvH//aAAgBAgABBQB//9oACAEDAAEFAH//2gAIAQEAAQUAf//aAAgBAgIGPwB//9oACAEDAgY/
+AH//2gAIAQEBBj8Af//Z
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/img/mainbackground.jpg
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QOjRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEaAAUA
+AAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAUAAAAcgEyAAIAAAAUAAAAhodp
+AAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcuMAAyMDA1OjAz
+OjIyIDE2OjIwOjMzAAAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAv2gAwAEAAAAAQAAAAoAAAAA
+AAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEoAAMAAAABAAIAAAIBAAQA
+AAABAAABJgICAAQAAAABAAACdQAAAAAAAABIAAAAAQAAAEgAAAAB/9j/4AAQSkZJRgABAgEASABI
+AAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwP
+FRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQO
+Dg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEI
+AAIAgAMBIgACEQEDEQH/3QAEAAj/xAE/AAABBQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEF
+AQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMi
+cYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj
+80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcG
+BTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kST
+VKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/
+2gAMAwEAAhEDEQA/AO7q/mq/6jf+pCkvm1JRMj9JLUx/5iv+qPyL5ZSTobols/VSS+VUk9Y/VSS+
+VUklP1UkvlVJJT9VJL5VSSU/VSS+VUklP1Uh5H9Ht/qO/IvllJJT/9n/7QheUGhvdG9zaG9wIDMu
+MAA4QklNBCUAAAAAABAAAAAAAAAAAAAAAAAAAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEA
+AThCSU0EJgAAAAAADgAAAAAAAAAAAAA/gAAAOEJJTQQNAAAAAAAEAAAAeDhCSU0EGQAAAAAABAAA
+AB44QklNA/MAAAAAAAkAAAAAAAAAAAEAOEJJTQQKAAAAAAABAAA4QklNJxAAAAAAAAoAAQAAAAAA
+AAABOEJJTQP1AAAAAABIAC9mZgABAGxmZgAGAAAAAAABAC9mZgABAKGZmgAGAAAAAAABADIAAAAB
+AFoAAAAGAAAAAAABADUAAAABAC0AAAAGAAAAAAABOEJJTQP4AAAAAABwAAD/////////////////
+////////////A+gAAAAA/////////////////////////////wPoAAAAAP//////////////////
+//////////8D6AAAAAD/////////////////////////////A+gAADhCSU0EAAAAAAAAAgABOEJJ
+TQQCAAAAAAAEAAAAADhCSU0ECAAAAAAAEAAAAAEAAAJAAAACQAAAAAA4QklNBB4AAAAAAAQAAAAA
+OEJJTQQaAAAAAANJAAAABgAAAAAAAAAAAAAACgAAAv0AAAAKAFUAbgB0AGkAdABsAGUAZAAtADEA
+AAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAv0AAAAKAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAABudWxsAAAAAgAAAAZib3VuZHNPYmpjAAAAAQAA
+AAAAAFJjdDEAAAAEAAAAAFRvcCBsb25nAAAAAAAAAABMZWZ0bG9uZwAAAAAAAAAAQnRvbWxvbmcA
+AAAKAAAAAFJnaHRsb25nAAAC/QAAAAZzbGljZXNWbExzAAAAAU9iamMAAAABAAAAAAAFc2xpY2UA
+AAASAAAAB3NsaWNlSURsb25nAAAAAAAAAAdncm91cElEbG9uZwAAAAAAAAAGb3JpZ2luZW51bQAA
+AAxFU2xpY2VPcmlnaW4AAAANYXV0b0dlbmVyYXRlZAAAAABUeXBlZW51bQAAAApFU2xpY2VUeXBl
+AAAAAEltZyAAAAAGYm91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAA
+AAAATGVmdGxvbmcAAAAAAAAAAEJ0b21sb25nAAAACgAAAABSZ2h0bG9uZwAAAv0AAAADdXJsVEVY
+VAAAAAEAAAAAAABudWxsVEVYVAAAAAEAAAAAAABNc2dlVEVYVAAAAAEAAAAAAAZhbHRUYWdURVhU
+AAAAAQAAAAAADmNlbGxUZXh0SXNIVE1MYm9vbAEAAAAIY2VsbFRleHRURVhUAAAAAQAAAAAACWhv
+cnpBbGlnbmVudW0AAAAPRVNsaWNlSG9yekFsaWduAAAAB2RlZmF1bHQAAAAJdmVydEFsaWduZW51
+bQAAAA9FU2xpY2VWZXJ0QWxpZ24AAAAHZGVmYXVsdAAAAAtiZ0NvbG9yVHlwZWVudW0AAAARRVNs
+aWNlQkdDb2xvclR5cGUAAAAATm9uZQAAAAl0b3BPdXRzZXRsb25nAAAAAAAAAApsZWZ0T3V0c2V0
+bG9uZwAAAAAAAAAMYm90dG9tT3V0c2V0bG9uZwAAAAAAAAALcmlnaHRPdXRzZXRsb25nAAAAAAA4
+QklNBBEAAAAAAAEBADhCSU0EFAAAAAAABAAAAAI4QklNBAwAAAAAApEAAAABAAAAgAAAAAIAAAGA
+AAADAAAAAnUAGAAB/9j/4AAQSkZJRgABAgEASABIAAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBk
+gAAAAAH/2wCEAAwICAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIAAIAgAMBIgACEQEDEQH/3QAEAAj/xAE/AAAB
+BQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEFAQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAA
+AQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMicYEyBhSRobFCIyQVUsFiMzRygtFDByWSU/Dh
+8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj80YnlKSFtJXE1OT0pbXF1eX1VmZ2hpamtsbW
+5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcGBTUBAAIRAyExEgRBUWFxIhMFMoGRFKGxQiPB
+UtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kSTVKMXZEVVNnRl4vKzhMPTdePzRpSkhbSVxNTk
+9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/2gAMAwEAAhEDEQA/AO7q/mq/6jf+pCkvm1JR
+Mj9JLUx/5iv+qPyL5ZSTobols/VSS+VUk9Y/VSS+VUklP1UkvlVJJT9VJL5VSSU/VSS+VUklP1Uh
+5H9Ht/qO/IvllJJT/9kAOEJJTQQhAAAAAABVAAAAAQEAAAAPAEEAZABvAGIAZQAgAFAAaABvAHQA
+bwBzAGgAbwBwAAAAEwBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBoAG8AcAAgADcALgAwAAAAAQA4
+QklNBAYAAAAAAAcABQEBAAEBAP/hEkhodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBh
+Y2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+Cjw/YWRvYmUt
+eGFwLWZpbHRlcnMgZXNjPSJDUiI/Pgo8eDp4YXBtZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEv
+JyB4OnhhcHRrPSdYTVAgdG9vbGtpdCAyLjguMi0zMywgZnJhbWV3b3JrIDEuNSc+CjxyZGY6UkRG
+IHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIycg
+eG1sbnM6aVg9J2h0dHA6Ly9ucy5hZG9iZS5jb20vaVgvMS4wLyc+CgogPHJkZjpEZXNjcmlwdGlv
+biBhYm91dD0ndXVpZDowMzUwMzlkNi05YjE4LTExZDktYTY3ZS04NjAwMGMyNDYwNjEnCiAgeG1s
+bnM6eGFwTU09J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8nPgogIDx4YXBNTTpEb2N1
+bWVudElEPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDowMzUwMzlkNC05YjE4LTExZDktYTY3ZS04NjAw
+MGMyNDYwNjE8L3hhcE1NOkRvY3VtZW50SUQ+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCjwvcmRmOlJE
+Rj4KPC94OnhhcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAo8P3hwYWNrZXQgZW5kPSd3Jz8+/+4AIUFkb2JlAGRAAAAAAQMAEAMCAwYAAAAAAAAA
+AAAAAAD/2wCEAAQDAwMDAwQDAwQGBAMEBgcFBAQFBwgGBgcGBggKCAkJCQkICgoMDAwMDAoMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwBBAUFCAcIDwoKDxQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/CABEIAAoC/QMBEQACEQEDEQH/xAB5AAEBAQEAAAAA
+AAAAAAAAAAAABgUIAQEBAQEAAAAAAAAAAAAAAAAABAIDEAAABQMFAAAAAAAAAAAAAABAYDECMgME
+BSE1BjY3EQAABQUBAAAAAAAAAAAAAAACBLQFdQBAYIKyBhIBAQAAAAAAAAAAAAAAAAAAYAH/2gAM
+AwEBAhEDEQAAAOnIrN3OgAAAAAAANHpztK5QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNEF
+FZu50AAAAAAABo9OdpXKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJo//9oACAECAAEFAHKB
+pyJrlA05E3//2gAIAQMAAQUAagF8Sa1ANSJN/9oACAEBAAEFAOFdNA4LXKky+9B4V00Dgd1Jl96D
+/9oACAECAgY/AKgqD//aAAgBAwIGPwCIIg//2gAIAQEBBj8A87GEk4LIvvwLDWKGeVTVXnYwknBZ
+F9+BYaxQzyqaq//Z
+
+------=_NextPart_000_001F_01C9E376.A05E9910
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/mystyle.css
+
+TD {
+	FONT-SIZE: 12px; VERTICAL-ALIGN: top; COLOR: #806c59; FONT-FAMILY: =
+Tahoma; TEXT-ALIGN: left
+}
+FORM {
+	MARGIN: 0px
+}
+A {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #002449; FONT-FAMILY: Arial; =
+TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #002449; TEXT-DECORATION: underline
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #002449
+}
+
+------=_NextPart_000_001F_01C9E376.A05E9910--

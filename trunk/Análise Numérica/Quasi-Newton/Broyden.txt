@@ -1,0 +1,13 @@
+http://www.ce.berkeley.edu/~sanjay/FEAP/umacr_broyden.html
+http://www.phys.washington.edu/users/mforbes/projects/broyden/broyden.pdf
+https://scicompforge.org/tracker/scicompforge/file/trunk/numerical/root-finding/src/broyden.f?rev=112
+http://www.chokkan.org/software/liblbfgs/
+http://www.pcs.cnu.edu/~bbradie/csystems.html
+http://www.siam.org/books/textbooks/fr16_book.pdf
+https://scicompforge.org/tracker/scicompforge/log/trunk/numerical/root-finding/include/Broyden.h?rev=114
+http://cctbx.sourceforge.net/current_cvs/c_plus_plus/namespacescitbx_1_1lbfgs.html
+http://gundog.lbl.gov/VS/doc/problem_driver_api_html/prefs_8h-source.html
+http://public.kitware.com/vxl/doc/release/core/vnl/html/vnl__lbfgs_8h-source.html
+http://cpansearch.perl.org/src/LAYE/Algorithm-LBFGS-0.16/lbfgs.h
+http://www.alglib.net/optimization/lbfgs.php
+http://www.codase.com/search/call?name=gsl_matrix_free

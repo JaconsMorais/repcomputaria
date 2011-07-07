@@ -1,0 +1,62 @@
+
+ROM used: 670 (8%)
+          670 (8%) including unused fragments
+
+          2 Average locations per line
+          14 Average locations per statement
+
+RAM used: 11 (3%) at main() level
+          16 (4%) worst case
+
+Stack used: 3 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   73    47 100  slave_2.c
+   27     0   0  slave_2.h
+  290     0   0  ..\Program Files (x86)\PICC\devices\16F876A.h
+----- -----
+  390    47 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     73  11   0   236  2.3  config_slave_2
+ Inline        0   592  1.9  refresh_leds
+0    253  38   1   559  3.3  rotina_slave_2
+0     10   1   0    25  1.2  @const77
+0     81  12   4   500  4.1  @PSTRINGCN7_9600_62_63
+0     21   3   3             @DIV88
+0     56   8   2             @PRINTF_U_9600_62_63
+0      1   0   0   478  4.1  @const86
+0     72  11   3             @PSTRINGC7_9600_62_63
+0     10   1   0             @const88
+0      1   0   0             @const89
+0      9   1   0             @const90
+0      1   0   0             @const91
+0     22   3   0    25  1.2  @const92
+0     23   3   0    25  1.2  @const93
+0      1   0   0   467  3.7  @const94
+0     32   5   0    38  1.2  MAIN
+
+Program metrics:
+    Functions               10
+    Statements              47
+    Comments                70
+    Volume (V)              4539
+    Difficilty (D)          25.5
+    Effort to implement (E) 115932
+    Time to implement (T)   1 hours, 47 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   14
+    Maintainability (MI)    73
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   666  1378  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

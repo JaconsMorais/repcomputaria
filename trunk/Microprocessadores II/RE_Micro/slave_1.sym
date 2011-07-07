@@ -1,0 +1,99 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 x
+022.0   alt
+023     @TRIS_C
+024-025 @PRINTF_LU_9600_62_63.P1
+024     @delay_ms1.P2
+024     @PSTRINGC7_9600_62_63.@SCRATCH1
+024     rotina_slave_1.@SCRATCH1
+025     @PRINTF_U_9600_62_63.P1
+025     @PSTRINGCN7_9600_62_63.P2
+025     @PSTRINGC7_9600_62_63.@SCRATCH2
+026     @PRINTF_U_9600_62_63.P1
+026     @PSTRINGCN7_9600_62_63.@SCRATCH1
+026     @PRINTF_LU_9600_62_63.@SCRATCH1
+026     @PSTRINGC7_9600_62_63.@SCRATCH3
+027     @DIV88.P1
+027     @PSTRINGCN7_9600_62_63.@SCRATCH2
+027     @PRINTF_LU_9600_62_63.@SCRATCH2
+028     @DIV88.P1
+028     @PSTRINGCN7_9600_62_63.@SCRATCH3
+028     @PRINTF_LU_9600_62_63.@SCRATCH3
+029     @PRINTF_LU_9600_62_63.@SCRATCH4
+029     @DIV88.@SCRATCH1
+02A     @PRINTF_LU_9600_62_63.@SCRATCH5
+02B     @PRINTF_LU_9600_62_63.@SCRATCH6
+02C     @PRINTF_LU_9600_62_63.@SCRATCH7
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+02A5  @delay_ms1
+0050  config_slave_1
+0132  rotina_conversor_ad
+0004  @const73
+0099  @PSTRINGCN7_9600_62_63
+0151  @PRINTF_LU_9600_62_63
+0012  @const78
+00EA  @PSTRINGC7_9600_62_63
+0208  rotina_slave_1
+0013  @const81
+01BB  @DIV88
+01D0  @PRINTF_U_9600_62_63
+001F  @const88
+0020  @const89
+002C  @const90
+002D  @const91
+003E  @const92
+004F  @const93
+02BB  MAIN
+02BB  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\RE_Micro\
+
+Project Files:
+    slave_1.c
+    slave_1.h
+    ..\Program Files (x86)\PICC\devices\16F876A.h
+
+Units:
+    C:\RE_Micro\slave_1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      slave_1.err
+    Ext Symbols: slave_1.esym
+    INHX8:       slave_1.hex
+    Symbols:     slave_1.sym
+    List:        slave_1.lst
+    Debug/COFF:  slave_1.cof
+    Project:     slave_1.PJT
+    Call Tree:   slave_1.tre
+    Statistics:  slave_1.sta

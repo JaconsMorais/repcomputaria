@@ -1,0 +1,189 @@
+#include <gl/glut.h> //Biblioteca gl/glut.h cuja função é necessária para incluir gráficos computacionais 
+#include <stdio.h>   //Biblioteca stdio.h cuja função necessária é manipular a entrada e saida de dados e registros
+#include <stdlib.h>  
+
+#define RETA    0
+#define CIRCULO 5
+#define raio  28 //foi definido um raio de valor 28, nesta parte são extipulados as definições do prgrama que será usada pelo usuário
+
+int Modo = 0; //variavel tipo int, de atribuição 0 para facilitar as operações abaixo
+int pushX = 0; //variavel tipo int, de atribuição 0 para facilitar as operações abaixo
+int pushY = 0; //variavel tipo int, de atribuição 0 para facilitar as operações abaixo
+int retaX0 = 0; //variavel tipo int, de atribuição 0 para facilitar as operações abaixo
+int retaY0 = 0; //variavel tipo int, de atribuição 0 para facilitar as operações abaixo
+int esc = 0; //variavel tipo int, de atribuição 0 para facilitar as operações abaixo
+
+void func_ponto(int x, int y) //gera o ponto
+{
+     glBegin(GL_POINTS) ;
+        glVertex2i(x, y);
+     glEnd();
+    
+}
+
+void func_circulo( int yc, int yC, int ra) // desenha circulo
+{
+    int ia = 0;
+    int ib = 0;
+    int p1 = 1 - ra;
+    int wx = 1;
+    int wy = -2 * ra;
+    int x = 0;
+    int y = ra;
+ 
+    func_ponto(pushX, pushY + ra);
+    func_ponto(pushX, pushY - ra);
+    func_ponto(pushX + ra, pushY);
+    func_ponto(pushX - ra, pushY);
+   
+    while(x < y)
+    {
+     
+      if(p1 >= 0)
+      {
+        y--;
+        wy += 2;
+        p1 += wy;
+      }
+      x++;
+      wx += 2;
+      p1 += wx;   
+      func_ponto(pushX + x, pushY + y); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX - x, pushY + y); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX + x, pushY - y); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX - x, pushY - y); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX + y, pushY + x); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX - y, pushY + x); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX + y, pushY - x); //Gera pontos de coordenadas com o clique do mouse
+      func_ponto(pushX - y, pushY - x); //Gera pontos de coordenadas com o clique do mouse
+
+     }
+}
+
+void func_reta(int x, int y) //gera as retas
+{
+     glBegin(GL_LINES) ; //inicio do openGL
+     glVertex2i(retaX0, retaY0);// apenas 1 cordenada - imagem 2d
+     glVertex2i(x, y);
+     glEnd(); // fim
+}
+
+//além da função glVertx2i de cordenadas (x,y), existem tambem a função glVertex3i de coordenadas (x,y,z)
+
+void func_desenha(void) //função de desenho
+{
+     if (Modo == RETA)
+     {
+        if( retaX0 == 0 && retaY0 == 0)
+        {
+        retaX0 = pushX;
+        retaY0 = pushY;
+        }
+        else
+        {
+        func_reta(pushX, pushY);
+        retaX0 = 0;
+        retaY0 = 0;
+        }
+     }
+     else if (Modo == CIRCULO)
+        func_circulo( pushX,pushY, esc*raio);
+    
+     glutSwapBuffers( );
+    
+}
+
+void inicio (void)
+{  
+    Modo = 0;
+   
+    glClearColor( 1.0f, 1.0f, 1.0f, 1.0f);
+   
+    glMatrixMode( GL_MODELVIEW) ;
+   
+    glLoadIdentity( );
+   
+    glClear(GL_COLOR_BUFFER_BIT) ;
+   
+    glMatrixMode( GL_PROJECTION) ;
+   
+    glLoadIdentity( );
+   
+    gluOrtho2D( 0, 600, 0, 400);
+   
+    glColor3f(5.0,0.0,3.0) ;
+}
+          
+void menusistema1(int op)
+{
+   if (op == 0)
+      Modo = RETA;
+   else
+      Modo = CIRCULO;
+}  
+
+void menusistema2(int op)
+{
+
+     switch(op) {
+            case 0:  esc = 1;
+                     break;
+            case 1:  esc = 2;
+                     break;
+            case 2:  esc = 4;
+                     break;
+    }
+    glutPostRedisplay( );
+
+}
+
+void menuprincipal(){
+}
+             
+void func_menu() //cria o menu do programa
+{
+    int menu;
+   
+    menu= glutCreateMenu( menusistema1) ;
+    glutAddMenuEntry( "Retas",0) ;
+    glutAddMenuEntry( "Circulos" ,1);
+    menu2 = glutCreateMenu(menusistema2);
+    glutAddMenuEntry("x1",0);
+    glutAddMenuEntry("x2",1);
+    glutAddMenuEntry("x4",2);  
+   
+    menup = glutCreateMenu(menuprincipal);
+    glutAddSubMenu("Primitivas",menusistema);
+    glutAddSubMenu("Escala",menusistema2);
+
+    glutAttachMenu( GLUT_RIGHT_BUTTON);
+}
+
+void func_mouse(int button, int state, int x, int y)
+{       
+    if (button == GLUT_RIGHT_BUTTON)
+         if (state == GLUT_DOWN)
+            func_menu();
+   
+    if (button == GLUT_LEFT_BUTTON)
+         if (state == GLUT_DOWN){
+            pushX = x;
+            pushY = 400 - y;
+            func_desenha();
+            }
+        
+    glutPostRedisplay( );
+}
+
+int main(void)
+{
+     glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);    
+     glutInitWindowSize( 600,400);
+     glutInitWindowPosition(50,50) ;
+     glutCreateWindow( "Source Program");
+     glutDisplayFunc( func_desenha);
+     glutMouseFunc( func_mouse);   
+     inicio() ;
+    
+     glutMainLoop( );
+}

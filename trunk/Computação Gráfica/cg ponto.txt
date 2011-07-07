@@ -1,0 +1,104 @@
+#define BLACK 0
+#include <GL/glut.h>
+#include <stdio.h>
+#include <math.h>
+
+#define bx1 250
+#define bx2 200
+#define by1 250
+#define by2 200
+#define WIDTH  600
+#define HEIGHT 600
+#define RAIO 250
+
+void draw_pixel(int ix, int iy, int value)
+{
+  glBegin(GL_POINTS) ;
+    glVertex2i( ix, iy );
+  glEnd();
+}
+
+ void rasterCircle( int x0, int y0, int radius)
+  {
+    int i = 0;
+    int i2 = 0;
+    int f = 1 - radius;
+    int ddF_x = 1;
+    int ddF_y = -2 * radius;
+    int x = 0;
+    int y = radius;
+ 
+    while(x < y)
+    {
+      //assert(ddF_ x == 2 * x + 1);
+      //assert(ddF_ y == -2 * y);
+      //assert(f == x*x + y*y - radius*radius + 2*x - y + 1);
+      if(f >= 0)
+      {
+        y--;
+        ddF_y += 2;
+        f += ddF_y;
+      }
+      x++;
+      ddF_x += 2;
+      f += ddF_x;    
+      draw_pixel(x0 + x, y0 + y, 0);
+      draw_pixel(x0 - x, y0 + y, 0);
+      draw_pixel(x0 + x, y0 - y, 0);
+      draw_pixel(x0 - x, y0 - y, 0);
+      draw_pixel(x0 + y, y0 + x, 0);
+      draw_pixel(x0 - y, y0 + x, 0);
+      draw_pixel(x0 + y, y0 - x, 0);
+      draw_pixel(x0 - y, y0 - x, 0);
+    }
+  }
+
+void display()
+{
+    
+    int i = 0;
+    float icolor = 0;
+    
+    glClear(GL_COLOR_ BUFFER_BIT) ;
+    
+    for (i=1;i<=raio;i+=1)
+    {
+       
+       // esse calculo da cor é bom cada um por o seu, já q isso q vai definir o gradiente
+       icolor = ((float) 1 - ((float) 1 / (float) i) * 100);
+       glClearColor( 1.0, 1.0, 1.0, 1.0);
+       glColor3f( icolor , 0 , 0 );
+       rasterCircle( bx1,by1, i) ;
+    }
+    glFlush();
+}
+
+void Incializar()
+{
+    glClearColor( 1.0, 1.0, 1.0, 1.0);
+    glColor3f(0. 0, 0.0, 1.0);
+    glPointSize( 1.0);
+    glMatrixMode( GL_PROJECTION) ;
+    glLoadIdentity( );
+    gluOrtho2D(0. 0, 499.0, 0.0, 499.0);
+}
+
+int main(int argc, char** argv)
+{
+
+    glutInit(&argc,argv);
+    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB); // Padrão
+    glutInitWindowSize( WIDTH,HEIGHT) ;             // Tamanho da Janela
+    glutInitWindowPosit ion(0,0);                  // Posição Inicial da Janela
+    glutCreateWindow( "Circulo" );   // Título da Janela
+    glutDisplayFunc( display);
+
+    Incializar() ;
+    
+    display();
+
+    glutMainLoop( );
+}
+
+
+

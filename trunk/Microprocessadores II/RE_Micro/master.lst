@@ -1,0 +1,644 @@
+CCS PCM C Compiler, Version 4.106, 3067               25-mai-10 04:59
+
+               Filename: C:\RE_Micro\master.lst
+
+               ROM used: 867 words (11%)
+                         Largest free fragment is 2048
+               RAM used: 11 (3%) at main() level
+                         15 (4%) worst case
+               Stack:    3 locations
+
+*
+0000:  MOVLW  03
+0001:  MOVWF  0A
+0002:  GOTO   31F
+0003:  NOP
+.................... #include "C:\RE_Micro\master.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES HS                       //High speed Osc (> 4mhz for PCM/PCH) (>10mhz for PCD) 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES PROTECT                  //Code protected from reads 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES CPD                      //Data EEPROM Code Protected 
+.................... #FUSES NOWRT                    //Program memory not write protected 
+....................  
+.................... #use delay(clock=20000000) 
+*
+0285:  MOVLW  26
+0286:  MOVWF  04
+0287:  BCF    03.7
+0288:  MOVF   00,W
+0289:  BTFSC  03.2
+028A:  GOTO   298
+028B:  MOVLW  06
+028C:  MOVWF  78
+028D:  CLRF   77
+028E:  DECFSZ 77,F
+028F:  GOTO   28E
+0290:  DECFSZ 78,F
+0291:  GOTO   28D
+0292:  MOVLW  7B
+0293:  MOVWF  77
+0294:  DECFSZ 77,F
+0295:  GOTO   294
+0296:  DECFSZ 00,F
+0297:  GOTO   28B
+0298:  RETURN
+.................... #use spi(MASTER, FORCE_HW) 
+.................... #use rs232(UART1) 
+....................  
+....................  
+....................  
+....................  
+.................... #define slave_1 PIN_B0 
+.................... #define slave_2 PIN_B1 
+....................  
+.................... int8 cond = 1, alto_slave_1 = 0, baixo_slave_1 = 0; 
+.................... int1 h = 1, w = 1, offset_slave_2 = 0; 
+....................   
+.................... void config_master(){ 
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+00A2:  BSF    03.5
+00A3:  BSF    1F.0
+00A4:  BSF    1F.1
+00A5:  BSF    1F.2
+00A6:  BCF    1F.3
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+00A7:  BCF    1F.6
+00A8:  BCF    03.5
+00A9:  BCF    1F.6
+00AA:  BCF    1F.7
+00AB:  BSF    03.5
+00AC:  BCF    1F.7
+00AD:  BCF    03.5
+00AE:  BSF    1F.0
+....................    setup_spi(SPI_MASTER|SPI_L_TO_H|SPI_CLK_DIV_4|SPI_SS_DISABLED); 
+00AF:  BCF    14.5
+00B0:  BCF    20.5
+00B1:  MOVF   20,W
+00B2:  BSF    03.5
+00B3:  MOVWF  07
+00B4:  BCF    03.5
+00B5:  BSF    20.4
+00B6:  MOVF   20,W
+00B7:  BSF    03.5
+00B8:  MOVWF  07
+00B9:  BCF    03.5
+00BA:  BCF    20.3
+00BB:  MOVF   20,W
+00BC:  BSF    03.5
+00BD:  MOVWF  07
+00BE:  MOVLW  21
+00BF:  BCF    03.5
+00C0:  MOVWF  14
+00C1:  MOVLW  00
+00C2:  BSF    03.5
+00C3:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+00C4:  MOVF   01,W
+00C5:  ANDLW  C7
+00C6:  IORLW  08
+00C7:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+00C8:  BCF    03.5
+00C9:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+00CA:  MOVLW  00
+00CB:  MOVWF  78
+00CC:  MOVWF  12
+00CD:  MOVLW  00
+00CE:  BSF    03.5
+00CF:  MOVWF  12
+....................    setup_ccp1(CCP_OFF); 
+00D0:  BCF    03.5
+00D1:  BSF    20.2
+00D2:  MOVF   20,W
+00D3:  BSF    03.5
+00D4:  MOVWF  07
+00D5:  BCF    03.5
+00D6:  CLRF   17
+....................    setup_comparator(NC_NC_NC_NC); 
+00D7:  MOVLW  07
+00D8:  BSF    03.5
+00D9:  MOVWF  1C
+00DA:  MOVF   05,W
+00DB:  MOVWF  05
+00DC:  MOVLW  10
+00DD:  MOVWF  77
+00DE:  DECFSZ 77,F
+00DF:  GOTO   0DE
+00E0:  NOP
+00E1:  MOVF   1C,W
+00E2:  BCF    03.5
+00E3:  BCF    0D.6
+....................    setup_vref(FALSE); 
+00E4:  BSF    03.5
+00E5:  CLRF   1D
+.................... } 
+00E6:  BCF    03.5
+00E7:  BCF    0A.3
+00E8:  BCF    0A.4
+00E9:  GOTO   351 (RETURN)
+....................  
+.................... void turnon_slave_1 () 
+.................... { 
+....................    output_bit (slave_1, 0); 
+00EA:  BCF    06.0
+00EB:  BSF    03.5
+00EC:  BCF    06.0
+.................... } 
+00ED:  BCF    03.5
+00EE:  BCF    0A.3
+00EF:  BCF    0A.4
+00F0:  GOTO   352 (RETURN)
+....................  
+.................... void turnoff_slave_1 () 
+.................... { 
+....................    output_bit (slave_1, 1); 
+*
+027E:  BSF    06.0
+027F:  BSF    03.5
+0280:  BCF    06.0
+.................... } 
+0281:  BCF    03.5
+0282:  BCF    0A.3
+0283:  BCF    0A.4
+0284:  GOTO   354 (RETURN)
+....................   
+.................... void rotina_slave_1() 
+.................... { 
+....................    if(h){ 
+*
+01D7:  BTFSS  24.0
+01D8:  GOTO   22A
+....................       spi_write (0); 
+01D9:  MOVF   13,W
+01DA:  CLRF   13
+01DB:  BSF    03.5
+01DC:  RRF    14,W
+01DD:  BTFSS  03.0
+01DE:  GOTO   1DC
+....................       printf(" Slave 1 pede o valor menos significativo!"); 
+01DF:  MOVLW  04
+01E0:  BCF    03.5
+01E1:  BSF    03.6
+01E2:  MOVWF  0D
+01E3:  MOVLW  00
+01E4:  MOVWF  0F
+01E5:  BCF    03.6
+01E6:  CALL   0F1
+....................       puts("\n"); 
+01E7:  MOVLW  1A
+01E8:  BSF    03.6
+01E9:  MOVWF  0D
+01EA:  MOVLW  00
+01EB:  MOVWF  0F
+01EC:  BCF    03.6
+01ED:  CALL   0F1
+01EE:  MOVLW  0D
+01EF:  BTFSS  0C.4
+01F0:  GOTO   1EF
+01F1:  MOVWF  19
+01F2:  MOVLW  0A
+01F3:  BTFSS  0C.4
+01F4:  GOTO   1F3
+01F5:  MOVWF  19
+....................       h = 0; 
+01F6:  BCF    24.0
+....................        
+....................       while (!spi_data_is_in()) {} 
+01F7:  BSF    03.5
+01F8:  BTFSS  14.0
+01F9:  GOTO   1F8
+....................     
+....................       if (spi_data_is_in()) baixo_slave_1 = spi_read(); 
+01FA:  BTFSS  14.0
+01FB:  GOTO   200
+01FC:  BCF    03.5
+01FD:  MOVF   13,W
+01FE:  MOVWF  23
+01FF:  BSF    03.5
+....................        
+....................       printf("Recebi %u do Slave 1",baixo_slave_1); 
+0200:  MOVLW  1B
+0201:  BCF    03.5
+0202:  BSF    03.6
+0203:  MOVWF  0D
+0204:  MOVLW  00
+0205:  MOVWF  0F
+0206:  BCF    03.0
+0207:  MOVLW  07
+0208:  BCF    03.6
+0209:  MOVWF  25
+020A:  CALL   139
+020B:  MOVF   23,W
+020C:  MOVWF  25
+020D:  MOVLW  1B
+020E:  MOVWF  26
+020F:  CALL   19F
+0210:  MOVLW  1F
+0211:  BSF    03.6
+0212:  MOVWF  0D
+0213:  MOVLW  00
+0214:  MOVWF  0F
+0215:  BSF    03.0
+0216:  MOVLW  0B
+0217:  BCF    03.6
+0218:  MOVWF  25
+0219:  CALL   139
+....................       puts("\n"); 
+021A:  MOVLW  26
+021B:  BSF    03.6
+021C:  MOVWF  0D
+021D:  MOVLW  00
+021E:  MOVWF  0F
+021F:  BCF    03.6
+0220:  CALL   0F1
+0221:  MOVLW  0D
+0222:  BTFSS  0C.4
+0223:  GOTO   222
+0224:  MOVWF  19
+0225:  MOVLW  0A
+0226:  BTFSS  0C.4
+0227:  GOTO   226
+0228:  MOVWF  19
+....................        
+....................      }else{  
+0229:  GOTO   27B
+....................       spi_write (1); 
+022A:  MOVF   13,W
+022B:  MOVLW  01
+022C:  MOVWF  13
+022D:  BSF    03.5
+022E:  RRF    14,W
+022F:  BTFSS  03.0
+0230:  GOTO   22E
+....................       printf(" Slave 1 pede o valor mais significativo"); 
+0231:  MOVLW  27
+0232:  BCF    03.5
+0233:  BSF    03.6
+0234:  MOVWF  0D
+0235:  MOVLW  00
+0236:  MOVWF  0F
+0237:  BCF    03.6
+0238:  CALL   0F1
+....................       puts("\n"); 
+0239:  MOVLW  3C
+023A:  BSF    03.6
+023B:  MOVWF  0D
+023C:  MOVLW  00
+023D:  MOVWF  0F
+023E:  BCF    03.6
+023F:  CALL   0F1
+0240:  MOVLW  0D
+0241:  BTFSS  0C.4
+0242:  GOTO   241
+0243:  MOVWF  19
+0244:  MOVLW  0A
+0245:  BTFSS  0C.4
+0246:  GOTO   245
+0247:  MOVWF  19
+....................       h = 1; 
+0248:  BSF    24.0
+....................        
+....................       while (!spi_data_is_in()) {} 
+0249:  BSF    03.5
+024A:  BTFSS  14.0
+024B:  GOTO   24A
+....................     
+....................       if (spi_data_is_in()) alto_slave_1 = spi_read(); 
+024C:  BTFSS  14.0
+024D:  GOTO   252
+024E:  BCF    03.5
+024F:  MOVF   13,W
+0250:  MOVWF  22
+0251:  BSF    03.5
+....................        
+....................       printf("Recebi %u do Slave 1",alto_slave_1); 
+0252:  MOVLW  3D
+0253:  BCF    03.5
+0254:  BSF    03.6
+0255:  MOVWF  0D
+0256:  MOVLW  00
+0257:  MOVWF  0F
+0258:  BCF    03.0
+0259:  MOVLW  07
+025A:  BCF    03.6
+025B:  MOVWF  25
+025C:  CALL   139
+025D:  MOVF   22,W
+025E:  MOVWF  25
+025F:  MOVLW  1B
+0260:  MOVWF  26
+0261:  CALL   19F
+0262:  MOVLW  41
+0263:  BSF    03.6
+0264:  MOVWF  0D
+0265:  MOVLW  00
+0266:  MOVWF  0F
+0267:  BSF    03.0
+0268:  MOVLW  0B
+0269:  BCF    03.6
+026A:  MOVWF  25
+026B:  CALL   139
+....................       puts("\n"); 
+026C:  MOVLW  48
+026D:  BSF    03.6
+026E:  MOVWF  0D
+026F:  MOVLW  00
+0270:  MOVWF  0F
+0271:  BCF    03.6
+0272:  CALL   0F1
+0273:  MOVLW  0D
+0274:  BTFSS  0C.4
+0275:  GOTO   274
+0276:  MOVWF  19
+0277:  MOVLW  0A
+0278:  BTFSS  0C.4
+0279:  GOTO   278
+027A:  MOVWF  19
+....................      } 
+.................... } 
+027B:  BCF    0A.3
+027C:  BCF    0A.4
+027D:  GOTO   353 (RETURN)
+....................  
+.................... void turnon_slave_2 () 
+.................... { 
+....................    output_bit (slave_2, 0); 
+*
+0299:  BCF    06.1
+029A:  BSF    03.5
+029B:  BCF    06.1
+.................... } 
+029C:  BCF    03.5
+029D:  BCF    0A.3
+029E:  BCF    0A.4
+029F:  GOTO   35C (RETURN)
+....................  
+.................... void turnoff_slave_2 () 
+.................... { 
+....................    output_bit (slave_2, 1); 
+*
+0318:  BSF    06.1
+0319:  BSF    03.5
+031A:  BCF    06.1
+.................... } 
+031B:  BCF    03.5
+031C:  BCF    0A.3
+031D:  BCF    0A.4
+031E:  GOTO   35E (RETURN)
+....................   
+.................... void rotina_slave_2() 
+.................... { 
+....................      if(w){ 
+*
+02A0:  BTFSS  24.1
+02A1:  GOTO   2CC
+....................       spi_write (baixo_slave_1); 
+02A2:  MOVF   23,W
+02A3:  MOVWF  13
+02A4:  BSF    03.5
+02A5:  RRF    14,W
+02A6:  BTFSS  03.0
+02A7:  GOTO   2A5
+....................       printf("Mandei para o Slave 2 o valor baixo"); 
+02A8:  MOVLW  49
+02A9:  BCF    03.5
+02AA:  BSF    03.6
+02AB:  MOVWF  0D
+02AC:  MOVLW  00
+02AD:  MOVWF  0F
+02AE:  BCF    03.6
+02AF:  CALL   0F1
+....................       puts("\n"); 
+02B0:  MOVLW  5B
+02B1:  BSF    03.6
+02B2:  MOVWF  0D
+02B3:  MOVLW  00
+02B4:  MOVWF  0F
+02B5:  BCF    03.6
+02B6:  CALL   0F1
+02B7:  MOVLW  0D
+02B8:  BTFSS  0C.4
+02B9:  GOTO   2B8
+02BA:  MOVWF  19
+02BB:  MOVLW  0A
+02BC:  BTFSS  0C.4
+02BD:  GOTO   2BC
+02BE:  MOVWF  19
+....................       w = 0; 
+02BF:  BCF    24.1
+....................        
+....................       while (!spi_data_is_in()) {} 
+02C0:  BSF    03.5
+02C1:  BTFSS  14.0
+02C2:  GOTO   2C1
+....................     
+....................       if (spi_data_is_in()) offset_slave_2 = spi_read(); 
+02C3:  BTFSS  14.0
+02C4:  GOTO   2CA
+02C5:  BCF    03.5
+02C6:  BCF    24.2
+02C7:  BTFSC  13.0
+02C8:  BSF    24.2
+02C9:  BSF    03.5
+....................  
+....................      }else{  
+02CA:  GOTO   2F4
+02CB:  BCF    03.5
+....................       spi_write (alto_slave_1); 
+02CC:  MOVF   22,W
+02CD:  MOVWF  13
+02CE:  BSF    03.5
+02CF:  RRF    14,W
+02D0:  BTFSS  03.0
+02D1:  GOTO   2CF
+....................       printf("Mandei para o Slave 2 o valor alto"); 
+02D2:  MOVLW  5C
+02D3:  BCF    03.5
+02D4:  BSF    03.6
+02D5:  MOVWF  0D
+02D6:  MOVLW  00
+02D7:  MOVWF  0F
+02D8:  BCF    03.6
+02D9:  CALL   0F1
+....................       puts("\n"); 
+02DA:  MOVLW  6E
+02DB:  BSF    03.6
+02DC:  MOVWF  0D
+02DD:  MOVLW  00
+02DE:  MOVWF  0F
+02DF:  BCF    03.6
+02E0:  CALL   0F1
+02E1:  MOVLW  0D
+02E2:  BTFSS  0C.4
+02E3:  GOTO   2E2
+02E4:  MOVWF  19
+02E5:  MOVLW  0A
+02E6:  BTFSS  0C.4
+02E7:  GOTO   2E6
+02E8:  MOVWF  19
+....................       w = 1; 
+02E9:  BSF    24.1
+....................        
+....................       while (!spi_data_is_in()) {} 
+02EA:  BSF    03.5
+02EB:  BTFSS  14.0
+02EC:  GOTO   2EB
+....................     
+....................       if (spi_data_is_in()) offset_slave_2 = spi_read(); 
+02ED:  BTFSS  14.0
+02EE:  GOTO   2F4
+02EF:  BCF    03.5
+02F0:  BCF    24.2
+02F1:  BTFSC  13.0
+02F2:  BSF    24.2
+02F3:  BSF    03.5
+....................      } 
+....................       
+....................      if(offset_slave_2) printf("Recebi 1 - Requisicao do Slave 2 pelo valor alto"); 
+02F4:  BCF    03.5
+02F5:  BTFSS  24.2
+02F6:  GOTO   2FF
+02F7:  MOVLW  6F
+02F8:  BSF    03.6
+02F9:  MOVWF  0D
+02FA:  MOVLW  00
+02FB:  MOVWF  0F
+02FC:  BCF    03.6
+02FD:  CALL   0F1
+....................      else printf("Recebi 0 - Requisicao do Slave 2 pelo valor baixo"); 
+02FE:  GOTO   306
+02FF:  MOVLW  88
+0300:  BSF    03.6
+0301:  MOVWF  0D
+0302:  MOVLW  00
+0303:  MOVWF  0F
+0304:  BCF    03.6
+0305:  CALL   0F1
+....................      puts("\n"); 
+0306:  MOVLW  A1
+0307:  BSF    03.6
+0308:  MOVWF  0D
+0309:  MOVLW  00
+030A:  MOVWF  0F
+030B:  BCF    03.6
+030C:  CALL   0F1
+030D:  MOVLW  0D
+030E:  BTFSS  0C.4
+030F:  GOTO   30E
+0310:  MOVWF  19
+0311:  MOVLW  0A
+0312:  BTFSS  0C.4
+0313:  GOTO   312
+0314:  MOVWF  19
+.................... } 
+0315:  BCF    0A.3
+0316:  BCF    0A.4
+0317:  GOTO   35D (RETURN)
+....................  
+.................... void main() 
+.................... { 
+*
+031F:  CLRF   04
+0320:  BCF    03.7
+0321:  MOVLW  1F
+0322:  ANDWF  03,F
+0323:  BCF    14.5
+0324:  MOVLW  20
+0325:  MOVWF  14
+0326:  MOVLW  00
+0327:  BSF    03.5
+0328:  MOVWF  14
+0329:  BCF    03.5
+032A:  BCF    20.5
+032B:  MOVF   20,W
+032C:  BSF    03.5
+032D:  MOVWF  07
+032E:  BCF    03.5
+032F:  BSF    20.4
+0330:  MOVF   20,W
+0331:  BSF    03.5
+0332:  MOVWF  07
+0333:  BCF    03.5
+0334:  BCF    20.3
+0335:  MOVF   20,W
+0336:  BSF    03.5
+0337:  MOVWF  07
+0338:  MOVLW  81
+0339:  MOVWF  19
+033A:  MOVLW  A6
+033B:  MOVWF  18
+033C:  MOVLW  90
+033D:  BCF    03.5
+033E:  MOVWF  18
+033F:  MOVLW  01
+0340:  MOVWF  21
+0341:  CLRF   22
+0342:  CLRF   23
+0343:  BSF    24.0
+0344:  BSF    24.1
+0345:  BCF    24.2
+0346:  BSF    03.5
+0347:  BSF    1F.0
+0348:  BSF    1F.1
+0349:  BSF    1F.2
+034A:  BCF    1F.3
+034B:  MOVLW  07
+034C:  MOVWF  1C
+....................    config_master();  
+*
+0350:  GOTO   0A2
+....................     
+....................    while (true) 
+....................    {   
+....................        
+....................       turnon_slave_1(); 
+0351:  GOTO   0EA
+....................       
+....................       rotina_slave_1(); 
+0352:  GOTO   1D7
+....................     
+....................       turnoff_slave_1(); 
+0353:  GOTO   27E
+....................     
+....................       delay_ms(300);  
+0354:  MOVLW  02
+0355:  MOVWF  25
+0356:  MOVLW  96
+0357:  MOVWF  26
+0358:  CALL   285
+0359:  DECFSZ 25,F
+035A:  GOTO   356
+....................     
+....................       turnon_slave_2(); 
+035B:  GOTO   299
+....................  
+....................       rotina_slave_2(); 
+035C:  GOTO   2A0
+....................        
+....................       turnoff_slave_2(); 
+035D:  GOTO   318
+....................     
+....................       delay_ms(200); 
+035E:  MOVLW  C8
+035F:  MOVWF  26
+0360:  CALL   285
+....................    } 
+0361:  GOTO   351
+.................... } 
+0362:  SLEEP
+
+Configuration Fuses:
+   Word  1: 1E3A   HS NOWDT NOPUT PROTECT NODEBUG NOBROWNOUT NOLVP CPD NOWRT

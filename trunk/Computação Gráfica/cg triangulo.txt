@@ -1,0 +1,68 @@
+include <stdlib.h>
+#include <gl\glut.h>
+
+GLfloat angulo;
+
+void DesenhaTriangulo( void)
+{
+// Desenha um triângulo no centro da janela
+    glBegin(GL_TRIANGLE S);
+        glVertex3f(- 0.5,-0.5, 0);
+        glVertex3f( 0.0, 0.5,0);
+        glVertex3f( 0.5,-0.5,0);
+    glEnd();           
+}
+
+// Função callback de redesenho da janela de visualização
+void Desenha(void)
+{
+    int i;
+    angulo=0;
+    for (i = 0; i<2000; i++){
+    // Limpa a janela de visualização com a cor branca
+    glClearColor( 1,1,1,0);
+    glClear(GL_COLOR_ BUFFER_BIT) ;
+
+    // Define a cor de desenho: azul
+    glColor3f(0, 0,1);
+    
+
+         angulo += 1;
+         glRotatef(angulo, 0,0,1);
+         DesenhaTriangulo( );
+        
+    glutSwapBuffers( );
+    }
+}
+
+// Função callback chamada para gerenciar eventos de teclas
+void Teclado (unsigned char key, int x, int y)
+{
+    if (key == 27)
+        exit(0);
+}
+
+// Função responsável por inicializar parâmetros e variáveis
+void Inicializa(void)
+{
+    // Define a janela de visualização 2D
+    glMatrixMode( GL_PROJECTION) ;
+    gluOrtho2D(- 1.0,1.0,- 1.0,1.0);
+    glMatrixMode( GL_MODELVIEW) ;
+}
+
+// Programa Principal 
+int main(void)
+{
+    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB); 
+    glutInitWindowSize( 400,400); 
+    glutCreateWindow( "TRIANGULO" );
+    glutDisplayFunc( Desenha);
+    glutKeyboardFunc (Teclado);
+    Inicializa() ;
+    glutMainLoop( ); 
+    return 0;
+}
+
+ 
+

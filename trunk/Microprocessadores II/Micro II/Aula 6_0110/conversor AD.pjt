@@ -1,0 +1,28 @@
+[PROJECT]
+Target=conversor AD.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[conversor AD]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=conversor AD
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\cn208000706\Documents\Micro II\Aula 6_0110\conversor AD.c
+2=C:\Users\cn208000706\Documents\Micro II\Aula 6_0110\conversor AD.h
+3=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\cn208000706\Documents\Micro II\Aula 6_0110\conversor AD.c
+[Units]
+Count=1
+1=conversor AD.c (main)
+Link=0

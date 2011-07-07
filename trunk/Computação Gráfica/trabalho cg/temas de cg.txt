@@ -1,0 +1,106 @@
+http://www.slideshare.net/
+
+
+Toma
+
+Disciplina EMA9038
+
+Computação Gráfica – 1º Semestre 2009
+
+Avaliações
+
+- Seminários:
+
+• Seminário 1:
+
+Processamento de Imagens: Filtros
+
+• Seminário 2:
+
+Processamento de Imagens: Morfologia Matemática
+
+• Seminário 3:
+
+Processamento Imagens: Segmentação (Detecção de contornos,
+
+Limiarização)
+
+• Seminário 4:
+
+Análise de Imagens: Conceitos e Aplicações de CBIR (Content Based
+
+Image Retrieval)
+
+• Seminário 5:
+
+Análise de Imagens: CBIR - Descritores de Forma
+
+• Seminário 6:
+
+Análise de Imagens: CBIR - Descritores de Cor
+
+• Seminário 7:
+
+Geração de Imagens: CAD e Modelagem 3D
+
+• Seminário 8:
+
+Geração de Imagens: Visualização 3D e Iluminação com OpenGL
+
+Grupos: 4 pessoas
+
+Tempo: 30 minutos para apresentação; 10 minutos para perguntas.
+
+Tópicos Avaliados:
+
+Apresentação: (i) Domínio do Assunto; (ii) Clareza da Apresentação; (iii)
+
+Slides; (iv) Postura.
+
+Texto: (i) Conteúdo; (ii) Organização; (iii) Normas (linguagem, layout,
+
+referências, etc); (iv) Qualidade dos recursos (figuras, tabelas, etc).
+
+Formato do Texto: fonte 12, de 10 a 15 páginas.
+
+IGCE – Instituto de Geociências e Ciências Exatas
+
+DEMAC – Departamento de Estatística, Matemática Aplicada e Computação
+
+- Trabalho Prático:
+
+Entrega em duplas, composto por:
+
+Trabalho Final: aplicação utilizando OpenGL e os algoritmos
+
+desenvolvidos durante o curso, com funcionalidades oferecidas em menus para
+
+criar figuras e/ou aplicar transformações geométricas .
+
+Exercícios: entrega de 3 exercícios desenvolvidos durante o curso.
+
+Tópicos Avaliados:
+
+(i) Execução correta; (ii) Organização do Código Fonte
+
+- Avaliação teórica:
+
+Conteúdo: temas abordados em aula até sábado anterior a avaliação:
+
+Introdução, Dispositivos, Algoritmos de Primitivas, Transformações
+
+Geométricas, Preenchimento e Recorte.
+
+Formato: individual, questões alternativas e dissertativas.
+
+- Nota Final:
+
+Nota Final = (AV + TP + SE)/3
+
+To: cc2007_noturno@ yahoogrupos. com.br
+From: flavioa.mello@ gmail.com
+Date: Tue, 2 Jun 2009 17:51:07 -0300
+Subject: [cc2007_noturno] seminarios cg
+
+galera alguem tem alistinha dos temas ai?
+cubo - perdido

@@ -1,0 +1,22 @@
+Utilizando o padrão de comunicação serial Síncrono SPI:
+
+Amostrar nos leds do Slave 2 (em binario) o valor obtido na conversão A/D do potenciômetro conectado ao Slave1
+
+Mostrar todos os logs de comunicação nos seus respectivos terminais.
+
+
+Consultar os livros/Apostilas de C que passei no inicio do curso e o help do compilador, existem funções prontas para inicialização do periférico SPI e escrita/leitura.
+
+Dados Técnicos:
+
+Clock do PIC	: 20MHz
+Conversor A/D	: 10bits
+
+
+obs> no padrão de comunicação SPI, o PIC MASTER gerencia o barramento por meio dos SlaveSelect (Pino SS do pic), selecionando assim qual slave ira comunicar.
+
+
+Entrega da Prova: 24/05/2010 até as 23:59, depois disso a prova será anulada.
+zipar o projeto de hardware e software em um único pacote. Não aceitarei arquivos separados dos projetos.
+
+Boa Sorte

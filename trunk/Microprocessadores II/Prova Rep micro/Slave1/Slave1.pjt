@@ -1,0 +1,29 @@
+[PROJECT]
+Target=Slave1.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[Slave1]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=Slave1
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave1\Slave1.c
+2=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste 2\main.h
+3=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave1\Slave1.h
+4=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave1\Slave1.c
+[Units]
+Count=1
+1=Slave1.c (main)
+Link=0

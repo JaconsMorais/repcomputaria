@@ -1,0 +1,30 @@
+[PROJECT]
+Target=elevador.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[elevador]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=elevador
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=F:\Estudos\Micro II\Projeto elevador\elevador.c
+2=elevador.h
+3=
+4=D:\Estudos\Micro II\Projeto elevador\elevador (2).h
+5=
+[Target Data]
+OptionString=-p +FM
+FileList=F:\Estudos\Micro II\Projeto elevador\elevador.c
+[Units]
+Count=1
+1=elevador.c (main)
+Link=0

@@ -1,0 +1,883 @@
+CCS PCM C Compiler, Version 4.032, 62930               09-dez-09 22:18
+
+               Filename: F:\Estudos\Micro II\Projeto elevador\elevador.lst
+
+               ROM used: 799 words (10%)
+                         Largest free fragment is 2048
+               RAM used: 30 (8%) at main() level
+                         39 (11%) worst case
+               Stack:    3 worst case (2 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   204
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  MOVF   7B,W
+0016:  MOVWF  27
+0017:  BCF    03.7
+0018:  BCF    03.5
+0019:  BTFSS  0B.5
+001A:  GOTO   01D
+001B:  BTFSC  0B.2
+001C:  GOTO   030
+001D:  MOVF   22,W
+001E:  MOVWF  04
+001F:  MOVF   23,W
+0020:  MOVWF  77
+0021:  MOVF   24,W
+0022:  MOVWF  78
+0023:  MOVF   25,W
+0024:  MOVWF  79
+0025:  MOVF   26,W
+0026:  MOVWF  7A
+0027:  MOVF   27,W
+0028:  MOVWF  7B
+0029:  MOVF   20,W
+002A:  MOVWF  0A
+002B:  SWAPF  21,W
+002C:  MOVWF  03
+002D:  SWAPF  7F,F
+002E:  SWAPF  7F,W
+002F:  RETFIE
+0030:  BCF    0A.3
+0031:  BCF    0A.4
+0032:  GOTO   06A
+.................... #include "F:\Estudos\Micro II\Projeto elevador\elevador.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES XT                       //Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES WRT_50%                  //Lower half of Program Memory is Write Protected 
+....................  
+.................... #use delay(clock=20000000) 
+*
+0076:  MOVLW  3A
+0077:  MOVWF  04
+0078:  BCF    03.7
+0079:  MOVF   00,W
+007A:  BTFSC  03.2
+007B:  GOTO   089
+007C:  MOVLW  06
+007D:  MOVWF  78
+007E:  CLRF   77
+007F:  DECFSZ 77,F
+0080:  GOTO   07F
+0081:  DECFSZ 78,F
+0082:  GOTO   07E
+0083:  MOVLW  7B
+0084:  MOVWF  77
+0085:  DECFSZ 77,F
+0086:  GOTO   085
+0087:  DECFSZ 00,F
+0088:  GOTO   07C
+0089:  RETLW  00
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8) 
+....................  
+.................... //endereços de memória 
+.................... //registrador de leitura e escrita 
+.................... #BYTE PORTA_A = 0x05 
+.................... #BYTE PORTA_B = 0x06 
+.................... #BYTE PORTA_C = 0x07 
+....................  
+.................... #BYTE TRIS_A = 0x85 
+.................... #BYTE TRIS_B = 0x86 // saida de dados 
+.................... #BYTE TRIS_C = 0x87 // entrada de dados 
+....................  
+.................... #bit andar1 = PORTA_B.1 //botões 
+.................... #bit andar2 = PORTA_B.2 
+.................... #bit andar3 = PORTA_B.4 
+.................... #bit andar4 = PORTA_B.5 
+.................... #bit parada = PORTA_B.3 
+....................  
+.................... #bit sinal = PORTA_B.0 //led 
+....................  
+.................... #bit motor1 = PORTA_A.0 
+.................... #bit motor2 = PORTA_A.1 //bobinas do motor de passo 
+.................... #bit motor3 = PORTA_A.2 
+.................... #bit motor4 = PORTA_A.3 
+....................  
+....................  
+.................... int16 TMP1 = 0; 
+*
+0217:  BCF    03.5
+0218:  CLRF   28
+0219:  CLRF   29
+.................... int16 TMP2; 
+.................... int16 conta; 
+.................... int andares[4],botao; 
+.................... int i = 0; 
+021A:  CLRF   33
+.................... int parou = 0; 
+021B:  CLRF   34
+....................  
+.................... #INT_TIMER0 
+.................... void tempo() 
+.................... { 
+....................    set_timer0 (131 - get_timer0 ()); 
+*
+006A:  MOVF   01,W
+006B:  SUBLW  83
+006C:  MOVWF  40
+006D:  MOVF   40,W
+006E:  MOVWF  01
+....................    conta++; //contagem das interrupções 
+006F:  INCF   2C,F
+0070:  BTFSC  03.2
+0071:  INCF   2D,F
+.................... } 
+....................  
+0072:  BCF    0B.2
+0073:  BCF    0A.3
+0074:  BCF    0A.4
+0075:  GOTO   01D
+.................... void insere_andar(int andar[],int i){//guarda na memória o andar pressionado 
+.................... int teste=0,j; 
+*
+008F:  CLRF   39
+....................  
+.................... if(i<4){ 
+0090:  MOVF   38,W
+0091:  SUBLW  03
+0092:  BTFSS  03.0
+0093:  GOTO   0B4
+....................  
+....................  
+....................  for(j = 0; j<i;j++){ 
+0094:  CLRF   3A
+0095:  MOVF   38,W
+0096:  SUBWF  3A,W
+0097:  BTFSC  03.0
+0098:  GOTO   0A8
+....................   if(botao == andar[j]){ 
+0099:  MOVF   3A,W
+009A:  ADDWF  36,W
+009B:  MOVWF  04
+009C:  BCF    03.7
+009D:  BTFSC  37.0
+009E:  BSF    03.7
+009F:  MOVF   00,W
+00A0:  SUBWF  32,W
+00A1:  BTFSS  03.2
+00A2:  GOTO   0A6
+....................    teste = 1; //repetição de andares 
+00A3:  MOVLW  01
+00A4:  MOVWF  39
+....................    break; 
+00A5:  GOTO   0A8
+....................   } 
+....................  } 
+00A6:  INCF   3A,F
+00A7:  GOTO   095
+....................   
+....................  if(teste == 0) andar[i] = botao; 
+00A8:  MOVF   39,F
+00A9:  BTFSS  03.2
+00AA:  GOTO   0B3
+00AB:  MOVF   38,W
+00AC:  ADDWF  36,W
+00AD:  MOVWF  04
+00AE:  BCF    03.7
+00AF:  BTFSC  37.0
+00B0:  BSF    03.7
+00B1:  MOVF   32,W
+00B2:  MOVWF  00
+....................  i++; 
+00B3:  INCF   38,F
+.................... } 
+....................  
+.................... } 
+00B4:  BCF    0A.3
+00B5:  BCF    0A.4
+00B6:  GOTO   2AE (RETURN)
+....................  
+.................... void tira_andar(int andar[]){ //tira da memória o andar que já foi 
+....................    int i; 
+....................    andar[0] = 0; 
+*
+01D5:  MOVF   36,W
+01D6:  MOVWF  04
+01D7:  BCF    03.7
+01D8:  BTFSC  37.0
+01D9:  BSF    03.7
+01DA:  CLRF   00
+....................    for (i = 1;i<4;i++){ 
+01DB:  MOVLW  01
+01DC:  MOVWF  38
+01DD:  MOVF   38,W
+01DE:  SUBLW  03
+01DF:  BTFSS  03.0
+01E0:  GOTO   201
+....................     andar[i-1] = andar[i]; 
+01E1:  MOVLW  01
+01E2:  SUBWF  38,W
+01E3:  ADDWF  36,W
+01E4:  MOVWF  78
+01E5:  MOVF   37,W
+01E6:  MOVWF  7A
+01E7:  BTFSC  03.0
+01E8:  INCF   7A,F
+01E9:  MOVF   38,W
+01EA:  ADDWF  36,W
+01EB:  MOVWF  04
+01EC:  BCF    03.7
+01ED:  BTFSC  37.0
+01EE:  BSF    03.7
+01EF:  MOVF   00,W
+01F0:  MOVWF  3C
+01F1:  MOVF   78,W
+01F2:  MOVWF  04
+01F3:  BCF    03.7
+01F4:  BTFSC  7A.0
+01F5:  BSF    03.7
+01F6:  MOVF   3C,W
+01F7:  MOVWF  00
+....................     andar[i] = 0; 
+01F8:  MOVF   38,W
+01F9:  ADDWF  36,W
+01FA:  MOVWF  04
+01FB:  BCF    03.7
+01FC:  BTFSC  37.0
+01FD:  BSF    03.7
+01FE:  CLRF   00
+....................    } 
+01FF:  INCF   38,F
+0200:  GOTO   1DD
+.................... } 
+0201:  BCF    0A.3
+0202:  BCF    0A.4
+0203:  GOTO   30E (RETURN)
+....................  
+.................... void ordena(int andar[]){ //ordena os andares para irem na ordem 
+....................      int i,j,aux; 
+....................       
+....................      for(i=1;i<4;i++){ 
+*
+00B7:  MOVLW  01
+00B8:  MOVWF  38
+00B9:  MOVF   38,W
+00BA:  SUBLW  03
+00BB:  BTFSS  03.0
+00BC:  GOTO   0F6
+....................        aux=andar[i]; 
+00BD:  MOVF   38,W
+00BE:  ADDWF  36,W
+00BF:  MOVWF  04
+00C0:  BCF    03.7
+00C1:  BTFSC  37.0
+00C2:  BSF    03.7
+00C3:  MOVF   00,W
+00C4:  MOVWF  3A
+....................        for(j=i-1;j>=0 && andar[j] > aux;j--) andar[j+1]=andar[j]; 
+00C5:  MOVLW  01
+00C6:  SUBWF  38,W
+00C7:  MOVWF  39
+00C8:  MOVF   39,W
+00C9:  ADDWF  36,W
+00CA:  MOVWF  04
+00CB:  BCF    03.7
+00CC:  BTFSC  37.0
+00CD:  BSF    03.7
+00CE:  MOVF   00,W
+00CF:  SUBWF  3A,W
+00D0:  BTFSC  03.0
+00D1:  GOTO   0EB
+00D2:  MOVLW  01
+00D3:  ADDWF  39,W
+00D4:  ADDWF  36,W
+00D5:  MOVWF  78
+00D6:  MOVF   37,W
+00D7:  MOVWF  7A
+00D8:  BTFSC  03.0
+00D9:  INCF   7A,F
+00DA:  MOVF   39,W
+00DB:  ADDWF  36,W
+00DC:  MOVWF  04
+00DD:  BCF    03.7
+00DE:  BTFSC  37.0
+00DF:  BSF    03.7
+00E0:  MOVF   00,W
+00E1:  MOVWF  3E
+00E2:  MOVF   78,W
+00E3:  MOVWF  04
+00E4:  BCF    03.7
+00E5:  BTFSC  7A.0
+00E6:  BSF    03.7
+00E7:  MOVF   3E,W
+00E8:  MOVWF  00
+00E9:  DECF   39,F
+00EA:  GOTO   0C8
+....................        andar[j+1]=aux; 
+00EB:  MOVLW  01
+00EC:  ADDWF  39,W
+00ED:  ADDWF  36,W
+00EE:  MOVWF  04
+00EF:  BCF    03.7
+00F0:  BTFSC  37.0
+00F1:  BSF    03.7
+00F2:  MOVF   3A,W
+00F3:  MOVWF  00
+....................      }  
+00F4:  INCF   38,F
+00F5:  GOTO   0B9
+.................... } 
+00F6:  BCF    0A.3
+00F7:  BCF    0A.4
+00F8:  GOTO   2B2 (RETURN)
+....................  
+.................... void motor_passo_frente(int16 timer){ 
+....................  
+.................... conta = 0; 
+00F9:  CLRF   2D
+00FA:  CLRF   2C
+....................  
+.................... while(conta != timer){ //passos para frente 
+00FB:  MOVF   38,W
+00FC:  SUBWF  2C,W
+00FD:  BTFSS  03.2
+00FE:  GOTO   103
+00FF:  MOVF   39,W
+0100:  SUBWF  2D,W
+0101:  BTFSC  03.2
+0102:  GOTO   124
+....................  motor1 = 1; 
+0103:  BSF    05.0
+....................  delay_ms(25); 
+0104:  MOVLW  19
+0105:  MOVWF  3A
+0106:  CALL   076
+....................  motor2 = 1; 
+0107:  BSF    05.1
+....................  delay_ms(25); 
+0108:  MOVLW  19
+0109:  MOVWF  3A
+010A:  CALL   076
+....................  motor1 = 0; 
+010B:  BCF    05.0
+....................  delay_ms(25); 
+010C:  MOVLW  19
+010D:  MOVWF  3A
+010E:  CALL   076
+....................  motor3 = 1; 
+010F:  BSF    05.2
+....................  delay_ms(25); 
+0110:  MOVLW  19
+0111:  MOVWF  3A
+0112:  CALL   076
+....................  motor2 = 0; 
+0113:  BCF    05.1
+....................  delay_ms(25); 
+0114:  MOVLW  19
+0115:  MOVWF  3A
+0116:  CALL   076
+....................  motor4 = 1; 
+0117:  BSF    05.3
+....................  delay_ms(25); 
+0118:  MOVLW  19
+0119:  MOVWF  3A
+011A:  CALL   076
+....................  motor3 = 0; 
+011B:  BCF    05.2
+....................  delay_ms(25); 
+011C:  MOVLW  19
+011D:  MOVWF  3A
+011E:  CALL   076
+....................  motor4 = 0; 
+011F:  BCF    05.3
+....................  delay_ms(25); 
+0120:  MOVLW  19
+0121:  MOVWF  3A
+0122:  CALL   076
+.................... } 
+0123:  GOTO   0FB
+....................  
+.................... } 
+0124:  BCF    0A.3
+0125:  BCF    0A.4
+0126:  GOTO   2F4 (RETURN)
+....................  
+.................... void motor_passo_tras(int16 timer){ 
+....................  
+.................... conta = 0; 
+0127:  CLRF   2D
+0128:  CLRF   2C
+....................  
+.................... while(conta != timer){ 
+0129:  MOVF   38,W
+012A:  SUBWF  2C,W
+012B:  BTFSS  03.2
+012C:  GOTO   131
+012D:  MOVF   39,W
+012E:  SUBWF  2D,W
+012F:  BTFSC  03.2
+0130:  GOTO   152
+....................  motor4 = 1; 
+0131:  BSF    05.3
+....................  delay_ms(25); 
+0132:  MOVLW  19
+0133:  MOVWF  3A
+0134:  CALL   076
+....................  motor3 = 1; 
+0135:  BSF    05.2
+....................  delay_ms(25); 
+0136:  MOVLW  19
+0137:  MOVWF  3A
+0138:  CALL   076
+....................  motor4 = 0; 
+0139:  BCF    05.3
+....................  delay_ms(25); 
+013A:  MOVLW  19
+013B:  MOVWF  3A
+013C:  CALL   076
+....................  motor2 = 1; 
+013D:  BSF    05.1
+....................  delay_ms(25); 
+013E:  MOVLW  19
+013F:  MOVWF  3A
+0140:  CALL   076
+....................  motor3 = 0; 
+0141:  BCF    05.2
+....................  delay_ms(25); 
+0142:  MOVLW  19
+0143:  MOVWF  3A
+0144:  CALL   076
+....................  motor1 = 1; 
+0145:  BSF    05.0
+....................  delay_ms(25); 
+0146:  MOVLW  19
+0147:  MOVWF  3A
+0148:  CALL   076
+....................  motor2 = 0; 
+0149:  BCF    05.1
+....................  delay_ms(25); 
+014A:  MOVLW  19
+014B:  MOVWF  3A
+014C:  CALL   076
+....................  motor1 = 0; 
+014D:  BCF    05.0
+....................  delay_ms(25); 
+014E:  MOVLW  19
+014F:  MOVWF  3A
+0150:  CALL   076
+.................... } 
+0151:  GOTO   129
+....................   
+.................... } 
+0152:  BCF    0A.3
+0153:  BCF    0A.4
+0154:  GOTO   2F4 (RETURN)
+....................  
+.................... void parar_motor_passo(){ 
+.................... motor1 = 0; 
+*
+008A:  BCF    05.0
+.................... motor2 = 0; 
+008B:  BCF    05.1
+.................... motor3 = 0; 
+008C:  BCF    05.2
+.................... motor4 = 0; 
+008D:  BCF    05.3
+.................... } 
+008E:  RETLW  00
+....................  
+.................... void main() 
+.................... { 
+*
+0204:  CLRF   04
+0205:  BCF    03.7
+0206:  MOVLW  1F
+0207:  ANDWF  03,F
+0208:  MOVLW  81
+0209:  BSF    03.5
+020A:  MOVWF  19
+020B:  MOVLW  A6
+020C:  MOVWF  18
+020D:  MOVLW  90
+020E:  BCF    03.5
+020F:  MOVWF  18
+0210:  BSF    03.5
+0211:  BSF    1F.0
+0212:  BSF    1F.1
+0213:  BSF    1F.2
+0214:  BCF    1F.3
+0215:  MOVLW  07
+0216:  MOVWF  1C
+....................  
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+021E:  BSF    03.5
+021F:  BSF    1F.0
+0220:  BSF    1F.1
+0221:  BSF    1F.2
+0222:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0223:  BCF    03.5
+0224:  BCF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+*
+021C:  MOVLW  FF
+021D:  MOVWF  35
+*
+0225:  BCF    14.5
+0226:  BCF    35.5
+0227:  MOVF   35,W
+0228:  BSF    03.5
+0229:  MOVWF  07
+022A:  BCF    03.5
+022B:  BSF    35.4
+022C:  MOVF   35,W
+022D:  BSF    03.5
+022E:  MOVWF  07
+022F:  BCF    03.5
+0230:  BCF    35.3
+0231:  MOVF   35,W
+0232:  BSF    03.5
+0233:  MOVWF  07
+0234:  MOVLW  01
+0235:  BCF    03.5
+0236:  MOVWF  14
+0237:  MOVLW  00
+0238:  BSF    03.5
+0239:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_32); 
+023A:  MOVF   01,W
+023B:  ANDLW  C0
+023C:  IORLW  04
+023D:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+023E:  BCF    03.5
+023F:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+0240:  MOVLW  00
+0241:  MOVWF  78
+0242:  MOVWF  12
+0243:  MOVLW  00
+0244:  BSF    03.5
+0245:  MOVWF  12
+....................    setup_comparator(NC_NC_NC_NC); 
+0246:  MOVLW  07
+0247:  MOVWF  1C
+0248:  MOVF   05,W
+0249:  MOVLW  10
+024A:  MOVWF  77
+024B:  DECFSZ 77,F
+024C:  GOTO   24B
+024D:  NOP
+024E:  MOVF   1C,W
+024F:  BCF    03.5
+0250:  BCF    0D.6
+....................    setup_vref(FALSE); 
+0251:  BSF    03.5
+0252:  CLRF   1D
+....................    enable_interrupts(INT_RDA); 
+0253:  BSF    0C.5
+....................    enable_interrupts(INT_TIMER0); 
+0254:  BCF    03.5
+0255:  BSF    0B.5
+....................    enable_interrupts(GLOBAL); 
+0256:  MOVLW  C0
+0257:  IORWF  0B,F
+....................    //port_b_pullups(TRUE); 
+....................    set_timer0(131); 
+0258:  MOVLW  83
+0259:  MOVWF  01
+....................    // TODO: USER CODE!! 
+....................  
+.................... andares[0] = 0; 
+025A:  CLRF   2E
+.................... andares[1] = 0; 
+025B:  CLRF   2F
+.................... andares[2] = 0; 
+025C:  CLRF   30
+.................... andares[3] = 0; 
+025D:  CLRF   31
+.................... sinal = 0; 
+025E:  BCF    06.0
+....................  
+....................    set_tris_a(0x00); //saída de dados 
+025F:  MOVLW  00
+0260:  BSF    03.5
+0261:  MOVWF  05
+....................    set_tris_b(0xfe); //entrada de dados,menos bit 0 
+0262:  MOVLW  FE
+0263:  MOVWF  06
+....................    set_tris_c(0xbf); //saída de dados, menos bit 6 
+0264:  MOVLW  BF
+0265:  MOVWF  07
+0266:  BCF    03.5
+0267:  MOVWF  35
+....................     
+....................    while(TRUE){ 
+....................          conta = 0; 
+0268:  CLRF   2D
+0269:  CLRF   2C
+....................           
+....................     if(!parada){ 
+026A:  BTFSC  06.3
+026B:  GOTO   274
+....................     while(!parada){ 
+026C:  BTFSC  06.3
+026D:  GOTO   274
+....................     delay_ms(30); 
+026E:  MOVLW  1E
+026F:  MOVWF  3A
+0270:  CALL   076
+....................     parou = 1; 
+0271:  MOVLW  01
+0272:  MOVWF  34
+....................     } 
+0273:  GOTO   26C
+....................     } 
+....................  
+....................        if(parou){ 
+0274:  MOVF   34,F
+0275:  BTFSC  03.2
+0276:  GOTO   290
+....................            printf("Opa!parada de emergência"); 
+0277:  CLRF   36
+0278:  MOVF   36,W
+0279:  CALL   033
+027A:  INCF   36,F
+027B:  MOVWF  77
+027C:  MOVF   77,W
+027D:  BTFSS  0C.4
+027E:  GOTO   27D
+027F:  MOVWF  19
+0280:  MOVLW  18
+0281:  SUBWF  36,W
+0282:  BTFSS  03.2
+0283:  GOTO   278
+....................            sinal = 0;  
+0284:  BCF    06.0
+....................             
+....................        TMP2 = TMP1; 
+0285:  MOVF   29,W
+0286:  MOVWF  2B
+0287:  MOVF   28,W
+0288:  MOVWF  2A
+....................     
+....................             do{ 
+....................             parar_motor_passo(); 
+0289:  CALL   08A
+....................        if(!parada) parou = 0; 
+028A:  BTFSS  06.3
+028B:  CLRF   34
+....................             }while(!parou); 
+028C:  MOVF   34,F
+028D:  BTFSC  03.2
+028E:  GOTO   289
+....................  
+....................             sinal = 1; 
+028F:  BSF    06.0
+....................         }     
+....................  
+....................          if(!andar1 || !andar2 || !andar3 || !andar4){ 
+0290:  BTFSS  06.1
+0291:  GOTO   298
+0292:  BTFSS  06.2
+0293:  GOTO   298
+0294:  BTFSS  06.4
+0295:  GOTO   298
+0296:  BTFSC  06.5
+0297:  GOTO   2B2
+....................             if(!andar1) botao = 1;  
+0298:  BTFSC  06.1
+0299:  GOTO   29C
+029A:  MOVLW  01
+029B:  MOVWF  32
+....................             if(!andar2) botao = 2; 
+029C:  BTFSC  06.2
+029D:  GOTO   2A0
+029E:  MOVLW  02
+029F:  MOVWF  32
+....................             if(!andar3) botao = 3; 
+02A0:  BTFSC  06.4
+02A1:  GOTO   2A4
+02A2:  MOVLW  03
+02A3:  MOVWF  32
+....................             if(!andar4) botao = 4; 
+02A4:  BTFSC  06.5
+02A5:  GOTO   2A8
+02A6:  MOVLW  04
+02A7:  MOVWF  32
+....................             insere_andar(andares,i); 
+02A8:  CLRF   37
+02A9:  MOVLW  2E
+02AA:  MOVWF  36
+02AB:  MOVF   33,W
+02AC:  MOVWF  38
+02AD:  GOTO   08F
+....................             ordena(andares); 
+02AE:  CLRF   37
+02AF:  MOVLW  2E
+02B0:  MOVWF  36
+02B1:  GOTO   0B7
+....................          } 
+....................           
+....................          if(andares[0] != 0){ 
+02B2:  MOVF   2E,F
+02B3:  BTFSC  03.2
+02B4:  GOTO   317
+....................             if(andares[0] == 1) TMP1 = 0;  
+02B5:  DECFSZ 2E,W
+02B6:  GOTO   2B9
+02B7:  CLRF   29
+02B8:  CLRF   28
+....................             if(andares[0] == 2) TMP1 = 256; 
+02B9:  MOVF   2E,W
+02BA:  SUBLW  02
+02BB:  BTFSS  03.2
+02BC:  GOTO   2C0
+02BD:  MOVLW  01
+02BE:  MOVWF  29
+02BF:  CLRF   28
+....................             if(andares[0] == 3) TMP1 = 512; 
+02C0:  MOVF   2E,W
+02C1:  SUBLW  03
+02C2:  BTFSS  03.2
+02C3:  GOTO   2C7
+02C4:  MOVLW  02
+02C5:  MOVWF  29
+02C6:  CLRF   28
+....................             if(andares[0] == 4) TMP1 = 768; 
+02C7:  MOVF   2E,W
+02C8:  SUBLW  04
+02C9:  BTFSS  03.2
+02CA:  GOTO   2CE
+02CB:  MOVLW  03
+02CC:  MOVWF  29
+02CD:  CLRF   28
+....................              
+....................           if(TMP2 < TMP1) motor_passo_frente(TMP1-TMP2); 
+02CE:  MOVF   2B,W
+02CF:  SUBWF  29,W
+02D0:  BTFSS  03.0
+02D1:  GOTO   2E6
+02D2:  BTFSS  03.2
+02D3:  GOTO   2D8
+02D4:  MOVF   28,W
+02D5:  SUBWF  2A,W
+02D6:  BTFSC  03.0
+02D7:  GOTO   2E6
+02D8:  MOVF   2A,W
+02D9:  SUBWF  28,W
+02DA:  MOVWF  36
+02DB:  MOVF   29,W
+02DC:  MOVWF  37
+02DD:  MOVF   2B,W
+02DE:  BTFSS  03.0
+02DF:  INCFSZ 2B,W
+02E0:  SUBWF  37,F
+02E1:  MOVF   37,W
+02E2:  MOVWF  39
+02E3:  MOVF   36,W
+02E4:  MOVWF  38
+02E5:  GOTO   0F9
+....................           else motor_passo_tras(TMP2-TMP1); 
+02E6:  MOVF   28,W
+02E7:  SUBWF  2A,W
+02E8:  MOVWF  36
+02E9:  MOVF   2B,W
+02EA:  MOVWF  37
+02EB:  MOVF   29,W
+02EC:  BTFSS  03.0
+02ED:  INCFSZ 29,W
+02EE:  SUBWF  37,F
+02EF:  MOVF   37,W
+02F0:  MOVWF  39
+02F1:  MOVF   36,W
+02F2:  MOVWF  38
+02F3:  GOTO   127
+....................       
+....................           conta = 0; 
+02F4:  CLRF   2D
+02F5:  CLRF   2C
+....................           sinal = 1; 
+02F6:  BSF    06.0
+....................           parar_motor_passo(); 
+02F7:  CALL   08A
+....................           printf("Você está no andar %d",andares[0]); 
+02F8:  CLRF   36
+02F9:  MOVF   36,W
+02FA:  CALL   050
+02FB:  INCF   36,F
+02FC:  MOVWF  77
+02FD:  MOVF   77,W
+02FE:  BTFSS  0C.4
+02FF:  GOTO   2FE
+0300:  MOVWF  19
+0301:  MOVLW  13
+0302:  SUBWF  36,W
+0303:  BTFSS  03.2
+0304:  GOTO   2F9
+0305:  MOVF   2E,W
+0306:  MOVWF  37
+0307:  MOVLW  1F
+0308:  MOVWF  38
+0309:  GOTO   16A
+....................           tira_andar(andares); 
+030A:  CLRF   37
+030B:  MOVLW  2E
+030C:  MOVWF  36
+030D:  GOTO   1D5
+....................           while(conta != 10); 
+030E:  MOVF   2C,W
+030F:  SUBLW  0A
+0310:  BTFSS  03.2
+0311:  GOTO   30E
+0312:  MOVF   2D,F
+0313:  BTFSS  03.2
+0314:  GOTO   30E
+....................           sinal = 0; 
+0315:  BCF    06.0
+....................  
+....................          }else{ 
+0316:  GOTO   319
+....................           parar_motor_passo(); 
+0317:  CALL   08A
+....................           sinal = 1; 
+0318:  BSF    06.0
+....................          } 
+....................  
+....................     TMP2 = TMP1; 
+0319:  MOVF   29,W
+031A:  MOVWF  2B
+031B:  MOVF   28,W
+031C:  MOVWF  2A
+....................                 
+....................    } 
+031D:  GOTO   268
+....................  
+.................... } 
+031E:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3939   XT NOWDT NOPUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD WRT_50%

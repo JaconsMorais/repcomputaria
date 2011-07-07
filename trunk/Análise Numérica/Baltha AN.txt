@@ -1,0 +1,13 @@
+Nome
+Título
+Resumo
+Objetivo
+Problema
+Algoritmo
+Fluxograma
+Rotina (Justificar linguagem)
+Resultados, Conclusões
+Figuras, Tabelas
+
+
+Prazo até 20 de junho

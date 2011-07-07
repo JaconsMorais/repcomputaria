@@ -1,0 +1,1099 @@
+
+<!-- saved from url=(0060)http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#tipof -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<META name="GENERATOR" content="Microsoft FrontPage 3.0">
+<TITLE> SPRING - Filtragem </TITLE>
+</HEAD><BODY bgcolor="#FFFFFF" background="./SPRING - Filtragem_files/fundo18.gif">
+
+<P><A name="filtro"></A></P>
+
+<TABLE border="0" cellpadding="4" cellspacing="0" width="98&percnt;">
+  <TBODY><TR>
+    <TD width="71&percnt;"><BIG><BIG><BIG><STRONG><FONT color="#800000">Técnicas de Filtragem</FONT></STRONG></BIG></BIG></BIG></TD>
+    <TD width="9&percnt;"><P align="center"><IMG src="./SPRING - Filtragem_files/c_filt1.gif" width="97" height="56" alt="wpe1.gif (2115 bytes)" align="center"><SMALL><SMALL> </SMALL></SMALL></P>
+    <P align="center"><SMALL><SMALL>- The Cyclops Project- CPGCC - INE -UFS</SMALL></SMALL></P></TD>
+  </TR>
+</TBODY></TABLE>
+
+<HR>
+
+<H1>Filtragem Espacial</H1>
+<A href="http://www.dpi.inpe.br/spring/usuario/sfilte.htm">
+
+</A><P><BIG><BIG><STRONG>Objetivos</STRONG></BIG></BIG></P>
+
+<P>&nbsp;&nbsp; A área de processamento de imagens (PI) é um excelente exemplo de
+interdisciplinaridade. As diversas técnicas originalmente desenvolvidas para tratamento
+de sinais unidimensionais foram, em primeiro lugar, adaptadas para tratamento de imagens
+obtidas de satélites e de naves espaciais. Posteriormente, com o rápido avanço das
+opções de hardware e software, estas mesmas técnicas passaram a ser aplicadas em
+inúmeros domínios tais como medicina, ciência dos materiais, microscopia, artes, etc...
+<BR>
+</P>
+
+<P align="center">&nbsp; <A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><B>Tipos de Filtros</B></A> <A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/seta_down.gif" border="0" height="20" width="20"> </A></P>
+
+<P>&nbsp;&nbsp;&nbsp; As técnicas de filtragem são transformações da imagem "<I>pixel</I>"
+a "<I>pixel</I>", que não dependem apenas do nível de cinza de um determinado
+"<I>pixel</I>", mas também do valor dos níveis de cinza dos "<B>pixels</B>"
+<B>vizinhos</B>, na imagem original. </P>
+
+<P>&nbsp;&nbsp;&nbsp; O processo de filtragem é feito utilizando-se matrizes denominadas <B>máscaras</B>,
+as quais são aplicadas sobre a imagem. Exemplo: a imagem original formada por uma matriz
+de 512 linhas por 512 colunas de valores numéricos, sendo aplicada uma máscara matricial
+de 3 linhas por 3 colunas. Cada valor da matriz 3x3 da máscara corresponde a um peso. </P>
+
+<P align="center">&nbsp; Ex: Máscara com centro na posição (2,2). <IMG src="./SPRING - Filtragem_files/filtro1.gif" width="499" height="237"> </P>
+
+<P>&nbsp;&nbsp;&nbsp; A aplicação da <B>máscara </B>com centro na posição <B>(i,j)</B>,
+sendo <B>i </B>o número de uma dada linha e<B> j</B> o número de uma dada coluna sobre a
+imagem, consiste na substituição do valor do "pixel" na posição <B>(i,j)</B>
+por um novo valor, o qual depende dos valores dos "pixels" vizinhos e dos pesos
+da máscara. </P>
+
+<P>&nbsp;&nbsp;&nbsp; &nbsp;A imagem resultante da aplicação de um filtro é uma nova
+imagem com a eliminação das linhas e colunas iniciais e finais da imagem original. </P>
+
+<P>&nbsp;&nbsp;&nbsp; &nbsp;Os filtros espaciais podem ser classificados em passa-baixa,
+passa-alta ou passa-banda. Os dois primeiros são os mais utilizados em processamento de
+imagens. O filtro passa-banda é mais utilizado em processamentos específicos,
+principalmente para remover ruídos periódicos. </P>
+
+<HR>
+
+<P><A name="fou"><STRONG><BIG>Fourier:</BIG></STRONG></A> 
+
+</P><UL>
+  <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#TF"><B><FONT size="+1">Transformada de Fourier</FONT></B></A></LI>
+  <UL>
+    <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#trf"><B><FONT size="+1">Transformada Rápida de Fourier</FONT></B></A></LI>
+    <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#fdf"><B><FONT size="+1">Filtragem no Domínio da Frequência</FONT></B></A></LI>
+    <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#osfiltros"><B><FONT size="4">Os Filtros</FONT><FONT size="+1"><BR>
+      </FONT></B></A></LI>
+  </UL>
+</UL>
+
+<P align="center"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/filtragemH.html"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Página Principal</A></P>
+
+<HR>
+
+<P><A name="tipof"><STRONG><BIG>Tipos de Filtros:</BIG></STRONG> </A></P>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="60&percnt;">
+  <TBODY><TR>
+    <TD width="100&percnt;"><UL>
+      <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#filtLin"><B><FONT size="+1">Filtros lineares</FONT></B></A></LI>
+      <UL>
+        <LI><B><FONT size="+1"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#pass_baixa">Passa-Baixa</A></FONT></B></LI>
+        <LI><B><FONT size="+1"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#passa_alta">Passa-Alta</A></FONT></B></LI>
+        <LI><B><FONT size="+1"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#edit_masc">Editor de máscaras</A></FONT></B></LI>
+        <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#norm_masc"><B><FONT size="+1">Normalizar uma máscara</FONT></B></A></LI>
+      </UL>
+    </UL>
+    </TD>
+  </TR>
+  <TR>
+    <TD width="100&percnt;"><UL>
+      <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#filtLin"><B><FONT size="+1">Filtros não-lineares</FONT></B></A></LI>
+      <UL>
+        <LI><B><FONT size="+1"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#opera_borda">Operadores para detecção de bordas</A></FONT></B></LI>
+        <LI><B><FONT size="+1"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#morfolog_mas">Filtros morfológicos</A></FONT></B></LI>
+        <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#edit_elem"><B><FONT size="+1">Editor de elementos estruturantes</FONT></B></A></LI>
+      </UL>
+      <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#filt_radar"><B><FONT size="+1">Filtro Radar</FONT></B></A></LI>
+      <LI><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#16exe"><FONT size="4"><B>16. EXEMPLOS</B></FONT></A></LI>
+    </UL>
+    </TD>
+  </TR>
+</TBODY></TABLE>
+
+<UL>
+  <UL>
+    <P align="center"><BR>
+    <A href="http://www.inf.ufsc.br/~visao/1999/neilza/filtragemH.html"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30">
+    Página Principal</A></P>
+  </UL>
+</UL>
+
+<HR>
+
+<P><A name="TF"><STRONG><BIG>Transformada de Fourier</BIG></STRONG></A></P>
+
+<P><STRONG><BIG><BR>
+</BIG></STRONG>&nbsp;&nbsp;&nbsp; Joseph Fourier deixou para a matemática um rico legado:
+a transformada que leva o seu nome é utilizada em diversas áreas da ciência e
+tecnologia hoje em dia. Sua aplicação em PI (processamento de imagens) tem relevada
+importância , desde a simples filtragem até a utilização na compressão de arquivos de
+imagem. Esta transformada é uma das maneiras de realizar uma mudança de domínio
+espacial em espectral ( onde um sinal fica caracterizado por suas componentes de
+freqüência). Para imagens digitais (uma função bidimensional discreta), utiliza-se a
+Transformada de Fourier Discreta( DFT – Discrete Fourier Transform ), que é definida
+como:</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image2.gif" width="619" height="196" alt="Image2.gif (6603 bytes)"></P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Estas duas equações representam um par de transformadas. Pode-se
+obter outros pares trocando o sinal das exponenciais ou então realizando a
+multiplicação pela constante apenas na transformada inversa. Inclusive esta última
+sugestão é recomendada para a implementação do algoritmo pois reduz o número de
+operações a serem realizadas.<BR>
+O termo exponencial nas equações é visivelmente separável. Fazendo com que o
+somatório em x possa conter todos os termos em x, assim a equação 3-1 fica:</P>
+
+<P align="center"><BR>
+<IMG src="./SPRING - Filtragem_files/Image3.gif" width="634" height="182" alt="Image3.gif (4904 bytes)"></P>
+
+<P align="left"><BR>
+<BR>
+ou seja, chegamos a duas transformadas unidimensionais, uma para colunas e outra para as
+linhas (a inversa tem demonstração equivalente). Esta propriedade permite com que a DFT
+seja calculada em duas etapas: uma para as colunas e outra para as linhas obtidas com a
+etapa anterior.Os somatórios nas equações vistas são aproximações de integrais, que
+por sua vez fornecem uma medida da "densidade "da freqüência u ou v ao longo
+de todo o domínio f, porém não no dá informações sobre a localização dessa
+freqüência no domínio da função.Existem outras transformadas que nos levam a outros
+modelos espectrais, tais como a Transformada Cosseno e a Transformada de Wavelets.<BR>
+&nbsp;&nbsp;&nbsp; A imagem complexa resultante da DFT possui a freqüência (0,0) no
+pixel de coordenada (0,0). Neste ponto a imagem atinge o seu maior valor, pois nele é
+computada justamente a menor freqüência presente na imagem e pode-se deduzir que este é
+o valor médio da imagem. Sabendo-se que a DFT é periódica com período N, este ponto
+irá se repetir em (N, N). Estamos observando o início e o fim de um período. Contudo
+para fins de análise é mais conveniente que observemos de -N/2 até +N/2, colocando a
+freqüência zero no centro da imagem.<BR>
+A centralização da imagem da transformada é feita de maneira muito simples, já que:</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image4.gif" width="633" height="181" alt="Image4.gif (5526 bytes)"><BR>
+<BR>
+Portanto, durante o cálculo da primeira etapa podemos realizar esta multiplicação e
+automaticamente obter a imagem da transformada já centrada. O problema com esta
+multiplicação está no fato de que quando calcularmos a inversa obteremos a imagem
+original com as multiplicações efetuadas. Assim, é necessário que estas
+multiplicações sejam desfeitas no algoritmo da transformada inversa. A mudança da
+origem se torna ainda mais interessante quando constatamos que a maior parte de nossas
+imagens a serem processadas pela DFT são imagens reais. A DFT neste caso exibe uma
+característica peculiar de simetria, onde:<BR>
+<BR>
+F( u,v) = F* (-u,-v)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Equação 3-7<BR>
+<BR>
+Quando visualizamos o módulo da transformada temos: </P>
+
+<P align="center">|F( u,v)|=|F( u,v)|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Equação
+3-8&nbsp;&nbsp;&nbsp;&nbsp; </P>
+
+<P>ou seja, observamos uma imagem simétrica em relação à origem. As imagens complexas
+com esta característica são chamadas de hermitianas. Esta propriedade nos ajuda a
+reduzir o tempo de cálculo de transformada (basta calcular a metade), e define uma das
+características dos filtros deste trabalho, descritos adiante. <BR>
+&nbsp;&nbsp;&nbsp; A DFT de uma imagem é essencialmente uma representação em série de
+Fourier de uma função bidimensional. Sendo assim, para ser válida esta função precisa
+ser periódica. Essa periodicidade é obtida considerando que a imagem se repete em um
+plano infinito como na Figura 3-1:</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image5.gif" width="227" height="191" alt="Image5.gif (21462 bytes)"></P>
+
+<P align="center">Figura 3-1 Imagem Replicada em um Plano Infinito.</P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Esta consideração para a validade da operação justifica o
+aparecimento de uma cruz central passando pela origem da imagem da transformada. São
+falsas freqüências espaciais ao longo dos eixos, necessárias para a representação da
+imagem dentro de uma área limitada. Estas freqüências não são prejudiciais à
+reconstrução, pelo contrário são necessárias para reconstruir as bordas da imagem.
+Naturalmente isso só acontece para imagens que possuam bordas laterais com intensidades
+diferentes, provocando uma descontinuidade após a replicação. Caso se deseje eliminar a
+cruz central para uma melhor visualização das freqüências presentes na imagem, uma
+solução é aplicar uma máscara que suavize a proximidade da borda até que o valor do
+pixel na mesma seja zero, eliminando a descontinuidade.<BR>
+&nbsp;&nbsp;&nbsp; A principal propriedade da FT é dada pelo Teorema da Convolução, que
+diz que a convolução entre duas funções no domínio real tem como transformada a
+multiplicação das transformadas das duas funções no domínio da freqüência, ou seja:</P>
+
+<P align="center"><BR>
+f (x) Ä g(x) Û F(u) . G(u)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Equação 3-9</P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Quando consideramos g(x) como uma função que modifica f(x), a
+operação de convolução no domínio real pode ser compreendida como uma filtragem. Uma
+operação de multiplicação é muito mais simples do que uma operação de convolução.
+Mas, para realizarmos a mesma filtragem no domínio da freqüência temos que calcular a
+FT das duas funções, multiplicá-las e calcular a IFT da imagem resultante, o que
+aparentemente não nos dá muita vantagem. </P>
+
+<P align="center"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#fou"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30">Sobre Fourier</A></P>
+
+<HR size="10">
+
+<P align="left"><BR>
+<A name="trf"><STRONG><BIG>Transformada Rápida de Fourier</BIG></STRONG></A></P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; A primeira divulgação de forma ampla do algoritmo de transformada
+rápida de Fourier (FFT- Fast Fourier Transform) ocorreu através do trabalho de J. W.
+Cooley e J. W. Tukey em 1960, [BRIGHAM 74]. Mas, pelo menos 20 anos antes, Danielson e
+Lanczos formularam uma das derivações mais claras do algoritmo, [PRESS 89].<BR>
+&nbsp;&nbsp;&nbsp; Eles mostraram que a DFT pode ser reescrita como a soma de duas outras
+DFTs, cada uma de tamanho N/2. Uma delas é formada pelos ponto pares e a outra pelos
+pontos ímpares do conjunto inicial. A prova é simples:</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image6.gif" width="629" height="309" alt="Image6.gif (7648 bytes)"></P>
+
+<P align="left"><BR>
+e<IMG src="./SPRING - Filtragem_files/Image7.gif" width="73" height="23" alt="Image7.gif (1311 bytes)"> correspondem
+a k-ésima componente da DFT de comprimento N/2 formada com os componentes pares e
+ímpares, respectivamente, do conjunto inicial. A grande idéia por traz desta propriedade
+é que pode ser usada recursivamente até o ponto em que temos uma transformada de apenas
+2 termos, que possui cálculo trivial. Assim, durante o cálculo da FFT teremos uma
+progressiva mudança de dimensão da transformada: 2, 4, 8, ..., N. Obviamente N aqui é
+uma potência de 2, sendo esta a maior restrição deste algoritmo. Como isto também é
+válido para M, vamos impor que M=N, pois simplificará o tratamento algorítmico. O fato
+de M e N serem potências de 2 enfatiza a diferença entre eles e na prática acabaríamos
+trabalhando quase sempre com imagens quadradas.O principal problema aqui é saber como
+combinar as transformadas de ordem 2, depois as de ordem 4, etc... A situação mais
+simples que poderíamos ter é combinar pares adjacentes de elementos, depois combinar
+elementos resultantes em pares também adjacentes e assim por diante. Para tanto, temos
+que reordenar os elementos dessa maneira.Aplicando sucessivas divisões entre pares e
+ímpares até obtermos uma transformada de 1<BR>
+termo, chegamos ao seguinte:</P>
+<DIV align="center"><CENTER>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="45&percnt;">
+  <TBODY><TR>
+    <TD width="50&percnt;"><IMG src="./SPRING - Filtragem_files/Image8.gif" width="238" height="69" alt="Image8.gif (1872 bytes)"></TD>
+    <TD width="50&percnt;"><P align="left">Equação 3-12<BR>
+    </P></TD>
+  </TR>
+</TBODY></TABLE>
+</CENTER></DIV>
+
+<P align="left">onde fn não depende de k (obs.: e - even, o - odd), nos resta agora
+descobrir quem é n no conjunto original. Se substituirmos os e’s e os o’s por
+0’s e 1’s, respectivamente, obtemos um número binário. O valor de n é
+exatamente este número com a ordem dos bit invertida. Isto é verdade porque as
+subdivisões sucessivas em pares e ímpares são testes sucessivos de bits de baixa ordem
+de n.<BR>
+&nbsp;&nbsp;&nbsp; Para exemplificar isso tomemos uma transformada de 8 pontos {f(0),
+f(1), f(2), f(3), f(4), f(5), f(6), f(7)}. A primeira divisão entre pares e ímpares nos
+fornece dois conjuntos {f(0), f(2), f(4), f(6)} e {f(1), f(3), f(5), f(7)}. Na segunda
+divisão temos quatro conjuntos {f(0), f(4)}, {f(2), f(6)}, {f(1), f(5)} e {f(3), f(7)}.
+Escrevendo esta ordem na tabela podemos comparar os índices e a ordem dos bits dos
+mesmos.</P>
+
+<P align="center"><BR>
+<IMG src="./SPRING - Filtragem_files/Image9.gif" width="280" height="250" alt="Image9.gif (14311 bytes)"></P>
+
+<P align="center">Tabela 3-1 Reordenação Usando a Inversão de Bits.</P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Portanto, o algoritmo da FFT é dividido em duas partes. Na primeira os
+dados são reordenados (Bit Reversal Section) e em seguida para cada potência de 2
+computam-se os valores das subtransformadas.<BR>
+&nbsp;&nbsp;&nbsp; Este algoritmo não é nem um pouco trivial. Sua vantagem reside
+justamente no tempo de processamento muitas vezes menor que o método de cálculo direto.
+Isto pode ser melhor evidenciado através do conceito de Complexidade Algorítmica.<BR>
+Tomando em consideração o número de multiplicações complexas, a equação 3-1 possui
+NxN multiplicações, que são realizadas para todos os elementos da imagem, ou seja, NxN
+pontos. Portanto, a complexidade da DFT é obviamente O(N 4 ). No caso da FFT, continuamos
+possuindo NxN pontos. Mas, a subdivisão sucessiva possui complexidade O(logN), resultando
+para a FFT O(N 2 xlogN), um resultado que valida todo o esforço de se implementar o
+algoritmo. No fundo estamos aplicando aqui o conceito de dividir para conquistar em um
+conjunto de N pontos (colunas), o que dá O(NxlogN), repetido para as N linhas,
+totalizando O(N 2 xlogN).<BR>
+&nbsp;&nbsp;&nbsp; Embora tenhamos passado por todas as etapas do algoritmo, na prática
+não é utilizada a recursão e a implementação se torna complexa. Dentre os algoritmos
+pesquisados existem diversas pequenas diferenças, a literatura apenas explica o
+funcionamento de cada um e não como se chegou ao mesmo. Portanto, acaba-se por copiar
+algum algoritmo implementado, entendendo-se como funciona mas não como deduzi-lo.<BR>
+&nbsp;&nbsp;&nbsp; O algoritmo de FFT é feito in-place, ou seja, sobre o próprio
+conjunto de dados complexos, no caso de imagens reais preencheríamos o conjunto complexo
+com a parte imaginária nula e realizaríamos o cálculo. Mas, podemos ainda utilizar um
+truque para o cálculo das colunas, utilizando a parte imaginária como se fosse uma
+divisão entre pares e ímpares, ou seja, coloca-se os termos pares do conjunto real na
+parte real do conjunto complexo e os termos ímpares na parte imaginária. Estamos então
+utilizando uma transformada complexa de N pontos para calcular duas também de N pontos.
+Após o cálculo temos que separar o resultado utilizando o fato de que a transformada de
+um conjunto real é complexa hermitiana.<BR>
+&nbsp;&nbsp;&nbsp; Existem ainda diversas variações do algoritmo de FFT. Quando se
+realiza os cálculos primeiro e depois a reordenação o algoritmo tem o codnome de
+Sande-Tukey, onde antes era Cooley-Tukey. Também pode-se acelerar o processo de cálculo
+forçando N a ser uma potência de 4 ou 8, neste caso são chamados de FFT de ordem 4, 8
+(quando a ordem não é especificada, assume-se ordem 2). Existem ainda algoritmos para
+N=n1 x n2 x n3 ... onde os n’s são números primos. Nestes dois últimos casos é
+preciso saber balancear a complexidade de implementação do algoritmo com o ganho de
+performance obtido.<BR>
+&nbsp;&nbsp;&nbsp; A DFT também pode ser obtida a partir de uma outra transformada, a de
+Hartley [O’NEILL 88]. Utilizando um algoritmo semelhante ao da FFT a FHT (Fast
+Hartley Transform) é mais rápida e consome menos recursos que a FFT, pois transforma
+dados reais em dados também reais. A DFT 0é obtida usando as equações a seguir:</P>
+
+<P align="center"><BR>
+<IMG src="./SPRING - Filtragem_files/Image10.gif" width="632" height="152" alt="Image10.gif (5931 bytes)"><BR>
+</P>
+
+<P align="left">&nbsp;&nbsp;&nbsp; Infelizmente a FHT não foi aproveitada neste trabalho.
+Mas convém ser mencionado para futuros melhoramentos.<BR>
+Vimos nesta seção as diversas facetas do algoritmo de FFT e seu uso em imagens digitais.
+Agora que já conseguimos chegar até a imagem complexa no domínio da freqüência,
+podemos introduzir as técnicas de filtragem.<BR>
+</P>
+
+<P align="center"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#fou"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30">Sobre Fourier</A></P>
+
+<HR size="10">
+
+<P align="left"><A name="fdf"><STRONG><BIG>Filtragem no Domínio da Freqüência</BIG></STRONG></A></P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Como explicado anteriormente, a técnica da filtragem no domínio da
+freqüência é muito simples, pois equivale a uma multiplicação. Na Figura 3-2 podemos
+ver uma seqüência inteira de filtragem, tanto no domínio real, como no domínio da
+freqüência. Na primeira parte vemos uma senóide modelada com um ruído também
+senoidal. Como a freqüência do ruído é maior que a da senóide, este se manifesta como
+os dois impulsos mais externos no domínio da freqüência. Para removê-los basta aplicar
+um passa baixa no domínio da freqüência, que de volta ao domínio real obteremos a
+senóide sem o ruído.<BR>
+</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image11.gif" width="290" height="367" alt="Image11.gif (5173 bytes)"></P>
+
+<P align="center">Figura 3-2 Comparação entre Filtragem no Domínio Real e no da
+Freqüência</P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Mas, surge um outro problema: estamos trabalhando com uma função
+discretizada e com a DFT e não a FT. Como vimos a DFT é uma aproximação para a FT. Ao
+aplicarmos algum tipo de filtragem com um filtro semelhante ao da Figura 3-2 (ideal), a
+transformada inversa fornecerá uma imagem com um fenômeno chamado ringing (anelamento).
+Visualmente este efeito é identificado por "anéis" (também chamados de
+artefatos) que surgem nas bordas dos objetos da imagem. Este fenômeno acontece devido a
+descontinuidade imposta pelo filtro ideal.<BR>
+&nbsp;&nbsp;&nbsp; Para evitar a introdução de artefatos após a filtragem os filtros
+devem ter sua borda suavizada por uma função com derivada contínua e faixa de
+decaimento controlada. É muito comum o uso de uma gaussiana ou de um cosseno para tal. O
+controle da faixa de decaimento permite o balanceamento entre a existência de artefatos e
+o quanto o filtro permitirá passar outras freqüências que não aquelas sob o mesmo.<BR>
+&nbsp;&nbsp;&nbsp; É preciso então saber balancear até que ponto a filtragem no
+domínio real é vantajosa em relação ao domínio das freqüências. A convolução no
+domínio real é definida como:</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image12.gif" width="583" height="75" alt="Image12.gif (3416 bytes)"></P>
+
+<P align="left"><BR>
+onde k é uma matriz quadrada de K 2 elementos.</P>
+
+<P align="left"><BR>
+&nbsp;&nbsp;&nbsp; Usando novamente o conceito de Complexidade Algorítmica, vemos que a
+Equação 3-15 possui complexidade O(K 2 N 2 ). A filtragem no domínio da freqüência
+exige um FFT, uma multiplicação pelo filtro e uma IFFT. Assim, a complexidade resultante
+é O(N 2 xlogN) + O(N 2 ) + O(N 2 xlogN) = O(N 2 xlogN), ou seja comparável a
+convolução no domínio real. É claro que o conceito de complexidade esconde diversas
+constantes que se tornam relevantes na prática. Mas, de qualquer maneira isso mostra que
+o tamanho da matriz de convolução K não pode ser muito grande.<BR>
+&nbsp;&nbsp;&nbsp; Na prática K assume valores 3, 5, 7 e 9, e a filtragem no domínio da
+freqüência permite uma seleção mais precisa de que elementos se deseja filtrar. Pois,
+a filtragem espacial não deixa de ser uma média ponderada da vizinhança de um
+determinado pixel, em contraste com uma visão global fornecida pela FT.</P>
+
+<P align="center"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#fou"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30">Sobre Fourier</A></P>
+
+<HR size="10">
+<B><FONT size="5">
+
+</FONT><P align="JUSTIFY"><FONT size="5"><A name="osfiltros">Os Filtros</A></FONT></P>
+</B>
+
+<P align="JUSTIFY">&nbsp;&nbsp; Como dito anteriormente, vários dos fenômenos ocorridos
+no domínio da freqüência são simples de serem modelados.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; A filtragem mais básica de todas e também a mais
+conhecida é o filtro passa faixa. Quando este está próximo à origem é chamado de
+passa baixa. Quando está afastado é chamado de passa alta. No domínio bidimensional
+este filtro é representado por dois anéis concêntricos e centrados na origem, Figura
+3-3.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image13.gif" width="182" height="176"></P>
+
+<P align="CENTER">Figura 3-3 Setor Circular Centrado na Origem.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Dois casos particulares do filtro anterior acontecem
+quando queremos isolar apenas freqüências horizontais ou apenas verticais, como visto na
+Figura 3-4 e Figura 3-5, respectivamente.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Repare que para isolar freqüências horizontais
+necessitamos de um retângulo vertical, e vice-versa. Também pode-se ver dois retângulos
+simétricos em relação à origem, isto é necessário pois estamos supondo que a imagem
+complexa no domínio da freqüência proveio de uma imagem real no domínio espacial.
+Sendo assim, os filtros devem obedecer o fato das imagens complexas em questão serem
+hermitianas. Assim, quando calcularmos a transformada inversa obteremos uma imagem
+complexa com parte imaginária nula (próxima de zero), ou melhor, uma imagem
+real.(14v15h)</P>
+
+<P align="center">&nbsp;<IMG src="./SPRING - Filtragem_files/Image14.gif" width="178" height="179"></P>
+
+<P align="CENTER">Figura 3-4 Retangular Vertical</P>
+<FONT size="2">
+
+</FONT><P align="center"><IMG src="./SPRING - Filtragem_files/Image15.gif" width="183" height="184"></P>
+
+<P align="center">Figura 3-5 Retangular Horizontal</P>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp; Quando a imagem possui freqüências espaciais muito bem
+determinadas em ambas as direções estas freqüências se manifestam no domínio da
+freqüência através de pontos brilhantes, ou melhor, uma região brilhante ao redor de
+um ponto mais intenso, um pico. Para isolar estes picos necessitamos de um filtro que
+envolva os mesmos, o filtro da Figura 3-6 cumpre exatamente esse papel. Observe também
+sua característica hermitiana.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image16.gif" width="191" height="190"></P>
+
+<P align="CENTER">Figura 3-6 Oval Não Centrada na Origem</P>
+
+<P align="left">Estes picos comumente se manifestam de forma periódica. O filtro da
+Figura 3-7 simplifica o trabalho de repetirmos o filtro anterior para cada um dos picos
+presentes na imagem.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image17.gif" width="180" height="184"></P>
+
+<P align="CENTER">Figura 3-7 Oval Periódica</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp; Algumas imagens podem ter freqüências distribuídas ao
+longo de uma direção inclinada. Estas freqüências aparecem com o formato de um setor
+angular como na Figura 3-8.</P>
+
+<P align="CENTER"><IMG src="./SPRING - Filtragem_files/Image18.gif" width="182" height="181"></P>
+
+<P align="CENTER">Figura 3-8 Setor Angular</P>
+
+<P>Quando se deseja incluir toda informação próxima à origem, utiliza-se o filtro da
+Figura 3-9.</P>
+<FONT size="2">
+
+</FONT><P align="center"><IMG src="./SPRING - Filtragem_files/Image19.gif" width="164" height="162"></P>
+
+<P align="CENTER">Figura 3-9 Retangular Inclinado Centrado na Origem</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Portanto, vimos que os mais conhecidos fenômenos
+podem ser modelados por filtros simples de serem criados e manipulados, pois podem ser
+utilizados objetos geométricos bem conhecidos. Naturalmente, todos devem poder possuir
+uma borda suave durante a aplicação sobre a imagem. Matematicamente, a combinação de
+um ou mais filtros implica na união da área delimitada pelos mesmos. A área delimitada
+pela combinação dos filtros pode sobrepor a imagem durante a aplicação, atuando como
+um filtro que "passa" freqüências, ou o complemento desta área sobrepõe,
+atuando como um filtro que "rejeita" freqüências.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; O método de filtragem com estes filtros é o mesmo
+descrito na Figura 3-2. A imagem original no domínio da freqüência é multiplicada pela
+imagem formada pelo uso de um ou mais filtros sobre a mesma.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; A seqüência completa de filtragem pode ser vista
+na Figura 3-10. Deve-se aplicar a transformada de Fourier direta sobre a imagem que se
+deseja filtrar, criar e combinar os filtros que melhor isolem o fenômeno desejado,
+aplicá-los sobre a imagem complexa, calcular a transformada de Fourier inversa e por fim
+obtém-se a imagem original filtrada.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image20.gif" width="545" height="223"></P>
+
+<P align="center"><A href="http://www.inf.ufsc.br/~visao/1999/neilza/c_filtro.htm#fou"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30">Sobre Fourier</A></P>
+
+<HR size="10">
+
+<H3 align="left"><A name="filtLin">Filtros LINEARES</A></H3>
+
+<P>&nbsp;&nbsp;&nbsp; O filtros servem para <B>suavisar </B>ou <B>realçar </B>detalhes da
+imagem, ou ainda minimizar efeitos de ruído. </P>
+
+<P>&nbsp;&nbsp;&nbsp; &nbsp;O sistema provê algumas máscaras pré-definidas para a
+aplicação de cada tipo de filtro. No caso da filtragem linear estão disponíveis
+máscaras para os filtros passa-baixa e passa-alta, descritos a seguir. </P>
+
+<P align="center">&nbsp; <BR>
+<A name="pass_baixa"></A> <A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Passa-Baixa</H3>
+
+<P>O efeito visual de um filtro passa-baixa é o de <B>suavização </B>da imagem e a <B>redução
+do número de níveis de cinza</B> da cena. As <B>altas freqüências</B>, que
+correspondem às transições abruptas são <B>atenuadas</B>. A suavização tende a
+minimizar ruídos e apresenta o efeito de borramento da imagem. </P>
+
+<P>&nbsp;Algumas janelas que efetuam uma filtragem passa-baixa, numa vizinhança de
+dimensão 3x3, 5x5 ou 7x7 estão indicadas abaixo, estes filtros são conhecidos por
+filtros de média, pois obtém a média entre pontos vizinhos. </P>
+
+<P>&nbsp;<IMG src="./SPRING - Filtragem_files/filtro2.gif" align="CENTER" width="90" height="67"> *1/9&nbsp;<IMG src="./SPRING - Filtragem_files/filtro3.gif" align="CENTER" width="136" height="104"> *1/25 </P>
+
+<P>&nbsp;<IMG src="./SPRING - Filtragem_files/filtro4.gif" align="CENTER" width="197" height="152"> *1/49 </P>
+
+<P>&nbsp;Outros tipos de filtro passa-baixa, conhecidos como filtros de média ponderada,
+são usados quando os pesos são definidos em funcão de sua distância do peso central.
+Filtros desse tipo de dimensão 3x3 são: </P>
+
+<P>&nbsp;<IMG src="./SPRING - Filtragem_files/filtro5.gif" align="CENTER" width="96" height="72"> *1/10&nbsp;<IMG src="./SPRING - Filtragem_files/filtro6.gif" align="CENTER" width="96" height="72"> *1/16 </P>
+
+<P>&nbsp; </P>
+
+<P>As figuras abaixo mostram duas cenas do satélite Landsat 5 (banda 5), onde a da
+esquerda é a imagem original realçada linearmente e da direita a mesma imagem, porém
+foi aplicado um filtro passa baixo de 7x7. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/ima_br_b5.gif" alt="ima_br_b5.gif - 35228 Bytes" border="0" height="354" width="261">&nbsp;<IMG src="./SPRING - Filtragem_files/ima_br_b5_fpb77.gif" alt="ima_br_b5_fpb77.gif - 21968 Bytes" border="0" height="354" width="261"> &nbsp; <BR>
+&nbsp; </P>
+
+<P align="center"><A name="passa_alta"></A> <A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Passa-Alta</H3>
+
+<P>A filtragem passa-alta tende a realçar os detalhes, produzindo uma "<B>agudização</B>"
+(“<I>sharpering</I>”) da imagem, isto é, as transições entre regiões
+diferentes tornam-se mais nítidas. Exemplos: limites de um campo de cultivo, lineamento
+geológico, etc. </P>
+
+<P>&nbsp;Estes filtros podem ser usados para realçar certas características presentes na
+imagem, tais como bordas, linhas curvas ou manchas. O efeito indesejado é o de enfatizar
+o ruído porventura existente na imagem. </P>
+
+<P>&nbsp;No caso de filtragem passa-altas alguns exemplos podem ser dados, como: </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro7.gif" align="CENTER" width="375" height="72">
+&nbsp; </P>
+
+<P>Os filtros de realce de bordas atribuem valores de nível de cinza para os "<I>pixels</I>"
+da cena original, segundo a influência de seus "<I>pixels</I>" vizinhos. Esta
+maior ou menor influência será função de valores (positivos, nulos ou negativos)
+fornecidos pelo usuário e atribuídos aos elementos da máscara, considerados segundo a
+configuração do filtro utilizado. É através da combinação destes valores de entrada
+ou pesos, que se obterá um realce maior ou menor da cena, segundo direções
+preferenciais de interesse. </P>
+
+<P>&nbsp;As janelas abaixo são utilizadas para o realçamento de bordas em vários
+sentidos. O nome dado às máscaras indica a direção ortogonal preferencial em que será
+realçado o limite de borda. Assim, a máscara norte realça limites horizontais. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro8.gif" align="CENTER" width="441" height="377">
+Exemplo de filtros direcionais. &nbsp; <BR>
+&nbsp; </P>
+
+<P>Realce <B>não-direcional de bordas</B>: é utilizado quando o usuário deseja realçar
+bordas, independentemente da direção. </P>
+
+<P>&nbsp;O SPRING sugere três máscaras, que diferem quanto à intensidade de altos
+valores de níveis de cinza presentes na imagem resultante. Neste caso, as bordas podem
+ser realçadas com as seguintes intensidades: </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro9.gif" align="CENTER" width="223" height="120">
+&nbsp; </P>
+
+<P>A máscara alta deixa passar menos os baixos níveis de cinza, isto é, a imagem fica
+mais clara. A máscara baixa produz uma imagem mais escura que a anterior. A máscara
+média apresenta resultados intermediários. </P>
+
+<P>&nbsp;Realce de imagens: esta opção corresponde à utilização de máscaras
+apropriadas ao realce de características de imagens obtidas por sensor específico. </P>
+
+<P>&nbsp;Atualmente, está disponível somente para imagens TM/Landsat. A máscara
+utilizada neste caso é: <BR>
+Este realce foi definido para compensar distorções radiométricas do sensor TM (trabalho
+desenvolvido por Banon, em 1992). O "<I>pixel</I>" que terá seu valor de nível
+de cinza substituído pela aplicação da máscara, corresponde à posição sombreada. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro10.gif" align="CENTER" width="115" height="116">
+&nbsp; </P>
+
+<P>As figuras abaixo mostram duas cenas do satélite <B>Landsat 5</B> (banda 5), onde a da
+esquerda é a imagem original realçada linearmente e da direita a mesma imagem, porém
+foi aplicado um filtro Realce de Imagem TM citado acima. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/ima_br_b5.gif" alt="ima_br_b5.gif - 35228 Bytes" border="0" height="354" width="261">&nbsp;<IMG src="./SPRING - Filtragem_files/ima_br_b5_realcetm.gif" alt="ima_br_b5_realcetm.gif - 43791 Bytes" border="0" height="354" width="261"> &nbsp; <BR>
+&nbsp; </P>
+
+<P align="center"><A name="edit_masc"></A> <A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Editor de máscaras</H3>
+
+<P>Além destas opções para filtragem linear com máscaras pré-definidas, existe
+também um Editor de máscaras para filtros lineares. Deste modo o usuário pode criar,
+atualizar, suprimir e aplicar suas próprias máscaras e visualizar máscaras
+pré-definidas para o sistema, que não podem ser modificadas. </P>
+
+<P>&nbsp;As máscaras criadas devem ter dimensões m x n, onde m = 1, 3, 5 ou 7 e n = 1,
+3, 5 ou 7, podem ou não ser normalizadas e aplicadas k vezes, onde k = 1, 2, ... 10. </P>
+
+<P>&nbsp;&nbsp; </P>
+
+<P align="center"><A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Normalizar uma máscara</H3>
+
+<P>Normalizar uma máscara significa que o valor resultante da aplicação da máscara
+será dividido pelo somatório dos pesos. </P>
+
+<P>&nbsp;Por exemplo, em uma máscara 3x3, de valor 1, cada valor obtido da aplicação da
+máscara sobre a imagem será dividido por 9. </P>
+
+<P>&nbsp;A normalização garante que as características estatísticas da imagem (como
+média), serão mantidas na imagem filtrada. </P>
+
+<P>&nbsp;O usuário pode decidir se a máscara será ou não normalizada. </P>
+
+<P align="center">&nbsp; <BR>
+<A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de
+Filtros </A></P>
+
+<HR>
+
+<P><A name="filt_nlinear"></A></P>
+
+<H3 align="center">Filtros NÃO-LINERARES</H3>
+
+<P>Utilizam-se filtros <B>não-lineares</B> para alterar a imagem, sem diminuir sua
+resolução. Servem para minimizar/realçar ruídos e suavizar/realçar bordas. </P>
+
+<P>&nbsp;Na categoria de filtragem não-linear, estão disponíveis os filtros: operadores
+para detecção de bordas e filtros morfológicos. Seguem as descrições. </P>
+
+<P>&nbsp; <A name="opera_borda"></A> </P>
+
+<P align="center"><A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Operadores para detecção de bordas</H3>
+
+<P>A detecção de características, tais como bordas, linhas, curvas e manchas, pode ser
+feita também com filtros não-lineares. No sistema estão disponíveis os operadores de <B>Roberts</B>
+e <B>Sobel</B>. </P>
+
+<P>&nbsp;<B>Operador de Roberts</B>: o operador gradiente de <B>Roberts </B>é o método
+não-linear mais simples utilizado para detecção de bordas. Apresenta a desvantagem de
+dependendo da direção, certas bordas serem mais realçadas que outras, mesmo tendo
+magnitude igual. </P>
+
+<P>&nbsp;Como resultado de sua aplicação, obtém-se uma imagem com altos valores de
+nível de cinza, em regiões de limites bem definidos e valores baixos em regiões de
+limites suaves, sendo 0 para regiões de nível de cinza constante. </P>
+
+<P>&nbsp;O operador consiste na seguinte função: </P>
+
+<P>&nbsp;(a') = (a - d)2 + (c - b)2 </P>
+
+<TABLE border="1" colspec="L20 L20">
+  <TBODY><TR>
+    <TD>a&nbsp;</TD>
+    <TD>b&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD>c&nbsp;</TD>
+    <TD>d&nbsp;</TD>
+  </TR>
+</TBODY></TABLE>
+
+<P>onde: <BR>
+a' - é o nível de cinza correspondente à localização a, a ser substituído; <BR>
+a, b, c, d - são as localizações cujos valores serão computados para a operação. </P>
+
+<P>&nbsp;A figura a seguir ilustra o efeito de sua aplicação. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro11.gif" align="CENTER" width="305" height="97">
+&nbsp; <BR>
+&nbsp; </P>
+
+<P><B>Operador de Sobel</B>: o operador gradiente de <B>Sobel </B>tem a propriedade de
+realçar linhas verticais e horizontais mais escuras que o fundo, sem realçar pontos
+isolados. </P>
+
+<P>&nbsp;Consiste na aplicação de duas máscaras, descritas a seguir, que compõem um
+resultado único: </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro12.gif" align="CENTER" width="265" height="93"> </P>
+
+<P>A máscara (a) detecta as variações no sentido horizontal e a máscara (b), no
+sentido vertical. O resultado desta aplicação, em cada "pixel", é dado por: </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro13.gif" align="CENTER" width="183" height="50"> </P>
+
+<P>onde a' é o valor de nível de cinza correspondente à localização do elemento
+central da máscara. </P>
+
+<P>&nbsp;A figura a seguir ilustra o efeito de sua aplicação. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro14.gif" align="CENTER" width="296" height="99">
+&nbsp; </P>
+
+<P>As figuras abaixo mostram duas cenas do satélite <B>Landsat 5</B> (banda 5), onde a da
+esquerda é a imagem original realçada linearmente e da direita a mesma imagem, porém
+foi aplicado um filtro de realce de Sobel. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/ima_br_b5.gif" alt="ima_br_b5.gif - 35228 Bytes" border="0" height="354" width="261">&nbsp;<IMG src="./SPRING - Filtragem_files/ima_br_b5_sobel.gif" alt="ima_br_b5_sobel.gif - 44357 Bytes" border="0" height="354" width="261"> &nbsp; <BR>
+&nbsp; <BR>
+&nbsp; </P>
+
+<P align="center"><A name="morfolog_mas"></A> <A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Filtros morfológicos</H3>
+
+<P>Exploram as propriedades geométricas dos sinais (níveis de cinza da imagem). </P>
+
+<P>&nbsp;Para filtros morfológicos, as máscaras são denominadas <B>elementos
+estruturantes</B>. Estes elementos devem apresentar valores 0 ou 1, de modo a considerar
+ou não, o "<I>pixel</I>" correspondente à posição da matriz. </P>
+
+<P>&nbsp;O SPRING fornece os seguintes filtros morfológicos: o filtro da <B>mediana,
+erosão e dilatação</B>. </P>
+
+<P align="center">&nbsp;Filtro morfológico da mediana: é utilizado para suavização e
+eliminação de ruído. Mantém-se a dimensão da imagem. Exemplo: <IMG src="./SPRING - Filtragem_files/filtro15.gif" align="CENTER" width="411" height="71"> &nbsp; </P>
+
+<P>A posição sombreada será alterada para o valor 6, visto que é o valor mediano na
+ordenação [2,3,6,6,8]. </P>
+
+<P>&nbsp;Filtro morfológico de erosão: provoca efeitos de erosão das partes claras da
+imagem (altos níveis de cinza), gerando imagens mais escuras. </P>
+
+<P>&nbsp;Considerando o exemplo anterior, o valor a ser substituído na posição
+sombreada corresponde ao menor valor da ordenação, no caso, 2. Filtro morfológico de
+dilatação: provoca efeitos de dilatação das partes escuras da imagem (baixos níveis
+de cinza), gerando imagens mais claras. </P>
+
+<P>&nbsp;Para o exemplo anterior, o valor resultante da aplicação deste filtro é o
+maior valor na ordenação, no caso, 8. </P>
+
+<P>&nbsp;Para a aplicação destes filtros, o sistema provê os seguintes elementos
+estruturantes pré-definidos: </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro16.gif" align="CENTER" width="572" height="270">
+Exemplo de elementos estruturantes. &nbsp; <BR>
+&nbsp; </P>
+
+<P>Abertura e fechamento de uma imagem: geralmente encadeiam-se filtros de erosão e
+dilatação com o mesmo elemento estruturante para obtenção de efeitos de abertura e
+fechamento. </P>
+
+<P>&nbsp;A abertura é obtida pelo encadeamento do filtro de <B>erosão</B>, seguido pelo
+de <B>dilatação</B>, conforme ilustra a figura a seguir. No exemplo, há quebra de
+istmos e eliminação de cabos e ilhas. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro17.gif" align="CENTER" width="510" height="302">
+Exemplo de Erosão. </P>
+
+<P>A figura original mostra a representação de uma imagem binária (valores de níveis
+de cinza 0 e 1). O efeito de fechamento é obtido pelo encadeamento do filtro de
+dilatação, seguido pelo de erosão. No exemplo, há eliminação de golfos e fechamento
+de baías. </P>
+
+<P align="center">&nbsp; <IMG src="./SPRING - Filtragem_files/filtro18.gif" align="CENTER" width="666" height="369">
+Exemplo de Dilatação. &nbsp; <BR>
+&nbsp; </P>
+
+<P align="center"><A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<H3>Editor de elementos estruturantes</H3>
+
+<P>Existe também um Editor de elementos estruturantes para filtros morfológicos. Neste
+caso, os elementos estruturantes têm dimensão fixa 3x3, e seus elementos podem ser
+somente 0's ou 1's. No editor, os elementos estruturantes podem ser aplicados k vezes,
+onde k = 1, ..., 10. </P>
+
+<P align="center">&nbsp; &nbsp;<A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Tipos de Filtros </A></P>
+
+<HR>
+
+<P><STRONG><BIG><BIG><A name="filt_radar"></A>Filtros para Imagem de RARAR</BIG></BIG></STRONG></P>
+
+<P>Muitos filtros espaciais tem sido desenvolvidos para a redução do <B>ruído Speckle</B>
+e para o aumento da relação sinal-ruído, objetivando uma melhoria na separabilidade
+entre os alvos da superfície, com a mínima perda de informação. </P>
+
+<P>&nbsp; 
+
+</P><UL>
+  <B></B><P><B>Filtro de Frost</B> [Frost-1982]: é um filtro convolucional linear, derivado da
+  minimização do erro médio quadrático sobre o modelo multiplicativo do ruído. Neste
+  filtro incorpora-se a dependência estatística do sinal original, uma vez que se supõe
+  uma função de correlação espacial exponencial entre pixels. É um filtro adaptativo
+  que preserva a estrutura de bordas. </P>
+  <P>&nbsp;<B>Filtro de Lee</B> [Lee-1981]: adota um modelo multiplicativo para o ruído e
+  obedece o critério de <B><I>"local linear minimum mean square error"</I></B>.
+  Local, porque utiliza estatísticas locais do pixel a ser filtrado, admitindo a não
+  estacionaridade da média e da variância do sinal. É um filtro linear porque realiza uma
+  linearização por expansão em série de Taylor da multiplicação do sinal e o ruído em
+  torno da média, utilizando apenas os termos lineares. O resultado da linearização
+  transforma o modelo multiplicativo do ruído em aditivo, ou seja, o ruído e o sinal
+  tornam-se independentes; e, finalmente, <B><I>"minimum mean square error"</I></B>,
+  porque minimiza o erro médio quadrático através do filtro de Wiener (filtro baseado no
+  critério de mínimo erro médio quadrático). O filtro de Lee é um filtro adaptativo e
+  geral. </P>
+  <P>&nbsp;<B>Filtro de Kuan/Nathan </B>[Kuan et al.-1982]: adota o modelo multiplicativo. O
+  procedimento é semelhante àquele de Lee, onde a estimação ponto a ponto é feita
+  utilizando-se o filtro de Wiener. A diferença entre eles, entretanto, consiste no fato de
+  que no filtro de Kuan/Nathan não se realiza nenhuma aproximação. É também um filtro
+  adaptativo e geral.</P>
+</UL>
+
+<P>&nbsp;&nbsp;&nbsp; As figuras a seguir mostram a imagem original (ERS-1, 8 "<B><I>looks</I></B>")
+e as correspondentes imagens filtradas, utilizando os seguintes filtros: Filtro de média
+5x5, Filtro de Frost adaptadivo, Filtro de mediana, Filtro de Lee fixo e Filtro de Kuan
+fixo (janela = 3). </P>
+
+<P>&nbsp;<IMG src="./SPRING - Filtragem_files/image_radar1.gif" alt="image_radar1.gif - 62034 Bytes" border="0" height="323" width="335"> Original&nbsp;<IMG src="./SPRING - Filtragem_files/image_radar2.gif" alt="image_radar2.gif - 37960 Bytes" border="0" height="324" width="333"> Média 3x3 </P>
+
+<P>&nbsp;<IMG src="./SPRING - Filtragem_files/image_radar3.gif" alt="image_radar3.gif - 53076 Bytes" border="0" height="325" width="337"> Frost&nbsp;<IMG src="./SPRING - Filtragem_files/image_radar4.gif" alt="image_radar4.gif - 51338 Bytes" border="0" height="323" width="334"> Mediana </P>
+
+<P>&nbsp;<IMG src="./SPRING - Filtragem_files/image_radar5.gif" alt="image_radar5.gif - 66738 Bytes" border="0" height="322" width="332"> Lee&nbsp;<IMG src="./SPRING - Filtragem_files/image_radar6.gif" alt="image_radar6.gif - 52773 Bytes" border="0" height="324" width="337"> Kuan <BR>
+&nbsp; </P>
+
+<P>&nbsp;&nbsp;&nbsp; Medidas quantitativas realizadas nos filtros testados, mostraram que
+os filtros de <B>Lee, Kuan, Frost</B> e de <B>Média</B> preservam o valor médio da
+imagem. Os filtros não específicos para ruído <B>Speckle</B>, <B>Média</B> e <B>Mediana</B>,
+apresentam uma considerável redução no desvio padrão, implicando em uma grande perda
+de informação (perda de resolução). O filtro de <B>Frost</B> apresentou a máxima
+preservação de textura e uma menor perda de informação. </P>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp; A utilização de um determinado filtro é dependente da
+aplicação desejada. Para uma determinada aplicação, se o fator mais importante for: 
+
+</P><UL type="CIRCLE">
+  <LI>1. Relação sinal-ruído - aconselha-se o uso do Filtro de Média.</LI>
+  <LI>2. Mínima perda de resolução aconselha-se o uso do Filtro de Frost</LI>
+  <LI>3. Relação sinal-ruído e mínima perda de resolução, concomitantemente aconselha-se
+    o Filtro de Frost.</LI>
+</UL>
+
+<P align="center"><A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm">&nbsp;<IMG src="./SPRING - Filtragem_files/seta_up.gif" alt="seta_up.gif - 170 Bytes" border="0" height="20" width="20" align="CENTER">Tipos de
+filtros &nbsp; </A></P>
+
+<HR>
+<FONT size="5"><B>
+
+<P align="left"><A name="16exe">16. EXEMPLOS</A></P>
+</B></FONT>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; As figuras 5-1, 5-2 e 5-3 foram incluídas com o
+objetivo de demonstrar a corretude da FFT utilizada e de mostrar algumas propriedades da
+imagem obtida com a Transformada de Fourier. As figuras seguintes exemplificam a
+metodologia de filtragem usando alguns dos filtros propostos.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Um pulso bidimensional pode ser representado de
+várias maneiras. Apresentamos duas delas, a primeira com duração igual em todas as
+direções a partir da origem e a segunda com duração igual ao longo de cada eixo, ou
+seja, um círculo (Figura 16-1) e um quadrado (Figura 16-2), respectivamente. Sabemos que
+a FT de um pulso é uma função sinc <FONT size="1">5 </FONT>, como visto na Figura 3-2.
+Na FT da imagem com o círculo a sinc se manifestará em todas as direções. Já na FT da
+imagem com o quadrado, a sinc se manifestará apenas na direção vertical e na
+horizontal. No caso bidimensional estamos observando a função de um ponto de vista
+superior, como se a imagem estivesse no plano X-Y e estivéssemos sobre o eixo Z olhando
+para baixo.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image21.gif" width="228" height="226"></P>
+
+<P align="center">Figura 16-1 FFT de um Círculo</P>
+
+<P align="CENTER"><IMG src="./SPRING - Filtragem_files/Image22.gif" width="228" height="224"></P>
+
+<P align="CENTER">Figura 16-2 FFT de um Quadrado</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp; A Figura 16-3 mostra um grid e sua transformada. O grid
+pode ser interpretado como um trem de impulsos bidimensional, desconsiderando a linha
+contínua de freqüência zero. Sendo assim sua transformada é também um trem de
+impulsos (parte imaginária zero, uma função, ou melhor imagem real), mas com uma
+periodicidade diferente. É interessante observar que as linhas contínuas são de certa
+maneira consideradas ao observarmos que os valores da cruz central são maiores que os
+valores internos aos quadrantes.</P>
+<FONT size="2">
+
+</FONT><P align="center"><FONT size="2"><IMG src="./SPRING - Filtragem_files/Image23.gif" width="226" height="229"></FONT></P>
+
+<P align="CENTER">Figura 16-3 FFT de um Grid</P>
+<FONT size="2">
+
+<P align="center">&nbsp;<IMG src="./SPRING - Filtragem_files/Image24.gif" width="457" height="462"></P>
+</FONT>
+
+<P align="center"><FONT size="2">Figura 16-4 Filtragem de Baixas e Altas Freqüências</FONT></P>
+
+<P align="JUSTIFY">&nbsp;</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Utilizando um filtro passa baixa bidimensional, como
+visto na Figura 16-4, obtemos uma imagem "borrada", ou seja ocorre uma perda de
+detalhes que são compostos de altas freqüências. Aplicando o inverso deste filtro
+explicitamos os detalhes perdidos na imagem anterior.(25)</P>
+
+<P align="CENTER"><IMG src="./SPRING - Filtragem_files/Image25.gif" width="456" height="227"></P>
+
+<P align="CENTER">Figura 16-5 Eliminação da Cruz Central </P>
+
+<P align="center"><A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm">&nbsp;<IMG src="./SPRING - Filtragem_files/seta_up.gif" alt="seta_up.gif - 170 Bytes" border="0" height="20" width="20" align="CENTER">Tipos de
+filtros &nbsp; </A></P>
+
+<HR>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Como visto na seção 4 Transformada de Fourier a
+transformada de uma imagem com bordas distintas gera a cruz central vista na Figura 16-5.
+Aplicando-se uma máscara na imagem original que elimina essa discontinuidade, obtemos uma
+imagem complexa da transformada sem a cruz central, o que permite uma melhor
+visualização dos fenômenos ocorridos no domínio da freqüência. Este procedimento é
+pouco usado pois é necessário uma interferência na imagem original muitas vezes não
+desejada.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image26.gif" width="360" height="341"></P>
+
+<P align="CENTER">Figura 16-6 Filtragem de um Ruído com Periodicidade Horizontal</P>
+<FONT size="2">
+
+</FONT><P><FONT size="2">&nbsp;&nbsp;&nbsp; &nbsp;</FONT>Esta imagem foi capturada de um digitalizador de sinal
+de vídeo quando a imagem no vídeo não estava bem posicionada gerando um ruído
+horizontal com uma periodicidade bem definida. A escolha do filtro é feita percebendo-se
+esta periodicidade e aplicando um filtro retangular vertical <I>(horizontal band pas</I>s).
+A imagem resultante da filtragem é vista sem o ruído em questão.</P>
+
+<P align="center">&nbsp;<IMG src="./SPRING - Filtragem_files/Image27.gif" width="369" height="297"> </P>
+
+<P align="center">Figura 16-7 Filtragem de Linhas Diagonais em um Chip</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; &nbsp;A imagem do chip vista na figura possui
+inúmeras linhas diagonais em duas direções, que se manifestam no domínio da
+freqüência como o X visto na imagem da transformada. Cada um dos traços corresponde a
+um grupo de linhas diagonais. Isolando apenas um dos grupos e preservando o resto da
+imagem complexa, obtemos a imagem original sem aquele conjunto de linhas diagonais.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; Esta filtragem pode ser usada para um detecção de
+bordas específica para linhas retas na imagem.</P>
+
+<P align="center"><IMG src="./SPRING - Filtragem_files/Image29.gif" width="352" height="308"><IMG src="./SPRING - Filtragem_files/Image28.gif" width="333" height="153"></P>
+
+<P align="center">Figura 16-8 Filtragem de Curvas Sobre Grid Confuso.</P>
+
+<P align="left">&nbsp;</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; A imagem inicial na seqüência da Figura 16-8 foi
+capturada através de um scanner e embora possua uma boa resolução a cópia original em
+papel não era bem definida gerando a imagem vista. O nosso interesse sobre esta imagem é
+isolar as duas classes de curvas que fornecem informações de cálculo, que uma vez no
+computador podem ser utilizadas por programas tornando o processo automático.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; O grid, mesmo confuso, parece ter alguma propriedade
+periódica. Ao calcularmos a FT da imagem original observamos três manifestações
+distintas: linhas verticais que provavelmente provêem do grid, uma linha inclinada muito
+bem definida e uma região esparsa em um setor angular. Isolamos as duas últimas regiões
+e obtivemos o contorno das curvas desejadas.</P>
+
+<P align="JUSTIFY">&nbsp;&nbsp;&nbsp; A curva que possui transforma uma linha inclinada
+bem definida, observando-se melhor, é muito semelhante a uma reta inclinada (uma linha
+diagonal), que como vimos na Figura 16-7 pode ser isolada. Já a outra curva se manifesta
+como se existissem diversas linhas diagonais <FONT size="1">6 </FONT>que combinadas formam
+a curva, por isso a formação da região esparsa em um setor angular.</P>
+
+<P align="center"><A href="./SPRING - Filtragem_files/SPRING - Filtragem.htm">&nbsp;<IMG src="./SPRING - Filtragem_files/seta_up.gif" alt="seta_up.gif - 170 Bytes" border="0" height="20" width="20" align="CENTER">Tipos de
+filtros &nbsp; </A></P>
+
+<HR>
+<FONT size="5"><B>
+
+</B></FONT><P><FONT size="5"><B>Referências Bibliográficas</B></FONT></P>
+<B><DIV align="left">
+
+<B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><B>
+  </B><TABLE border="0" cellpadding="0" width="100&percnt;" style="margin-left: 10px" cellspacing="4">
+  <TBODY><TR>
+    <TD width="100&percnt;" align="left">ALBUQUERQUE, M.P. de.<B> Processamento de Imagens:
+    Métodos e Análises.</B></TD>
+  </TR>
+  <TR>
+    <TD width="100&percnt;" align="left">FALCÃO, Alexandre Xavier &amp; LEITE, Neucimar Jerônimo.<B>
+    Tópicos em Processamento de Imagens.</B> UNICAMP. <B></B></TD>
+  </TR>
+  <TR>
+    <TD width="100&percnt;" align="left">Gonzales, Rafael &amp; WOODSD, Richard.<B> Digital Image
+    Processing, </B>Addison-Weslley Publishing Company, 1993.<B></B></TD>
+  </TR>
+  <TR>
+    <TD width="100&percnt;" align="left">PACIORNIK, Sidnei. <STRONG>Introdução ao Processamento
+    Digital de Imagens</STRONG>. PUC-RIO.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;" align="left">PARKER, J.R. <B>Algoritms for Image Processing and
+    Computer Vision. </B>Addison-Wesley Publishing Company, 1993.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;" align="left">RUSS, John C. <B>The Image Processing Handbook</B>. CRC
+    Press, 1994 INPE.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;" align="left">ARGOUD, Fernada Isabel Marques. <STRONG>Detecção e
+    Reconhecimento Automático de Atividades Epileptiformes no &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Encefalograma</STRONG>. Exame de Qualificação, UFSC, GPEB, Florianópolis, 1998.RUSS,
+    John C. </TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">BIRAN, Adrian and BREINER, Mosher.<B> <STRONG>MATLAB for Engineers
+    Addison -</STRONG>Wesley Publishing Company.</B> 1995 . </TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">IFEACHOR, Emmanuel C. and JERVIS, Barrier W. <STRONG>Digital Signal
+    Processing. </STRONG>Addison- Wesley Publishing Company.1993.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">KRAUSS, Thomas and SHURE Loren and LITTE, JOHN N. <STRONG>Signal
+    Processing Toolbox for Use with MATLAB</STRONG>. Math Works Inc.<B></B></TD>
+  </TR>
+  <TR>
+    <TD width="100&percnt;">OPPENHEIM, Alan V. and SCHAFER Thomas and SHURE Loren and LITTLE, JOHN N.
+    Signal Processing.<STRONG>Englewood Cliffs, New Jersey : Prentice-Hall.</STRONG></TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">SIQUEIRA, José Carlos Goulart E 703/803. Escola Federal de
+    Engenharia de Itajubá.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">E. O. BRigham " <STRONG>The Faust Fourier Transform</STRONG>"
+    Englewood Cliffs, Prentice Hall, 1974.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">M. A. O'Neill " <STRONG>Faster Than Fast Fourier </STRONG>"
+    BYTE, Abril págs.293-300, 1988.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">R. C. Gonzales &amp; P. Wintz " <STRONG>Digital</STRONG> <STRONG>Image
+    Processing</STRONG>" Addison Wesley, 1987.</TD>
+    </TR>
+  <TR>
+    <TD width="100&percnt;">K. R. Castlemanl " <STRONG>Digital Image Processing </STRONG>"
+    Prentice_Hall, Inc., Englewood Cliffs, 1979.<B></B></TD>
+  </TR>
+  <TR>
+    <TD width="100&percnt;">www.ime.usp.br/~cesar</TD>
+    </TR>
+</TBODY></TABLE>
+</DIV></B>
+
+<P align="center">&nbsp; <A href="http://www.inf.ufsc.br/~visao/1999/neilza/filtragemH.html"><IMG src="./SPRING - Filtragem_files/volta.gif" align="CENTER" width="30" height="30"> Página Principal</A></P>
+
+<HR>
+
+
+</BODY></HTML>

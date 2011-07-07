@@ -1,0 +1,25 @@
+ÀÄslave_1
+   ÀÄMAIN  0/33  Ram=0
+      ÃÄ??0??
+      ÃÄconfig_slave_1  0/73  Ram=0
+      ÃÄrotina_conversor_ad  0/137  Ram=0
+      ³  ÃÄ@PSTRINGCN7_9600_62_63  0/81  Ram=4
+      ³  ÃÄ@PRINTF_LU_9600_62_63  (Inline)  Ram=9
+      ³  ÀÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ÃÄrotina_slave_1  0/157  Ram=1
+      ³  ÃÄ@PSTRINGCN7_9600_62_63  0/81  Ram=4
+      ³  ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ÀÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@PSTRINGCN7_9600_62_63  0/81  Ram=4
+      ³  ÃÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ³  ÃÄ@PSTRINGCN7_9600_62_63  0/81  Ram=4
+      ³  ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ³  ÀÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@PSTRINGCN7_9600_62_63  0/81  Ram=4
+      ³  ÃÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ³  ÃÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ³  ÃÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ³  ÀÄ@PSTRINGC7_9600_62_63  0/72  Ram=3
+      ÀÄ@delay_ms1  0/22  Ram=1

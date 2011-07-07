@@ -1,0 +1,252 @@
+CCS PCM C Compiler, Version 4.032, 62930               16-dez-09 22:23
+
+               Filename: C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste 2\main.lst
+
+               ROM used: 153 words (2%)
+                         Largest free fragment is 2048
+               RAM used: 16 (4%) at main() level
+                         16 (4%) worst case
+               Stack:    1 worst case (0 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   049
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  MOVF   7B,W
+0016:  MOVWF  27
+0017:  BCF    03.7
+0018:  BCF    03.5
+0019:  MOVLW  8C
+001A:  MOVWF  04
+001B:  BTFSS  00.0
+001C:  GOTO   01F
+001D:  BTFSC  0C.0
+001E:  GOTO   032
+001F:  MOVF   22,W
+0020:  MOVWF  04
+0021:  MOVF   23,W
+0022:  MOVWF  77
+0023:  MOVF   24,W
+0024:  MOVWF  78
+0025:  MOVF   25,W
+0026:  MOVWF  79
+0027:  MOVF   26,W
+0028:  MOVWF  7A
+0029:  MOVF   27,W
+002A:  MOVWF  7B
+002B:  MOVF   20,W
+002C:  MOVWF  0A
+002D:  SWAPF  21,W
+002E:  MOVWF  03
+002F:  SWAPF  7F,F
+0030:  SWAPF  7F,W
+0031:  RETFIE
+0032:  BCF    0A.3
+0033:  BCF    0A.4
+0034:  GOTO   035
+.................... #include "C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste 2\main.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES LP                       //Low power osc < 200 khz 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES WRT_50%                  //Lower half of Program Memory is Write Protected 
+....................  
+.................... #use delay(clock=20000000) 
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8) 
+....................  
+.................... //registrador de leitura e escrita 
+.................... #BYTE PORTA_A = 0x05 
+.................... #BYTE PORTA_B = 0x06 
+.................... #BYTE PORTA_C = 0x07 
+....................  
+.................... #BYTE TRIS_A = 0x85 
+.................... #BYTE TRIS_B = 0x86 // saida de dados 
+.................... #BYTE TRIS_C = 0x87 // entrada de dados 
+....................  
+.................... #byte adresh = 0x1E 
+.................... #byte adresl = 0x9E 
+.................... #byte adcon0 = 0x1F 
+.................... #byte adcon1 = 0x9F 
+.................... #byte pir1 = 0x0C 
+.................... #byte pie1 = 0x8C 
+.................... #byte intcon = 0x8B 
+....................  
+.................... #bit adon = adcon0.0 
+.................... #bit godone = adcon0.2 
+.................... #bit adfm = adcon1.7 
+....................  
+....................  
+....................  
+.................... int1 i = 1; 
+*
+005C:  BCF    03.5
+005D:  BSF    28.0
+....................  
+.................... #int_timer1 
+.................... void us(){ 
+....................  
+.................... set_timer1(25000); 
+*
+0035:  MOVLW  61
+0036:  MOVWF  0F
+0037:  MOVLW  A8
+0038:  MOVWF  0E
+.................... output_bit(PIN_C2,i); 
+0039:  BTFSC  28.0
+003A:  GOTO   03D
+003B:  BCF    07.2
+003C:  GOTO   03E
+003D:  BSF    07.2
+003E:  BCF    29.2
+003F:  MOVF   29,W
+0040:  BSF    03.5
+0041:  MOVWF  07
+*
+005E:  MOVLW  FF
+005F:  MOVWF  29
+....................  
+.................... i = !i; 
+*
+0042:  MOVLW  01
+0043:  BCF    03.5
+0044:  XORWF  28,F
+....................  
+.................... } 
+....................  
+0045:  BCF    0C.0
+0046:  BCF    0A.3
+0047:  BCF    0A.4
+0048:  GOTO   01F
+.................... void main() 
+.................... { 
+0049:  CLRF   04
+004A:  BCF    03.7
+004B:  MOVLW  1F
+004C:  ANDWF  03,F
+004D:  MOVLW  81
+004E:  BSF    03.5
+004F:  MOVWF  19
+0050:  MOVLW  A6
+0051:  MOVWF  18
+0052:  MOVLW  90
+0053:  BCF    03.5
+0054:  MOVWF  18
+0055:  BSF    03.5
+0056:  BSF    1F.0
+0057:  BSF    1F.1
+0058:  BSF    1F.2
+0059:  BCF    1F.3
+005A:  MOVLW  07
+005B:  MOVWF  1C
+....................  
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+0060:  BSF    03.5
+0061:  BSF    1F.0
+0062:  BSF    1F.1
+0063:  BSF    1F.2
+0064:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0065:  BCF    03.5
+0066:  BCF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+0067:  BCF    14.5
+0068:  BCF    29.5
+0069:  MOVF   29,W
+006A:  BSF    03.5
+006B:  MOVWF  07
+006C:  BCF    03.5
+006D:  BSF    29.4
+006E:  MOVF   29,W
+006F:  BSF    03.5
+0070:  MOVWF  07
+0071:  BCF    03.5
+0072:  BCF    29.3
+0073:  MOVF   29,W
+0074:  BSF    03.5
+0075:  MOVWF  07
+0076:  MOVLW  01
+0077:  BCF    03.5
+0078:  MOVWF  14
+0079:  MOVLW  00
+007A:  BSF    03.5
+007B:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_4); 
+007C:  MOVF   01,W
+007D:  ANDLW  C0
+007E:  IORLW  01
+007F:  MOVWF  01
+....................    setup_timer_1(T1_INTERNAL|T1_DIV_BY_2); 
+0080:  MOVLW  95
+0081:  BCF    03.5
+0082:  MOVWF  10
+....................    setup_timer_2(T2_DIV_BY_16,93,1); 
+0083:  MOVLW  00
+0084:  MOVWF  78
+0085:  IORLW  06
+0086:  MOVWF  12
+0087:  MOVLW  5D
+0088:  BSF    03.5
+0089:  MOVWF  12
+....................    setup_comparator(NC_NC_NC_NC); 
+008A:  MOVLW  07
+008B:  MOVWF  1C
+008C:  MOVF   05,W
+008D:  MOVLW  10
+008E:  MOVWF  77
+008F:  DECFSZ 77,F
+0090:  GOTO   08F
+0091:  NOP
+0092:  MOVF   1C,W
+0093:  BCF    03.5
+0094:  BCF    0D.6
+....................    setup_vref(FALSE); 
+0095:  BSF    03.5
+0096:  CLRF   1D
+....................    // TODO: USER CODE!! 
+....................  
+....................  
+....................  
+....................  
+.................... while(true){ 
+.................... /*output_bit(PIN_C2,1); 
+.................... delay_us(10); 
+.................... output_bit(PIN_C2,0); 
+.................... delay_us(90);*/ 
+.................... } 
+0097:  GOTO   097
+....................  
+.................... } 
+0098:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3938   LP NOWDT NOPUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD WRT_50%

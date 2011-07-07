@@ -1,0 +1,8 @@
+ÀÄconversor AD
+   ÀÄmain  0/108  Ram=2
+      ÃÄ??0??
+      ÃÄinicia_ad  0/22  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄle_ad  0/23  Ram=4
+      ÀÄ@PRINTF_LD_9600_62_63  0/120  Ram=9

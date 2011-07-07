@@ -1,0 +1,13 @@
+*** Error 12 "Master.c" Line 5(8,14): Undefined identifier   adcon1
+*** Error 12 "Master.c" Line 6(8,14): Undefined identifier   adcon0
+*** Error 12 "Master.c" Line 7(6,10): Undefined identifier   adon
+*** Error 12 "Master.c" Line 17(8,14): Undefined identifier   godone
+*** Error 12 "Master.c" Line 19(7,13): Undefined identifier   godone
+*** Error 12 "Master.c" Line 21(5,11): Undefined identifier   adresh
+*** Error 12 "Master.c" Line 23(7,13): Undefined identifier   adresl
+*** Error 103 "Master.c" Line 39(32,33): Constant out of the valid range  :: 0 is not 1..16
+*** Error 12 "Master.c" Line 47(11,17): Undefined identifier   TRIS_A
+*** Error 12 "Master.c" Line 48(11,17): Undefined identifier   TRIS_B
+*** Error 12 "Master.c" Line 49(11,17): Undefined identifier   TRIS_C
+*** Error 79 "Master.c" Line 66(0,1): Expect }
+      12 Errors,  0 Warnings.

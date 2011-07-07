@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.inf.pucrs.br/~pinho/CG/Aulas/Img/IMG.htm -->
+<HTML><HEAD><TITLE>MANIPULAÇÃO DE IMAGENS</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.6000.16830" name=GENERATOR>
+<META content="C:\ARQUIVOS DE PROGRAMAS\MICROSOFT OFFICE\OFFICE\html.dot" 
+name=Template></HEAD>
+<BODY vLink=#800080 link=#0000ff 
+background=MANIPULAÇÃO%20DE%20IMAGENS_arquivos/FundoAzul.gif>
+<CENTER><B><FONT color=#ff0000><FONT size=+3>Manipulação de 
+imagens</FONT></FONT></B></CENTER>
+<P><BR></P>
+<CENTER>
+<H4><A href="http://www.inf.pucrs.br/~pinho/CG/Aulas/Img/ProgsImg.zip">Programas 
+que geraram as imagens desta página</A></H4></CENTER>
+<CENTER><A 
+href="http://www.inf.pucrs.br/~pinho/CG/Aulas/Img/Teste1.zip">Material para 
+exercício no Lapro</A></CENTER>
+<P><BR><BR><BR></P>
+<P><B><FONT color=#800000><FONT size=+3>1.Tipos de imagens</FONT></FONT></B> 
+</P>
+<P><B><FONT color=#800000><FONT size=+2>1.1 Imagens True-Color</FONT></FONT></B> 
+</P>
+<BLOCKQUOTE><FONT size=+1>Tem-se geralmente 24 bits/pixel</FONT> 
+  <P><FONT size=+1>8 bits para cada componente RGB</FONT> </P>
+  <P><FONT size=+1>2^24 cores possíveis para cada ponto : 16.777.216 
+  cores</FONT></P></BLOCKQUOTE>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=7 width=265 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="17%"><FONT 
+size=+1>rgb</FONT></TD></TR></TBODY></TABLE></CENTER><B><FONT 
+color=#800000><FONT size=+2>1.2 Imagens com Palette</FONT></FONT></B> 
+<P><FONT size=+1>A imagem é separada em duas partes</FONT> </P>
+<CENTER>
+<P><FONT size=+1>Palette</FONT></P></CENTER>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=7 width=353 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT size=+1>rgb</FONT></TD>
+    <TD vAlign=top width="13%"><FONT 
+size=+1>rgb</FONT></TD></TR></TBODY></TABLE></CENTER>
+<CENTER><FONT size=+1>Imagem</FONT></CENTER>
+<CENTER>
+<TABLE height=125 cellSpacing=2 cellPadding=7 width=265 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="17%" height=33><FONT size=-2>10</FONT></TD>
+    <TD vAlign=top width="17%" height=33><FONT size=-2>08</FONT></TD>
+    <TD vAlign=top width="17%" height=33><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=33><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=33><FONT size=-2>03</FONT></TD>
+    <TD vAlign=top width="17%" height=33><FONT size=-2>10</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>11</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>10</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>05</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>03</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT size=-2>06</FONT></TD>
+    <TD vAlign=top width="17%" height=19><FONT 
+size=-2>03</FONT></TD></TR></TBODY></TABLE></CENTER><FONT size=+1>O número de 
+cores diferentes por imagem é limitado pelo tamanho do <U>Palette</U></FONT> 
+<BR>&nbsp; 
+<P><B><FONT color=#800000><FONT size=+3>2. Redução do número de 
+cores</FONT></FONT></B> </P>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp; Como exibir uma imagem True-Color em um 
+dispositivo com Palette ?</FONT> <BR><FONT size=+1>&nbsp;&nbsp;&nbsp; Como 
+exibir uma imagem com palette de 256 cores em um dispositivo de 16 cores 
+?</FONT> </P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><FONT size=+1><B>Genericamente: </B>Como exibir uma imagem com 
+    um M cores diferentes</FONT> <BR><FONT size=+1>(M trincas RGB distintas) e 
+    um dispositivo capaz de exibir N cores</FONT> <BR><FONT size=+1>diferentes 
+    sendo N &lt; M ?</FONT></BLOCKQUOTE></BLOCKQUOTE><B><FONT 
+size=+1>Algoritmo</FONT></B> 
+<BLOCKQUOTE><FONT size=+1>1. Tomar a imagem de entrada e determinar quais as N 
+  cores que mais vezes aparecem</FONT> 
+  <P><FONT size=+1>2. Criar um palette com estas cores</FONT> </P>
+  <P><FONT size=+1>3. Para cada ponto da imagem de entrada</FONT> </P>
+  <BLOCKQUOTE><FONT size=+1>3.1&nbsp; Determinar qual das entradas do palette 
+    construído <I>mais se parece</I></FONT> <BR><FONT size=+1>&nbsp;&nbsp;&nbsp; 
+    com a cor (RGB)<I> </I>do ponto</FONT> <BR><FONT size=+1>3.2&nbsp; Exibir o 
+    ponto com a cor obtida</FONT></BLOCKQUOTE></BLOCKQUOTE><B><FONT 
+color=#800000><FONT size=+2>2.1 Cores <I>Parecidas</I></FONT></FONT></B> 
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para determinar qual 
+dentre duas cores(RGB) é a que mais <I>se parece </I>com uma terceira basta 
+calcular a <U>distância</U> entre as cores no espaço RGB.</FONT> </P>
+<CENTER>
+<P><IMG height=53 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/image5.gif" 
+width=286></P></CENTER>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quanto menor a 
+distância <I><B>mais pareciadas</B> </I>são Cor 1 e Cor 2</FONT> <BR>&nbsp; 
+<BR>&nbsp; </P>
+<P><B><FONT color=#800000><FONT size=+3>3. Exibição de imagens em tons de 
+cinza</FONT></FONT></B> </P>
+<P><B><FONT color=#800000><FONT size=+2>3.1 Tom de cinza</FONT></FONT></B> </P>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uma cor é um <I>tom 
+de cinza</I> sempre que suas componentes R, G e B são iguais</FONT> 
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Preto&nbsp; R:0&nbsp;&nbsp; 
+G:0&nbsp;&nbsp; B:0</TT> <BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Branco R:255 G:255 B:255</TT> <BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Cinza&nbsp; R:30&nbsp; G:30&nbsp; B:30</TT> 
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cinza&nbsp; R:200 G:200 
+B:200</TT> </P>
+<P><B><FONT color=#800000><FONT size=+2>3.2 Grau de 
+luminosidade</FONT></FONT></B> </P>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O grau de 
+<I>luminosidade de uma cor </I>significa quanto o olho humano pode perceber 
+desta cor.</FONT> <BR><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pode ser calculado por</FONT> <BR><B><FONT 
+size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Luminosidade = R*0.3 + G*0.59 + B *0.11</FONT></B> </P>
+<P><B><FONT color=#800000><FONT size=+1>3.2.1 Exibição em dispositivos 
+True-Color</FONT></FONT></B> </P>
+<P><FONT size=+1>Tomar cada ponto da imagem e calcular seu grau de luminosidade: 
+K</FONT> </P>
+<P><FONT size=+1>Exibir o ponto com um tom de cinza que tenha as componente R,G 
+e B todas iguais a K</FONT> </P>
+<P><B><FONT color=#800000><FONT size=+1>3.2.2 Exibição em dispositivos com 
+Palette</FONT></FONT></B> </P>
+<BLOCKQUOTE><FONT size=+1>1. Montar um palette com N tons de cinza em ordem 
+  crescente</FONT></BLOCKQUOTE>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=7 width=529 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="13%"><B><FONT size=+1>Índice</FONT></B></TD>
+    <TD vAlign=center width="3%">
+      <CENTER><B><FONT size=+1>0</FONT></B></CENTER></TD>
+    <TD vAlign=top width="5%"><FONT size=+1>...</FONT></TD>
+    <TD vAlign=top width="19%">
+      <CENTER><B><FONT size=+1>50</FONT></B></CENTER></TD>
+    <TD vAlign=top width="7%">&nbsp;</TD>
+    <TD vAlign=top width="24%">
+      <CENTER><B><FONT size=+1>100</FONT></B></CENTER></TD>
+    <TD vAlign=top width="7%">&nbsp;</TD>
+    <TD vAlign=top width="24%">
+      <CENTER><B><FONT size=+1>255</FONT></B></CENTER></TD></TR>
+  <TR>
+    <TD vAlign=center width="13%"><B><FONT size=+1>r,g,b</FONT></B></TD>
+    <TD vAlign=center width="3%"><FONT size=+1>0,0,0</FONT></TD>
+    <TD vAlign=center width="5%"><FONT size=+1>...</FONT></TD>
+    <TD vAlign=center width="19%"><FONT size=+1>50,50,50</FONT></TD>
+    <TD vAlign=center width="7%"><FONT size=+1>...</FONT></TD>
+    <TD vAlign=center width="24%"><FONT size=+1>100,100,100</FONT></TD>
+    <TD vAlign=center width="7%"><FONT size=+1>...</FONT></TD>
+    <TD vAlign=center width="24%"><FONT 
+  size=+1>255,255,255</FONT></TD></TR></TBODY></TABLE></CENTER>
+<BLOCKQUOTE><FONT size=+1><B>2.</B> Para cada ponto da 
+imagem</FONT></BLOCKQUOTE>
+<BLOCKQUOTE><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Calcular 
+  seu grau de luminosidade: K</FONT> <BR><FONT 
+  size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exibir o ponto com a cor K 
+  do palette</FONT></BLOCKQUOTE>
+<CENTER><IMG style="WIDTH: 694px; HEIGHT: 222px" alt="" 
+src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/cinza.jpg"> 
+<P><B><FONT size=+1>Imagem gerada em tons de cinza</FONT></B></P></CENTER>
+<P><B><FONT color=#800000><FONT size=+3>4. Exibição de Imagens em Dispositivos 
+Monocromáticos</FONT></FONT></B> </P>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Todos os métodos a 
+seguir apresentados partem de uma imagem em tons de cinza</FONT> </P>
+<P><B><FONT color=#800000><FONT size=+2>4.1 Método do Limiar 
+(threshold)</FONT></FONT></B> </P>
+<P><FONT size=+1>Determina-se um nível de cinza(limiar) a partir do qual o ponto 
+deve ser aceso</FONT> </P>
+<P><FONT size=+1>Para cada ponto da imagem</FONT> </P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><FONT size=+1>Se NivelDeCinza limiar</FONT> <BR><FONT 
+    size=+1>então acende o ponto</FONT> <BR><FONT size=+1>senão apaga o 
+    ponto</FONT></BLOCKQUOTE></BLOCKQUOTE><FONT size=+1>O <I>limiar</I> pode ser 
+escolhido como a intensidade média do palette da imagem</FONT> 
+<P><FONT size=+1>Gera uma imagem de baixa qualidade, entretanto é um algortimo 
+rápido.</FONT> </P>
+<CENTER><IMG height=209 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/Limiar.jpg" 
+width=522></CENTER>
+<P><B><FONT color=#800000><FONT size=+2>4.2 Aproximação por Halftone 
+(Meios-tons)</FONT></FONT></B> </P>
+<P><FONT size=+1>Cada intensidade é exibida como um padrão</FONT> </P>
+<P><FONT size=+1>Para gerar imagens com 5 tons de cinza usa-se um (padrão 
+2x2)</FONT> </P>
+<P><IMG height=81 alt="padraohalftone.gif (3151 bytes)" 
+src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/padraohalftone.gif" width=650></P>
+<P><FONT size=+1>Para imagens com 10 tons de cinza (padrão 3x3)</FONT> </P>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=7 width=113 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="33%">
+      <CENTER><B>6&nbsp;</B></CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER><B>8&nbsp;</B></CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER><B>4&nbsp;</B></CENTER></TD></TR>
+  <TR>
+    <TD vAlign=top width="33%">
+      <CENTER><B>1&nbsp;</B></CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER><B>0&nbsp;</B></CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER><B>3&nbsp;</B></CENTER></TD></TR>
+  <TR>
+    <TD vAlign=top width="33%">
+      <CENTER><B>5&nbsp;</B></CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER><B>2&nbsp;</B></CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER><B>7&nbsp;</B></CENTER></TD></TR></TBODY></TABLE></CENTER><FONT 
+size=+1>As imagens geradas com <I>halftone </I>são sempre maiores que a imagem 
+original</FONT> 
+<P><FONT size=+1>Se uma imagem possuir mais intensidades que o número de padrões 
+então deve-se criar grupos de intensidades que serão exibidas com o mesmo 
+padrão:</FONT> </P>
+<CENTER>
+<P><FONT size=+1>5 padrões X 50 intensidades</FONT></P></CENTER>
+<CENTER>
+<TABLE cellSpacing=2 cellPadding=7 width=493 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="23%">
+      <CENTER><FONT size=+1>Intensidade</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>0..9</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>10..19</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>20..29</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>30..39</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>40..49</FONT></CENTER></TD></TR>
+  <TR>
+    <TD vAlign=top width="23%">
+      <CENTER><FONT size=+1>Padrão</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>0</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>1</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>2</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>3</FONT></CENTER></TD>
+    <TD vAlign=top width="15%">
+      <CENTER><FONT size=+1>4</FONT></CENTER></TD></TR></TBODY></TABLE></CENTER>
+<CENTER><IMG height=209 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/halftone.jpg" 
+width=588> 
+<P><I><FONT size=+1>&nbsp;</FONT></I> <B><FONT size=+1>Imagem gerada por 
+Halftone com padrão 2x2</FONT></B></P></CENTER>
+<P><FONT color=#800000><FONT size=+2>4.2 Aproximação por Dither</FONT></FONT> 
+</P>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp; Busca não aumentar o tamanho da 
+imagem</FONT> </P>
+<P><FONT size=+1>&nbsp;&nbsp;&nbsp; Dn = Matriz de Dither de ordem n</FONT> </P>
+<P><IMG height=194 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/matrizes.gif" 
+width=656></P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE><B>Dn(i,j) = entrada [i,j] da matriz de Dither de ordem n&nbsp;<BR>Para cada ponto (X,Y) da imagem&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = X mod n&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; j = Y mod n&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (cor(X,Y) Dn(i,j)&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pinta (X,Y)</B></PRE></BLOCKQUOTE></BLOCKQUOTE><FONT 
+size=+1>O problema do Dither é que o padrão é visível</FONT> 
+<P><FONT size=+1>Para gerar matrizes de Dither maiores pode-se usar a seguinte 
+técnica</FONT> </P>
+<CENTER>
+<P><IMG height=152 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/Image6.gif" 
+width=294></P>
+<P><IMG height=209 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/dither.jpg" 
+width=522></P>
+<P><FONT size=+2>&nbsp;</FONT> <B><FONT size=+1>Imagem gerada pelo método de 
+Dither</FONT></B> (2x2)</P></CENTER>
+<P><FONT color=#800000><FONT size=+2>4.3 Aproximação por Difusão de 
+erro(Floid-Steinberg)</FONT></FONT> </P>
+<P><FONT size=+1>Parte do Método do Limiar</FONT> </P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE><PRE><FONT size=-1>Calcula o <I>erro </I>cometido na exibição do ponto</FONT></PRE><PRE><FONT size=-1>Distribui este <I>erro </I>aos pontos vizinhos</FONT></PRE><PRE><FONT size=-1>Toma a intensidade média da imagem como valor do limiar</FONT></PRE><PRE><FONT size=-1>Se um ponto tem intensidade maior que o limar</FONT>&nbsp;<BR><FONT size=-2>então </FONT><FONT size=-1>acende o ponto</FONT></PRE><PRE><FONT size=-1>calcula o <I>erro </I>cometido na exibição</FONT></PRE><PRE><FONT size=-1>erro = INTENS_MAX - CorPonto</FONT></PRE><PRE><FONT size=-1>Se um ponto tem intensidade menor ou igual ao limiar</FONT>&nbsp;<BR><FONT size=-2>então </FONT><FONT size=-1>apaga o ponto</FONT></PRE><PRE><FONT size=-1>calcula o <I>erro </I>cometido na exibição</FONT></PRE><PRE><FONT size=-1>erro = CorPonto - INTENS_MIN</FONT></PRE><PRE><FONT size=-1>Distribui o <I>erro</I> para os pontos vizinhos (conforme as tabelas)</FONT></PRE></BLOCKQUOTE></BLOCKQUOTE>
+<CENTER><IMG height=132 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/difusao1.gif" 
+width=540></CENTER>
+<P><FONT size=+1>A imagem deve ser processada da esquerda para a direita, de 
+cima para baixo</FONT> </P><PRE><FONT face="Courier New"><FONT size=-1>for(x=1; x&lt; LARG; x++)</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp; for(y=1; y&lt; ALT; y++)</FONT></FONT>&nbsp;<BR>&nbsp; <FONT face="Courier New"><FONT size=-1>{</FONT></FONT>&nbsp;<BR>&nbsp;&nbsp;&nbsp; <FONT face="Courier New"><FONT size=-1>if(Cor(x,y) Limiar)</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; putpixel(x,y,WHITE);</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; erro = INTENS_MAX - Cor(x,y);</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; putpixel(x,y,BLACK);</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; erro = Cor(x,y) - INTENS_MIN;</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT></PRE><PRE><FONT face="Courier New"><FONT size=-1>/* Distribui o erro */</FONT></FONT></PRE><PRE><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Img[x+1][y] += 3/8 * erro;</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Img[x][y+1] += 3/8 * erro;</FONT></FONT>&nbsp;<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Img[x+1][y+1] += 2/8 * erro;</FONT></FONT></PRE><PRE><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp; }</FONT></FONT></PRE><FONT 
+size=+1>O algoritmo de difusão de erro também pode ser usado para exibir imagem 
+em dispositivos com capacidade de gerar cores</FONT> 
+<P><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp; CorPonto = 
+Cor(x,y);</FONT></FONT> <BR><FONT face="Courier New"><FONT 
+size=-1>&nbsp;&nbsp;&nbsp; CorExistente = 
+CorMaisParecida(CorPonto);</FONT></FONT> <BR><FONT face="Courier New"><FONT 
+size=-1>&nbsp;&nbsp;&nbsp; putpixel(x,y,CorExistente);</FONT></FONT> <BR><FONT 
+face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp; erro = CorPonto - 
+CorExistente</FONT></FONT> <BR><FONT face="Courier New"><FONT 
+size=-1>&nbsp;&nbsp;&nbsp; /* Distribui o erro ...*/</FONT></FONT> <BR>&nbsp; 
+<BR>&nbsp; <BR></P>
+<CENTER>
+<P><IMG height=208 alt="DifusaoErro.jpg (69860 bytes)" 
+src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/DifusaoErro.jpg" width=524></P>
+<P><B><FONT size=+1>Imagem gerada por difusão de erro</FONT></B></P></CENTER>
+<P><FONT size=+2>&nbsp;</FONT> <B><FONT color=#800000><FONT size=+3>5. 
+FILTROS</FONT></FONT></B> </P>
+<CENTER>
+<P><IMG height=287 src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/Image4.gif" 
+width=455></P></CENTER>
+<P><BR><BR><BR><BR></P>
+<P><FONT size=+1>Cada linha de uma imagem pode ser vista como uma curva que 
+relaciona tempo e freqüência</FONT> </P>
+<P><FONT size=+1>Os filtros procuram altera o comportamento das curvas de 
+freqüência</FONT> </P>
+<P><B><FONT color=#800000><FONT size=+2>5.1 Filtros Passa-alta</FONT></FONT></B> 
+</P>
+<P><FONT size=+1>Trata a curva mantendo trechos de alfa freqüência e eliminando 
+trechos de baixa freqüência</FONT> </P>
+<P><FONT size=+1>Usado para detectar bordas em imagens</FONT> </P>
+<P><B><FONT size=+1>Algoritmo</FONT></B> </P>
+<P><FONT face="Courier New"><FONT size=-1>1)Detectar bordas não 
+horizontais</FONT></FONT> </P>
+<P><FONT face="Courier New"><FONT size=-1>Para cada ponto (x,y) de uma 
+linha</FONT></FONT> <BR><FONT face="Courier New"><FONT 
+size=-1>&nbsp;&nbsp;&nbsp; Se (Cor(x-1,y)- Cor(x,y)) &gt; limiar</FONT></FONT> 
+<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp; Então Gera um 
+ponto na imagem de saída na posição (x,y)</FONT></FONT> </P>
+<P><FONT face="Courier New"><FONT size=-1>2)Detectar bordas não 
+verticais</FONT></FONT> </P>
+<P><FONT face="Courier New"><FONT size=-1>Para cada ponto (x,y) de uma 
+coluna</FONT></FONT> <BR><FONT face="Courier New"><FONT 
+size=-1>&nbsp;&nbsp;&nbsp; Se (Cor(x,y-1)- Cor(x,y)) &gt; limiar</FONT></FONT> 
+<BR><FONT face="Courier New"><FONT size=-1>&nbsp;&nbsp;&nbsp; Então Gera um 
+ponto na imagem de saída na posição (x,y)</FONT></FONT></P>
+<P></P>
+<P><FONT style="FONT-WEIGHT: bold" face="Courier New"><FONT size=-1>Observação: 
+Nestes algoritmos, o cálculo "</FONT></FONT><FONT style="FONT-WEIGHT: bold" 
+face="Courier New"><FONT size=-1>Cor(x-1,y)- Cor(x,y)</FONT></FONT><FONT 
+face="Courier New"><FONT size=-1><SPAN style="FONT-WEIGHT: bold">" refere-se ao 
+cáculo de uma distância entre duas cores. </SPAN>Veja na seção 2.1 como calcular 
+a distância entre duas cores. Também é possivel usar a diferença de luminosidade 
+entre duas cores apra detectar uma borda.</FONT></FONT> </P>
+<CENTER>
+<P><IMG height=233 alt="Bordas.gif (7394 bytes)" 
+src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/Bordas.gif" width=553></P>
+<P><B><FONT size=+1>Imagem gerada por um filtro 
+passa-alta</FONT></B></P></CENTER>
+<P><B><FONT color=#800000><FONT size=+2>5.2 Filtros 
+Passa-baixa</FONT></FONT></B> </P>
+<P><FONT size=+1>Trata a curva mantendo trechos de baixa freqüência e eliminando 
+trechos de alta freqüência</FONT> </P>
+<P><FONT size=+1>Usado para suavizar bordas imagens</FONT> </P>
+<P><B><FONT size=+1>Algoritmo</FONT></B> </P>
+<P><FONT size=+1>A cor de cada ponto da imagem passa a ser uma média ponderada 
+entre sua cor original e as cores dos pontos vizinhos</FONT> </P>
+<P><FONT size=+1>Em geral, representam-se os pesos de cada ponto por meio de uma 
+matriz</FONT> </P>
+<CENTER>
+<TABLE cellPadding=7 width=113 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="33%">
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER>2&nbsp;</CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER>1&nbsp;</CENTER></TD></TR>
+  <TR>
+    <TD vAlign=top width="33%">
+      <CENTER>2&nbsp;</CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER>5&nbsp;</CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER>2&nbsp;</CENTER></TD></TR>
+  <TR>
+    <TD vAlign=top width="33%">
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER>2&nbsp;</CENTER></TD>
+    <TD vAlign=top width="33%">
+      <CENTER>1&nbsp;</CENTER></TD></TR></TBODY></TABLE></CENTER>
+<CENTER>
+<P><IMG height=128 alt="Suave.gif (6210 bytes)" 
+src="MANIPULAÇÃO%20DE%20IMAGENS_arquivos/Suave.gif" width=566></P>
+<P><B><FONT size=+1>Imagem gerada por filtro 
+passa-baixa</FONT></B></P></CENTER></BODY></HTML>

@@ -1,0 +1,9 @@
+http://www.tecgraf.puc-rio.br/~mgattass/fcg/trb06/Ricardo%20Szczerbacki/source/t2-segmentacao/t2-metodologia.html
+http://www.dpi.inpe.br/spring/teoria/filtrage/filtragem.htm
+http://74.125.113.132/search?q=cache:5A2FeCw_GtAJ:www.inf.puc-rio.br/~pvieira/fcg/T2/T2.doc+Filtros+Computa%C3%A7%C3%A3o+Gr%C3%A1fica+Matriz&cd=2&hl=pt-BR&ct=clnk&gl=br
+www.cbpf.br/cat/pdsi/pdf/ProcessamentoImagens.PDF 
+http://www.inf.pucrs.br/~pinho/CG/Aulas/Img/IMG.htm
+http://www.inf.ufrgs.br/~crdias/relatorio_3TFPI.htm
+http://www.del.ufrj.br/~fmello/AnaliseDeImagens/curso2.htm (mesmo que o PDF)
+
+Tags: processamento de imagens filtros

@@ -1,0 +1,28 @@
+[PROJECT]
+Target=main.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=main
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=F:\Micro II\Projeto1\main.c
+2=
+3=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\Micro II\Projeto1\main.c
+[Units]
+Count=1
+1=main.c (main)
+Link=0

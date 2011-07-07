@@ -1,0 +1,324 @@
+BODY {
+	FONT-SIZE: 10pt; COLOR: #cccccc
+}
+A:link {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+body_alink {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+body_avisited {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+body_ahover {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.page {
+	BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BACKGROUND: #333333; BORDER-LEFT: #333333 1px solid; COLOR: #999999; BORDER-BOTTOM: #333333 1px solid
+}
+.tborder {
+	BACKGROUND: #000000; COLOR: #999999
+}
+.tcat {
+	FONT-WEIGHT: bold; BACKGROUND: url(../../images/adrenaline_v4.0/gradients/gradient_tcat.gif) #333333 repeat-x left top; COLOR: #999999
+}
+.tcat A:link {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.tcat_alink {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.tcat A:visited {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.tcat_avisited {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.tcat A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tcat A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tcat_ahover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.thead {
+	FONT-WEIGHT: bold; BACKGROUND: url(../../images/adrenaline_v4.0/gradients/gradient_tcat.gif) #000000 repeat-x left top; COLOR: #cccccc
+}
+.thead A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.thead_alink {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.thead A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.thead_avisited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.thead A:hover {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.thead A:active {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.thead_ahover {
+	COLOR: #cc0000; TEXT-DECORATION: none
+}
+.tfoot {
+	BACKGROUND: #333333; COLOR: #999999
+}
+.tfoot A:link {
+	COLOR: #999999
+}
+.tfoot_alink {
+	COLOR: #999999
+}
+.tfoot A:visited {
+	COLOR: #999999
+}
+.tfoot_avisited {
+	COLOR: #999999
+}
+.tfoot A:hover {
+	COLOR: #cccccc
+}
+.tfoot A:active {
+	COLOR: #cccccc
+}
+.tfoot_ahover {
+	COLOR: #cccccc
+}
+.alt1 {
+	BACKGROUND: #282828; COLOR: #cccccc
+}
+.alt1Active {
+	BACKGROUND: #282828; COLOR: #cccccc
+}
+.alt2 {
+	BACKGROUND: #333333; COLOR: #999999
+}
+.alt2Active {
+	BACKGROUND: #333333; COLOR: #999999
+}
+.inlinemod {
+	BACKGROUND: #999999; COLOR: #000000
+}
+.wysiwyg {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #333333; PADDING-BOTTOM: 0px; MARGIN: 5px 10px 10px; FONT: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif; COLOR: #cccccc; PADDING-TOP: 0px
+}
+.wysiwyg A:link {
+	COLOR: #cccccc
+}
+.wysiwyg_alink {
+	COLOR: #cccccc
+}
+.wysiwyg A:visited {
+	COLOR: #cccccc
+}
+.wysiwyg_avisited {
+	COLOR: #cccccc
+}
+.wysiwyg A:hover {
+	COLOR: #cccccc
+}
+.wysiwyg A:active {
+	COLOR: #cccccc
+}
+.wysiwyg_ahover {
+	COLOR: #cccccc
+}
+TEXTAREA {
+	FONT: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.bginput {
+	FONT: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.bginput OPTION {
+	FONT-SIZE: 10pt; FONT-FAMILY: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.bginput OPTGROUP {
+	FONT-SIZE: 10pt; FONT-FAMILY: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.button {
+	FONT: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+SELECT {
+	FONT: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+OPTION {
+	FONT-SIZE: 11px; FONT-FAMILY: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+OPTGROUP {
+	FONT-SIZE: 11px; FONT-FAMILY: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.smallfont {
+	FONT: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.time {
+	COLOR: #ffffff
+}
+.navbar {
+	FONT: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif
+}
+.highlight {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+.fjsel {
+	BACKGROUND: #999999; COLOR: #000000
+}
+.fjdpth0 {
+	BACKGROUND: #cccccc; COLOR: #000000
+}
+.panel {
+	BACKGROUND: #333333; COLOR: #cccccc
+}
+.panelsurround {
+	BACKGROUND: #333333; COLOR: #cccccc
+}
+LEGEND {
+	FONT: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif; COLOR: #000000
+}
+.vbmenu_control {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; BACKGROUND: #666666; PADDING-BOTTOM: 3px; FONT: bold 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif; COLOR: #000000; PADDING-TOP: 3px; WHITE-SPACE: nowrap
+}
+.vbmenu_control A:link {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+.vbmenu_control_alink {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+.vbmenu_control A:visited {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+.vbmenu_control_avisited {
+	COLOR: #cccccc; TEXT-DECORATION: none
+}
+.vbmenu_control A:hover {
+	COLOR: #cccccc; TEXT-DECORATION: underline
+}
+.vbmenu_control A:active {
+	COLOR: #cccccc; TEXT-DECORATION: underline
+}
+.vbmenu_control_ahover {
+	COLOR: #cccccc; TEXT-DECORATION: underline
+}
+.vbmenu_popup {
+	BORDER-RIGHT: #0b198c 1px solid; BORDER-TOP: #0b198c 1px solid; BACKGROUND: #666666; BORDER-LEFT: #0b198c 1px solid; COLOR: #000000; BORDER-BOTTOM: #0b198c 1px solid
+}
+.vbmenu_option {
+	BACKGROUND: #999999; FONT: 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif; CURSOR: pointer; COLOR: #000000; WHITE-SPACE: nowrap
+}
+.vbmenu_option A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.vbmenu_option_alink {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.vbmenu_option A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.vbmenu_option_avisited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.vbmenu_option A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_option A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_option_ahover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite {
+	BACKGROUND: #999999; FONT: 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif; CURSOR: pointer; COLOR: #000000; WHITE-SPACE: nowrap
+}
+.vbmenu_hilite A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite_alink {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite_avisited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.vbmenu_hilite_ahover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.bigusername {
+	FONT-SIZE: 14pt
+}
+TD.thead {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+TH.thead {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+DIV.thead {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+.pagenav A {
+	TEXT-DECORATION: none
+}
+.pagenav TD {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+.shade {
+	COLOR: #777777; TEXT-DECORATION: none
+}
+A.shade:link {
+	COLOR: #777777; TEXT-DECORATION: none
+}
+A.shade:visited {
+	COLOR: #777777; TEXT-DECORATION: none
+}
+A.shade:active {
+	COLOR: #ff4400; TEXT-DECORATION: underline
+}
+A.shade:hover {
+	COLOR: #ff4400; TEXT-DECORATION: underline
+}
+.tcat .shade {
+	COLOR: #dddddd
+}
+.thead .shade {
+	COLOR: #dddddd
+}
+.tfoot .shade {
+	COLOR: #dddddd
+}
+.fieldset {
+	MARGIN-BOTTOM: 6px
+}
+.fieldset {
+	FONT-SIZE: 11px
+}
+.fieldset TD {
+	FONT-SIZE: 11px
+}
+.fieldset P {
+	FONT-SIZE: 11px
+}
+.fieldset LI {
+	FONT-SIZE: 11px
+}
