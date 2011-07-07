@@ -1,0 +1,13 @@
+[paths]
+default = http://so2.juliano.info/hg/u/tenazatto/shell/
+
+
+[ui]
+username = Thales Eduardo Nazatto <discipulodopovo@yahoo.com.br>
+
+[tortoisehg]
+summarylen = 0
+messagewrap = 0
+pushafterci = False
+autoinc = None
+ciexclude = None

@@ -1,0 +1,3 @@
+multichatcli.o: multichatcli.c util.h
+multichatsrv.o: multichatsrv.c util.h
+util.o: util.c util.h

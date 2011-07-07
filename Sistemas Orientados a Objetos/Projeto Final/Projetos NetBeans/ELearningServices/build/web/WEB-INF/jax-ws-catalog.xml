@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:9960/ELearningServices/AlunoService?wsdl" uri="wsdl/localhost_9960/ELearningServices/AlunoService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/AlunoService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/AlunoService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/DisciplinaService?wsdl" uri="wsdl/localhost_9960/ELearningServices/DisciplinaService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/DisciplinaService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/DisciplinaService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/CriterioAvaliacaoService?wsdl" uri="wsdl/localhost_9960/ELearningServices/CriterioAvaliacaoService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/CriterioAvaliacaoService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/CriterioAvaliacaoService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/MatriculaService?wsdl" uri="wsdl/localhost_9960/ELearningServices/MatriculaService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/MatriculaService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/MatriculaService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/NotaService?wsdl" uri="wsdl/localhost_9960/ELearningServices/NotaService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/NotaService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/NotaService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/PessoaService?wsdl" uri="wsdl/localhost_9960/ELearningServices/PessoaService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/PessoaService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/PessoaService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/ProfessorService?wsdl" uri="wsdl/localhost_9960/ELearningServices/ProfessorService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/ProfessorService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/ProfessorService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/ReportService?wsdl" uri="wsdl/localhost_9960/ELearningServices/ReportService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/ReportService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/ReportService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/UsuarioService?wsdl" uri="wsdl/localhost_9960/ELearningServices/UsuarioService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/UsuarioService?xsd=1" uri="wsdl/localhost_9960/ELearningServices/UsuarioService.xsd_1.xsd"/>
+</catalog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarDisciplina" type="tns:cadastrarDisciplina" />
+
+<xs:element name="cadastrarDisciplinaResponse" type="tns:cadastrarDisciplinaResponse" />
+
+<xs:element name="deletarDisciplina" type="tns:deletarDisciplina" />
+
+<xs:element name="deletarDisciplinaResponse" type="tns:deletarDisciplinaResponse" />
+
+<xs:element name="editarDisciplina" type="tns:editarDisciplina" />
+
+<xs:element name="editarDisciplinaResponse" type="tns:editarDisciplinaResponse" />
+
+<xs:element name="procurarDisciplina" type="tns:procurarDisciplina" />
+
+<xs:element name="procurarDisciplinaResponse" type="tns:procurarDisciplinaResponse" />
+
+<xs:complexType name="editarDisciplina">
+<xs:sequence>
+<xs:element name="oldDiscipline" type="tns:disciplina" minOccurs="0" />
+<xs:element name="newDiscipline" type="tns:disciplina" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disciplina">
+<xs:sequence>
+<xs:element name="criteria" type="tns:criterioAvaliacao" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="dataFim" type="xs:dateTime" minOccurs="0" />
+<xs:element name="dataInicio" type="xs:dateTime" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="idProfessor" type="xs:long" minOccurs="0" />
+<xs:element name="matriculas" type="tns:matricula" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="nomeDisciplina" type="xs:string" minOccurs="0" />
+<xs:element name="numNotas" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="criterioAvaliacao">
+<xs:sequence>
+<xs:element name="idCriterioAvaliacao" type="xs:long" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="nome" type="xs:string" minOccurs="0" />
+<xs:element name="peso" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="matricula">
+<xs:sequence>
+<xs:element name="idAluno" type="xs:long" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="notaFinal" type="xs:float" minOccurs="0" />
+<xs:element name="notas" type="tns:nota" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nota">
+<xs:sequence>
+<xs:element name="idCriterion" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="idNota" type="xs:long" minOccurs="0" />
+<xs:element name="notaCriterio" type="xs:float" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarDisciplinaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:disciplina" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarDisciplina">
+<xs:sequence>
+<xs:element name="newDiscipline" type="tns:disciplina" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarDisciplinaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarDisciplina">
+<xs:sequence>
+<xs:element name="discipline" type="tns:disciplina" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarDisciplinaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarDisciplina">
+<xs:sequence>
+<xs:element name="discipline" type="tns:disciplina" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarDisciplinaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:disciplina" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

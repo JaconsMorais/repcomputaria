@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarNota" type="tns:cadastrarNota" />
+
+<xs:element name="cadastrarNotaResponse" type="tns:cadastrarNotaResponse" />
+
+<xs:element name="deletarNota" type="tns:deletarNota" />
+
+<xs:element name="deletarNotaResponse" type="tns:deletarNotaResponse" />
+
+<xs:element name="editarNota" type="tns:editarNota" />
+
+<xs:element name="editarNotaResponse" type="tns:editarNotaResponse" />
+
+<xs:element name="procurarNota" type="tns:procurarNota" />
+
+<xs:element name="procurarNotaResponse" type="tns:procurarNotaResponse" />
+
+<xs:complexType name="cadastrarNota">
+<xs:sequence>
+<xs:element name="newGrade" type="tns:nota" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nota">
+<xs:sequence>
+<xs:element name="idCriterion" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="idNota" type="xs:long" minOccurs="0" />
+<xs:element name="notaCriterio" type="xs:float" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarNotaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarNota">
+<xs:sequence>
+<xs:element name="grade" type="tns:nota" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarNotaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarNota">
+<xs:sequence>
+<xs:element name="grade" type="tns:nota" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarNotaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nota" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarNota">
+<xs:sequence>
+<xs:element name="oldGrade" type="tns:nota" minOccurs="0" />
+<xs:element name="newGrade" type="tns:nota" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarNotaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nota" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

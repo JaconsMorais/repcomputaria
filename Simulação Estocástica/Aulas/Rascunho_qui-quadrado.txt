@@ -1,0 +1,16 @@
+      real*8 x, n
+      integer i    
+
+      write(*,10) !imprime na tela
+      read(*,11) n !lê via tela
+      write(*,11) n !idem
+10      format('digite o n')
+11      format(F5.2)
+
+      Do 10 x=sqrt(n/10 - n*i**2)/(n/10)
+
+      write(1,20) x
+20      format(F5.2)
+      write(*,20) x
+      close(1)
+      end

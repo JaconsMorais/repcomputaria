@@ -1,0 +1,19 @@
+------------ --------- --------- ----
+
+Objetivos 
+
+1. Projetar a Unidade Lógica e Aritmética de 4-Bit e desenvolve-la em VHDL; 
+2. Fornecer o diagrama de blocos de todas as partes projetadas; 
+3. Simular todas as operações; 
+4. Desenvolver relatório técnico contendo: 
+a. Introdução; 
+b. Objetivos; 
+c. Metodologias; 
+d. Resultados; 
+e. Conclusão; 
+f. Bibliografia; 
+g. Utilizar formatação padrão para documentos científicos publicados em 
+periódicos (IEEE), com nome e matrícula dos integrantes do grupo; 
+5. Apresentar o projeto funcionando no QUARTUS II da Altera; 
+
+------------ ------

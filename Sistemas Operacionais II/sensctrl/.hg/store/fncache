@@ -1,0 +1,8 @@
+data/.hgignore.i
+data/Makefile.i
+data/controller.c.i
+data/queue.c.i
+data/queue.h.i
+data/sensor.c.i
+data/util.c.i
+data/util.h.i

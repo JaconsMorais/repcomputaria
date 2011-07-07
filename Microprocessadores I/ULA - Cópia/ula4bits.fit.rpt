@@ -1,0 +1,542 @@
+Fitter report for ula4bits
+Fri Jun 19 00:33:20 2009
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. Output Pin Default Load For Reported TCO
+ 11. Fitter Resource Utilization by Entity
+ 12. Non-Global High Fan-Out Signals
+ 13. Interconnect Usage Summary
+ 14. LAB External Interconnect
+ 15. LAB Macrocells
+ 16. Parallel Expander
+ 17. Shareable Expander
+ 18. Logic Cell Interconnection
+ 19. Fitter Device Options
+ 20. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------+
+; Fitter Summary                                                  ;
++-----------------------+-----------------------------------------+
+; Fitter Status         ; Successful - Fri Jun 19 00:33:20 2009   ;
+; Quartus II Version    ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name         ; ula4bits                                ;
+; Top-level Entity Name ; ula4bits                                ;
+; Family                ; MAX7000S                                ;
+; Device                ; EPM7128SLC84-7                          ;
+; Timing Models         ; Final                                   ;
+; Total macrocells      ; 68 / 128 ( 53 % )                       ;
+; Total pins            ; 21 / 68 ( 31 % )                        ;
++-----------------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Fitter Settings                                                                     ;
++----------------------------------------------------+----------------+---------------+
+; Option                                             ; Setting        ; Default Value ;
++----------------------------------------------------+----------------+---------------+
+; Device                                             ; EPM7128SLC84-7 ;               ;
+; Fitter Effort                                      ; Standard Fit   ; Auto Fit      ;
+; Use smart compilation                              ; Off            ; Off           ;
+; Use TimeQuest Timing Analyzer                      ; Off            ; Off           ;
+; Optimize Timing for ECOs                           ; Off            ; Off           ;
+; Regenerate full fit report during ECO compiles     ; Off            ; Off           ;
+; Optimize IOC Register Placement for Timing         ; On             ; On            ;
+; Limit to One Fitting Attempt                       ; Off            ; Off           ;
+; Fitter Initial Placement Seed                      ; 1              ; 1             ;
+; Slow Slew Rate                                     ; Off            ; Off           ;
+; Force Fitter to Avoid Periphery Placement Warnings ; Off            ; Off           ;
++----------------------------------------------------+----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Users/Thales/Desktop/ULA/ula4bits.pin.
+
+
++-------------------------------------------------------+
+; Fitter Resource Usage Summary                         ;
++-----------------------------------+-------------------+
+; Resource                          ; Usage             ;
++-----------------------------------+-------------------+
+; Logic cells                       ; 68 / 128 ( 53 % ) ;
+; Registers                         ; 0 / 128 ( 0 % )   ;
+; Number of pterms used             ; 320               ;
+; User inserted logic elements      ; 0                 ;
+; I/O pins                          ; 21 / 68 ( 31 % )  ;
+;     -- Clock pins                 ; 0 / 2 ( 0 % )     ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )     ;
+; Global signals                    ; 0                 ;
+; Shareable expanders               ; 37 / 128 ( 29 % ) ;
+; Parallel expanders                ; 35 / 120 ( 29 % ) ;
+; Cells using turbo bit             ; 68 / 128 ( 53 % ) ;
+; Maximum fan-out node              ; a[1]              ;
+; Maximum fan-out                   ; 58                ;
+; Highest non-global fan-out signal ; a[1]              ;
+; Highest non-global fan-out        ; 58                ;
+; Total fan-out                     ; 643               ;
+; Average fan-out                   ; 5.10              ;
++-----------------------------------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                 ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; C    ; 4     ; --       ; 1   ; 16                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; M    ; 5     ; --       ; 1   ; 19                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; S[0] ; 6     ; --       ; 1   ; 50                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; S[1] ; 8     ; --       ; 1   ; 47                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[0] ; 9     ; --       ; 1   ; 55                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[1] ; 10    ; --       ; 1   ; 58                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[2] ; 11    ; --       ; 1   ; 45                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[3] ; 12    ; --       ; 1   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; b[0] ; 15    ; --       ; 2   ; 49                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; b[1] ; 16    ; --       ; 2   ; 57                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; b[2] ; 17    ; --       ; 2   ; 42                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; b[3] ; 18    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                 ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; Name ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; Co   ; 29    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ;
+; f[0] ; 20    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; f[1] ; 21    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; f[2] ; 22    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; f[3] ; 24    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 4        ; 3          ; --       ; C              ; input  ; TTL          ;         ; Y               ;
+; 5        ; 4          ; --       ; M              ; input  ; TTL          ;         ; Y               ;
+; 6        ; 5          ; --       ; S[0]           ; input  ; TTL          ;         ; Y               ;
+; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 8        ; 7          ; --       ; S[1]           ; input  ; TTL          ;         ; Y               ;
+; 9        ; 8          ; --       ; a[0]           ; input  ; TTL          ;         ; Y               ;
+; 10       ; 9          ; --       ; a[1]           ; input  ; TTL          ;         ; Y               ;
+; 11       ; 10         ; --       ; a[2]           ; input  ; TTL          ;         ; Y               ;
+; 12       ; 11         ; --       ; a[3]           ; input  ; TTL          ;         ; Y               ;
+; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
+; 15       ; 14         ; --       ; b[0]           ; input  ; TTL          ;         ; Y               ;
+; 16       ; 15         ; --       ; b[1]           ; input  ; TTL          ;         ; Y               ;
+; 17       ; 16         ; --       ; b[2]           ; input  ; TTL          ;         ; Y               ;
+; 18       ; 17         ; --       ; b[3]           ; input  ; TTL          ;         ; Y               ;
+; 19       ; 18         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 20       ; 19         ; --       ; f[0]           ; output ; TTL          ;         ; Y               ;
+; 21       ; 20         ; --       ; f[1]           ; output ; TTL          ;         ; Y               ;
+; 22       ; 21         ; --       ; f[2]           ; output ; TTL          ;         ; Y               ;
+; 23       ; 22         ; --       ; TMS            ; input  ; TTL          ;         ; N               ;
+; 24       ; 23         ; --       ; f[3]           ; output ; TTL          ;         ; Y               ;
+; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 25         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 27       ; 26         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 28       ; 27         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 29       ; 28         ; --       ; Co             ; output ; TTL          ;         ; N               ;
+; 30       ; 29         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 31       ; 30         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 32       ; 31         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 33       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 34       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 35       ; 34         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 36       ; 35         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 37       ; 36         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 38       ; 37         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 39       ; 38         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 40       ; 39         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 41       ; 40         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 44       ; 43         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 45       ; 44         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 46       ; 45         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 47       ; 46         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 48       ; 47         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 49       ; 48         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 50       ; 49         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 51       ; 50         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 52       ; 51         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 53       ; 52         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 54       ; 53         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 55       ; 54         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 56       ; 55         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 57       ; 56         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 58       ; 57         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 59       ; 58         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 60       ; 59         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 61       ; 60         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 62       ; 61         ; --       ; TCK            ; input  ; TTL          ;         ; N               ;
+; 63       ; 62         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 64       ; 63         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 65       ; 64         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 66       ; 65         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 67       ; 66         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 68       ; 67         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 69       ; 68         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 70       ; 69         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 71       ; 70         ; --       ; TDO            ; output ; TTL          ;         ; N               ;
+; 72       ; 71         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 73       ; 72         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 74       ; 73         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 75       ; 74         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 76       ; 75         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 77       ; 76         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 78       ; 77         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 79       ; 78         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 80       ; 79         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 81       ; 80         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 82       ; 81         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 83       ; 82         ; --       ; GND+           ;        ;              ;         ;                 ;
+; 84       ; 83         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                    ;
++------------------------------------+------------+------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; Macrocells ; Pins ; Full Hierarchy Name                                              ; Library Name ;
++------------------------------------+------------+------+------------------------------------------------------------------+--------------+
+; |ula4bits                          ; 68         ; 21   ; |ula4bits                                                        ; work         ;
+;    |lpm_add_sub:Add0|              ; 3          ; 0    ; |ula4bits|lpm_add_sub:Add0                                       ; work         ;
+;       |addcore:adder|              ; 3          ; 0    ; |ula4bits|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 3          ; 0    ; |ula4bits|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add1|              ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add1                                       ; work         ;
+;       |addcore:adder|              ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add1|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add3|              ; 6          ; 0    ; |ula4bits|lpm_add_sub:Add3                                       ; work         ;
+;       |addcore:adder|              ; 6          ; 0    ; |ula4bits|lpm_add_sub:Add3|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 6          ; 0    ; |ula4bits|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add5|              ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add5                                       ; work         ;
+;       |addcore:adder|              ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add5|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add6|              ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add6                                       ; work         ;
+;       |addcore:adder|              ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add6|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 2          ; 0    ; |ula4bits|lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node ; work         ;
++------------------------------------+------------+------+------------------------------------------------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                     ;
++---------------------------------------------------------------------------+---------+
+; Name                                                                      ; Fan-Out ;
++---------------------------------------------------------------------------+---------+
+; a[1]                                                                      ; 58      ;
+; b[1]                                                                      ; 57      ;
+; a[0]                                                                      ; 55      ;
+; S[0]                                                                      ; 50      ;
+; b[0]                                                                      ; 49      ;
+; S[1]                                                                      ; 47      ;
+; a[2]                                                                      ; 45      ;
+; b[2]                                                                      ; 42      ;
+; b[3]                                                                      ; 25      ;
+; a[3]                                                                      ; 25      ;
+; M                                                                         ; 19      ;
+; C                                                                         ; 16      ;
+; Mux9~9bal                                                                 ; 8       ;
+; Mux9~8bal                                                                 ; 7       ;
+; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal ; 4       ;
+; temp~281bal                                                               ; 4       ;
+; Mux9~5                                                                    ; 4       ;
+; temp~430                                                                  ; 3       ;
+; temp~200                                                                  ; 3       ;
+; temp~436                                                                  ; 2       ;
+; temp~435                                                                  ; 2       ;
+; temp~434                                                                  ; 2       ;
+; temp~432                                                                  ; 2       ;
+; temp~431                                                                  ; 2       ;
+; carry~15                                                                  ; 2       ;
+; temp~295                                                                  ; 2       ;
+; temp~293                                                                  ; 2       ;
+; temp~255                                                                  ; 2       ;
+; temp~254                                                                  ; 2       ;
+; temp~215                                                                  ; 2       ;
+; temp~206                                                                  ; 2       ;
+; temp~204                                                                  ; 2       ;
+; temp~199                                                                  ; 2       ;
+; temp~191                                                                  ; 2       ;
+; temp~190                                                                  ; 2       ;
+; temp~178                                                                  ; 2       ;
+; temp~171                                                                  ; 2       ;
+; temp~164                                                                  ; 2       ;
+; temp~150                                                                  ; 2       ;
+; temp~143                                                                  ; 2       ;
+; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17    ; 2       ;
+; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8     ; 2       ;
+; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[1]~3     ; 2       ;
+; temp~440                                                                  ; 1       ;
+; temp~439                                                                  ; 1       ;
+; temp~438                                                                  ; 1       ;
+; temp~437                                                                  ; 1       ;
+; temp~433                                                                  ; 1       ;
+; carry~7sexpand0                                                           ; 1       ;
+; temp~424                                                                  ; 1       ;
++---------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------+
+; Interconnect Usage Summary                     ;
++----------------------------+-------------------+
+; Interconnect Resource Type ; Usage             ;
++----------------------------+-------------------+
+; Output enables             ; 0 / 6 ( 0 % )     ;
+; PIA buffers                ; 70 / 288 ( 24 % ) ;
+; PIAs                       ; 84 / 288 ( 29 % ) ;
++----------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB External Interconnect                                                   ;
++-----------------------------------------------+-----------------------------+
+; LAB External Interconnects  (Average = 10.50) ; Number of LABs  (Total = 6) ;
++-----------------------------------------------+-----------------------------+
+; 0 - 1                                         ; 2                           ;
+; 2 - 3                                         ; 0                           ;
+; 4 - 5                                         ; 0                           ;
+; 6 - 7                                         ; 1                           ;
+; 8 - 9                                         ; 1                           ;
+; 10 - 11                                       ; 1                           ;
+; 12 - 13                                       ; 1                           ;
+; 14 - 15                                       ; 0                           ;
+; 16 - 17                                       ; 0                           ;
+; 18 - 19                                       ; 0                           ;
+; 20 - 21                                       ; 1                           ;
+; 22 - 23                                       ; 0                           ;
+; 24 - 25                                       ; 1                           ;
++-----------------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 8.50) ; Number of LABs  (Total = 6) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 2                           ;
+; 1                                      ; 0                           ;
+; 2                                      ; 0                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 0                           ;
+; 6                                      ; 1                           ;
+; 7                                      ; 0                           ;
+; 8                                      ; 0                           ;
+; 9                                      ; 1                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 1                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 1                           ;
+; 14                                     ; 1                           ;
+; 15                                     ; 1                           ;
++----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 17                           ;
+; 2                        ; 6                            ;
+; 3                        ; 2                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 4.63) ; Number of LABs  (Total = 4) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 4                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 2                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 0                           ;
+; 11                                              ; 1                           ;
+; 12                                              ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                                                      ; Output                                                                                                                                                                                                                                                                                         ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC7        ; temp~414, temp~281bal, temp~431, Mux9~8bal, b[0], S[1], S[0], a[0], b[3], a[3], Mux9~9bal, temp~204, b[1]                                                                                                                                                                                                                                                                                                  ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC6        ; temp~408, temp~281bal, Mux9~9bal, Mux9~5, a[1], S[1], S[0], b[3], a[3], temp~434, b[0], a[0], Mux9~8bal, temp~206, b[1]                                                                                                                                                                                                                                                                                    ; temp~290                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC4        ; temp~281bal, a[2], S[1], S[0], b[2], b[3], a[3], Mux9~9bal, a[1], b[1]                                                                                                                                                                                                                                                                                                                                     ; temp~408                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC5        ; temp~402, temp~281bal, Mux9~8bal, a[1], S[1], S[0], b[1], b[3], a[3], temp~200, Mux9~9bal, Mux9~5                                                                                                                                                                                                                                                                                                          ; temp~414                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC2        ; temp~393, b[2], S[0], a[3], b[3], a[2], Mux9~9bal, a[1], b[1], Mux9~8bal, temp~200                                                                                                                                                                                                                                                                                                                         ; temp~272                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC1        ; b[2], S[0], a[3], b[3], a[2]                                                                                                                                                                                                                                                                                                                                                                               ; temp~396                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC9        ; Mux9~16, b[2], S[1], a[2], b[3], a[3], Mux9~4, S[0], Mux9~8bal, a[1], b[1], Mux9~9bal, Mux9~5                                                                                                                                                                                                                                                                                                              ; Mux9~15                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC8        ; S[0], a[1], S[1], a[2], a[0], a[3], b[2], b[3]                                                                                                                                                                                                                                                                                                                                                             ; Mux9~22                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC11       ; b[2], a[2]                                                                                                                                                                                                                                                                                                                                                                                                 ; Mux9~15, Mux9~22, temp~272, temp~396, temp~290, temp~408, temp~414                                                                                                                                                                                                                             ;
+;  A  ; LC13       ; b[2], a[2]                                                                                                                                                                                                                                                                                                                                                                                                 ; Mux9~15, Mux9~22, temp~272, temp~396, temp~290, temp~402, temp~408, temp~414                                                                                                                                                                                                                   ;
+;  A  ; LC10       ; Mux9~22, Mux9~9bal, Mux9~5, a[1], S[1], b[3], a[3], temp~204, b[1], Mux9~8bal, temp~431, b[0], a[0]                                                                                                                                                                                                                                                                                                        ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC12       ; a[3], b[3]                                                                                                                                                                                                                                                                                                                                                                                                 ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17, lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17 ;
+;  A  ; LC3        ; temp~396, Mux9~8bal, temp~200, a[1], S[0], a[3], b[3], Mux9~9bal, temp~434, b[0], a[0], temp~206, b[1]                                                                                                                                                                                                                                                                                                     ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC31       ; a[1], b[1], b[0], a[0]                                                                                                                                                                                                                                                                                                                                                                                     ; temp~223, temp~362                                                                                                                                                                                                                                                                             ;
+;  B  ; LC26       ; S[0], S[1], b[0], M, C, a[0]                                                                                                                                                                                                                                                                                                                                                                               ; temp~232                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC17       ; temp~164, temp~171, temp~178, temp~190, C, S[1], M, temp~199, temp~215                                                                                                                                                                                                                                                                                                                                     ; f[2]                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC28       ; S[1], M, a[1], b[1], S[0]                                                                                                                                                                                                                                                                                                                                                                                  ; temp~244                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC27       ; temp~372, S[0], S[1], b[0], M, C, a[0]                                                                                                                                                                                                                                                                                                                                                                     ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC29       ; temp~378, S[1], M, S[0], b[1], a[1]                                                                                                                                                                                                                                                                                                                                                                        ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC30       ; M, temp~232, temp~244, temp~190, temp~250, C, Mux9~15, temp~143, temp~150, temp~199, temp~215, temp~261, temp~272, S[1], temp~178, temp~290, temp~303, temp~164, temp~171                                                                                                                                                                                                                                  ; carry~15                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC21       ; temp~304, S[0], S[1], b[0], M, C, a[0]                                                                                                                                                                                                                                                                                                                                                                     ; f[0]                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC25       ; temp~314, b[0], b[1], a[0], C, S[0], S[1], a[1]                                                                                                                                                                                                                                                                                                                                                            ; Equal0~1, temp~319                                                                                                                                                                                                                                                                             ;
+;  B  ; LC19       ; temp~319, a[1], S[1], b[1], S[0], M                                                                                                                                                                                                                                                                                                                                                                        ; f[1]                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC23       ; temp~310, S[0], b[0], S[1], b[1], C, a[0], a[1]                                                                                                                                                                                                                                                                                                                                                            ; Equal0~1, temp~319                                                                                                                                                                                                                                                                             ;
+;  B  ; LC20       ; S[0], S[1], b[0], M, C, a[0]                                                                                                                                                                                                                                                                                                                                                                               ; temp~136                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC22       ; S[0], S[1], b[1], C, a[0], b[0]                                                                                                                                                                                                                                                                                                                                                                            ; temp~143                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC24       ; S[1], b[0], b[1], C, S[0], a[0]                                                                                                                                                                                                                                                                                                                                                                            ; temp~150                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC18       ; temp~143, temp~150, M, a[1], S[1], b[1], S[0]                                                                                                                                                                                                                                                                                                                                                              ; temp~162                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC44       ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, C, S[1], M, S[0], lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[1]~3, temp~430, temp~295 ; temp~366                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC35       ; b[2], S[0], S[1], a[3], b[3], a[2]                                                                                                                                                                                                                                                                                                                                                                         ; temp~387                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC34       ; temp~381, S[1], M, S[0], b[3], a[3]                                                                                                                                                                                                                                                                                                                                                                        ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC37       ; temp~387, temp~255, temp~432, b[1], S[0], S[1], a[3], b[3], temp~430, a[1], temp~254, temp~433, a[0], b[0]                                                                                                                                                                                                                                                                                                 ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC46       ; temp~366, S[1], M, S[0], a[3], b[3], temp~222, temp~223, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, temp~224, temp~225                                                                                                                                                                                                                                                        ; f[3]                                                                                                                                                                                                                                                                                           ;
+;  C  ; LC33       ; S[1], M, a[3], b[3], S[0]                                                                                                                                                                                                                                                                                                                                                                                  ; temp~250                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC38       ; Equal0~1, carry~15, S[1], S[0], M, C, carry~7sexpand0                                                                                                                                                                                                                                                                                                                                                      ; carry~15, Co                                                                                                                                                                                                                                                                                   ;
+;  C  ; LC45       ; temp~362, C, S[1], M, S[0], a[3], a[2], a[0], a[1], lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17, lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17, b[3]                                                                                                                                                                                                   ; temp~231                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC36       ; temp~384, b[2], S[0], S[1], a[3], b[3], a[2], temp~254, b[1], a[1], temp~255, temp~432                                                                                                                                                                                                                                                                                                                     ; temp~261                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC52       ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~35, a[1], a[2], b[0], a[0], b[2], b[1], lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~16                                                                                                                                                 ; temp~231, temp~362                                                                                                                                                                                                                                                                             ;
+;  D  ; LC61       ; temp~424, temp~435, temp~293, a[1], S[1], b[3], a[3], temp~297, temp~436, b[0], a[0], S[0], temp~437, b[1]                                                                                                                                                                                                                                                                                                 ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC59       ; S[0], S[1], a[3], a[2], b[2], b[3]                                                                                                                                                                                                                                                                                                                                                                         ; temp~424                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC60       ; temp~420, a[2], S[0], S[1], b[2], b[3], a[3], temp~436, a[1], b[1], temp~435, temp~293                                                                                                                                                                                                                                                                                                                     ; temp~303                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC62       ; a[2], S[1], S[0], b[2], b[3], a[3]                                                                                                                                                                                                                                                                                                                                                                         ; temp~290, temp~402, temp~408, temp~414                                                                                                                                                                                                                                                         ;
+;  D  ; LC54       ; temp~323, a[2], a[0], b[1], S[0], a[1], b[0], b[2]                                                                                                                                                                                                                                                                                                                                                         ; temp~220, Equal0~1                                                                                                                                                                                                                                                                             ;
+;  D  ; LC56       ; temp~328, a[2], a[0], b[1], S[0], a[1], b[0], b[2]                                                                                                                                                                                                                                                                                                                                                         ; temp~220, Equal0~1                                                                                                                                                                                                                                                                             ;
+;  D  ; LC50       ; temp~333, S[0], b[2], a[0], b[1], S[1], a[1], b[0], a[2]                                                                                                                                                                                                                                                                                                                                                   ; temp~220, Equal0~1                                                                                                                                                                                                                                                                             ;
+;  D  ; LC58       ; temp~338, S[1], M, S[0], b[2], a[2]                                                                                                                                                                                                                                                                                                                                                                        ; temp~220, Equal0~1                                                                                                                                                                                                                                                                             ;
+;  D  ; LC55       ; a[1], b[0], a[2], S[0], b[1], a[0]                                                                                                                                                                                                                                                                                                                                                                         ; temp~171                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC57       ; S[1], M, a[2], b[2], S[0]                                                                                                                                                                                                                                                                                                                                                                                  ; temp~190                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC53       ; a[1], b[0], a[2], S[0], b[1], a[0]                                                                                                                                                                                                                                                                                                                                                                         ; temp~164                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC51       ; a[2], b[2], a[1], b[1]                                                                                                                                                                                                                                                                                                                                                                                     ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17                                                                                                                                                                                                                         ;
+;  D  ; LC49       ; a[1], S[0], b[0], b[2], S[1], b[1], a[0]                                                                                                                                                                                                                                                                                                                                                                   ; temp~178                                                                                                                                                                                                                                                                                       ;
+;  E  ; LC65       ; S[1], a[2], S[0], a[1], b[1], b[2], a[0]                                                                                                                                                                                                                                                                                                                                                                   ; temp~350                                                                                                                                                                                                                                                                                       ;
+;  E  ; LC69       ; b[1], S[0], S[1], a[2], b[2], a[1], temp~191                                                                                                                                                                                                                                                                                                                                                               ; temp~199                                                                                                                                                                                                                                                                                       ;
+;  E  ; LC66       ; temp~345, a[2], S[0], a[1], b[1], b[2], temp~438, S[1], temp~201, temp~202                                                                                                                                                                                                                                                                                                                                 ; temp~356                                                                                                                                                                                                                                                                                       ;
+;  E  ; LC67       ; temp~350, temp~203, a[0], a[2], S[0], a[1], temp~439, b[1], b[2], temp~205, temp~440, S[1]                                                                                                                                                                                                                                                                                                                 ; temp~215                                                                                                                                                                                                                                                                                       ;
+;  E  ; LC68       ; temp~356, temp~207, S[1], a[0], a[2], S[0], b[2], b[0], temp~208, a[1]                                                                                                                                                                                                                                                                                                                                     ; temp~220, Equal0~1                                                                                                                                                                                                                                                                             ;
+;  E  ; LC70       ; temp~341, temp~191, b[1], S[0], S[1], a[2], b[2], temp~192, a[1], temp~193, a[0], b[0]                                                                                                                                                                                                                                                                                                                     ; temp~220, Equal0~1                                                                                                                                                                                                                                                                             ;
+;  F  ; LC85       ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~35, a[1], a[2], b[0], a[0], b[2], b[1], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                      ; temp~362                                                                                                                                                                                                                                                                                       ;
+;  F  ; LC87       ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~35, a[1], a[2], b[0], a[0], b[2], b[1], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                      ; temp~362                                                                                                                                                                                                                                                                                       ;
+;  F  ; LC89       ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~36, b[2], b[0], b[1], a[0], a[1], a[2], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                      ; temp~366                                                                                                                                                                                                                                                                                       ;
+;  F  ; LC91       ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~36, b[2], b[0], b[1], a[0], a[1], a[2], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                      ; temp~366                                                                                                                                                                                                                                                                                       ;
+;  F  ; LC82       ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~24, a[1], a[2], a[0], b[1], b[0], b[2]                                                                                                                                                                                                                                                                                                 ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8                                                                                                                                                                                                                          ;
+;  F  ; LC81       ; a[1], a[2], b[2], b[1], b[0], a[0]                                                                                                                                                                                                                                                                                                                                                                         ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29                                                                                                                                                                                                                         ;
+;  F  ; LC90       ; b[2], a[1], b[0], a[0], b[1], a[2]                                                                                                                                                                                                                                                                                                                                                                         ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17                                                                                                                                                                                                                         ;
+;  F  ; LC88       ; b[2], a[1], b[0], a[0], b[1], a[2]                                                                                                                                                                                                                                                                                                                                                                         ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17                                                                                                                                                                                                                         ;
+;  F  ; LC86       ; a[2], b[2], a[1], b[1]                                                                                                                                                                                                                                                                                                                                                                                     ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17                                                                                                                                                                                                                         ;
+;  F  ; LC84       ; a[2], b[2], a[1], b[1]                                                                                                                                                                                                                                                                                                                                                                                     ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17                                                                                                                                                                                                                         ;
+;  F  ; LC83       ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29, a[1], b[2], b[1], a[0], b[0], a[2]                                                                                                                                                                                                                                                                                                 ; temp~223, temp~362                                                                                                                                                                                                                                                                             ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Fri Jun 19 00:33:18 2009
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off ula4bits -c ula4bits
+Info: Selected device EPM7128SLC84-7 for design "ula4bits"
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Fri Jun 19 00:33:20 2009
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

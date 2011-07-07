@@ -1,0 +1,12 @@
+
+- os comandos externos, aceitam N argumentos para trata-los, mas no shell, a funcao execve, só esta 
+  pegando a string inteira, portanto tratando apenas como um argumento.
+
+- Digitar apenas um <enter> no prompt, ocorre Segmetation Fault.
+
+- comando CD, quando passado um argumento de um diretorio que existe, o interpretador 
+  e abortado com falha de segmentacao.
+
+
+
+

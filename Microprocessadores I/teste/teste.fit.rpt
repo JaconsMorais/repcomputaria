@@ -1,0 +1,555 @@
+Fitter report for teste
+Fri Jun 19 01:49:27 2009
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. Output Pin Default Load For Reported TCO
+ 11. Fitter Resource Utilization by Entity
+ 12. Non-Global High Fan-Out Signals
+ 13. Interconnect Usage Summary
+ 14. LAB External Interconnect
+ 15. LAB Macrocells
+ 16. Parallel Expander
+ 17. Shareable Expander
+ 18. Logic Cell Interconnection
+ 19. Fitter Device Options
+ 20. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------+
+; Fitter Summary                                                  ;
++-----------------------+-----------------------------------------+
+; Fitter Status         ; Successful - Fri Jun 19 01:49:27 2009   ;
+; Quartus II Version    ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name         ; teste                                   ;
+; Top-level Entity Name ; teste                                   ;
+; Family                ; MAX7000S                                ;
+; Device                ; EPM7128SLC84-7                          ;
+; Timing Models         ; Final                                   ;
+; Total macrocells      ; 85 / 128 ( 66 % )                       ;
+; Total pins            ; 21 / 68 ( 31 % )                        ;
++-----------------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Fitter Settings                                                                     ;
++----------------------------------------------------+----------------+---------------+
+; Option                                             ; Setting        ; Default Value ;
++----------------------------------------------------+----------------+---------------+
+; Device                                             ; EPM7128SLC84-7 ;               ;
+; Use smart compilation                              ; Off            ; Off           ;
+; Use TimeQuest Timing Analyzer                      ; Off            ; Off           ;
+; Optimize Timing for ECOs                           ; Off            ; Off           ;
+; Regenerate full fit report during ECO compiles     ; Off            ; Off           ;
+; Optimize IOC Register Placement for Timing         ; On             ; On            ;
+; Limit to One Fitting Attempt                       ; Off            ; Off           ;
+; Fitter Initial Placement Seed                      ; 1              ; 1             ;
+; Slow Slew Rate                                     ; Off            ; Off           ;
+; Fitter Effort                                      ; Auto Fit       ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings ; Off            ; Off           ;
++----------------------------------------------------+----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Users/Thales/Desktop/teste/teste.pin.
+
+
++-------------------------------------------------------+
+; Fitter Resource Usage Summary                         ;
++-----------------------------------+-------------------+
+; Resource                          ; Usage             ;
++-----------------------------------+-------------------+
+; Logic cells                       ; 85 / 128 ( 66 % ) ;
+; Registers                         ; 0 / 128 ( 0 % )   ;
+; Number of pterms used             ; 398               ;
+; User inserted logic elements      ; 0                 ;
+; I/O pins                          ; 21 / 68 ( 31 % )  ;
+;     -- Clock pins                 ; 0 / 2 ( 0 % )     ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )     ;
+; Global signals                    ; 0                 ;
+; Shareable expanders               ; 35 / 128 ( 27 % ) ;
+; Parallel expanders                ; 47 / 120 ( 39 % ) ;
+; Cells using turbo bit             ; 85 / 128 ( 66 % ) ;
+; Maximum fan-out node              ; x[0]              ;
+; Maximum fan-out                   ; 71                ;
+; Highest non-global fan-out signal ; x[0]              ;
+; Highest non-global fan-out        ; 71                ;
+; Total fan-out                     ; 766               ;
+; Average fan-out                   ; 5.43              ;
++-----------------------------------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                 ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; C    ; 18    ; --       ; 2   ; 23                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; M    ; 67    ; --       ; 7   ; 23                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; S[0] ; 79    ; --       ; 8   ; 56                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; S[1] ; 6     ; --       ; 1   ; 52                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; x[0] ; 4     ; --       ; 1   ; 71                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; x[1] ; 24    ; --       ; 3   ; 70                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; x[2] ; 61    ; --       ; 6   ; 58                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; x[3] ; 34    ; --       ; 4   ; 25                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; y[0] ; 81    ; --       ; 8   ; 63                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; y[1] ; 33    ; --       ; 4   ; 70                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; y[2] ; 52    ; --       ; 5   ; 55                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; y[3] ; 16    ; --       ; 2   ; 25                    ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
++------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                 ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; Name ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; Co   ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ;
+; f[0] ; 17    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ;
+; f[1] ; 15    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ;
+; f[2] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ;
+; f[3] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 4        ; 3          ; --       ; x[0]           ; input  ; TTL          ;         ; N               ;
+; 5        ; 4          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 6        ; 5          ; --       ; S[1]           ; input  ; TTL          ;         ; N               ;
+; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 8        ; 7          ; --       ; Co             ; output ; TTL          ;         ; N               ;
+; 9        ; 8          ; --       ; f[3]           ; output ; TTL          ;         ; N               ;
+; 10       ; 9          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 11       ; 10         ; --       ; f[2]           ; output ; TTL          ;         ; N               ;
+; 12       ; 11         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
+; 15       ; 14         ; --       ; f[1]           ; output ; TTL          ;         ; N               ;
+; 16       ; 15         ; --       ; y[3]           ; input  ; TTL          ;         ; N               ;
+; 17       ; 16         ; --       ; f[0]           ; output ; TTL          ;         ; N               ;
+; 18       ; 17         ; --       ; C              ; input  ; TTL          ;         ; N               ;
+; 19       ; 18         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 22       ; 21         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 23       ; 22         ; --       ; TMS            ; input  ; TTL          ;         ; N               ;
+; 24       ; 23         ; --       ; x[1]           ; input  ; TTL          ;         ; N               ;
+; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 25         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 27       ; 26         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 28       ; 27         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 29       ; 28         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 30       ; 29         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 31       ; 30         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 32       ; 31         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 33       ; 32         ; --       ; y[1]           ; input  ; TTL          ;         ; N               ;
+; 34       ; 33         ; --       ; x[3]           ; input  ; TTL          ;         ; N               ;
+; 35       ; 34         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 36       ; 35         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 37       ; 36         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 38       ; 37         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 39       ; 38         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 40       ; 39         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 41       ; 40         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 44       ; 43         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 45       ; 44         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 46       ; 45         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 47       ; 46         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 48       ; 47         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 49       ; 48         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 50       ; 49         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 51       ; 50         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 52       ; 51         ; --       ; y[2]           ; input  ; TTL          ;         ; N               ;
+; 53       ; 52         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 54       ; 53         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 55       ; 54         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 56       ; 55         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 57       ; 56         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 58       ; 57         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 59       ; 58         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 60       ; 59         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 61       ; 60         ; --       ; x[2]           ; input  ; TTL          ;         ; N               ;
+; 62       ; 61         ; --       ; TCK            ; input  ; TTL          ;         ; N               ;
+; 63       ; 62         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 64       ; 63         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 65       ; 64         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 66       ; 65         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 67       ; 66         ; --       ; M              ; input  ; TTL          ;         ; N               ;
+; 68       ; 67         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 69       ; 68         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 70       ; 69         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 71       ; 70         ; --       ; TDO            ; output ; TTL          ;         ; N               ;
+; 72       ; 71         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 73       ; 72         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 74       ; 73         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 75       ; 74         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 76       ; 75         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 77       ; 76         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 78       ; 77         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 79       ; 78         ; --       ; S[0]           ; input  ; TTL          ;         ; N               ;
+; 80       ; 79         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 81       ; 80         ; --       ; y[0]           ; input  ; TTL          ;         ; N               ;
+; 82       ; 81         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 83       ; 82         ; --       ; GND+           ;        ;              ;         ;                 ;
+; 84       ; 83         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                 ;
++------------------------------------+------------+------+---------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; Macrocells ; Pins ; Full Hierarchy Name                                           ; Library Name ;
++------------------------------------+------------+------+---------------------------------------------------------------+--------------+
+; |teste                             ; 85         ; 21   ; |teste                                                        ; work         ;
+;    |lpm_add_sub:Add0|              ; 6          ; 0    ; |teste|lpm_add_sub:Add0                                       ; work         ;
+;       |addcore:adder|              ; 6          ; 0    ; |teste|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 6          ; 0    ; |teste|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add1|              ; 5          ; 0    ; |teste|lpm_add_sub:Add1                                       ; work         ;
+;       |addcore:adder|              ; 5          ; 0    ; |teste|lpm_add_sub:Add1|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 5          ; 0    ; |teste|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add3|              ; 6          ; 0    ; |teste|lpm_add_sub:Add3                                       ; work         ;
+;       |addcore:adder|              ; 6          ; 0    ; |teste|lpm_add_sub:Add3|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 6          ; 0    ; |teste|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add5|              ; 5          ; 0    ; |teste|lpm_add_sub:Add5                                       ; work         ;
+;       |addcore:adder|              ; 5          ; 0    ; |teste|lpm_add_sub:Add5|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 5          ; 0    ; |teste|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add6|              ; 5          ; 0    ; |teste|lpm_add_sub:Add6                                       ; work         ;
+;       |addcore:adder|              ; 5          ; 0    ; |teste|lpm_add_sub:Add6|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 5          ; 0    ; |teste|lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node ; work         ;
++------------------------------------+------------+------+---------------------------------------------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                     ;
++---------------------------------------------------------------------------+---------+
+; Name                                                                      ; Fan-Out ;
++---------------------------------------------------------------------------+---------+
+; x[0]                                                                      ; 71      ;
+; y[1]                                                                      ; 70      ;
+; x[1]                                                                      ; 70      ;
+; y[0]                                                                      ; 63      ;
+; x[2]                                                                      ; 58      ;
+; S[0]                                                                      ; 56      ;
+; y[2]                                                                      ; 55      ;
+; S[1]                                                                      ; 52      ;
+; y[3]                                                                      ; 25      ;
+; x[3]                                                                      ; 25      ;
+; M                                                                         ; 23      ;
+; C                                                                         ; 23      ;
+; Mux9~9bal                                                                 ; 8       ;
+; Mux9~8bal                                                                 ; 7       ;
+; tg~210bal                                                                 ; 6       ;
+; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal ; 4       ;
+; tg~271bal                                                                 ; 4       ;
+; tg~285                                                                    ; 4       ;
+; tg~238                                                                    ; 4       ;
+; tg~237                                                                    ; 4       ;
+; tg~209                                                                    ; 4       ;
+; Mux9~5                                                                    ; 4       ;
+; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8     ; 4       ;
+; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[1]~3     ; 4       ;
+; tg~218                                                                    ; 3       ;
+; tg~458                                                                    ; 2       ;
+; carry~15                                                                  ; 2       ;
+; tg~283                                                                    ; 2       ;
+; tg~224                                                                    ; 2       ;
+; tg~211                                                                    ; 2       ;
+; Mux9~7                                                                    ; 2       ;
+; Mux9~6                                                                    ; 2       ;
+; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17    ; 2       ;
+; tg~461                                                                    ; 1       ;
+; Mux9~29                                                                   ; 1       ;
+; tg~460                                                                    ; 1       ;
+; tg~459                                                                    ; 1       ;
+; Mux9~28                                                                   ; 1       ;
+; carry~7sexpand0                                                           ; 1       ;
+; tg~453                                                                    ; 1       ;
+; tg~448                                                                    ; 1       ;
+; tg~442                                                                    ; 1       ;
+; tg~438                                                                    ; 1       ;
+; tg~432                                                                    ; 1       ;
+; tg~426                                                                    ; 1       ;
+; tg~420                                                                    ; 1       ;
+; tg~415                                                                    ; 1       ;
+; tg~409                                                                    ; 1       ;
+; tg~406                                                                    ; 1       ;
+; tg~400                                                                    ; 1       ;
++---------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------+
+; Interconnect Usage Summary                      ;
++----------------------------+--------------------+
+; Interconnect Resource Type ; Usage              ;
++----------------------------+--------------------+
+; Output enables             ; 0 / 6 ( 0 % )      ;
+; PIA buffers                ; 79 / 288 ( 27 % )  ;
+; PIAs                       ; 101 / 288 ( 35 % ) ;
++----------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB External Interconnect                                                   ;
++-----------------------------------------------+-----------------------------+
+; LAB External Interconnects  (Average = 12.63) ; Number of LABs  (Total = 7) ;
++-----------------------------------------------+-----------------------------+
+; 0 - 2                                         ; 1                           ;
+; 3 - 5                                         ; 0                           ;
+; 6 - 8                                         ; 2                           ;
+; 9 - 11                                        ; 2                           ;
+; 12 - 14                                       ; 1                           ;
+; 15 - 17                                       ; 0                           ;
+; 18 - 20                                       ; 0                           ;
+; 21 - 23                                       ; 0                           ;
+; 24 - 26                                       ; 1                           ;
+; 27 - 29                                       ; 1                           ;
++-----------------------------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 10.63) ; Number of LABs  (Total = 7) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 1                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 1                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 2                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 0                           ;
+; 13                                      ; 1                           ;
+; 14                                      ; 2                           ;
+; 15                                      ; 0                           ;
+; 16                                      ; 1                           ;
++-----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 16                           ;
+; 2                        ; 11                           ;
+; 3                        ; 3                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 4.38) ; Number of LABs  (Total = 5) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 3                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 1                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 2                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 1                           ;
+; 10                                              ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-----+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                                                     ; Output                                                                                                                                                                                                                                                                                         ;
++-----+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC1        ; S[1], M, x[3], y[3], S[0]                                                                                                                                                                                                                                                                                                                                                                                 ; tg~194                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC11       ; Equal0~1, carry~15, M, C, S[1], S[0], carry~7sexpand0                                                                                                                                                                                                                                                                                                                                                     ; carry~15, Co                                                                                                                                                                                                                                                                                   ;
+;  A  ; LC7        ; tg~342, C, S[1], M, S[0], x[3], x[2], x[0], x[1], lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17, lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17, y[3]                                                                                                                                                                                                    ; tg~169                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC6        ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, C, S[1], M, S[0], lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[1]~3, tg~210bal, tg~285 ; tg~346                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC4        ; tg~332, C, S[1], M, S[0], x[2], x[0], x[1], lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[3]~8, lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[3]~8, y[2]                                                                                                                                                                                                            ; tg~159                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC3        ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8, C, S[1], M, S[0], lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[1]~3, tg~210bal, tg~285                                                                           ; tg~336                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC5        ; tg~336, S[1], M, S[0], x[2], y[2], tg~150, tg~151, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8, tg~152, tg~153                                                                                                                                                                                                                                                                  ; f[2]                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC8        ; tg~346, S[1], M, S[0], x[3], y[3], tg~160, tg~161, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, tg~162, tg~163                                                                                                                                                                                                                                                                 ; f[3]                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC2        ; tg~364, S[1], M, S[0], y[3], x[3]                                                                                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC13       ; y[2], x[2]                                                                                                                                                                                                                                                                                                                                                                                                ; Mux9~15, Mux9~22, tg~255, tg~409, tg~280, tg~426, tg~432                                                                                                                                                                                                                                       ;
+;  A  ; LC10       ; y[2], x[2]                                                                                                                                                                                                                                                                                                                                                                                                ; Mux9~15, Mux9~22, tg~255, tg~409, tg~280, tg~420, tg~426, tg~432                                                                                                                                                                                                                               ;
+;  A  ; LC12       ; x[3], y[3]                                                                                                                                                                                                                                                                                                                                                                                                ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17, lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17, lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17 ;
+;  A  ; LC9        ; x[0], y[0]                                                                                                                                                                                                                                                                                                                                                                                                ; tg~217, tg~244, tg~151, tg~161, tg~332, tg~342                                                                                                                                                                                                                                                 ;
+;  B  ; LC18       ; tg~367, S[0], y[0], S[1], y[1], C, x[0], x[1]                                                                                                                                                                                                                                                                                                                                                             ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC17       ; S[0], S[1], y[1], C, x[0], y[0]                                                                                                                                                                                                                                                                                                                                                                           ; tg~195                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC32       ; M, tg~170, tg~182, tg~188, tg~194, C, Mux9~15, tg~195, tg~202, tg~217, tg~233, tg~244, tg~255, S[1], tg~256, tg~280, tg~293, tg~294, tg~301                                                                                                                                                                                                                                                               ; carry~15                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC30       ; S[0], S[1], y[0], M, C, x[0]                                                                                                                                                                                                                                                                                                                                                                              ; tg~170                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC20       ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~35, x[1], x[2], y[0], x[0], y[2], y[1], lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15, lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~16                                                                                                                                                ; tg~169, tg~342                                                                                                                                                                                                                                                                                 ;
+;  B  ; LC25       ; tg~308, S[0], S[1], y[0], M, C, x[0]                                                                                                                                                                                                                                                                                                                                                                      ; f[0]                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC29       ; tg~326, x[0], C, M, y[1], S[1], S[0], y[0], x[1]                                                                                                                                                                                                                                                                                                                                                          ; f[1]                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC31       ; tg~352, S[0], S[1], y[0], M, C, x[0]                                                                                                                                                                                                                                                                                                                                                                      ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC28       ; tg~320, y[0], x[0], S[0], y[1], S[1], C, M                                                                                                                                                                                                                                                                                                                                                                ; tg~143                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC27       ; tg~314, x[0], S[0], C, M, y[1], S[1], y[0]                                                                                                                                                                                                                                                                                                                                                                ; tg~326                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC26       ; y[0], x[0], S[0], C, M, y[1], S[1], x[1]                                                                                                                                                                                                                                                                                                                                                                  ; tg~320                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC22       ; tg~371, y[0], y[1], x[0], C, S[0], S[1], x[1]                                                                                                                                                                                                                                                                                                                                                             ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC23       ; x[2], S[1], S[0], y[2], y[3], x[3]                                                                                                                                                                                                                                                                                                                                                                        ; tg~280, tg~420, tg~426, tg~432                                                                                                                                                                                                                                                                 ;
+;  B  ; LC24       ; S[0], S[1], y[0], M, C, x[0]                                                                                                                                                                                                                                                                                                                                                                              ; tg~136                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC19       ; x[2], y[2], x[1], y[1]                                                                                                                                                                                                                                                                                                                                                                                    ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17                                                                                                                                                                                                                         ;
+;  B  ; LC21       ; S[1], y[0], y[1], C, S[0], x[0]                                                                                                                                                                                                                                                                                                                                                                           ; tg~202                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC43       ; Mux9~22, Mux9~9bal, Mux9~5, x[1], S[1], y[3], x[3], Mux9~6, y[1], Mux9~8bal, Mux9~7, y[0], x[0]                                                                                                                                                                                                                                                                                                           ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC35       ; tg~409, Mux9~8bal, tg~218, x[1], S[0], x[3], y[3], Mux9~9bal, tg~458, y[0], x[0], tg~224, y[1]                                                                                                                                                                                                                                                                                                            ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC40       ; tg~432, tg~271bal, Mux9~7, Mux9~8bal, y[0], S[1], S[0], x[0], y[3], x[3], Mux9~9bal, Mux9~6, y[1]                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC38       ; tg~420, tg~271bal, Mux9~8bal, x[1], S[1], S[0], y[1], y[3], x[3], tg~218, Mux9~9bal, Mux9~5                                                                                                                                                                                                                                                                                                               ; tg~432                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC41       ; S[0], x[1], S[1], x[2], x[0], x[3], y[2], y[3]                                                                                                                                                                                                                                                                                                                                                            ; Mux9~22                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC42       ; Mux9~16, y[2], S[1], x[2], y[3], x[3], Mux9~4, S[0], Mux9~8bal, x[1], y[1], Mux9~9bal, Mux9~5                                                                                                                                                                                                                                                                                                             ; Mux9~15                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC33       ; y[2], S[0], x[3], y[3], x[2]                                                                                                                                                                                                                                                                                                                                                                              ; tg~409                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC34       ; tg~406, y[2], S[0], x[3], y[3], x[2], Mux9~9bal, x[1], y[1], Mux9~8bal, tg~218                                                                                                                                                                                                                                                                                                                            ; tg~255                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC37       ; tg~271bal, x[2], S[1], S[0], y[2], y[3], x[3], Mux9~9bal, x[1], y[1]                                                                                                                                                                                                                                                                                                                                      ; tg~426                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC39       ; tg~426, tg~271bal, Mux9~9bal, Mux9~5, x[1], S[1], S[0], y[3], x[3], tg~458, y[0], x[0], Mux9~8bal, tg~224, y[1]                                                                                                                                                                                                                                                                                           ; tg~280                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC62       ; tg~415, S[0], y[2], x[0], y[1], S[1], x[1], y[0], x[2]                                                                                                                                                                                                                                                                                                                                                    ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC51       ; tg~442, tg~237, tg~283, x[1], S[1], y[3], x[3], tg~287, tg~238, y[0], x[0], S[0], tg~459, y[1]                                                                                                                                                                                                                                                                                                            ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC61       ; x[1], S[0], y[0], y[2], S[1], y[1], x[0]                                                                                                                                                                                                                                                                                                                                                                  ; tg~256                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC57       ; tg~397, y[2], S[0], S[1], x[3], y[3], x[2], tg~237, y[1], x[1], tg~238, tg~209                                                                                                                                                                                                                                                                                                                            ; tg~244                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC53       ; tg~448, x[2], x[0], y[1], S[0], x[1], y[0], y[2]                                                                                                                                                                                                                                                                                                                                                          ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC59       ; y[1], S[0], S[1], x[2], y[2], x[1], tg~209                                                                                                                                                                                                                                                                                                                                                                ; tg~217                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC60       ; tg~376, tg~209, y[1], S[0], S[1], x[2], y[2], tg~210bal, x[1], tg~211, x[0], y[0]                                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC58       ; tg~400, tg~238, tg~209, y[1], S[0], S[1], x[3], y[3], tg~210bal, x[1], tg~237, tg~211, x[0], y[0]                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC52       ; x[1], y[0], x[2], S[0], y[1], x[0]                                                                                                                                                                                                                                                                                                                                                                        ; tg~294                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC50       ; tg~438, x[2], S[0], S[1], y[2], y[3], x[3], tg~238, x[1], y[1], tg~237, tg~283                                                                                                                                                                                                                                                                                                                            ; tg~293                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC49       ; S[0], S[1], x[3], x[2], y[2], y[3]                                                                                                                                                                                                                                                                                                                                                                        ; tg~442                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC56       ; y[2], S[0], S[1], x[3], y[3], x[2]                                                                                                                                                                                                                                                                                                                                                                        ; tg~400                                                                                                                                                                                                                                                                                         ;
+;  D  ; LC55       ; tg~453, x[2], x[0], y[1], S[0], x[1], y[0], y[2]                                                                                                                                                                                                                                                                                                                                                          ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC54       ; x[1], y[0], x[2], S[0], y[1], x[0]                                                                                                                                                                                                                                                                                                                                                                        ; tg~301                                                                                                                                                                                                                                                                                         ;
+;  E  ; LC71       ; S[1], x[2], S[0], x[1], y[1], y[2], x[0]                                                                                                                                                                                                                                                                                                                                                                  ; tg~385                                                                                                                                                                                                                                                                                         ;
+;  E  ; LC67       ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29, x[1], y[2], y[1], x[0], y[0], x[2]                                                                                                                                                                                                                                                                                                ; tg~332                                                                                                                                                                                                                                                                                         ;
+;  E  ; LC70       ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29, x[1], y[2], y[1], x[0], y[0], x[2]                                                                                                                                                                                                                                                                                                ; tg~332                                                                                                                                                                                                                                                                                         ;
+;  E  ; LC72       ; tg~380, x[2], S[0], x[1], y[1], y[2], tg~460, S[1], tg~219, tg~220                                                                                                                                                                                                                                                                                                                                        ; tg~391                                                                                                                                                                                                                                                                                         ;
+;  E  ; LC74       ; tg~391, tg~225, S[1], x[0], x[2], S[0], y[2], y[0], Mux9~28, x[1]                                                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  E  ; LC69       ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[2]~24, x[1], x[2], x[0], y[1], y[0], y[2]                                                                                                                                                                                                                                                                                                ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8                                                                                                                                                                                                                          ;
+;  E  ; LC68       ; x[1], x[2], y[2], y[1], y[0], x[0]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29                                                                                                                                                                                                                         ;
+;  E  ; LC66       ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[2]~24, x[1], x[2], x[0], y[1], y[0], y[2]                                                                                                                                                                                                                                                                                                ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8                                                                                                                                                                                                                          ;
+;  E  ; LC65       ; x[1], x[2], y[2], y[1], y[0], x[0]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29                                                                                                                                                                                                                         ;
+;  E  ; LC73       ; tg~385, tg~221, x[0], x[2], S[0], x[1], Mux9~29, y[1], y[2], tg~223, tg~461, S[1]                                                                                                                                                                                                                                                                                                                         ; tg~233                                                                                                                                                                                                                                                                                         ;
+;  F  ; LC83       ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29, x[1], y[2], y[1], x[0], y[0], x[2]                                                                                                                                                                                                                                                                                                ; tg~159, tg~161, tg~332, tg~342                                                                                                                                                                                                                                                                 ;
+;  F  ; LC86       ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[3]~30, y[0], y[1], x[2], y[2], x[1], x[0]                                                                                                                                                                                                                                                                                                ; tg~336                                                                                                                                                                                                                                                                                         ;
+;  F  ; LC89       ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[3]~30, y[0], y[1], x[2], y[2], x[1], x[0]                                                                                                                                                                                                                                                                                                ; tg~336                                                                                                                                                                                                                                                                                         ;
+;  F  ; LC87       ; y[1], x[2], y[2], x[0], y[0], x[1]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[3]~30                                                                                                                                                                                                                         ;
+;  F  ; LC90       ; S[1], M, x[1], y[1], S[0]                                                                                                                                                                                                                                                                                                                                                                                 ; tg~182                                                                                                                                                                                                                                                                                         ;
+;  F  ; LC92       ; S[1], M, x[2], y[2], S[0]                                                                                                                                                                                                                                                                                                                                                                                 ; tg~188                                                                                                                                                                                                                                                                                         ;
+;  F  ; LC81       ; x[1], x[2], y[2], y[1], y[0], x[0]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~29                                                                                                                                                                                                                         ;
+;  F  ; LC82       ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~24, x[1], x[2], x[0], y[1], y[0], y[2]                                                                                                                                                                                                                                                                                                ; lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|sout_node[2]~8                                                                                                                                                                                                                          ;
+;  F  ; LC88       ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[3]~24, y[0], y[1], x[2], y[2], x[1], x[0]                                                                                                                                                                                                                                                                                                ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[3]~8                                                                                                                                                                                                                          ;
+;  F  ; LC85       ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[3]~24, y[0], y[1], x[2], y[2], x[1], x[0]                                                                                                                                                                                                                                                                                                ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[3]~8                                                                                                                                                                                                                          ;
+;  F  ; LC93       ; tg~361, S[1], M, S[0], y[2], x[2]                                                                                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  F  ; LC91       ; tg~358, S[1], M, S[0], y[1], x[1]                                                                                                                                                                                                                                                                                                                                                                         ; Equal0~1                                                                                                                                                                                                                                                                                       ;
+;  F  ; LC84       ; y[0], y[1], x[2], y[2], x[0], x[1]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[3]~30                                                                                                                                                                                                                         ;
+;  F  ; LC94       ; x[1], y[1], y[0], x[0]                                                                                                                                                                                                                                                                                                                                                                                    ; tg~151, tg~161, tg~332, tg~342                                                                                                                                                                                                                                                                 ;
+;  G  ; LC99       ; x[2], y[2], x[1], y[1]                                                                                                                                                                                                                                                                                                                                                                                    ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17                                                                                                                                                                                                                         ;
+;  G  ; LC101      ; y[2], x[1], y[0], x[0], y[1], x[2]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17                                                                                                                                                                                                                         ;
+;  G  ; LC103      ; y[2], x[1], y[0], x[0], y[1], x[2]                                                                                                                                                                                                                                                                                                                                                                        ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~17                                                                                                                                                                                                                         ;
+;  G  ; LC98       ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~35, x[1], x[2], y[0], x[0], y[2], y[1], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                     ; tg~342                                                                                                                                                                                                                                                                                         ;
+;  G  ; LC102      ; lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|sout_node[4]~36, y[2], y[0], y[1], x[0], x[1], x[2], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                     ; tg~346                                                                                                                                                                                                                                                                                         ;
+;  G  ; LC97       ; x[2], y[2], x[1], y[1]                                                                                                                                                                                                                                                                                                                                                                                    ; lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~17                                                                                                                                                                                                                         ;
+;  G  ; LC100      ; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|sout_node[3]~35, x[1], x[2], y[0], x[0], y[2], y[1], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                     ; tg~342                                                                                                                                                                                                                                                                                         ;
+;  G  ; LC104      ; lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node|sout_node[4]~36, y[2], y[0], y[1], x[0], x[1], x[2], lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|sout_node[3]~15bal                                                                                                                                                                                                                     ; tg~346                                                                                                                                                                                                                                                                                         ;
++-----+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Fri Jun 19 01:49:26 2009
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off teste -c teste
+Info: Selected device EPM7128SLC84-7 for design "teste"
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Fri Jun 19 01:49:27 2009
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

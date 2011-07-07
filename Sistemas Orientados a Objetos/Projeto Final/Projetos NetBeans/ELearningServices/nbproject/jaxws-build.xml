@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        -->
+<project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <target name="wsgen-init" depends="init, -do-compile">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws/resources/"/>
+        <mkdir dir="${build.classes.dir}"/>
+        <taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsgen-DisciplinaService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.DisciplinaService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-NotaService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.NotaService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-AlunoService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.AlunoService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-MatriculaService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.MatriculaService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-PessoaService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.PessoaService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-UsuarioService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.UsuarioService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-CriterioAvaliacaoService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.CriterioAvaliacaoService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-ReportService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.ReportService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-ProfessorService" depends="wsgen-init">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" xendorsed="true" keep="true" genwsdl="true" sei="ELearning.services.ProfessorService">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-ReportService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ReportService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ReportService" destdir="${build.generated.dir}/jax-wsCache/ReportService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ReportService/wsdl/localhost_9960/ELearningServices/ReportService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/ReportService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.relatorios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ReportService/wsdl/localhost_9960/ELearningServices/ReportService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ReportService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ReportService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ReportService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/relatorios"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ReportService"/>
+    </target>
+    <target name="wsimport-client-DisciplinaService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DisciplinaService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DisciplinaService" destdir="${build.generated.dir}/jax-wsCache/DisciplinaService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/DisciplinaService/wsdl/localhost_9960/ELearningServices/DisciplinaService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/DisciplinaService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.disciplina">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/DisciplinaService/wsdl/localhost_9960/ELearningServices/DisciplinaService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DisciplinaService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DisciplinaService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DisciplinaService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/disciplina"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/DisciplinaService"/>
+    </target>
+    <target name="wsimport-client-NotaService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/NotaService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/NotaService" destdir="${build.generated.dir}/jax-wsCache/NotaService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/NotaService/wsdl/localhost_9960/ELearningServices/NotaService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/NotaService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.nota">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/NotaService/wsdl/localhost_9960/ELearningServices/NotaService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/NotaService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/NotaService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-NotaService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/nota"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/NotaService"/>
+    </target>
+    <target name="wsimport-client-AlunoService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/AlunoService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AlunoService" destdir="${build.generated.dir}/jax-wsCache/AlunoService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/AlunoService/wsdl/localhost_9960/ELearningServices/AlunoService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/AlunoService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.aluno">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/AlunoService/wsdl/localhost_9960/ELearningServices/AlunoService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/AlunoService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/AlunoService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-AlunoService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/aluno"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/AlunoService"/>
+    </target>
+    <target name="wsimport-client-MatriculaService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MatriculaService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MatriculaService" destdir="${build.generated.dir}/jax-wsCache/MatriculaService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/MatriculaService/wsdl/localhost_9960/ELearningServices/MatriculaService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/MatriculaService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.matricula">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/MatriculaService/wsdl/localhost_9960/ELearningServices/MatriculaService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MatriculaService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MatriculaService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MatriculaService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/matricula"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/MatriculaService"/>
+    </target>
+    <target name="wsimport-client-PessoaService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PessoaService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PessoaService" destdir="${build.generated.dir}/jax-wsCache/PessoaService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PessoaService/wsdl/localhost_9960/ELearningServices/PessoaService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/PessoaService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.pessoa">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PessoaService/wsdl/localhost_9960/ELearningServices/PessoaService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PessoaService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PessoaService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-PessoaService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/pessoa"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/PessoaService"/>
+    </target>
+    <target name="wsimport-client-UsuarioService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsuarioService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsuarioService" destdir="${build.generated.dir}/jax-wsCache/UsuarioService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UsuarioService/wsdl/localhost_9960/ELearningServices/UsuarioService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/UsuarioService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.usuario">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UsuarioService/wsdl/localhost_9960/ELearningServices/UsuarioService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsuarioService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsuarioService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsuarioService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/usuario"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UsuarioService"/>
+    </target>
+    <target name="wsimport-client-CriterioAvaliacaoService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CriterioAvaliacaoService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CriterioAvaliacaoService" destdir="${build.generated.dir}/jax-wsCache/CriterioAvaliacaoService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CriterioAvaliacaoService/wsdl/localhost_9960/ELearningServices/CriterioAvaliacaoService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/CriterioAvaliacaoService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.criterioavaliacao">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CriterioAvaliacaoService/wsdl/localhost_9960/ELearningServices/CriterioAvaliacaoService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CriterioAvaliacaoService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CriterioAvaliacaoService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CriterioAvaliacaoService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/criterioavaliacao"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CriterioAvaliacaoService"/>
+    </target>
+    <target name="wsimport-client-ProfessorService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ProfessorService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ProfessorService" destdir="${build.generated.dir}/jax-wsCache/ProfessorService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ProfessorService/wsdl/localhost_9960/ELearningServices/ProfessorService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9960/ELearningServices/ProfessorService?wsdl" xnocompile="true" xendorsed="true" package="ELearning.services.client.professor">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ProfessorService/wsdl/localhost_9960/ELearningServices/ProfessorService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ProfessorService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ProfessorService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ProfessorService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ELearning/services/client/professor"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ProfessorService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ReportService, wsimport-client-DisciplinaService, wsimport-client-NotaService, wsimport-client-AlunoService, wsimport-client-MatriculaService, wsimport-client-PessoaService, wsimport-client-UsuarioService, wsimport-client-CriterioAvaliacaoService, wsimport-client-ProfessorService"/>
+</project>
