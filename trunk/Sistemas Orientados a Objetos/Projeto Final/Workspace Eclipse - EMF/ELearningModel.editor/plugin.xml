@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="elearningmodel.presentation.ElearningmodelModelWizardID"
+            name="%_UI_ElearningmodelModelWizard_label"
+            class="elearningmodel.presentation.ElearningmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ElearningmodelModelFile.gif">
+         <description>%_UI_ElearningmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="elearningmodel.presentation.ElearningmodelEditorID"
+            name="%_UI_ElearningmodelEditor_label"
+            icon="icons/full/obj16/ElearningmodelModelFile.gif"
+            extensions="elearningmodel"
+            class="elearningmodel.presentation.ElearningmodelEditor"
+            contributorClass="elearningmodel.presentation.ElearningmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

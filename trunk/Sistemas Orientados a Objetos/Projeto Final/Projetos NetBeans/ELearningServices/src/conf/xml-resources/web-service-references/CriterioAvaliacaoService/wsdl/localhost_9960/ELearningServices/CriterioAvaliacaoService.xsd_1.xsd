@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarCriterio" type="tns:cadastrarCriterio" />
+
+<xs:element name="cadastrarCriterioResponse" type="tns:cadastrarCriterioResponse" />
+
+<xs:element name="deletarCriterio" type="tns:deletarCriterio" />
+
+<xs:element name="deletarCriterioResponse" type="tns:deletarCriterioResponse" />
+
+<xs:element name="editarCriterio" type="tns:editarCriterio" />
+
+<xs:element name="editarCriterioResponse" type="tns:editarCriterioResponse" />
+
+<xs:element name="procurarCriterio" type="tns:procurarCriterio" />
+
+<xs:element name="procurarCriterioResponse" type="tns:procurarCriterioResponse" />
+
+<xs:complexType name="cadastrarCriterio">
+<xs:sequence>
+<xs:element name="newCriterion" type="tns:criterioAvaliacao" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="criterioAvaliacao">
+<xs:sequence>
+<xs:element name="idCriterioAvaliacao" type="xs:long" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="nome" type="xs:string" minOccurs="0" />
+<xs:element name="peso" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarCriterioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarCriterio">
+<xs:sequence>
+<xs:element name="criterion" type="tns:criterioAvaliacao" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarCriterioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarCriterio">
+<xs:sequence>
+<xs:element name="oldCriterion" type="tns:criterioAvaliacao" minOccurs="0" />
+<xs:element name="newCriterion" type="tns:criterioAvaliacao" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarCriterioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:criterioAvaliacao" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarCriterio">
+<xs:sequence>
+<xs:element name="criterion" type="tns:criterioAvaliacao" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarCriterioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:criterioAvaliacao" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,1095 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.seas.upenn.edu/~ee201/lab/LabALU/ALU.html -->
+<HTML><HEAD><TITLE>Projeto da ULA</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 6.00.2716.2200" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator>
+<META content="J. Van der Spiegel" name=Author>
+<META content="4-bit ALU" name=Description>
+<META content="Digital design, FPGA, CPLD, Xilinx, ALU" name=KeyWords>
+<META content="Microsoft FrontPage 4.0" 
+name=GENERATOR><LINK href="./ALU_F01_files/filelist.xml" rel=File-List><LINK 
+href="./ALU_F01_files/editdata.mso" rel=Edit-Time-Data><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Jan Van der Spiegel</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Jan Van der Spiegel</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>148</o:TotalTime>
+  <o:Created>2001-10-17T01:37:00Z</o:Created>
+  <o:LastSaved>2001-10-17T03:15:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>3026</o:Words>
+  <o:Characters>17249</o:Characters>
+  <o:Lines>143</o:Lines>
+  <o:Paragraphs>34</o:Paragraphs>
+  <o:CharactersWithSpaces>21182</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Wingdings;
+}
+@page Section1 {size: 612.0pt 792.0pt; margin: 72.0pt 90.0pt 72.0pt 90.0pt; mso-header-margin: 36.0pt; mso-footer-margin: 36.0pt; mso-paper-source: 0; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+P {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 0pt; MARGIN-RIGHT: 0pt; FONT-FAMILY: "Times New Roman"; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+PRE {
+	FONT-SIZE: 10pt; MARGIN: 0pt; FONT-FAMILY: "Courier New"; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; mso-pagination: widow-orphan; mso-fareast-font-family: "Courier New"
+}
+TT {
+	mso-fareast-font-family: "Courier New"; mso-ascii-font-family: "Courier New"; mso-hansi-font-family: "Courier New"; mso-bidi-font-family: "Courier New"
+}
+DIV.Section1 {
+	page: Section1
+}
+OL {
+	MARGIN-BOTTOM: 0pt
+}
+UL {
+	MARGIN-BOTTOM: 0pt
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1038"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--></HEAD>
+<BODY lang=EN-US style="tab-interval: 36.0pt" vLink=#0000ff link=#0000ff 
+bgColor=#ffffff background="ALU Design_arquivos/blutextb.gif">
+<table border="1" width="100%">
+  <tr>
+    <td width="25%"><img src="Introd1.gif" v:shapes="_x0000_i1025" width="160" height="101"></td>
+    <td width="75%">
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0">Departamento
+      de Engenharia Elétrica<o:p>
+      </o:p>
+      </p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0">Faculdade
+      de Tecnologia<o:p>
+      </o:p>
+      </p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0">Universidade
+      de Brasília<o:p>
+      </o:p>
+      </p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0"><span lang="ES-TRAD" style="mso-ansi-language:ES-TRAD">Sistemas
+      Digitais I<o:p>
+      </o:p>
+      </span></p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0"><span lang="ES-TRAD" style="mso-ansi-language:ES-TRAD">Prof.
+      Juliana F. Camapum Wanderley<o:p>
+      </o:p>
+      </span></p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0"><span lang="ES-TRAD" style="font-size:8.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;
+  mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:ES-TRAD">Tel.
+      (061)273-5977<o:p>
+      </o:p>
+      </span></p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0"><span lang="ES-TRAD" style="font-size:8.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;
+  mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:ES-TRAD">Fax.
+      (061)274-6651<o:p>
+      </o:p>
+      </span></p>
+      <p class="MsoHeader" align="right" style="text-align: right; word-spacing: 0; margin: 0"><span style="font-size: 8.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US" lang="EN-US">e-mail</span><span lang="EN-US" style="font-size:8.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;
+  mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US">:
+      juliana@ene.unb.br</span><o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+</table>
+<CENTER> 
+<P><font size="4"><b>Projeto 3 - Data de entrega: 02/12/2003</b></font> 
+<P><SPAN style="FONT-SIZE: 13.5pt"><B>Projeto e Implementação de uma ULA de 4-bit&nbsp;</B></SPAN></CENTER>
+<HR align=center width="100%">
+
+<p><SPAN style="FONT-SIZE: 13.5pt"><B>Objetivo:</B></SPAN> 
+</p>
+1. Projetar uma ULA de 4-bit
+<p style="margin-top: 4">2. Simular a ULA no XILINX checando a sua operação
+<DIV class=MsoNormal>
+  <p style="margin-top: 6">Este experimento é um pouco diferente dos outros pois ele
+  é um projeto que dá liberdade ao aluno para criar as suas próprias
+  soluções. As direções abaixo deve guiá-lo neste processo. Entretanto, se
+  você encontrar formas mais elegantes e mais eficientes para implementar
+  partes da ULA, vá em frente. Apenas justifique o seu projeto e explique com
+  clareza as suas decisões no relatório. <BR>&nbsp;Como este projeto é mais
+  extenso do que os outros, os seus projetos devem estar escritos em um
+  relatório (arquivo .doc) e deve incluir itens como descrição dos projetos,
+  resultados e análise dos resultados.</DIV>
+<p><B>a. Descrição do Problema:</B> 
+</p>
+<P>Uma&nbsp; Unidade Lógica Aritmética (ALU) é um circuito combinacional que
+realiza micro-operações lógica e aritmética em um par de operandos de n-bit (ex. A[3:0]
+e B[3:0]). As operações realizadas por uma ULA são controladas por um
+conjunto de entradas<I> </I>de <I>seleção de funções</I>. Neste experimento,
+você irá projetar uma ULA de 4-bit ALU com 3 entradas de <i>seleção de
+funções:</i> Modo M, Entradas Seleção S1 e S0. A entrada modo M seleciona
+entre uma operação Lógica (M=0) e Aritmética (M=1). As funções realizadas
+pela ULA estão especificadas na Tabela I. <BR>&nbsp; 
+<CENTER>
+<TABLE style="mso-cellspacing: 1.5pt; mso-padding-alt: 0pt 0pt 0pt 0pt" 
+cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 332.25pt; PADDING-TOP: 0.75pt" 
+    width=443 colSpan=5>
+      <CENTER>Tabela 1: Funções da ULA</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 332.25pt; PADDING-TOP: 0.75pt" 
+    width=443 colSpan=5>
+      <DIV class=MsoNormal><B>M = 0</B>  Lógica</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      S1</TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>S0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>C0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>FUNÇÃO&nbsp;</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>OPERAÇÃO (bit a bit)</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>X</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A<SUB>i</SUB>B<SUB>i</SUB></DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>&nbsp;AND</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>X</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A<SUB>i</SUB> + B<SUB>i</SUB></DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>OR</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>X</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A<SUB>i<SPAN 
+      style="FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN 
+      style="mso-char-type: symbol; mso-symbol-font-family: Symbol"></SUB>Å</SPAN></SPAN> 
+      B<SUB>i</SUB></DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>XOR</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>X</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>(A<SUB>i<SPAN 
+      style="FONT-FAMILY: Symbol; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-char-type: symbol; mso-symbol-font-family: Symbol"><SPAN 
+      style="mso-char-type: symbol; mso-symbol-font-family: Symbol"></SUB>Å</SPAN></SPAN> 
+      B<SUB>i</SUB>)’</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>XNOR</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 332.25pt; PADDING-TOP: 0.75pt" 
+    width=443 colSpan=5>
+      <DIV class=MsoNormal><B>M = 1</B>  Aritmética</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>S1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>S0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>C0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>FUNÇÃO&nbsp;</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>OPERAÇÃO</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>Transfere A&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A + 1</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>Incrementa A de 1</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A + B</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>Adiciona A e B</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A + B + 1&nbsp;</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>Incrementa a soma de A e B de 1</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A + B'</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>A mais complemento de B</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A - B</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>Subtrai B de A (i.e. B' + A + 1)</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>A' + B</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>B mais complemento de A</DIV></TD></TR>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 37.5pt; PADDING-TOP: 0.75pt" 
+    width=50>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 30.75pt; PADDING-TOP: 0.75pt" 
+    width=41>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 59.25pt; PADDING-TOP: 0.75pt" 
+    width=79>
+      <DIV class=MsoNormal>B - A</DIV></TD>
+    <TD 
+    style="PADDING-RIGHT: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-BOTTOM: 0.75pt; WIDTH: 174pt; PADDING-TOP: 0.75pt" 
+    width=232>
+      <DIV class=MsoNormal>B menos A (ou A' + B + 
+1)&nbsp;</DIV></TD></TR></TBODY></TABLE></CENTER>&nbsp;
+<p>Um diagrama de blocos é
+apresentado na Figura 1. 
+<CENTER>
+</p>
+<P><IMG id=_x0000_i1027 height=198 src="pr3-1-03_arquivos/lab6.1.gif" 
+width=404>&nbsp; 
+<P>Figura 1: Diagrama de blocos da ULA de 4-bit.</CENTER>
+<P>Ao fazer uma operação aritmética, você precisa decidir como representar
+números negativos. Geralmente em sistemas digitais, números negativos são
+representados em complemento de dois. Isto tem várias vantagens em relação a
+representação sinal e magnitude como a facilidade de realizar operações de
+adição e subtração de números negativos e positivos. Além disto, o número
+zero tem uma representação única em complemento de dois. O complemento de
+dois de um número N de n-bit é definida como, 
+<BR>&nbsp; 
+<BLOCKQUOTE>
+  <DIV class=MsoNormal 
+  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">2<SUP>n</SUP> 
+  - N = (2<SUP>n</SUP> - 1 - N) + 1</DIV></BLOCKQUOTE>
+<DIV class=MsoNormal>A última representação fornece uma forma fácil de
+  encontrar o complemento de dois: pegue o complemento do número e adicione 1.
+  Por exemplo, para representar o número -5, nós calculamos o complemento de
+  dois de 5 (=0101) da seguinte forma,</DIV>
+<PRE style="MARGIN: 0pt 36pt">&nbsp;&nbsp; 5&nbsp;&nbsp; 0 1 0 1&nbsp;&nbsp; --&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 0 1 0&nbsp; (complemento bit a bit)</PRE><PRE style="MARGIN: 0pt 36pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<U>&nbsp;&nbsp;&nbsp;&nbsp; + 1</U></PRE><PRE style="MARGIN: 0pt 36pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 0 1 1&nbsp; (complemento de dois)</PRE>
+<P>Números representados em complemento de dois estão na faixa 
+-(2<SUP>n-1</SUP>) a&nbsp; +(2<SUP>n-1</SUP> - 1). Para um número de 4-bit isto
+significa que o número está na faixa de -8 a +7. Existe um problema potencial
+que nós precisamos ficar atentos quando trabalhamos com complemento de dois, ou
+seja, overflow (resultado acima do limite superior da faixa) e underflow(resultado abaixo
+do limite inferior da faixa) como ilustrado no exemplo abaixo, <PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN style="COLOR: red"><B>0 1</SPAN></B> 0 0&nbsp;&nbsp;&nbsp; (=carry Ci)</TT></PRE><PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 1 0 1</TT></PRE><PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<U> +4&nbsp;</U>&nbsp; <U>+&nbsp;&nbsp; 0 1 0 0</U></TT></PRE><PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +9&nbsp;&nbsp;&nbsp;&nbsp; <STRIKE>0</STRIKE> 1 0 0 1&nbsp;&nbsp;&nbsp; = -7!</TT></PRE>
+<P><BR>também, <PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN style="COLOR: red"><B>1 0</SPAN></B> 0 0&nbsp;&nbsp;&nbsp; (=carry Ci)</TT></PRE><PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 0 0 1</TT></PRE><PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <U>-2</U>&nbsp;&nbsp;&nbsp;&nbsp; <U>+&nbsp; 1 1 1 0</U></TT></PRE><PRE><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <STRIKE>1</STRIKE> 0 1 1 1&nbsp;&nbsp;&nbsp; = +7!</TT></PRE>
+<P>Ambos os cálculos dão resultados errados (-7 ao invés de +9 ou +7 ao
+invés de -9) pelo fato de que o resultado +9 ou -9 está fora da faixa
+permitida para números em complemento de dois de 4-bit. Sempre que o resultado
+for maior do que +7 ou menor do que -8 existe um overflow ou underflow e o
+resultado da adição ou subtração está errado. Overflow e underflow podem
+ser facilmente detectados quando o bit carry-out do estágio mais significativo
+(ou seja, 
+C<SUB>4</SUB> ) for diferente do carry-out do estágio anterior (ou seja, 
+C<SUB>3</SUB>). <BR>Você pode assumir que as entradas A e B estão em
+complemento de dois quando eles são apresentados à entrada da ULA.<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><B>b.
+Estratégias de Projeto</B><P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Quando
+você for projetar a ULA, você deve seguir o princípio &quot;Dividir e
+Conquistar&quot; para desenvolver um projeto modular que consiste de blocos
+menores e mais fáceis de entender, alguns podem ser reutilizados. Ao invés de
+projetar uma ULA de 4-bit como um único circuito, nós iremos primeiro projetar
+uma ULA de um-bit, também chamada de<B><I> bit-slice</I></B>. Estes 
+bit-slices podem ser colocados juntos para fazer uma ULA de 4-bit.<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Existem
+diferentes formas de projetar um bit-slice da ULA. Um método consiste em
+escrever a tabela-verdade para a ULA de um-bit. Esta tabela tem 6 entradas (M, S1, S0, 
+C<SUB>0</SUB>, A<SUB>i</SUB>  e B<SUB>i</SUB>) e duas saídas F<SUB>i</SUB> 
+ e C<SUB>i+1</SUB>. Isto pode ser feito mas pode ser tediosos quando feito
+manualmente.<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Uma
+forma alternativa é dividir a ULA em dois módulos, um Lógico e um Aritmético.
+Projetar cada módulo separadamente será mais fácil do que projetar um <i><b>
+bit-slice</b></i> como uma única unidade. Um diagrama de bloco possível da ULA é
+mostrado na Figura 2. Ele consiste de três módulos: 2:1 MUX, uma unidade
+Lógica e uma unidade Aritmética. <BR>&nbsp;
+<CENTER>
+<P><IMG id=_x0000_i1028 height=256 src="pr3-1-03_arquivos/lab6.2.gif" 
+width=321> 
+<P>Figura 2: Diagrama de bloco de uma ULA <b><i> bit-slice (ULA de 1 bit)</i></b></CENTER>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><b>c
+- Apresentando os resultados.&nbsp;</b><P 
+style="MARGIN-LEFT: 39pt; TEXT-INDENT: -18pt; mso-list: l6 level1 lfo5; tab-stops: list 39.0pt">A
+Figura 3 mostra o esquemático completo do sistema. <BR>
+<CENTER>
+<P><IMG height=265 src="pr3-1-03_arquivos/Fig3Block.gif" width=296>
+<P>&nbsp;Figura 3:
+Sistema completo da ULA de 4-bit</CENTER>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><B>d.
+Tarefas</B>: Escreva todas as respostas para os itens abaixo no seu relatório. 
+<OL type=1>
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo8; tab-stops: list 36.0pt"><I>Projete
+    o MUX</I>. Você pode escolher projetar o MUX com portas lógicas ou
+    escrevendo o código em VHDL. Escolha um dos dois métodos e escreva o
+    projeto no seu relatório. </LI></OL>
+<OL type=1 start=2>
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l4 level1 lfo11; tab-stops: list 36.0pt"><I>Projete
+    a unidade Lógica</I>. Aqui você também tem várias opções para projetar
+    esta unidade: 
+  </LI></OL>
+<DIV class=MsoNormal 
+style="MARGIN-LEFT: 72pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">a.
+  Escreva a tabela-verdade, faça o mapa de Karnaugh e implemente o circuito
+  minimizado</DIV>
+<DIV 
+style="MARGIN-LEFT: 72pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">b. 
+Use um MUX 4:1 e portas lógicas</DIV>
+<DIV 
+style="MARGIN-LEFT: 72pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">c.
+Escreva um arquivo HDL</DIV>
+<BLOCKQUOTE>
+  <p>Você pode escolher um dos três métodos. Brevemente, justifique a
+  sua escolha. Explique os procedimentos adotados no projeto e forneça o
+  esquemático lógico ou o arquivo HDL. Caso você use um MUX, você também
+  precisa fornecer o esquemático ou o arquivo HDL para o MUX.</p>
+</BLOCKQUOTE>
+<OL type=1 start=3>
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l4 level1 lfo11; tab-stops: list 36.0pt"><i>Projete
+    a unidade aritmética</i>. Novamente, você tem diferentes escolhas para o
+    projeto e implementação da unidade aritmética. Um método particularmente
+    atrativo é aquele que usa módulos projetados anteriormente, tal como o
+    Somador Completo (<i>Full Adder</i>). A unidade aritmética realiza basicamente
+    adições em um conjunto de entradas. Escolhendo as entradas apropriadas,
+    pode-se realizar um conjunto de operações. Esta abordagem é apresentada
+    na Figura 4. O único bloco que precisa ser projetado são os circuitos
+    lógicos A e B. Você pode usar o seu projeto anterior do Somador Completo. </LI></OL>
+<CENTER>
+<P><BR><IMG id=_x0000_i1029 height=129 src="pr3-1-03_arquivos/lab6.3.gif" 
+width=242 border=0> 
+<P>Figura 4: Diagrama de blocos do esquemático da unidade aritmética.</CENTER>
+<blockquote>
+  <ol type="a">
+    <li>Forneça
+      as tabelas-verdade para as funções Xi e Yi com entradas S1, S0 e Ai, e S1, S0
+      e Bi, respectivamente. Preencha as seguintes tabelas. Note que na
+      definição da tabela I da ULA, a variável C<SUB>0</SUB>  age como
+      entrada 
+    Carry. Dependendo do valor de C<SUB>0</SUB>, será realizada a função nas
+      entradas ímpares ou pares da definição da tabela I. Como exemplo, a
+      primeira entrada é &quot;transfere A" (para C<SUB>0</SUB>=0) enquanto a
+      segunda é "A+1" (para C<SUB>0</SUB>=1); Similarmente para A + B e A + B + 1, etc.</li>
+  </ol>
+</blockquote>
+<CENTER>
+<TABLE 
+style="mso-cellspacing: 1.5pt; mso-padding-alt: 0pt 0pt 0pt 0pt" 
+cellPadding=0 width="363" border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER><B>S1</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER><B>S0</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER><B>Ai</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER><B>Xi&nbsp;</B> <BR><B>(A Logic)</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER><B>S1</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER><B>S0</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER><B>Bi</B></CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER><B>Yi&nbsp;</B> <BR><B>(B Logic)</B></CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>0&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <DIV style="MARGIN: 0pt">.</DIV></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>0</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR>
+  <TR>
+    <TD 
+    style="padding: 0.75pt" 
+    width=29>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=27>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=25>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=70>
+      <CENTER>.</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=32>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=28>
+      <CENTER>1</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=36>
+      <CENTER>1&nbsp;</CENTER></TD>
+    <TD 
+    style="padding: 0.75pt" 
+    width=80>
+      <CENTER>.</CENTER></TD></TR></TBODY></TABLE></CENTER>
+<CENTER>Tabela II: Tabelas-verdade para circuitos lógicos A e B.</CENTER>
+<UL type=disc>
+  <OL type=a start=2>
+    <LI class=MsoNormal 
+    style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level2 lfo16; tab-stops: list 72.0pt">Forneça
+      o mapa de Karnaugh para as funções Xi e Yi. Encontre a realização
+      mínima para Xi e 
+    Yi. 
+    <LI class=MsoNormal 
+    style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level2 lfo16; tab-stops: list 72.0pt">Desenhe
+      o circuito lógico para Xi e Yi. 
+    <LI class=MsoNormal 
+    style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level2 lfo16; tab-stops: list 72.0pt">Projete
+      o circuito que detecta overflow ou underflow. </LI></OL></UL>
+<DIV class=MsoNormal 
+style="TEXT-ALIGN: center; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
+<CENTER>
+<HR align=center width="100%" SIZE=2>
+</CENTER></DIV>
+<DIV class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><B><I>A.
+  Equipamentos:</I></B></DIV>
+<blockquote>
+  <p>1. 
+  PC</p>
+  2. 
+  Xilinx Foundation Tools&nbsp;ou Xilinx WebPack
+</blockquote>
+<DIV class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><B><I>B.
+  Experimentos</I></B></DIV>
+<DIV 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Sua
+  tarefa é projetar e implementar a ULA de 4-bit usando as ferramentas do Xilinx Foundation.
+  Siga as instruções para o projeto da ULA de 4-bit. Você irá criar um
+  projeto (veja as tarefas abaixo) com um esquemático de alto nível que
+  consiste de uma ULA de 4-bit. Este arquivo de alto nível terá várias macros
+  que você precisa criar usando o editor de Esquemático ou VHDL. Macros podem
+  ter macros inseridas dentro delas.</DIV>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><b><i><font color="#ff9900">Como
+este projeto é mais complicado do que os projetos anteriores, será importante
+que você implemene o projeto de forma sistemática. Cada macro deve ser
+simulada e erros devem ser corrigidos antes de passar para a próxima etapa. Se
+você não fizer isto, será mias difícil encontrar erros no sistema</font></i></b>
+<p><B><I>&nbsp;Leitura para Xilinx WebPack</I></B>
+    <p>Pode ser feita através do arquivo <a href="bibliografia/xilinx_ise_webpack_51/qst.pdf">qst.pdf
+    </a>(CD-Rom) 
+    <ol>
+      <li>Leia a seção &quot;Design Entry (VHDL)&quot; , &quot;Design Entry (Top
+        Level Schematic)&quot;, &quot;Simulating the Behavioral Model&quot;.&nbsp;</li>
+      <li>Para criar uma macro a partir do projeto em VHDL veja a pág. 17</li>
+      <li>Como inserir uma macro em VHDL no esquemático - veja pág. 17 a 26</li>
+    </ol>
+<P 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><B>Tarefa</B> 
+<UL type=disc>
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Criar
+    um novo projeto no modo esquemático: Chamá-lo MY4ALU, onde MY é
+    substituído pelo seu nome. 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Abra
+    o editor de esquemático (a folha deve ter o mesmo nome do projeto: 
+  MY4ALU1.sch). Este será o seu esquemático de alto nível. (Note: Cda vez que
+    você abre uma nova folha, ela será chamada MY4ALU2.sch, MY4ALU3.sch; todas
+    estas folhas são parte do esquemático de alto nível. Você deve usar
+    múltiplas folhas apenas quando o seu esquemático de alto nível é tão
+    grande que não cabe em uma única folha). 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Criar
+    macros para cada módulo (cuidadosamente leia a seção "<A 
+  href="http://www.seas.upenn.edu/~ee201/foundation/foundation_macros6.html">Creating 
+  Macros</A>" nos Tutoriais da Xilinx - não use a folha de mais alto nível
+    como uma macro!). Isto pode ser feito na janela do Editor de Esquemático
+    selecionando TOOLS -&gt; 
+  SYMBOL WIZARD. 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Defina
+    os arquivos fontes para as macros. 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Faça
+    uma simulação funcional das macros <A 
+  href="http://www.seas.upenn.edu/~ee201/foundation/foundation_macros6.html#simulate macro">simulation 
+  of&nbsp; the macros</A> (primeiro coloque-as no esquemático de mais alto
+    nível). Verifique a operação correta antes de avançar para o próximo
+    passo. Isto irá tornar a correção dos erros mais fácil. Se você
+    encontrar erros nas formas de onda simuladas, procure o erro no circuito.
+    Checar o seu esquemático ou código HDL. Lembre que nomes de macros HDL
+    devem ter no máximo 8 caracteres. Ao checar o esquemático, use a ponta de
+    prova (seta - Probe) para adicionar sinais (nomes dos fios - net names) à
+    janela do simulador. Isto irá ajudá-lo a rastrear o erro de uma forma
+    sistemática. 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Faça
+    o bit slice (isto deve ser uma macro contendo várias sub macros) 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Faça
+    a ULA de 4-bit. 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Projete
+    e adicione o circuito que detecta overflow V ao seu esquemático. 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l5 level1 lfo22; tab-stops: list 36.0pt">Simule
+    a ULA de 4-bit e verifique se todas as operações lógicas e aritméticas
+    funcionam corretamente. </LI> 
+  <LI class=MsoNormal 
+  style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l8 level1 lfo25; tab-stops: list 36.0pt">Será
+    instrutivo fazer uma simulação funcional para ter uma idéia da velocidade
+    do circuito.</UL>
+<P>Se o seu projeto for muito grande você pode facilmente compactá-lo
+através da janela Project Manager e selecionando FILE-&gt; ARCHIVE PROJECT.
+Isto irá compactar todo o projeto incluindo todas as bibliotecas necessárias. <BR>&nbsp; 
+<DIV class=MsoNormal 
+style="TEXT-ALIGN: center; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
+<CENTER>
+<HR align=center width="100%" SIZE=2>
+</CENTER></DIV>
+<DIV 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><SPAN 
+style="FONT-SIZE: 13.5pt"><B>Relatório</B></SPAN></DIV>Você deve incluir no
+relatório:<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">1.
+Nome do curso, título e número do experimento, seu nome, matrícula e data<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">2.
+Explicação do projeto de cada bloco.<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">3.a.
+Descrição breve dos objetivos. <BR>&nbsp;&nbsp;&nbsp; b. Explicação breve da abordagem do
+projeto, o esquemático completo e cada macro. <BR>&nbsp;&nbsp;&nbsp; c. Cópia dos esquemáticos e
+código fonte HDL (captura da tela). Rotule os esquemáticos e comente o código
+fonte. <BR>&nbsp;&nbsp;&nbsp; d. Simulação lógica (captura da tela das formas de onda, rotule as
+saídas para provar que as funções do circuito funciona corretamente). <BR>&nbsp;&nbsp;&nbsp;&nbsp;
+e.
+Discuta os resultados indicando que o circuito funciona corretamente.<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">4.
+Conclusões e discussões. <BR>5. Código fonte do projeto compactado<P class=MsoNormal 
+style="MARGIN-LEFT: 36pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">&nbsp;<P class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">O
+relatório é muito importante. Escreva com clareza&nbsp; e seja organizado.
+Esta é a única forma de você provar que você fez um bom trabalho. O
+relatório deve ser digitado no computador.. 
+<DIV class=MsoNormal 
+style="TEXT-ALIGN: center; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
+<CENTER>
+<HR align=center width="100%" SIZE=2>
+</CENTER></DIV>
+<DIV class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><B>Referências</B>:</DIV>
+<BLOCKQUOTE>
+  <DIV 
+  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">1. 
+  J. Wakerly, "Digital Design", 3<SUP>rd</SUP>  Edition, Prentice Hall, Upper 
+  Saddle River, 2000M.&nbsp;</DIV>
+  <DIV 
+  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">2.
+    Mano and C. Kime, &quot;Logic and Computer Design Fundamentals&quot;, 2<SUP>nd</SUP> 
+    Edition, Prentice Hall, Upper Saddle River, NJ, 2001.</DIV>
+  <DIV 
+  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">3. 
+  R. Katz, &quot;Contemporary Logic Design", Benjamin/Cummings Publ., Reading, MA,
+    1994.</DIV></BLOCKQUOTE>
+<DIV class=MsoNormal 
+style="TEXT-ALIGN: center; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">
+<CENTER>
+<HR align=center width="100%" SIZE=2>
+</CENTER></DIV>
+<DIV class=MsoNormal 
+style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Vá
+  para o <A 
+href="http://www.seas.upenn.edu/~ee201/foundation/foundation_intro.html">Xilinx 
+Foundation Tutorial</A></DIV>
+</BODY></HTML>

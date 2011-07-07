@@ -1,0 +1,6 @@
+syntax:glob
+controller
+sensor
+Makefile.dep
+*.o
+*~

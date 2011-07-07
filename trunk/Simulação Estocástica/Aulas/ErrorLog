@@ -1,0 +1,30 @@
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(2) : warning 197 - Variable FILACLASSE has been declared but not used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(3) : warning 197 - Variable FILATEMPOEXEC has been declared but not used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(7) : warning 242 - Variable FIMFILA has been given a value but never used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(7) : warning 242 - Variable FLAG has been given a value but never used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(8) : warning 242 - Variable DMAX has been given a value but never used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(21) : warning 242 - Variable FLAG has been given a value but never used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(71) : warning 298 - Variable DMAX has been used without being given an initial value
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(95) : warning 197 - Variable Z has been declared but not used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(99) : warning 298 - Variable DMAX has been used without being given an initial value
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(132) : warning 242 - Variable FLAG has been given a value but never used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(154) : warning 767 - The argument NUM has not been used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(151) : warning 676 - In a call to TEMPEXEC from another procedure, the second argument was of type INTEGER(KIND=3), it is now REAL(KIND=2)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(170) : warning 197 - Variable ISEED has been declared but not used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(172) : warning 242 - Variable FLAG has been given a value but never used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(187) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(199) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(206) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(223) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(230) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(241) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(248) : warning 189 - In a previous call to ORGANIZAFILA, the first argument was of type REAL(KIND=1) FUNCTION, it is now INTEGER(KIND=3)
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(262) : warning 767 - The argument PROC has not been used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(263) : warning 767 - The argument PROCT has not been used
+F:\Estudos\Simulação Estocástica\Simula_CPU.FOR(264) : warning 197 - Variable ISEED has been declared but not used
+WARNING the following symbols are missing:
+FILATEMPOEXEC                            F:\Estudos\Simulação Estocástica\lgotemp@.obj
+                                              (F:\ESTUDOS\SIMULAçãO ESTOCáSTICA\SIMULA_CPU.FOR)
+FILACLASSE                               F:\Estudos\Simulação Estocástica\lgotemp@.obj
+                                              (F:\ESTUDOS\SIMULAçãO ESTOCáSTICA\SIMULA_CPU.FOR)
+Creating executable: F:\Estudos\Simulação Estocástica\Simula_CPU.EXE

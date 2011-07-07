@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarMatricula" type="tns:cadastrarMatricula" />
+
+<xs:element name="cadastrarMatriculaResponse" type="tns:cadastrarMatriculaResponse" />
+
+<xs:element name="deletarMatricula" type="tns:deletarMatricula" />
+
+<xs:element name="deletarMatriculaResponse" type="tns:deletarMatriculaResponse" />
+
+<xs:element name="editarMatricula" type="tns:editarMatricula" />
+
+<xs:element name="editarMatriculaResponse" type="tns:editarMatriculaResponse" />
+
+<xs:element name="procurarMatricula" type="tns:procurarMatricula" />
+
+<xs:element name="procurarMatriculaResponse" type="tns:procurarMatriculaResponse" />
+
+<xs:complexType name="procurarMatricula">
+<xs:sequence>
+<xs:element name="enrollment" type="tns:matricula" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="matricula">
+<xs:sequence>
+<xs:element name="idAluno" type="xs:long" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="notaFinal" type="xs:float" minOccurs="0" />
+<xs:element name="notas" type="tns:nota" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nota">
+<xs:sequence>
+<xs:element name="idCriterion" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="idNota" type="xs:long" minOccurs="0" />
+<xs:element name="notaCriterio" type="xs:float" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarMatriculaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matricula" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarMatricula">
+<xs:sequence>
+<xs:element name="newEnrollment" type="tns:matricula" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarMatriculaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarMatricula">
+<xs:sequence>
+<xs:element name="enrollment" type="tns:matricula" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarMatriculaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarMatricula">
+<xs:sequence>
+<xs:element name="oldEnrollment" type="tns:matricula" minOccurs="0" />
+<xs:element name="newEnrollment" type="tns:matricula" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarMatriculaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matricula" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

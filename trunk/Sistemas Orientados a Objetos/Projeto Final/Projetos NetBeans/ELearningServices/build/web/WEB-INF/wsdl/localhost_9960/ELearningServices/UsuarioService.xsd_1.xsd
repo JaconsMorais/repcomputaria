@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarUsuario" type="tns:cadastrarUsuario" />
+
+<xs:element name="cadastrarUsuarioResponse" type="tns:cadastrarUsuarioResponse" />
+
+<xs:element name="deletarUsuario" type="tns:deletarUsuario" />
+
+<xs:element name="deletarUsuarioResponse" type="tns:deletarUsuarioResponse" />
+
+<xs:element name="editarUsuario" type="tns:editarUsuario" />
+
+<xs:element name="editarUsuarioResponse" type="tns:editarUsuarioResponse" />
+
+<xs:element name="procurarUsuario" type="tns:procurarUsuario" />
+
+<xs:element name="procurarUsuarioResponse" type="tns:procurarUsuarioResponse" />
+
+<xs:element name="validaLogin" type="tns:validaLogin" />
+
+<xs:element name="validaLoginResponse" type="tns:validaLoginResponse" />
+
+<xs:complexType name="procurarUsuario">
+<xs:sequence>
+<xs:element name="user" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:long" minOccurs="0" />
+<xs:element name="login" type="xs:string" minOccurs="0" />
+<xs:element name="senha" type="xs:string" minOccurs="0" />
+<xs:element name="tipoUsuario" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarUsuario">
+<xs:sequence>
+<xs:element name="user" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validaLogin">
+<xs:sequence>
+<xs:element name="loginUser" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validaLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarUsuario">
+<xs:sequence>
+<xs:element name="oldUser" type="tns:usuario" minOccurs="0" />
+<xs:element name="newUser" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarUsuario">
+<xs:sequence>
+<xs:element name="newUser" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

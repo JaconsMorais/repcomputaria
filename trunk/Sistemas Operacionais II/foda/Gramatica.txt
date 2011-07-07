@@ -1,0 +1,31 @@
+
+
+        1 Gramatica modificada,
+
+        2 Decidimos fazer o parser de uma outra maneira
+
+        3 
+
+        4 <statement> -> <pipeline> <EOL>
+
+        5 
+
+        6 <pipeline> -> <command> [ "|" <command> ] [ ">" <filename> ]
+
+        7 
+
+        8 <command> -> <argument>+
+
+        9 
+
+       10 <filename> -> <argument>
+
+       11 
+
+       12 <EOL> -> "\n"
+
+       13 
+
+       14 <argument> -> Todos os caracteres exceto "|", ">", "-", " ", "?"
+
+

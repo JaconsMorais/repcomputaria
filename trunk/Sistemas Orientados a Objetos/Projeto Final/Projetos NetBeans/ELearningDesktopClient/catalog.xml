@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:9960/ELearningServices/UsuarioService?WSDL" uri="xml-resources/web-service-references/UsuarioService/wsdl/localhost_9960/ELearningServices/UsuarioService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/UsuarioService?wsdl" uri="xml-resources/web-service-references/UsuarioService/wsdl/localhost_9960/ELearningServices/UsuarioService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/UsuarioService?xsd=1" uri="xml-resources/web-service-references/UsuarioService/wsdl/localhost_9960/ELearningServices/UsuarioService.xsd_1.xsd"/>
+    <system systemId="http://localhost:9960/ELearningServices/ReportService?wsdl" uri="xml-resources/web-service-references/ReportService/wsdl/localhost_9960/ELearningServices/ReportService.wsdl"/>
+    <system systemId="http://localhost:9960/ELearningServices/ReportService?xsd=1" uri="xml-resources/web-service-references/ReportService/wsdl/localhost_9960/ELearningServices/ReportService.xsd_1.xsd"/>
+</catalog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

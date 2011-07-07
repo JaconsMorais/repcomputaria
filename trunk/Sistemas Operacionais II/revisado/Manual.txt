@@ -1,0 +1,57 @@
+Alunos:   
+    Diego Sansão Monteiro               
+    Thales Eduardo Nazatto                 
+       
+
+Professor:
+    Juliano Ravazi
+    Sistemas Operacionais 2 - Noturno
+
+Objetivo:
+   
+    Implementar em C um interpretador MYSHELL
+
+Comandos:
+   
+    -> PWD -Pwd significa Path Working Directory.
+        O comando retorno o nome do seu Active Directory (o diretório que o usuário está), e o seu caminho completo.        
+       
+    Como utilizar no sistema:
+    pwd [ENTER]
+
+    -> CD -    Cd signifca Change Directory.
+             O comando muda para o diretório    escolhido.
+
+    Como utilizar no sistema:
+    cd + NOME DO DIRETÓRIO [ENTER]
+
+    -> EXIT - Comando utilizado para sair do sistema.
+
+    Como utilizar no sistema:
+    exit [ENTER]
+   
+
+Adicionais:
+   
+    -> MULTIPLOS PIPELINE - Técnica de hardware que permite que a CPU realize a busca de uma ou mais instruções além da próxima a ser executada.
+                Nesse sistema pode-se utilizar multiplos Pipelines.
+   
+    -> REDIRECIONAMENTO DE ENTRADA - Redireciona as entradas e saídas do sistema.
+
+Gramática:
+   
+    <statement> ::= <pipeline> <EOL>
+    <pipeline> ::= <command> [ "|" <command> ]*
+    <command> ::=  <argument>+ ([ ">" <file> ] | [ ">" <file> ])
+    <file> ::= <argument>
+    <EOL> ::= Tecla Enter, ou "\n".
+    <argument> ::= Todos os caracteres exceto "|", ">", etc.
+
+
+Como utilizar:
+           
+    Digitar os comandos na interface. O sistema interpreta o comando e o executa, gerando a saída no próprio sistema.
+    Para sair utilizar o comando EXIT.
+
+
+*/

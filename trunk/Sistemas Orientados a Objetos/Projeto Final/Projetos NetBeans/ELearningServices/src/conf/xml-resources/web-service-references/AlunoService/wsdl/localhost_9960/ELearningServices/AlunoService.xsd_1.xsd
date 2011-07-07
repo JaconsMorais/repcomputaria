@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarAluno" type="tns:cadastrarAluno" />
+
+<xs:element name="cadastrarAlunoResponse" type="tns:cadastrarAlunoResponse" />
+
+<xs:element name="deletarAluno" type="tns:deletarAluno" />
+
+<xs:element name="deletarAlunoResponse" type="tns:deletarAlunoResponse" />
+
+<xs:element name="editarAluno" type="tns:editarAluno" />
+
+<xs:element name="editarAlunoResponse" type="tns:editarAlunoResponse" />
+
+<xs:element name="procurarAluno" type="tns:procurarAluno" />
+
+<xs:element name="procurarAlunoResponse" type="tns:procurarAlunoResponse" />
+
+<xs:element name="procurarMatriculasNaoFeitas" type="tns:procurarMatriculasNaoFeitas" />
+
+<xs:element name="procurarMatriculasNaoFeitasResponse" type="tns:procurarMatriculasNaoFeitasResponse" />
+
+<xs:complexType name="procurarAluno">
+<xs:sequence>
+<xs:element name="student" type="tns:aluno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aluno">
+<xs:complexContent>
+<xs:extension base="tns:pessoa">
+<xs:sequence>
+<xs:element name="matriculas" type="tns:matricula" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="pessoa">
+<xs:complexContent>
+<xs:extension base="tns:usuario">
+<xs:sequence>
+<xs:element name="endereco" type="xs:string" minOccurs="0" />
+<xs:element name="telefone" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:long" minOccurs="0" />
+<xs:element name="login" type="xs:string" minOccurs="0" />
+<xs:element name="senha" type="xs:string" minOccurs="0" />
+<xs:element name="tipoUsuario" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="matricula">
+<xs:sequence>
+<xs:element name="idAluno" type="xs:long" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="notaFinal" type="xs:float" minOccurs="0" />
+<xs:element name="notas" type="tns:nota" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nota">
+<xs:sequence>
+<xs:element name="idCriterion" type="xs:long" minOccurs="0" />
+<xs:element name="idMatricula" type="xs:long" minOccurs="0" />
+<xs:element name="idNota" type="xs:long" minOccurs="0" />
+<xs:element name="notaCriterio" type="xs:float" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarAlunoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:aluno" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarAluno">
+<xs:sequence>
+<xs:element name="oldStudent" type="tns:aluno" minOccurs="0" />
+<xs:element name="newStudent" type="tns:aluno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarAlunoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:aluno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarAluno">
+<xs:sequence>
+<xs:element name="newStudent" type="tns:aluno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarAlunoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarMatriculasNaoFeitas">
+<xs:sequence>
+<xs:element name="student" type="tns:aluno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarMatriculasNaoFeitasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:studentEnrollmentModel" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="studentEnrollmentModel">
+<xs:sequence>
+<xs:element name="dataFim" type="xs:dateTime" minOccurs="0" />
+<xs:element name="dataInicio" type="xs:dateTime" minOccurs="0" />
+<xs:element name="idDisciplina" type="xs:long" minOccurs="0" />
+<xs:element name="login" type="xs:string" minOccurs="0" />
+<xs:element name="nomeDisciplina" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarAluno">
+<xs:sequence>
+<xs:element name="student" type="tns:aluno" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarAlunoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services/>
+  <clients>
+    <client name="UsuarioService">
+      <wsdl-url>http://localhost:9960/ELearningServices/UsuarioService?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_9960/ELearningServices/UsuarioService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">ELearning.services.client.usuario</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:9960/ELearningServices/UsuarioService?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>ELearning.services.client.usuario</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="ReportService">
+      <wsdl-url>http://localhost:9960/ELearningServices/ReportService?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_9960/ELearningServices/ReportService.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">ELearning.services.client.relatorios</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:9960/ELearningServices/ReportService?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>ELearning.services.client.relatorios</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+  </clients>
+  <jsr109>false</jsr109>
+</jax-ws>

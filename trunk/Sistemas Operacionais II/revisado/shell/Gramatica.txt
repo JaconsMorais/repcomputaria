@@ -1,0 +1,12 @@
+<statement> ::= <args>
+
+<args> ::= /[^ \n><|;&]/ | <comandos>
+
+<comandos> ::= <comando> (" | " <comando>)*
+
+<comando> ::= <path> <flags> (<arq> | <redir> | <*>)
+
+<arq> ::= /[^ \n><|;&]/ "." <ext>
+<redir> ::= <arq> " > " <arq>
+<*> ::= "*." <ext>
+"*." <ext> ::= (<arq>)*

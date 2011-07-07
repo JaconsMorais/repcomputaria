@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://services.ELearning/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.ELearning/">
+
+<xs:element name="cadastrarPessoa" type="tns:cadastrarPessoa" />
+
+<xs:element name="cadastrarPessoaResponse" type="tns:cadastrarPessoaResponse" />
+
+<xs:element name="deletarPessoa" type="tns:deletarPessoa" />
+
+<xs:element name="deletarPessoaResponse" type="tns:deletarPessoaResponse" />
+
+<xs:element name="editarPessoa" type="tns:editarPessoa" />
+
+<xs:element name="editarPessoaResponse" type="tns:editarPessoaResponse" />
+
+<xs:element name="procurarPessoa" type="tns:procurarPessoa" />
+
+<xs:element name="procurarPessoaResponse" type="tns:procurarPessoaResponse" />
+
+<xs:complexType name="deletarPessoa">
+<xs:sequence>
+<xs:element name="person" type="tns:pessoa" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pessoa">
+<xs:complexContent>
+<xs:extension base="tns:usuario">
+<xs:sequence>
+<xs:element name="endereco" type="xs:string" minOccurs="0" />
+<xs:element name="telefone" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:long" minOccurs="0" />
+<xs:element name="login" type="xs:string" minOccurs="0" />
+<xs:element name="senha" type="xs:string" minOccurs="0" />
+<xs:element name="tipoUsuario" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarPessoaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarPessoa">
+<xs:sequence>
+<xs:element name="oldPerson" type="tns:pessoa" minOccurs="0" />
+<xs:element name="newPerson" type="tns:pessoa" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editarPessoaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pessoa" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarPessoa">
+<xs:sequence>
+<xs:element name="newPerson" type="tns:pessoa" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cadastrarPessoaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarPessoa">
+<xs:sequence>
+<xs:element name="person" type="tns:pessoa" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="procurarPessoaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pessoa" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

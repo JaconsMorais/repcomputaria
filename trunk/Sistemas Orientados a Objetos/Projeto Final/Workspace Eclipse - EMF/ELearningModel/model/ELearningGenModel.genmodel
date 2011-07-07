@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ELearningModel/src"
+    modelPluginID="ELearningModel" modelName="ELearningGenModel" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>ELearningModel.ecore</foreignModel>
+  <genPackages prefix="Elearningmodel" disposableProviderFactory="true" ecorePackage="ELearningModel.ecore#/">
+    <genClasses ecoreClass="ELearningModel.ecore#//Usuario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Usuario/idUsuario"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Usuario/login"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Usuario/senha"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Usuario/tipoUsuario"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//Pessoa">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Pessoa/endereco"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Pessoa/telefone"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//Professor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Professor/Leciona"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//Aluno">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Aluno/Faz"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Aluno/EReference0"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//Disciplina">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Disciplina/idDisciplina"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Disciplina/idProfessor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Disciplina/nomeDisciplina"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Disciplina/numNotas"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Disciplina/Possui"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Disciplina/Possui.1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Disciplina/dataInicio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Disciplina/dataFim"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//CriterioAvaliacao">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//CriterioAvaliacao/idCriterioAvaliacao"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//CriterioAvaliacao/idDisciplina"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//CriterioAvaliacao/nome"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//CriterioAvaliacao/peso"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//CriterioAvaliacao/Está%20em"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//Matricula">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Matricula/idMatricula"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Matricula/idAluno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Matricula/idDisciplina"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Matricula/notaFinal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Matricula/Feita%20na"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ELearningModel.ecore#//Matricula/Possui"/>
+    </genClasses>
+    <genClasses ecoreClass="ELearningModel.ecore#//Nota">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Nota/idNota"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Nota/idCriterioAvaliacao"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Nota/idAluno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ELearningModel.ecore#//Nota/notaCriterio"/>
+    </genClasses>
+    <nestedGenPackages prefix="" disposableProviderFactory="true" ecorePackage="ELearningModel.ecore#//"/>
+  </genPackages>
+</genmodel:GenModel>

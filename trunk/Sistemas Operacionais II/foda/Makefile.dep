@@ -1,0 +1,11 @@
+
+
+        1 lexer.o: lexer.c lexer.h
+
+        2 parser.o: parser.c lexer.h parser.h
+
+        3 shell.o: shell.c parser.h lexer.h
+
+        4 teste.o: teste.c
+
+

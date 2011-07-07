@@ -1,0 +1,18 @@
+Gerenciar: -Planejar
+	   -Acompanhar a execução
+	   -Monitorar p/ ter controle da execução
+
+(Content Management System)
+CMS: -Perfis do usuário
+     -Repositório de conteúdo
+     -Visibilidade(conteúdo) em diferentes graus
+     -Ambientes de edição
+     -Área compartilhamento de conteúdo
+     -Ferramentas síncronas e assíncronas
+
+LMS: -Administrador do sistema
+     -Administrador do curso
+     -Tutor - (monitores)
+     -Alunos
+     -Projetistas de conteúdo
+     -Avaliador
