@@ -1,0 +1,32 @@
+
+v1.0 4/7
+-construtores PUBLICCCCCC
+-organizei em view,main e logica
+-criei um grafico na estatistica
+quando clica na tabela agora coloca automatico o id ou cpf
+-criei uma classe Exception pra economiza exception inuteis
+-Arrumei a consulta de veiculo caso o campo de modelo e o outro
+tive vazio ele considera todos
+-CONTROLLER volto e ta tratando as exceptions
+-arrumei conexao pra coloca algum nome e url inicial
+-biblioteca FreeChart adicionada em lib
+
+proximas versoes
+dividindo em dificuldade
+lv1
+-arrumar as consulta para buscar melhor(só busca pelo comeco se
+a palavra estiver no meio ela nao encontra)
+
+lv2
+-Arrumar a busca de funcionario para aparecer o cargo e o salario
+
+lv3
+-tratar as exceptions do cadastro
+-tratar as exceptions da busca quando nao encontra nada
+-mascara no cpf,cep,rg...
+
+-colocar uma exception quando nao tiver dados no 
+banco de dados nas tabelas de busca
+ e limpar a tabela
+
+
