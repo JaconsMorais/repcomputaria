@@ -1,0 +1,5 @@
+RB (Roubada de Bola),FC (Falta cometida), GC (Gol Contra), CA (Cartão amarelo), CV (Cartão Vermelho), SG (Jogos sem sofrer gols)
+
+DD (Defesa Difícil), DP (Defesa de pênalti),9 GS (Gol Sofrido),10 J(Jogos), FS(Falta sofrida), PE (Passe errado), A (Assistência),
+
+ FT (Finalização na trave), FD (Finalizaçãodefendida),16 FF (Finalização fora), G(Gol), I (Impedimento), PP (Pênalti perdido).

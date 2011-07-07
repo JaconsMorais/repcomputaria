@@ -1,0 +1,234 @@
+
+
+
+- PALMEIRAS:
+INSERT INTO jogadores VALUES (1, '1,64m', ‘Goleiro’, '59kg', {d'1978-03-08'},'Marcos', 0, 0, 0, 0, 0, 3, 20, 1, 5, 5, 3, 5, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (2, '1,91m',  ‘Goleiro’, '1,78m', '74kg', {d'1983-09-02'},'Deola', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (3, '1,90m', ‘Goleiro’,  '84kg', {d'1981-12-23'},'Bruno', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+INSERT INTO jogadores VALUES (4, '1,78m', ‘Goleiro’ ‘'74kg', {d'1983-09-02'},Raphael Alemão',  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (5, '1,84m', '89kg',’Zagueiro’ { d'1981-01-24'},'Vítor', 22, 40, 0, 1, 3, 0, 0, 0, 0, 5, 20, 12, 5, 0, 0, 0, 0, 0);           
+INSERT INTO jogadores VALUES (6, '1,85m', '82kg',’Zagueiro’ {d'1990-01-29'},'Maurício Ramos', 15, 33, 0, 0, 3, 0, 0, 0, 0, 5, 16, 12, 6, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (7, 1,'1,71m', '72kg',’Zagueiro’, {d'1979-02-04'},’Danilo', 12, 29, 0, 0, 3, 0, 0, 0, 0, 5,12, 14, 8, 0, 1, 0, 0, 0);
+INSERT INTO jogadores VALUES (8, 1,'1,85m', '89kg',’Lateral’, {d'1979-11-29'},'Leandro Amaro', 10, 31, 0, 1, 3, 0, 0, 0, 0, 5, 10, 10, 9, 0, 0, 1, 0, 0);
+INSERT INTO jogadores VALUES (9, 1,'1,80m', '71kg',’Lateral’, {d'1974-07-29'},'Fabrício',13, 33, 0, 0, 3, 0, 0, 0, 0, 5, 14, 8, 11,  0,  0, 0, 1, 0);
+INSERT INTO jogadores VALUES (10, 1,'1,90m', '80kg',’Lateral’,{d'1986-04-07'},'Gabriel Silva', 20, 45, 0, 0, 3, 0, 0, 0, 0, 5, 13, 13, 10, 0, 1, 0, 0, 0);
+INSERT INTO jogadores VALUES (11,1, ',74m', '64kg',’Lateral’, {d'1985-05-19'},’Luis Felipe', 26, 39, 0, 1, 3, 0, 0, 0, 0, 5, 12, 16, 10, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (12,1, '1,69m', '63kg',’Lateral’, {d'1982-08-18'},Lincoln', 20, 41, 0, 2, 3, 0, 0, 0, 0, 5, 18, 16, 9, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (13,1, '1,87m', '79kg',’Meia’, {d'1983-03-27'},'Márcio Araújo', 15, 44, 0, 0, 3, 0, 0, 0, 0, 5, 14, 17, 8, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (14,1, '1,78m', '72kg',’Meia’, {d'1980-03-13'},'Marcos Assunção', 13, 29, 0, 1, 3, 0, 0, 0, 0, 5, 16, 20, 10, 0, 0, 0,  0, 0);
+INSERT INTO jogadores VALUES (15,1, '1,94m', '92kg',’Meia’, {d'1986-06-15'},'Edinho', 17, 28. 0, 1. 3, 0, 0, 0, 0, 5, 12, 15, 11, 0, 0, 1, 0, 0);
+INSERT INTO jogadores VALUES (16,1, '1,85m', '82kg',’Meia’, {d'1988-02-23'},'Valdivia', 23, 32, 0, 0, 3, 0, 0, 0, 0, 5, 11, 16, 15, 1, 1, 0, 1, 0);
+INSERT INTO jogadores VALUES (17,1, '1,70m', '70kg',’Meia’, {d'1988-01-14'},'Pierre', 25, 45, 0, 2, 3, 0, 0, 0, 0, 5, 17, 19, 14, 0, 1, 0, 0, 0);
+INSERT INTO jogadores VALUES (18,1, '1,86m', '75kg',’Meia’, {d'1978-10-08'},'Tinga', 21, 44, 0, 1, 3, 0, 0, 0, 0, 5, 12, 20, 13, 0, 0, 0, 0, 0);
+INSERT INTO jogadores VALUES (19 ,1, '1,90m', '84kg',’Meia’, {d'1981-12-23'},'Rivaldo', 14, 40. 0, 0, 3, 0, 0, 0, 0, 5, 11, 13, 13, 1, 2, 0, 0, 0);
+INSERT INTO jogadores VALUES (20 ,1, '1,82m', '74kg',’Meia’, {d'1982-08-05'},'Bruno Turco', 9, 28, 0, 0, 3, 0, 0, 0, 0, 5, 10, 15, 19,  0, 1, 0, 0, 0);
+INSERT INTO jogadores VALUES (21 ,1, '1,64m', '59kg',’Meia’, {d'1978-03-08'},'Tadeu', 19, 38, 0, 1, 3, 0, 0, 0, 0, 5, 16, 16, 20, 0, 2, 0, 0, 0);
+INSERT INTO jogadores VALUES (22 ,1, '1,78m', '74kg',’Meia’, {d'1983-09-02'},'Dinei',12, 33, 0, 0, 3, 0, 0, 0, 0, 5, 18, 12, 19, 3, 2, 0, 0, 0);
+INSERT INTO jogadores VALUES (23 ,1, ',80m', '75kg',’Atacante’, {d'1980-06-03'},'Éwerthon', 10, 19, 0, 1, 3, 0, 0, 0, 0, 5, 12, 12, 11, 1, 3, 0, 0, 0);
+INSERT INTO jogadores VALUES (24 ,1, '1,73m', '72kg',’Atacante’, {d'1986-11-20'},'Lenny', 8, 20, 0, 1, 3, 0, 0, 0, 0, 5, 17, 20, 15, 1, 12, 0, 0, 0);
+INSERT INTO jogadores VALUES (25 ,1, '1,86m', '78kg',’Atacante’, {d'1987-04-02'},'Kléber', 7, 18, 0, 1, 3, 0, 0, 0, 0, 5, 15, 14, 13, 0, 8, 0, 1, 0);
+INSERT INTO jogadores VALUES (26 ,1, '1,85m', '85kg',’Atacante’, {d'1987-12-09'},'Luan', 12, 10, 0, 0, 3, 0, 0, 0, 0, 5, 19, 6, 19, 0, 6, 0, 5, 0);
+INSERT INTO jogadores VALUES (27 ,1, '1,70m', '71kg',’Atacante’, {d'1982-07-06'},'Vinícius', 10, 9, 0, 1, 3, 0, 0, 0, 0, 5, 20, 9, 16, 3, 0, 3, 0);
+INSERT INTO jogadores VALUES (28 ,1, '1,79m', '79kg',’Atacante’, {d'1981-08-07'},'Patrik', 6, 14, 0, 1, 3, 0, 0, 0, 0, 5, 22, 10, 11, 0, 3, 6, 0, 2, 0);
+INSERT INTO jogadores VALUES (29 ,1, ',79m', '72kg',’Atacante’, {d'1988-03-22'},'Bruno Oliveira', 7, 7, 0, 1, 3, 0, 0, 0, 0, 5, 20, 8, 19, 1, 5, 7, 0, 4, 0);
+
+
+
+
+- JOGADORES SÃO PAULO:
+
+INSERT INTO jogadores VALUES (30 , 2, '1,88m', 'Goleiro', '85kg', {d'1973-01-22'},'Rogério Ceni', 0, 0, 0, 0, 0, 3, 19, 0, 4, 5, 2, 3, 0, 0, 0, 0, 0, 0, 0); );
+
+INSERT INTO jogadores VALUES (31 , 2, '1,84m', 'Goleiro', '79kg', {d'1974-11-14'},'Bosco', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (32 , 2, '1,88m', 'Goleiro', '79kg', {d'1987-04-04'},'Denis', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (33 , 2, '1,85m', 'Zagueiro', '78kg', {d'1984-09-07'},'Miranda', 35, 38, 0, 1, 3, 3, 0, 0, 0, 5, 20, 12, 5, 0, 0, 0, 0, 0);           );
+
+INSERT INTO jogadores VALUES (34 , 2, '1,83m', 'Zagueiro', '78kg', {d'1983-07-26'},'Renato Silva', 32, 28, 0, 1, 0, 3, 0, 0, 0, 5, 22, 50, 22, 3, 0, 5, 0, 2, 0);
+
+INSERT INTO jogadores VALUES (35 , 2, '1,93m', 'Zagueiro', '82kg', {d'1985-03-10'},'Alex Silva', 27, 19, 0, 0, 0, 3, 0, 0, 0, 5, 27, 44, 20, 0, 2, 2, 0, 0, 0
+INSERT INTO jogadores VALUES (36 , 2, '1,90m', 'Zagueiro', '80kg', {d'1986-04-07'},’Samuel', 36, 20, 0, 0, 0, 3, 0, 0, 0, 5, 23, 53, 21, 0, 0, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (37 , 2, '1,66m', 'Lateral', '60kg', {d'1982-04-09'},'Junior Cesar', 40, 22, 0, 1, 0, 3, 0, 0, 0, 5, 31, 48, 7, 0, 1, 2, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (38 , 2, '1,78m', 'Lateral', '81kg', {d'1985-10-12'},9,'Ilsinho',37, 27, 0, 0, 0, 3, 0, 0, 0, 5, 40, 47, 13, 0, 3, 2, 0, 1, 0);
+
+INSERT INTO jogadores VALUES (39 , 2, '1,72m', 'Lateral', '68kg', {d'1989-03-24'},10,'Carleto',33, 30, 0, 0, 3, 0, 0, 0, 5, 29, 42, 12, 0, 2, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (40 , 2, '1,93m', 'Zagueiro', '82kg', {d'1988-02-23'},11,'Xandão',39, 14, 0, 0, 3, 0, 0, 0, 5, 28, 47, 10, 0, 1, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (41 , 2, '1,76m', 'Lateral', '77kg', {d'1989-12-30'},12,'Diogo',34, 16, 0, 0, 3, 0, 0, 0, 5, 33, 51, 9, 0, 2, 4, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (42 , 2, '1,87m', 'Zagueiro', '85kg', {d'1991-06-03'},13,'Bruno Uvini',38, 13, 0, 0, 3, 0, 0, 0, 5, 29, 42, 11, 0, 1, 2, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (43 , 2, '1,70m', 'Meia', '70kg', {d'1986-06-24'},14,'Jean',39, 11, 0, 0, 3, 0, 0, 0, 5, 21, 38, 12, 0, 4, 1, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (44 , 2, '1,78m', '73kg', {d'1978-11-17'},15,'Jorge Wagner',41, 15, 0, 0, 3, 0, 0, 0, 5, 19, 43, 23, 0, 15, 12, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (45 , 2, '1,81m', '75kg', {d'1983-09-09'},16,'Rodrigo Souto,'33, 12, 0, 0, 3, 0, 0, 0,  5, 32, 44, 12, 2, 12, 5, 4, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (46 , 2, '1,76m', '72kg', {d'1982-12-27'},17,'Richarlyson',44, 11, 0, 0, 3, 0, 0, 0, 5, 19, 48, 15,0, 8, 5, 1, 3, 0);
+
+INSERT INTO jogadores VALUES (47 , 2, '1,87m', '80kg', {d'1981-06-27'},18,'Cleber Santana',39, 12, 0, 0, 3, 0, 0, 0, 5, 29, 39, 12, 0, 10, 7, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (48 , 2, '1,75m', '70kg', {d'1989-11-16'},19,'Sérgio Mota'33, 15, 0, 0, 3, 0, 0, 0, 5, 21, 52, 15, 0, 15, 11, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (49 , 2, '1,70m', '67kg', {d'1983-03-04'},20,'Carlinhos Paraíba', 29, 10, 0, 0, 3, 0, 0, 0, 5, 21, 36, 13,  0, 12, 12, 0, 0, 0   );
+
+INSERT INTO jogadores VALUES (50 , 2, '1,74m', '70kg', {d'1988-06-07'},21,'Marlos',27, 8, 0, 0, 3, 0, 0, 0, 5, 37, 49, 14, 0, 9, 12, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (51 , 2, '1,73m', '70kg', {d'1991-01-28'},22,'Wellington', 35, 15, 0, 0, 3, 0, 0, 0, 5, 27, 41, 14, 0, 12, 11, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (52 , 2, '1,84m', '80kg', {d'1992-02-23'},23,'Casemiro', 32, 12 ,0, 0, 3, 0, 0, 0, 5, 33, 31, 14, 0, 9, 17, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (53 , 2, '1,84m', '82kg', {d'1991-09-23'},24,'Zé Vitor',29, 7, 0, 0, 3, 0, 0, 0, 5, 22, 41, 16,  0, 11, 16, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (54 , 2, '1,72m', '66kg', {d'1992-08-13'},25,'Lucas', 34, 12, 0, 0, 3, 0, 0, 0, 19, 48, 15, 0, 13, 9, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (55 , 2, '1,75m', '75kg', {d'1983-03-22'},26,'Dagoberto',27, 11, 0, 0, 3, 0, 0, 0, 19, 43, 23, 13, 9, 1, 0, 0);
+
+INSERT INTO jogadores VALUES (56 , 2, '1,90m', '85kg', {d'1978-03-18'},27,'Fernandão',38, 15, 0, 0, 3, 0, 0, 0, 28, 41, 12, 13, 9, 1, 0, 0);
+
+INSERT INTO jogadores VALUES (57 , 2, '1,80m', '82kg', {d'1980-05-06'},28,'Ricardo Oliveira',36, 11, 0, 0, 3, 0, 0, 0, 27, 52, 19, 17, 9, 1, 0, 0);
+
+INSERT INTO jogadores VALUES (58 , 2, '1,71m', '66kg', {d'1985-11-25'},29,'Fernandinho',40, 13, 0, 0, 3, 30, 49, 17, 0, 19, 10, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (59 , 2, '1,71m', '66kg', {d'1985-11-25'},30,'Lucas Gaúcho',39, 16, 0, 0, 3, 33, 46, 19, 0, 17, 11, 0, 0, 0); 
+
+
+
+
+
+
+
+
+
+CORINTHIANS:
+
+INSERT INTO jogadores VALUES (60 , 3, '1,89m', 'Goleiro', '85kg', {d'1985-09-24'},'Bobadilla', 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (61 , 3, '1,84m', 'Goleiro', '89kg', {d'1981-01-24'},Julio Cesar', 0, 0, 0, 0, 0, 3, 22, 1, 2, 5, 2, 8, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (62 , 3, '1,85m', 'Goleiro', '82kg', {d'1990-01-29'},'Rafael Santos', 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (63 , 3, '1,71m', 'Goleiro', '72kg', {d'1979-02-04'},'Danilo Fernades', 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (64 , 3, '1,85m', 'Zagueiro', '89kg', {d'1979-11-29'},'Alessandro', 48, 17, 0, 0, 0, 3, 0, 0, 2, 5, 9, 19, 2, 0, 3, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (65 , 3, '1,80m', 'Zagueiro', '71kg', {d'1974-07-29'},'Roberto Carlos', 39, 14, 0, 0, 0, 3, 0, 0, 2, 5, 11, 21, 2, 0, 3, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (66 , 3, '1,90m', 'Zagueiro', '80kg', {d'1986-04-07'},'Paulo andré', 32, 11, 0, 0, 0, 3, 0, 0, 2, 5, 13, 29, 2, 0, 3, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (67 , 3, '1,74m', 'Zagueiro', '64kg', {d'1985-05-19'},'Chicão', 31, 19, 0, 1, 0, 3, 0, 0, 2, 5, 16, 31, 2, 0, 3, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (68 , 3, '1,69m', 'Zagueiro', '63kg', {d'1982-08-18'},'Leandro Castan', 38, 22, 0, 0, 0, 3, 0, 0, 2, 5, 18, 32, 2, 0, 4, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (69 , 3, '1,87m', 'Zagueiro', '79kg', {d'1983-03-27'},'Thiago Heleno', 34, 18, 0, 0, 0, 3, 0, 0, 2, 5, 13, 30, 2, 0, 2, 2, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (70 , 3, '1,78m', 'Zagueiro', '72kg', {d'1980-03-13'},'William', 29, 25, 0, 0, 0, 3, 0, 0, 2, 5, 13, 30, 2, 0, 2, 2, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (71 , 3, '1,94m', 'Zagueiro', '92kg', {d'1986-06-15'},'Renato', 35, 23, 0, 0, 0, 3, 0, 0, 2, 5, 9, 39, 1, 0, 4, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (72 , 3, '1,85m', 'Zagueiro', '82kg', {d'1988-02-23'},'Dodô', 33, 19, 0, 0, 0, 3, 0, 0, 2, 5, 13, 40, 1, 0, 2, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (73 , 3, '1,70m', 'Zagueiro', '70kg', {d'1988-01-14'},'André Vinicius', 33, 21, 0, 0, 0, 3, 0, 0, 2, 5, 22, 40, 1, 0, 3, 1, 0, 0, 0); 
+
+INSERT INTO jogadores VALUES (74 , 3, '1,86m', 'Lateral', '75kg', {d'1978-10-08'},'Danilo', 29, 23, 0, 0, 0, 3, 0, 0, 2, 5, 19, 30, 2, 0, 2, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (75 , 3, '1,90m', 'Lateral', '84kg', {d'1981-12-23'},'Edu', 41, 17, 0, 1, 0, 3, 0, 0, 2, 5, 19, 31, 2, 0, 1, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (76 , 3, '1,82m', 'Lateral', '74kg', {d'1982-08-05'},'Elias', 37, 15, 0, 1, 0, 3, 0, 0, 2, 5, 22, 37, 2, 0, 1, 5, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (77 , 3, '1,64m', 'Lateral', '59kg', {d'1978-03-08'},'Ralf', 32, 28, 0, 0, 0, 3, 0, 0, 2, 5, 9, 41, 1, 0, 4, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (78 , 3, '1,78m', 'Lateral', '74kg', {d'1983-09-02'},'Moacir', 30, 16, 0, 1, 0, 3, 0, 0, 2, 5, 16, 20, 2, 0, 1, 7, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (79 , 3, '1,80m', 'Lateral', '75kg', {d'1980-06-03'},'Boquita', 35, 22, 0, 1, 0, 3, 0, 0, 2, 5, 28, 37, 2, 0, 1, 4, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (80 , 3, '1,73m', 'Meia', '72kg', {d'1986-11-20'},'Bruno Cesar', 28, 16, 0, 1, 0, 3, 0, 0, 2, 5, 16, 20, 2, 0, 1, 5, 4, 0, 0);
+
+INSERT INTO jogadores VALUES (81 , 3, '1,86m', 'Meia', '78kg', {d'1987-04-02'},'Jucilei', 35, 22, 0, 0, 0, 3, 0, 0, 2, 5, 28, 37, 2, 0, 2, 5, 1, 0, 0);
+
+INSERT INTO jogadores VALUES (82 , 3, '1,85m', 'Meia', '85kg', {d'1987-12-09'},'Paulinho', 38, 24, 0, 1, 0, 3, 0, 0, 2, 5, 15, 21, 2, 0, 2, 4, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (83 , 3, '1,70m', 'Meia', '71kg', {d'1982-07-06'},'Defederico', 34, 17, 0, 1, 0, 3, 0, 0, 2, 5, 19, 31, 2, 0, 0, 6, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (84 , 3, '1,79m', 'Meia', '79kg', {d'1981-08-07'},'William Morais', 37, 19, 0, 1, 0, 3, 0, 0, 2, 5, 25, 38, 2, 0, 0, 7, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (85 , 3, '1,79m', 'Atacante', '72kg', {d'1988-03-22'},'Dentinho', 41, 19, 0, 1, 0, 3, 0, 0, 2, 5, 33, 40, 2, 0, 1, 4, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (86 , 3, '1,74m', 'Atacante', '70kg', {d'1985-11-25'},'Iarley', 30, 14, 0, 0, 0, 3, 0, 0, 2, 5, 19, 21, 2, 0, 3, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (87 , 3, '1,62m', 'Atacante', '64kg', {d'1979-09-17'},'Souza', 28, 33, 0, 0, 0, 3, 0, 0, 2, 5, 31, 21, 2, 0, 3, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (88 , 3, '1,86m', 'Atacante', '78kg', {d'1987-04-02'},'Jorge Henrique', 28, 33, 0, 0, 0, 3, 0, 0, 2, 5, 31, 21, 2, 0, 3, 3, 2, 0, 0);
+
+INSERT INTO jogadores VALUES (89 , 3, '1,85m', 'Atacante', '85kg', {d'1987-12-09'},'Taubaté', 32, 28, 0, 0, 0, 3, 0, 0, 2, 5, 41, 19, 2, 0, 3, 3, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (90 , 3, '1,85m', 'Atacante', '85kg', {d'1976-09-22'},'Ronaldo', 29, 33, 0, 0, 0, 3, 0, 0, 2, 5, 39, 27, 2, 0, 1, 4, 0, 0, 0);
+
+
+
+
+
+
+GUARANI:
+
+INSERT INTO jogadores VALUES (91 , 4, '1,90m', 'Goleiro', '84kg', {d'1981-12-23'},'Douglas', 0, 0, 0, 0, 0, 1, 10, 1, 15, 10, 3, 2, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (92, 4, '1,78m', 'Goleiro', '74kg', {d'1983-09-02'},'Léo', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (93, 4, '1,84m', 'Goleiro', '89kg', {d'1981-01-24'},'Juliano', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (94, 4, '1,85m', 'Goleiro', '82kg', {d'1990-01-29'},'Emerson', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (95, 4, '1,71m', 'Zagueiro', '72kg', {d'1979-02-04'},'Fabão', 32, 15, 0, 0, 0, 1, 0, 0, 2, 9, 9, 19, 2, 0, 3, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (96, 4, '1,85m', 'Zagueiro', '89kg', {d'1979-11-29'},'Márcio Careca', 25, 15, 0, 0, 0, 1, 0, 0, 2, 4, 9, 12, 2, 0, 3, 0, 0, 0, 0  );
+
+INSERT INTO jogadores VALUES (97, 4, '1,80m', 'Zagueiro', '71kg', {d'1974-07-29'},'Fabiano', 20, 15, 0, 0, 0, 1, 0, 0, 2, 5, 9, 15, 2, 0, 5, 2, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (98, 4, '1,90m', 'Zagueiro', '80kg', {d'1986-04-07'},'Apodi', 13, 15, 0, 0, 0, 1, 0, 0, 2, 6, 9, 19, 2, 0, 3, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (99, 4, '1,74m', 'Zagueiro', '64kg', {d'1985-05-19'},'Heverton', 30, 15, 0, 0, 0, 1, 0, 0, 2, 7, 9, 19, 2, 0, 3, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (100, 4, '1,69m', 'Zagueiro', '63kg', {d'1982-08-18'},'Rodrigo Heffner', 15, 15, 0, 0, 0, 1, 0, 0, 2, 3, 9, 19, 2, 0, 3, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (101, 4, '1,87m', 'Zagueiro', '79kg', {d'1983-03-27'},'Aislan, 30, 15, 0, 0, 0, 1, 0, 0, 2, 7, 7, 19, 2, 0, 2, 6, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (102, 4, '1,78m', 'Zagueiro', '72kg', {d'1980-03-13'},'Ailson', 14, 15, 0, 0, 0, 1, 0, 0, 2, 6, 5, 19, 2, 0, 3, 4, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (103, 4, '1,94m', 'Zagueiro', '92kg', {d'1986-06-15'},'Rodrigão', 10, 15, 0, 0, 0, 1, 0, 0, 2, 8, 6, 19, 2, 0, 3, 1, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (104, 4, '1,85m', 'Lateral', '82kg', {d'1988-02-23'},'Da Silva', 15, 19, 0, 0, 0, 1, 0, 0, 2, 8, 6, 25, 2, 0, 5, 2, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (105, 4, '1,70m', 'Lateral', '70kg', {d'1988-01-14'},'Baiano', 36, 22, 0, 0, 0, 1, 0, 0, 2, 5, 20, 22, 2, 0, 2, 4, 1, 0, 0);
+
+INSERT INTO jogadores VALUES (106, 4, '1,86m', 'Lateral', '75kg', {d'1978-10-08'},'Paulinho', 22, 15, 0, 0, 0, 1, 0, 0, 2, 8, 6, 25, 2, 0, 5, 0, 0, 0, 0);
+
+INSERT INTO jogadores VALUES (107, 4, '1,90m', 'Lateral', '84kg', {d'1981-12-23'},'Ronaldo', 19, 19, 0, 0, 0, 1, 0, 0, 2, 5, 10, 21, 2, 0, 5, 2, 0, 0, 0  );
+
+INSERT INTO jogadores VALUES (109, 4, '1,64m', 'Lateral', '59kg', {d'1978-03-08'},'Moreno', 39, 19, 0, 1, 0, 1, 0, 0, 2, 5, 22, 37, 2, 0, 2, 2, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (111, 4, '1,80m', 'Lateral', '75kg', {d'1980-06-03'},'Victor Junior', 33, 17, 0, 1, 0, 1, 0, 0, 2, 5, 19, 27, 2, 0, 1, 3, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (112, 4, '1,73m', 'Meia', '72kg', {d'1986-11-20'},'Geovane', 30, 26, 0, 1, 0, 1, 0, 0, 2, 5, 19, 40, 2, 0, 2, 2, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (113, 4, '1,86m', 'Meia', '78kg', {d'1987-04-02'},'Preto', 37, 10, 0, 1, 0, 1, 0, 0, 2, 5, 32, 15, 2, 0, 2, 5, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (115, 4, '1,70m', 'Meia', '71kg', {d'1982-07-06'},'Barboza', 38, 20, 0, 1, 0, 1, 0, 0, 2, 5, 19, 33, 2, 0, 3, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (116, 4, '1,79m', 'Meia', '79kg', {d'1981-08-07'},'Paulo Roberto', 40, 11, 0, 1, 0, 1, 0, 0, 2, 5, 1, 30, 2, 0, 2, 1, 0, 0, 0 );
+
+INSERT INTO jogadores VALUES (118, 4, '1,74m', 'Meia', '70kg', {d'1985-11-25'},'Rodrigo César', 32, 19, 0, 1, 0, 1, 0, 0, 2, 5, 19, 33, 2, 0, 6, 2, 0, 0, 0  );
+
+INSERT INTO jogadores VALUES (119, 4, '1,62m', 'Atacante', '64kg', {d'1979-09-17'},'Rômulo', 30, 21, 0, 1, 0, 1, 0, 0, 2, 5, 1, 27, 2, 0, 2, 9, 0, 0, 0  );
+
+INSERT INTO jogadores VALUES (120, 4, '1,86m', 'Atacante', '78kg', {d'1987-04-02'},'Reinaldo', 27, 19, 0, 1, 0, 1, 0, 0, 2, 5, 1, 22, 2, 0, 7, 1, 0, 0, 0  );
+
+INSERT INTO jogadores VALUES (121, 4, '1,85m', 'Atacante', '85kg', {d'1987-12-09'},'Ricardo Xavier', 27, 29, 0, 1, 0, 1, 0, 0, 2, 5, 1, 19, 2, 0, 6, 1, 0, 0, 0   );
+
+INSERT INTO jogadores VALUES (122, 4, '1,82m', 'Atacante', '74kg', {d'1982-08-05'},'Mazola', 23, 40, 0, 0, 0, 3, 0, 0, 2, 5, 21, 31, 2, 0, 2, 3, 1, 0, 0  );
+
+INSERT INTO jogadores VALUES (123, 4, '1,82m', 'Atacante', '74kg', {d'1982-08-05'},'Douglas', 28, 21, 0, 1, 0, 1, 0, 0, 2, 5, 1, 19, 2, 0, 3, 3, 0, 0, 0   );
