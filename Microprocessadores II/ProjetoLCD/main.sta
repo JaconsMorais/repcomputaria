@@ -1,0 +1,52 @@
+
+ROM used: 176 (2%)
+          176 (2%) including unused fragments
+
+          0 Average locations per line
+          4 Average locations per statement
+
+RAM used: 8 (2%) at main() level
+          9 (2%) worst case
+
+Stack used: 4 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   98    48 100  main.c
+   33     0   0  main.h
+  273     0   0  C:\Program Files\PICC\devices\16F876A.h
+----- -----
+  404    48 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21  12   1             @delay_ms1
+0      5   3   0    69  1.6  clock
+0     18  10   0   136  2.2  verificaBF
+0      6   3   1    69  1.6  EscreveInstr
+0      8   5   1    69  1.6  EscreveDado
+0     27  15   0   207  1.8  initLCD
+0     87  49   1   383  3.3  MAIN
+
+Program metrics:
+    Functions               6
+    Statements              48
+    Comments                74
+    Volume (V)              1409
+    Difficilty (D)          12.3
+    Effort to implement (E) 17259
+    Time to implement (T)   16 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    72
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   172  1872  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

@@ -1,0 +1,10 @@
+ÀÄmain
+   ÃÄMAIN  0/100  Ram=0
+   ³  ÃÄ??0??
+   ³  ÃÄesquerda  0/17  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/21  Ram=1
+   ³  ³  ÀÄ@delay_ms1  0/21  Ram=1
+   ³  ÀÄdireita  0/17  Ram=0
+   ³     ÃÄ@delay_ms1  0/21  Ram=1
+   ³     ÀÄ@delay_ms1  0/21  Ram=1
+   ÀÄTIMER0_ISR  0/31  Ram=0

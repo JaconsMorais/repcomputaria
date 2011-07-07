@@ -1,0 +1,299 @@
+CCS PCM C Compiler, Version 4.032, 62930               10-set-09 20:49
+
+               Filename: D:\Micro II\Projeto1\main.lst
+
+               ROM used: 144 words (2%)
+                         Largest free fragment is 2048
+               RAM used: 7 (2%) at main() level
+                         8 (2%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   03B
+0003:  NOP
+.................... #include "D:\Micro II\Projeto1\main.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES XT                       //Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES WRT_50%                  //Lower half of Program Memory is Write Protected 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  21
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8) 
+....................  
+.................... #byte porta_a = 0x05 //registrador de leitura e escrita 
+.................... #byte porta_b = 0x06 //registrador de leitura e escrita 
+.................... #byte porta_c = 0x07 //registrador de leitura e escrita 
+....................  
+.................... #byte tris_a = 0x85 
+.................... #byte tris_b = 0x86 
+.................... #byte tris_c = 0x87 
+....................  
+....................  
+....................  
+.................... void direita(){ 
+....................  
+....................    porta_b = 0b10000000; 
+*
+002A:  MOVLW  80
+002B:  MOVWF  06
+....................    delay_ms (100); 
+002C:  MOVLW  64
+002D:  MOVWF  21
+002E:  CALL   004
+....................    while (porta_b != 0b0){ 
+002F:  MOVF   06,F
+0030:  BTFSC  03.2
+0031:  GOTO   038
+....................       porta_b >>= 1; 
+0032:  BCF    03.0
+0033:  RRF    06,F
+....................       delay_ms (100); 
+0034:  MOVLW  64
+0035:  MOVWF  21
+0036:  CALL   004
+....................    } 
+0037:  GOTO   02F
+....................     
+.................... } 
+0038:  BCF    0A.3
+0039:  BCF    0A.4
+003A:  GOTO   08E (RETURN)
+....................  
+.................... void esquerda(){ 
+....................  
+....................    porta_b = 0b00000001; 
+*
+0019:  MOVLW  01
+001A:  MOVWF  06
+....................    delay_ms (100); 
+001B:  MOVLW  64
+001C:  MOVWF  21
+001D:  CALL   004
+....................    while (porta_b != 0b0){ 
+001E:  MOVF   06,F
+001F:  BTFSC  03.2
+0020:  GOTO   027
+....................       porta_b <<= 1; 
+0021:  BCF    03.0
+0022:  RLF    06,F
+....................       delay_ms (100); 
+0023:  MOVLW  64
+0024:  MOVWF  21
+0025:  CALL   004
+....................    } 
+0026:  GOTO   01E
+....................  
+.................... } 
+0027:  BCF    0A.3
+0028:  BCF    0A.4
+0029:  GOTO   08E (RETURN)
+....................  
+.................... void main() 
+.................... { 
+*
+003B:  CLRF   04
+003C:  BCF    03.7
+003D:  MOVLW  1F
+003E:  ANDWF  03,F
+003F:  MOVLW  19
+0040:  BSF    03.5
+0041:  MOVWF  19
+0042:  MOVLW  A6
+0043:  MOVWF  18
+0044:  MOVLW  90
+0045:  BCF    03.5
+0046:  MOVWF  18
+0047:  BSF    03.5
+0048:  BSF    1F.0
+0049:  BSF    1F.1
+004A:  BSF    1F.2
+004B:  BCF    1F.3
+004C:  MOVLW  07
+004D:  MOVWF  1C
+....................  
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+0051:  BSF    03.5
+0052:  BSF    1F.0
+0053:  BSF    1F.1
+0054:  BSF    1F.2
+0055:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0056:  BCF    03.5
+0057:  BCF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+*
+004E:  MOVLW  FF
+004F:  BCF    03.5
+0050:  MOVWF  20
+*
+0058:  BCF    14.5
+0059:  BCF    20.5
+005A:  MOVF   20,W
+005B:  BSF    03.5
+005C:  MOVWF  07
+005D:  BCF    03.5
+005E:  BSF    20.4
+005F:  MOVF   20,W
+0060:  BSF    03.5
+0061:  MOVWF  07
+0062:  BCF    03.5
+0063:  BCF    20.3
+0064:  MOVF   20,W
+0065:  BSF    03.5
+0066:  MOVWF  07
+0067:  MOVLW  01
+0068:  BCF    03.5
+0069:  MOVWF  14
+006A:  MOVLW  00
+006B:  BSF    03.5
+006C:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+006D:  MOVF   01,W
+006E:  ANDLW  C7
+006F:  IORLW  08
+0070:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+0071:  BCF    03.5
+0072:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+0073:  MOVLW  00
+0074:  MOVWF  78
+0075:  MOVWF  12
+0076:  MOVLW  00
+0077:  BSF    03.5
+0078:  MOVWF  12
+....................    setup_comparator(NC_NC_NC_NC); 
+0079:  MOVLW  07
+007A:  MOVWF  1C
+007B:  MOVF   05,W
+007C:  MOVLW  03
+007D:  MOVWF  77
+007E:  DECFSZ 77,F
+007F:  GOTO   07E
+0080:  MOVF   1C,W
+0081:  BCF    03.5
+0082:  BCF    0D.6
+....................    setup_vref(FALSE); 
+0083:  BSF    03.5
+0084:  CLRF   1D
+....................  
+....................    // TODO: USER CODE!! 
+....................    tris_a = 0xff; 
+0085:  MOVLW  FF
+0086:  MOVWF  05
+....................    tris_b = 0x00; 
+0087:  CLRF   06
+....................    tris_c = 0xff; 
+0088:  MOVWF  07
+....................     
+....................    while(TRUE){ 
+....................             if (porta_c == 0x00) esquerda(); 
+0089:  BCF    03.5
+008A:  MOVF   07,F
+008B:  BTFSC  03.2
+008C:  GOTO   019
+....................             else direita(); 
+008D:  GOTO   02A
+....................    } 
+008E:  GOTO   08A
+.................... } 
+....................  
+.................... /*#include "D:\Micro II\Projeto1\main.h" 
+....................  
+.................... int troca = 0; 
+....................  
+.................... void direita(){ 
+....................  
+....................    porta_b = 0b10000000; 
+....................    delay_ms (100); 
+....................    while (porta_b != 0b0){ 
+....................       porta_b >>= 1; 
+....................       delay_ms (100); 
+....................    } 
+....................     
+.................... } 
+....................  
+.................... void esquerda(){ 
+....................  
+....................    porta_b = 0b00000001; 
+....................    delay_ms (100); 
+....................    while (porta_b != 0b0){ 
+....................       porta_b <<= 1; 
+....................       delay_ms (100); 
+....................    } 
+....................  
+.................... } 
+....................  
+.................... void shift(){ 
+....................    if (troca == 0){ 
+....................       troca = 1; 
+....................       esquerda(); 
+....................    }else{ 
+....................       troca = 0; 
+....................       direita(); 
+....................    } 
+.................... } 
+....................  
+.................... void main() 
+.................... { 
+....................     
+....................    setup_adc_ports(NO_ANALOGS); 
+....................    setup_adc(ADC_OFF); 
+....................    setup_spi(SPI_SS_DISABLED); 
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+....................    setup_timer_1(T1_DISABLED); 
+....................    setup_timer_2(T2_DISABLED,0,1); 
+....................    setup_comparator(NC_NC_NC_NC); 
+....................    setup_vref(FALSE); 
+....................  
+....................    // TODO: USER CODE!! 
+....................    tris_a = 0xff; 
+....................    tris_b = 0x00; 
+....................    tris_c = 0xff; 
+....................     
+....................    while(TRUE){ 
+....................             if (porta_c == 0x00) shift(); 
+....................    } 
+.................... } 
+.................... } 
+.................... }*/ 
+008F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3939   XT NOWDT NOPUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD WRT_50%

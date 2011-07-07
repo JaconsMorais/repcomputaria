@@ -1,0 +1,28 @@
+[PROJECT]
+Target=rs 232_2.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[rs 232_2]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=rs 232_2
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\cn208000706\Documents\Micro II\Aula 5_2409\rs 232_2.c
+2=C:\Users\cn208000706\Documents\Micro II\Aula 5_2409\rs 232_2.h
+3=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\cn208000706\Documents\Micro II\Aula 5_2409\rs 232_2.c
+[Units]
+Count=1
+1=rs 232_2.c (main)
+Link=0

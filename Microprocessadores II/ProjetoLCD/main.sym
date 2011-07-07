@@ -1,0 +1,67 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+004-005 @WRITE_PROGRAM_MEMORY.P2
+005     PORTA_A
+006     PORTA_B
+006.0   E
+006.1   RW
+006.2   RS
+007     PORTA_C
+007.7   BF
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B-01C CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     EscreveInstr.Instr
+021     EscreveDado.dado
+021     MAIN.@SCRATCH
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+085     TRIS_A
+086     TRIS_B
+087     TRIS_C
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY.P1
+10D-10E @WRITE_PROGRAM_MEMORY.P2
+
+0009  @delay_ms1
+0004  clock
+001E  verificaBF
+0030  EscreveInstr
+0051  EscreveDado
+0036  initLCD
+0059  MAIN
+0059  @cinit
+
+Project Files:
+    main.c
+    main.h
+    C:\Program Files\PICC\devices\16F876A.h
+
+Units:
+    D:\Micro II\ProjetoLCD\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      D:\Micro II\ProjetoLCD\main.err
+    Ext Symbols: D:\Micro II\ProjetoLCD\main.esym
+    INHX8:       D:\Micro II\ProjetoLCD\main.hex
+    Symbols:     D:\Micro II\ProjetoLCD\main.sym
+    List:        D:\Micro II\ProjetoLCD\main.lst
+    Debug/COFF:  D:\Micro II\ProjetoLCD\main.cof
+    Call Tree:   main.tre
+    Statistics:  main.sta

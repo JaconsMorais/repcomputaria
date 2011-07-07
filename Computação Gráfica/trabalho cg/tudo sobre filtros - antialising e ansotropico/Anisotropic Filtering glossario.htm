@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0039)http://www.meko.co.uk/anisofilter.shtml -->
+<HTML><HEAD><TITLE>Anisotropic Filtering</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 13px; COLOR: black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: white
+}
+H1 {
+	FONT-SIZE: large
+}
+A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red
+}
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+:link {
+	COLOR: #0000ff
+}
+:visited {
+	COLOR: #0000ff
+}
+:active {
+	COLOR: #0000ff
+}
+SPAN.c6 {
+	FONT-SIZE: 17px
+}
+SPAN.c3 {
+	FONT-SIZE: 70%
+}
+HR.c2 {
+	TEXT-ALIGN: center
+}
+DIV.c1 {
+	TEXT-ALIGN: center
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.16830" name=GENERATOR></HEAD>
+<BODY topMargin=0 marginheight="0"><A name=backtotop></A>
+<TABLE height=108 cellSpacing=0 cellPadding=4 width="100%" border=0>
+  <TBODY>
+  <TR><!--#include virtual="header.inc"-->
+    <TD vAlign=center align=middle width="80%" height=106>
+      <DIV class=c1 valign="bottom">
+      <H1>Anisotropic Filtering </H1></DIV></TD></TR>
+  <TR><!--#include virtual="menu.inc"-->
+    <TD vAlign=top width="80%">
+      <HR class=c2 width="100%" SIZE=3>
+      Anisotropic means "non-uniform shape" and it is because this filtering 
+      technique works on non-uniform, or uneven, shaped areas that it is more 
+      powerful, and takes much more processing power, than <A 
+      href="http://www.meko.co.uk/pointsamp.shtml">point sampling</A>, <A 
+      href="http://www.meko.co.uk/bitrilinear.shtml">bi-linear or tri-linear 
+      filtering</A>.<BR><BR>One of the problems with these methods is that they 
+      rely on a square as their sampling area and are, therefore, only effective 
+      on surfaces at right angles to the viewer. The sampling area used by these 
+      methods is, in fact, circular but, as they all base their calculations on 
+      a 2 x 2 pixel area within that circle, the area they work on is 
+      effectively square. When a surface is at an angle to the viewer, an area 
+      on the surface that appears to the viewer to be circular is, in fact, 
+      elliptical in shape if the viewpoint is moved so that the surface is seen 
+      square on. Anisotropic texture filtering calculates the shape of this 
+      ellipse, maps it onto the required texture and then takes an average of 
+      the colours from up to 32 texels within the ellipse to decide what colour 
+      should be plotted onto the target surface. Since the ellipse can have any 
+      ratio between its height and width, depending on the angle it is tilted at 
+      with respect to the viewer, the arrangement of the texels to be sampled 
+      can only be calculated at runtime and will rarely consist of rows or 
+      columns of an equal number of texels. It is from this variable arrangement 
+      that the label "anisotropic" comes.<BR><BR>Because anisotropic texture 
+      filtering requires so many calculations to be done to plot a single pixel, 
+      it has, until quite recently, been available only on the most expensive 3D 
+      hardware. Now, though, a new generation of graphics processors are 
+      becoming available which have sufficient power to allow the inclusion of 
+      anisotropic filtering in their features. Amongst the current crop of 
+      processors with this feature are: ATI's Rage 128 Pro, Matrox' G400, 
+      Nvidia's Riva TNT, S3's Savage 4, Trident's Blade 3D and Videologic's 
+      PowerVR.<BR><BR>
+      <DIV class=c1>Return to <A 
+      href="http://www.meko.co.uk/wotw.shtml">Displays Glossary</A> index. 
+      </DIV><BR>
+      <HR class=c2 width="100%" SIZE=3>
+      <BR>
+      <DIV class=c1><A 
+      href="http://www.meko.co.uk/anisofilter.shtml#backtotop">Back to Top</A> 
+      </DIV></TD></TR></TBODY></TABLE></BODY></HTML>

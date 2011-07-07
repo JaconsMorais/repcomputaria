@@ -1,0 +1,37 @@
+[PROJECT]
+Target=main.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=main
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste 2\main.c
+2=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste 2\main.h
+3=C:\Program Files\PICC\Examples\EX_SPI.C
+4=C:\Program Files\PICC\Examples\EX_SPI_SLAVE.c
+5=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.c
+6=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Master\Master.c
+7=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Master\Master.h
+8=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave1\Slave1.c
+9=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave1\Slave1.h
+10=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave2\Slave2.c
+11=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Slave2\Slave2.h
+12=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste 2\main.c
+[Units]
+Count=1
+1=main.c (main)
+Link=0

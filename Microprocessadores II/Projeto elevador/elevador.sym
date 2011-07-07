@@ -1,0 +1,133 @@
+004-005 @WRITE_PROGRAM_MEMORY.P1
+004-005 @READ_PROGRAM_MEMORY.P2
+005.0   motor1
+005     PORTA_A
+005.1   motor2
+005.2   motor3
+005.3   motor4
+006.0   sinal
+006     PORTA_B
+006.1   andar1
+006.2   andar2
+006.3   parada
+006.4   andar3
+006.5   andar4
+007     PORTA_C
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028-029 TMP1
+02A-02B TMP2
+02C-02D conta
+02E-031 andares
+032     botao
+033     i
+034     parou
+035     @TRIS_C
+036-037 tira_andar.andar
+036-037 insere_andar.andar
+036-037 ordena.andar
+036     MAIN.@SCRATCH
+037     @PRINTF_D_9600_62_63.P1
+037     MAIN.@SCRATCH
+038-039 motor_passo_frente.timer
+038     insere_andar.i
+038     tira_andar.i
+038-039 motor_passo_tras.timer
+038     @PRINTF_D_9600_62_63.P1
+038     ordena.i
+039     insere_andar.teste
+039     ordena.j
+039     tira_andar.@SCRATCH
+039     @PRINTF_D_9600_62_63.@SCRATCH
+03A     insere_andar.j
+03A     ordena.aux
+03A     @delay_ms1.P1
+03A     tira_andar.@SCRATCH
+03A     @PRINTF_D_9600_62_63.@SCRATCH
+03B     insere_andar.@SCRATCH
+03B     tira_andar.@SCRATCH
+03B     ordena.@SCRATCH
+03B     @PRINTF_D_9600_62_63.@SCRATCH
+03C     insere_andar.@SCRATCH
+03C     tira_andar.@SCRATCH
+03C     ordena.@SCRATCH
+03C     @PRINTF_D_9600_62_63.@SCRATCH
+03D     @DIV88.P1
+03D     ordena.@SCRATCH
+03E     @DIV88.P1
+03E     ordena.@SCRATCH
+03F     @DIV88.@SCRATCH
+040     tempo.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+07F     @INTERRUPT_AREA
+085     TRIS_A
+086     TRIS_B
+087     TRIS_C
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY.P1
+10D-10E @READ_PROGRAM_MEMORY.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+
+0076  @delay_ms1
+006A  tempo
+008F  insere_andar
+01D5  tira_andar
+00B7  ordena
+00F9  motor_passo_frente
+0127  motor_passo_tras
+008A  parar_motor_passo
+0204  MAIN
+0033  @const95
+0050  @const96
+0155  @DIV88
+016A  @PRINTF_D_9600_62_63
+0204  @cinit
+
+Project Files:
+    elevador.c
+    elevador.h
+    C:\PROGRA~1\PICC\devices\16F876A.h
+
+Units:
+    F:\Estudos\Micro II\Projeto elevador\elevador.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      F:\Estudos\Micro II\Projeto elevador\elevador.err
+    Ext Symbols: F:\Estudos\Micro II\Projeto elevador\elevador.esym
+    INHX8:       F:\Estudos\Micro II\Projeto elevador\elevador.hex
+    Symbols:     F:\Estudos\Micro II\Projeto elevador\elevador.sym
+    List:        F:\Estudos\Micro II\Projeto elevador\elevador.lst
+    Debug/COFF:  F:\Estudos\Micro II\Projeto elevador\elevador.cof
+    Call Tree:   elevador.tre
+    Statistics:  elevador.sta

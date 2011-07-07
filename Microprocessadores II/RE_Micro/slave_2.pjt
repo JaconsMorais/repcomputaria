@@ -1,0 +1,29 @@
+[PROJECT]
+Target=C:\RE_Micro\slave_2.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[C:\RE_Micro\slave_2]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=C:\RE_Micro\slave_2.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=slave_2.c
+2=..\Users\Thales\Documents\Unesp\3º Ano\Microprocessadores II\AnalogDigital Micro\AnalogDigital.c
+3=..\Users\Thales\Documents\Unesp\3º Ano\Microprocessadores II\Prova Micro\Prova.h
+4=slave_2.h
+5=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\RE_Micro\slave_2.c
+[Units]
+Count=1
+1=slave_2 (main)

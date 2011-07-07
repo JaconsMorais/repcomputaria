@@ -1,0 +1,481 @@
+CCS PCM C Compiler, Version 4.106, 3067               25-mai-10 04:59
+
+               Filename: C:\RE_Micro\slave_2.lst
+
+               ROM used: 670 words (8%)
+                         Largest free fragment is 2048
+               RAM used: 11 (3%) at main() level
+                         16 (4%) worst case
+               Stack:    3 locations
+
+*
+0000:  MOVLW  02
+0001:  MOVWF  0A
+0002:  GOTO   27E
+0003:  NOP
+.................... #include "C:\RE_Micro\slave_2.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES HS                       //High speed Osc (> 4mhz for PCM/PCH) (>10mhz for PCD) 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES PROTECT                  //Code protected from reads 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES CPD                      //Data EEPROM Code Protected 
+.................... #FUSES NOWRT                    //Program memory not write protected 
+....................  
+.................... #use delay(clock=20000000) 
+.................... #use rs232(UART1) 
+....................   
+.................... #define LED_1 PIN_B0 
+.................... #define LED_2 PIN_B1 
+.................... #define LED_3 PIN_B2 
+.................... #define LED_4 PIN_B3 
+.................... #define LED_5 PIN_B4 
+.................... #define LED_6 PIN_B5 
+.................... #define LED_7 PIN_B6 
+.................... #define LED_8 PIN_B7 
+.................... #define LED_9 PIN_C0 
+.................... #define LED_10 PIN_C1 
+....................  
+....................  
+.................... int8 hg = 0, lw = 0; 
+.................... int16 out = 0; 
+.................... int1 y = 1, alt = 0; 
+....................  
+.................... void config_slave_2() 
+.................... { 
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+0052:  BSF    03.5
+0053:  BSF    1F.0
+0054:  BSF    1F.1
+0055:  BSF    1F.2
+0056:  BCF    1F.3
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+0057:  BCF    1F.6
+0058:  BCF    03.5
+0059:  BCF    1F.6
+005A:  BCF    1F.7
+005B:  BSF    03.5
+005C:  BCF    1F.7
+005D:  BCF    03.5
+005E:  BSF    1F.0
+....................    setup_spi(SPI_SLAVE|SPI_L_TO_H|SPI_CLK_DIV_4); 
+005F:  BCF    14.5
+0060:  BCF    25.5
+0061:  MOVF   25,W
+0062:  BSF    03.5
+0063:  MOVWF  07
+0064:  BCF    03.5
+0065:  BSF    25.4
+0066:  MOVF   25,W
+0067:  BSF    03.5
+0068:  MOVWF  07
+0069:  BSF    05.5
+006A:  BCF    03.5
+006B:  BSF    25.3
+006C:  MOVF   25,W
+006D:  BSF    03.5
+006E:  MOVWF  07
+006F:  MOVLW  24
+0070:  BCF    03.5
+0071:  MOVWF  14
+0072:  MOVLW  00
+0073:  BSF    03.5
+0074:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+0075:  MOVF   01,W
+0076:  ANDLW  C7
+0077:  IORLW  08
+0078:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+0079:  BCF    03.5
+007A:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+007B:  MOVLW  00
+007C:  MOVWF  78
+007D:  MOVWF  12
+007E:  MOVLW  00
+007F:  BSF    03.5
+0080:  MOVWF  12
+....................    setup_ccp1(CCP_OFF); 
+0081:  BCF    03.5
+0082:  BSF    25.2
+0083:  MOVF   25,W
+0084:  BSF    03.5
+0085:  MOVWF  07
+0086:  BCF    03.5
+0087:  CLRF   17
+....................    setup_comparator(NC_NC_NC_NC); 
+0088:  MOVLW  07
+0089:  BSF    03.5
+008A:  MOVWF  1C
+008B:  MOVF   05,W
+008C:  MOVWF  05
+008D:  MOVLW  10
+008E:  MOVWF  77
+008F:  DECFSZ 77,F
+0090:  GOTO   08F
+0091:  NOP
+0092:  MOVF   1C,W
+0093:  BCF    03.5
+0094:  BCF    0D.6
+....................    setup_vref(FALSE); 
+0095:  BSF    03.5
+0096:  CLRF   1D
+.................... } 
+0097:  BCF    03.5
+0098:  BCF    0A.3
+0099:  BCF    0A.4
+009A:  GOTO   29B (RETURN)
+....................   
+.................... void refresh_leds() 
+.................... { 
+....................       output_bit(LED_1,bit_test(out,0)); 
+*
+01E2:  BTFSC  22.0
+01E3:  GOTO   1E6
+01E4:  BCF    06.0
+01E5:  GOTO   1E7
+01E6:  BSF    06.0
+01E7:  BSF    03.5
+01E8:  BCF    06.0
+....................       output_bit(LED_2,bit_test(out,1)); 
+01E9:  BCF    03.5
+01EA:  BTFSC  22.1
+01EB:  GOTO   1EE
+01EC:  BCF    06.1
+01ED:  GOTO   1EF
+01EE:  BSF    06.1
+01EF:  BSF    03.5
+01F0:  BCF    06.1
+....................       output_bit(LED_3,bit_test(out,2)); 
+01F1:  BCF    03.5
+01F2:  BTFSC  22.2
+01F3:  GOTO   1F6
+01F4:  BCF    06.2
+01F5:  GOTO   1F7
+01F6:  BSF    06.2
+01F7:  BSF    03.5
+01F8:  BCF    06.2
+....................       output_bit(LED_4,bit_test(out,3)); 
+01F9:  BCF    03.5
+01FA:  BTFSC  22.3
+01FB:  GOTO   1FE
+01FC:  BCF    06.3
+01FD:  GOTO   1FF
+01FE:  BSF    06.3
+01FF:  BSF    03.5
+0200:  BCF    06.3
+....................       output_bit(LED_5,bit_test(out,4)); 
+0201:  BCF    03.5
+0202:  BTFSC  22.4
+0203:  GOTO   206
+0204:  BCF    06.4
+0205:  GOTO   207
+0206:  BSF    06.4
+0207:  BSF    03.5
+0208:  BCF    06.4
+....................       output_bit(LED_6,bit_test(out,5)); 
+0209:  BCF    03.5
+020A:  BTFSC  22.5
+020B:  GOTO   20E
+020C:  BCF    06.5
+020D:  GOTO   20F
+020E:  BSF    06.5
+020F:  BSF    03.5
+0210:  BCF    06.5
+....................       output_bit(LED_7,bit_test(out,6)); 
+0211:  BCF    03.5
+0212:  BTFSC  22.6
+0213:  GOTO   216
+0214:  BCF    06.6
+0215:  GOTO   217
+0216:  BSF    06.6
+0217:  BSF    03.5
+0218:  BCF    06.6
+....................       output_bit(LED_8,bit_test(out,7)); 
+0219:  BCF    03.5
+021A:  BTFSC  22.7
+021B:  GOTO   21E
+021C:  BCF    06.7
+021D:  GOTO   21F
+021E:  BSF    06.7
+021F:  BSF    03.5
+0220:  BCF    06.7
+....................       output_bit(LED_9,bit_test(out,8)); 
+0221:  BCF    03.5
+0222:  BTFSC  23.0
+0223:  GOTO   226
+0224:  BCF    07.0
+0225:  GOTO   227
+0226:  BSF    07.0
+0227:  BCF    25.0
+0228:  MOVF   25,W
+0229:  BSF    03.5
+022A:  MOVWF  07
+....................       output_bit(LED_10,bit_test(out,9)); 
+022B:  BCF    03.5
+022C:  BTFSC  23.1
+022D:  GOTO   230
+022E:  BCF    07.1
+022F:  GOTO   231
+0230:  BSF    07.1
+0231:  BCF    25.1
+0232:  MOVF   25,W
+0233:  BSF    03.5
+0234:  MOVWF  07
+.................... } 
+....................  
+.................... void rotina_slave_2() 
+.................... { 
+....................     if (spi_data_is_in()){ 
+*
+0181:  BSF    03.5
+0182:  BTFSS  14.0
+0183:  GOTO   27A
+....................       if(y){ 
+0184:  BCF    03.5
+0185:  BTFSS  24.0
+0186:  GOTO   1B4
+....................          lw = spi_read(); 
+0187:  MOVF   13,W
+0188:  MOVWF  21
+....................          printf ("Recebi %u do Master",lw); 
+0189:  MOVLW  04
+018A:  BSF    03.6
+018B:  MOVWF  0D
+018C:  MOVLW  00
+018D:  MOVWF  0F
+018E:  BCF    03.0
+018F:  MOVLW  07
+0190:  BCF    03.6
+0191:  MOVWF  26
+0192:  CALL   09B
+0193:  MOVF   21,W
+0194:  MOVWF  26
+0195:  MOVLW  1B
+0196:  MOVWF  27
+0197:  CALL   101
+0198:  MOVLW  08
+0199:  BSF    03.6
+019A:  MOVWF  0D
+019B:  MOVLW  00
+019C:  MOVWF  0F
+019D:  BSF    03.0
+019E:  MOVLW  0A
+019F:  BCF    03.6
+01A0:  MOVWF  26
+01A1:  CALL   09B
+....................          puts ("\n"); 
+01A2:  MOVLW  0E
+01A3:  BSF    03.6
+01A4:  MOVWF  0D
+01A5:  MOVLW  00
+01A6:  MOVWF  0F
+01A7:  BCF    03.6
+01A8:  CALL   139
+01A9:  MOVLW  0D
+01AA:  BTFSS  0C.4
+01AB:  GOTO   1AA
+01AC:  MOVWF  19
+01AD:  MOVLW  0A
+01AE:  BTFSS  0C.4
+01AF:  GOTO   1AE
+01B0:  MOVWF  19
+....................          alt = 0; 
+01B1:  BCF    24.1
+....................          y = 0; 
+01B2:  BCF    24.0
+....................       }else{ 
+01B3:  GOTO   24E
+....................          hg = spi_read(); 
+01B4:  MOVF   13,W
+01B5:  MOVWF  20
+....................          out = make16(lw,hg); 
+01B6:  MOVF   21,W
+01B7:  MOVWF  23
+01B8:  MOVF   20,W
+01B9:  MOVWF  22
+....................          printf ("Recebi %u do Master", hg); 
+01BA:  MOVLW  0F
+01BB:  BSF    03.6
+01BC:  MOVWF  0D
+01BD:  MOVLW  00
+01BE:  MOVWF  0F
+01BF:  BCF    03.0
+01C0:  MOVLW  07
+01C1:  BCF    03.6
+01C2:  MOVWF  26
+01C3:  CALL   09B
+01C4:  MOVF   20,W
+01C5:  MOVWF  26
+01C6:  MOVLW  1B
+01C7:  MOVWF  27
+01C8:  CALL   101
+01C9:  MOVLW  13
+01CA:  BSF    03.6
+01CB:  MOVWF  0D
+01CC:  MOVLW  00
+01CD:  MOVWF  0F
+01CE:  BSF    03.0
+01CF:  MOVLW  0A
+01D0:  BCF    03.6
+01D1:  MOVWF  26
+01D2:  CALL   09B
+....................          puts ("\n"); 
+01D3:  MOVLW  19
+01D4:  BSF    03.6
+01D5:  MOVWF  0D
+01D6:  MOVLW  00
+01D7:  MOVWF  0F
+01D8:  BCF    03.6
+01D9:  CALL   139
+01DA:  MOVLW  0D
+01DB:  BTFSS  0C.4
+01DC:  GOTO   1DB
+01DD:  MOVWF  19
+01DE:  MOVLW  0A
+01DF:  BTFSS  0C.4
+01E0:  GOTO   1DF
+01E1:  MOVWF  19
+....................          refresh_leds(); 
+....................          printf (" Leds Atualizados"); 
+*
+0235:  MOVLW  1A
+0236:  BCF    03.5
+0237:  BSF    03.6
+0238:  MOVWF  0D
+0239:  MOVLW  00
+023A:  MOVWF  0F
+023B:  BCF    03.6
+023C:  CALL   139
+....................          puts ("\n"); 
+023D:  MOVLW  23
+023E:  BSF    03.6
+023F:  MOVWF  0D
+0240:  MOVLW  00
+0241:  MOVWF  0F
+0242:  BCF    03.6
+0243:  CALL   139
+0244:  MOVLW  0D
+0245:  BTFSS  0C.4
+0246:  GOTO   245
+0247:  MOVWF  19
+0248:  MOVLW  0A
+0249:  BTFSS  0C.4
+024A:  GOTO   249
+024B:  MOVWF  19
+....................          alt = 1; 
+024C:  BSF    24.1
+....................          y = 1; 
+024D:  BSF    24.0
+....................       } 
+....................        
+....................       spi_write(alt); 
+024E:  MOVLW  00
+024F:  BTFSC  24.1
+0250:  MOVLW  01
+0251:  MOVWF  26
+0252:  MOVF   26,W
+0253:  MOVWF  13
+0254:  BSF    03.5
+0255:  RRF    14,W
+0256:  BTFSS  03.0
+0257:  GOTO   255
+....................         
+....................        
+....................       if(alt) printf (" 1 -  Master com o valor mais significativo"); 
+0258:  BCF    03.5
+0259:  BTFSS  24.1
+025A:  GOTO   263
+025B:  MOVLW  24
+025C:  BSF    03.6
+025D:  MOVWF  0D
+025E:  MOVLW  00
+025F:  MOVWF  0F
+0260:  BCF    03.6
+0261:  CALL   139
+....................       else printf (" 0 -  Master com o valor menos significativo"); 
+0262:  GOTO   26A
+0263:  MOVLW  3A
+0264:  BSF    03.6
+0265:  MOVWF  0D
+0266:  MOVLW  00
+0267:  MOVWF  0F
+0268:  BCF    03.6
+0269:  CALL   139
+....................       puts ("\n"); 
+026A:  MOVLW  51
+026B:  BSF    03.6
+026C:  MOVWF  0D
+026D:  MOVLW  00
+026E:  MOVWF  0F
+026F:  BCF    03.6
+0270:  CALL   139
+0271:  MOVLW  0D
+0272:  BTFSS  0C.4
+0273:  GOTO   272
+0274:  MOVWF  19
+0275:  MOVLW  0A
+0276:  BTFSS  0C.4
+0277:  GOTO   276
+0278:  MOVWF  19
+0279:  BSF    03.5
+....................     } 
+.................... } 
+027A:  BCF    03.5
+027B:  BCF    0A.3
+027C:  BCF    0A.4
+027D:  GOTO   29C (RETURN)
+....................  
+.................... void main() 
+.................... {  
+027E:  CLRF   04
+027F:  BCF    03.7
+0280:  MOVLW  1F
+0281:  ANDWF  03,F
+0282:  MOVLW  81
+0283:  BSF    03.5
+0284:  MOVWF  19
+0285:  MOVLW  A6
+0286:  MOVWF  18
+0287:  MOVLW  90
+0288:  BCF    03.5
+0289:  MOVWF  18
+028A:  CLRF   20
+028B:  CLRF   21
+028C:  CLRF   23
+028D:  CLRF   22
+028E:  BSF    24.0
+028F:  BCF    24.1
+0290:  BSF    03.5
+0291:  BSF    1F.0
+0292:  BSF    1F.1
+0293:  BSF    1F.2
+0294:  BCF    1F.3
+0295:  MOVLW  07
+0296:  MOVWF  1C
+....................    config_slave_2(); 
+*
+029A:  GOTO   052
+....................     
+....................    while (true) 
+....................    { 
+....................       rotina_slave_2(); 
+029B:  GOTO   181
+....................    } 
+029C:  GOTO   29B
+.................... } 
+029D:  SLEEP
+
+Configuration Fuses:
+   Word  1: 1E3A   HS NOWDT NOPUT PROTECT NODEBUG NOBROWNOUT NOLVP CPD NOWRT

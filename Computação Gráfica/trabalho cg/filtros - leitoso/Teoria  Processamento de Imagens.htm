@@ -1,0 +1,1160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://www.dpi.inpe.br/spring/teoria/filtrage/filtragem.htm -->
+<HTML><HEAD><TITLE>Teoria : Processamento de Imagens</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.6000.16830" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffc8>
+<H1>Teoria : Processamento de Imagens</H1>
+<P><I><B><FONT size=2>O que é filtragem? Como se efetua?</FONT></B></I> 
+<UL>
+  <LI><FONT size=2>As técnicas de filtragem são transformações da imagem pixel a 
+  pixel, que não dependem apenas do nível de cinza de um determinado pixel, mas 
+  também do valor dos níveis de cinza dos pixels vizinhos.</FONT> 
+  <LI><FONT size=2>O processo de filtragem é feito utilizando matrizes 
+  denominadas máscaras, as quais são aplicadas sobre a imagem.</FONT> </LI></UL>
+<P align=center><IMG height=148 
+src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00001.gif" width=380> 
+</P>
+<P align=center><FONT size=2>Máscara de 3 linhas por 3 colunas com centro na 
+posição (2,2).</FONT> </P>
+<UL>
+  <LI><FONT size=2>A aplicação da máscara com centro na posição (<I>i,j</I>), 
+  sendo <I>i</I> o número de uma dada linha e <I>j</I> o número de uma dada 
+  coluna sobre a imagem, consiste na substituição do valor do pixel na posição 
+  (<I>i,j</I>) por um novo valor que depende dos valores dos pixels vizinhos e 
+  dos pesos da máscara, gerando uma nova imagem com a eliminação das linhas e 
+  colunas iniciais e finais da imagem original.</FONT> 
+  <LI><FONT size=2>Os filtros espaciais podem ser classificados em passa-baixa, 
+  passa-alta ou passa-banda. Os dois primeiros são os mais utilizados em 
+  processamento de imagens. O filtro passa-banda é mais utilizado em 
+  processamentos específicos, principalmente para remover ruídos 
+  periódicos.</FONT> </LI></UL>
+<P><I><B><A name=_Toc362262031><FONT size=2>O que são filtros 
+lineares</FONT></A><FONT face=Arial size=2>?</FONT></B></I> 
+<UL>
+  <LI><FONT size=2>Suavizam e realçam detalhes da imagem e minimizam efeitos de 
+  ruído, sem alterar a média da imagem. Alguns filtros são descritos a 
+  seguir.</FONT> 
+  <UL>
+    <LI><FONT size=2>Passa-Baixa: Suaviza a imagem atenuando as altas 
+    freqüências, que correspondem às transições abruptas. Tende a minimizar 
+    ruídos e apresenta o efeito de borramento da imagem. Exemplos de filtros de 
+    média 3x3, 5x5 e 7x7.</FONT> </LI></UL></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=28>
+      <P align=center><FONT size=2>1</FONT></P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=45>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=45>
+      <P align=center>*1/9 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=45>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>
+      <P align=center>*1/25</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=45>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>
+      <P align=center>*1/49</P></TD></TR>
+  <TR>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=45>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=45>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=45>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>Passa-Baixa, de média ponderada, são usados quando os pesos são definidos 
+  em função de sua distância do peso central. Filtros desse tipo de dimensão 3x3 
+  são: </LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>2</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>2 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>
+      <P align=center>*1/10 </P></TD>
+    <TD width=28>
+      <P align=center>2</P></TD>
+    <TD width=28>
+      <P align=center>4 </P></TD>
+    <TD width=28>
+      <P align=center>2</P></TD>
+    <TD width=52>
+      <P align=center>*1/16 </P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=52>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>2</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=52>&nbsp;</TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>Passa-Alta: a filtragem passa-alta realça detalhes, produzindo uma 
+  "agudização" ("sharpering") da imagem, isto é, as transições entre regiões 
+  diferentes tornam-se mais nítidas. Estes filtros podem ser usados para realçar 
+  certas características presentes na imagem, tais como bordas, linhas curvas ou 
+  manchas, mas enfatizam o ruído existente na imagem. Alguns exemplos podem ser 
+  dado por: </LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=32>
+      <P align=center>0</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>0</P></TD>
+    <TD width=54>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=54>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>-2 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>5 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=54>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>9</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=54>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-2</P></TD>
+    <TD width=32>
+      <P align=center>5 </P></TD>
+    <TD width=32>
+      <P align=center>-2</P></TD></TR>
+  <TR>
+    <TD width=32>
+      <P align=center>0</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>0</P></TD>
+    <TD width=54>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=54>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>-2 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>Os filtros de realce de bordas realçam a cena, segundo direções 
+  preferenciais de interesse, definidas pelas máscaras. Abaixo estão algumas 
+  utilizadas para o realçamento de bordas em vários sentidos. O nome dado às 
+  máscaras indica a direção ortogonal preferencial em que será realçado o limite 
+  de borda. Assim, a máscara norte realça limites horizontais. </LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>
+      <P align=center>Norte</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>-2</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>
+      <P align=center>Nordeste </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-2 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>
+      <P align=center>Leste</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-2</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>
+      <P align=center>Sudeste </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-2 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD></TR>
+  <TR>
+    <TD width=50>
+      <P align=center>Sul</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>-2</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>
+      <P align=center>Sudoeste </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>-2 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD>
+    <TD width=32>&nbsp;</TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=50>
+      <P align=center>Oeste</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>-2</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>
+      <P align=center>Noroeste </P></TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>-2 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD></TR>
+  <TR>
+    <TD width=50>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD>
+    <TD width=30>&nbsp;</TD>
+    <TD width=108>&nbsp;</TD>
+    <TD width=32>
+      <P align=center>1</P></TD>
+    <TD width=32>
+      <P align=center>-1 </P></TD>
+    <TD width=32>
+      <P align=center>-1</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>Realce não-direcional de bordas: é utilizado para realçar bordas, 
+  independentemente da direção. As três máscaras mais comuns diferem quanto à 
+  intensidade de altos valores de níveis de cinza presentes na imagem 
+  resultante. A máscara alta deixa passar menos os baixos níveis de cinza, isto 
+  é, a imagem fica mais clara. A máscara baixa produz uma imagem mais escura que 
+  a anterior. A máscara média apresenta resultados intermediários. </LI></UL>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=85 colSpan=3>
+      <P align=center><B>Alta</B></P></TD>
+    <TD width=57>&nbsp;</TD>
+    <TD width=85 colSpan=3>
+      <P align=center><B>Média</B> </P></TD>
+    <TD width=47>&nbsp;</TD>
+    <TD width=85 colSpan=3>
+      <P align=center><B>Baixa</B> </P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B> </P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=57>&nbsp;</TD>
+    <TD width=30>
+      <P align=center><B>0</B></P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B> </P></TD>
+    <TD width=27>
+      <P align=center><B>0</B></P></TD>
+    <TD width=47>&nbsp;</TD>
+    <TD width=29>
+      <P align=center><B>1</B></P></TD>
+    <TD width=28>
+      <P align=center><B>-2</B> </P></TD>
+    <TD width=28>
+      <P align=center><B>1</B></P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=28>
+      <P align=center><B>8</B> </P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=57>&nbsp;</TD>
+    <TD width=30>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=28>
+      <P align=center><B>4</B> </P></TD>
+    <TD width=27>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=47>&nbsp;</TD>
+    <TD width=29>
+      <P align=center><B>-2</B></P></TD>
+    <TD width=28>
+      <P align=center><B>3</B> </P></TD>
+    <TD width=28>
+      <P align=center><B>-2</B></P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B> </P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=57>&nbsp;</TD>
+    <TD width=30>
+      <P align=center><B>0</B></P></TD>
+    <TD width=28>
+      <P align=center><B>-1</B> </P></TD>
+    <TD width=27>
+      <P align=center><B>0</B></P></TD>
+    <TD width=47>&nbsp;</TD>
+    <TD width=29>
+      <P align=center><B>1</B></P></TD>
+    <TD width=28>
+      <P align=center><B>-2</B> </P></TD>
+    <TD width=28>
+      <P align=center><B>1</B></P></TD></TR></TBODY></TABLE>
+<UL>
+  <LI>Realce de imagens: Utiliza máscaras apropriadas ao realce de 
+  características de imagens obtidas por um sensor específico. Para imagens 
+  TM/Landsat o realce compensa distorções radiométricas do sensor. O pixel que 
+  terá seu valor de nível de cinza substituído pela aplicação da máscara, 
+  corresponde à posição sombreada. </LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=36>
+      <P align=center><B>3</B></P></TD>
+    <TD width=38>
+      <P align=center><B>-7</B> </P></TD>
+    <TD width=38>
+      <P align=center><B>-7</B></P></TD>
+    <TD width=36>
+      <P align=center><B>3</B> </P></TD></TR>
+  <TR>
+    <TD width=36>
+      <P align=center><B>-7</B></P></TD>
+    <TD width=38>
+      <P align=center><I>13</I> </P></TD>
+    <TD width=38>
+      <P align=center><B>13</B></P></TD>
+    <TD width=36>
+      <P align=center><B>-7</B> </P></TD></TR>
+  <TR>
+    <TD width=36>
+      <P align=center><B>-7</B></P></TD>
+    <TD width=38>
+      <P align=center><B>13</B> </P></TD>
+    <TD width=38>
+      <P align=center><B>13</B></P></TD>
+    <TD width=36>
+      <P align=center><B>-7</B> </P></TD></TR>
+  <TR>
+    <TD width=36>
+      <P align=center><B>3</B></P></TD>
+    <TD width=38>
+      <P align=center><B>-7</B> </P></TD>
+    <TD width=38>
+      <P align=center><B>-7</B></P></TD>
+    <TD width=36>
+      <P align=center><B>3</B> </P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P><A name=_Toc362262033><I><B>O que são filtros não-lineares</B></I></A>? 
+<UL>
+  <LI><FONT size=2>Minimizam/realçam ruídos e suavizam/realçam bordas, alterando 
+  a média da imagem, sendo os principais os operadores para detecção de bordas e 
+  os filtros morfológicos.</FONT> 
+  <UL>
+    <LI><FONT size=2>Operadores para detecção de bordas: Detecta 
+    características, como bordas, linhas, curvas e manchas, sendo os mais comuns 
+    os operadores de Roberts e Sobel.</FONT> 
+    <UL>
+      <LI><FONT size=2><B>Operador de Roberts</B>: Apresenta a desvantagem de 
+      certas bordas serem mais realçadas do que outras dependendo da direção, 
+      mesmo com magnitude igual. Como resultado de sua aplicação, obtém-se uma 
+      imagem com altos valores de nível de cinza, em regiões de limites bem 
+      definidos e valores baixos em regiões de limites suaves, sendo 0 para 
+      regiões de nível de cinza constante. O operador consiste na função:<IMG 
+      height=30 
+      src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00002.gif" 
+      width=164>, onde a' é o nível de cinza correspondente à localização a, a 
+      ser substituído; a, b, c, d são as localizações cujos valores serão 
+      computados para a operação.</FONT> </LI></UL></LI></UL></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE borderColor=#000000 border=1>
+  <TBODY>
+  <TR>
+    <TD width=21>
+      <P align=center><B><FONT size=2>a</FONT></B> </P></TD>
+    <TD width=20>
+      <P align=center><B><FONT size=2>b</FONT></B> </P></TD></TR>
+  <TR>
+    <TD width=21>
+      <P align=center><B><FONT size=2>c</FONT></B> </P></TD>
+    <TD width=20>
+      <P align=center><B><FONT size=2>d</FONT></B> 
+</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P align=center><IMG height=110 
+src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00003.gif" width=350> 
+</P>
+<P align=center>Efeito da aplicação do operador de Roberts. </P>
+<UL>
+  <LI><B>Operador de Sobel</B>: Realça linhas verticais e horizontais mais 
+  escuras que o fundo, sem realçar pontos isolados. Consiste na aplicação de 
+  duas máscaras, descritas a seguir, que compõem um resultado único: </LI></UL>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=131 colSpan=3>
+      <P align=center><B>a</B></P></TD>
+    <TD width=48>&nbsp;</TD>
+    <TD width=132 colSpan=3>
+      <P align=center><B>b</B></P></TD></TR>
+  <TR>
+    <TD width=44>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=44>
+      <P align=center><B>2</B> </P></TD>
+    <TD width=44>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=48>&nbsp;</TD>
+    <TD width=47>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=38>
+      <P align=center><B>0</B> </P></TD>
+    <TD width=47>
+      <P align=center><B>1</B></P></TD></TR>
+  <TR>
+    <TD width=44>
+      <P align=center><B>0</B></P></TD>
+    <TD width=44>
+      <P align=center><B>0</B> </P></TD>
+    <TD width=44>
+      <P align=center><B>0</B></P></TD>
+    <TD width=48>&nbsp;</TD>
+    <TD width=47>
+      <P align=center><B>-2</B></P></TD>
+    <TD width=38>
+      <P align=center><B>0</B> </P></TD>
+    <TD width=47>
+      <P align=center><B>2</B></P></TD></TR>
+  <TR>
+    <TD width=44>
+      <P align=center><B>1</B></P></TD>
+    <TD width=44>
+      <P align=center><B>2</B> </P></TD>
+    <TD width=44>
+      <P align=center><B>1</B></P></TD>
+    <TD width=48>&nbsp;</TD>
+    <TD width=47>
+      <P align=center><B>-1</B></P></TD>
+    <TD width=38>
+      <P align=center><B>0</B> </P></TD>
+    <TD width=47>
+      <P align=center><B>1</B></P></TD></TR></TBODY></TABLE>
+<UL>
+  <LI>A máscara (a) detecta as variações no sentido horizontal e a máscara (b), 
+  no sentido vertical. O resultado desta aplicação, em cada pixel, é dado por: 
+  <IMG height=26 
+  src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00004.gif" 
+  width=94>onde a' é o valor de nível de cinza correspondente à localização do 
+  elemento central da máscara. </LI></UL>
+<P align=center><IMG height=84 
+src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00005.gif" width=312> 
+</P>
+<P align=center>Efeito da aplicação do operador de Roberts. </P>
+<P><I><B>O que são filtros morfológicos?</B></I> 
+<UL>
+  <LI><FONT size=2>Exploram as propriedades geométricas dos sinais (níveis de 
+  cinza da imagem). Para filtros morfológicos, as máscaras são denominadas 
+  elementos estruturantes e apresentam valores 0 ou 1 na matriz que correspondem 
+  ao pixel considerado. Os filtros morfológicos básicos são o filtro da mediana, 
+  erosão e dilatação.</FONT> 
+  <UL>
+    <LI><FONT size=2>Filtro morfológico da mediana é utilizado para suavização e 
+    eliminação de ruído e mantém a dimensão da imagem. Exemplo:</FONT> 
+  </LI></UL></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=90 colSpan=3>
+      <P align=center><FONT size=2>elemento estruturante</FONT> </P></TD>
+    <TD width=58>&nbsp;</TD>
+    <TD width=90 colSpan=3>
+      <P align=center>imagem </P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=29>
+      <P align=center>1 </P></TD>
+    <TD width=30>
+      <P align=center>0</P></TD>
+    <TD width=58>&nbsp;</TD>
+    <TD width=30>
+      <P align=center>3 </P></TD>
+    <TD width=32>
+      <P align=center>6</P></TD>
+    <TD width=28>
+      <P align=center>5 </P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=29>
+      <P align=center>1 </P></TD>
+    <TD width=30>
+      <P align=center>1</P></TD>
+    <TD width=58>&nbsp;</TD>
+    <TD width=30>
+      <P align=center>2 </P></TD>
+    <TD width=32>
+      <P align=center>8</P></TD>
+    <TD width=28>
+      <P align=center>3 </P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=29>
+      <P align=center>1 </P></TD>
+    <TD width=30>
+      <P align=center>0</P></TD>
+    <TD width=58>&nbsp;</TD>
+    <TD width=30>
+      <P align=center>2 </P></TD>
+    <TD width=32>
+      <P align=center>6</P></TD>
+    <TD width=28>
+      <P align=center>5 </P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>O pixel central será alterada para o valor 6 (valor mediano na ordenação 
+  [2,3,6,6,8]). </LI></UL>
+<UL>
+  <LI>Filtro morfológico de erosão: provoca efeitos de erosão das partes claras 
+  da imagem (altos níveis de cinza), gerando imagens mais escuras. Considerando 
+  o exemplo anterior, o valor a ser substituído no pixel central corresponde ao 
+  menor valor da ordenação, 2. 
+  <LI>Filtro morfológico de dilatação: provoca efeitos de dilatação das partes 
+  escuras da imagem (baixos níveis de cinza), gerando imagens mais claras. Para 
+  o exemplo anterior, o valor resultante da aplicação deste filtro é o maior 
+  valor na ordenação, 8. </LI></UL>
+<UL>
+  <LI>Os seguintes elementos estruturantes são os mais comuns: </LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD></TR>
+  <TR>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD></TR>
+  <TR>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>1 </P></TD>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD></TR>
+  <TR>
+    <TD width=28>
+      <P align=center>0</P></TD>
+    <TD width=28>
+      <P align=center>0 </P></TD>
+    <TD width=28>
+      <P align=center>1</P></TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD>
+    <TD width=28>&nbsp;</TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>Abertura e fechamento de uma imagem: geralmente encadeiam-se filtros de 
+  erosão e dilatação com o mesmo elemento estruturante para obtenção de efeitos 
+  de abertura e fechamento. 
+  <UL>
+    <LI>A abertura é obtida pelo encadeamento do filtro de erosão, seguido pelo 
+    de dilatação, conforme ilustra a figura a seguir. No exemplo, há quebra de 
+    istmos e eliminação de cabos e ilhas. </LI></UL>
+  <P align=center><IMG height=132 
+  src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00006.gif" 
+  width=279> </P>
+  <UL>
+    <LI>O efeito de fechamento é obtido pelo encadeamento do filtro de 
+    dilatação, seguido pelo de erosão. No exemplo, há eliminação de golfos e 
+    fechamento de baías. </LI></UL></LI></UL>
+<P align=center><IMG height=191 
+src="Teoria%20%20Processamento%20de%20Imagens_arquivos/img00007.gif" width=372> 
+</P></BODY></HTML>

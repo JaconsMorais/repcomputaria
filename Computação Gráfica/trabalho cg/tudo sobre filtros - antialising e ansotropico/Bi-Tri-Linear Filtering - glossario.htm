@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0039)http://www.meko.co.uk/bitrilinear.shtml -->
+<HTML><HEAD><TITLE>Bi/Tri-Linear Filtering</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<STYLE type=text/css>TD {
+	FONT-SIZE: 13px; COLOR: black; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: white
+}
+H1 {
+	FONT-SIZE: large
+}
+A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red
+}
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+:link {
+	COLOR: #0000ff
+}
+:visited {
+	COLOR: #0000ff
+}
+:active {
+	COLOR: #0000ff
+}
+SPAN.c6 {
+	FONT-SIZE: 17px
+}
+SPAN.c3 {
+	FONT-SIZE: 70%
+}
+HR.c2 {
+	TEXT-ALIGN: center
+}
+DIV.c1 {
+	TEXT-ALIGN: center
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.16830" name=GENERATOR></HEAD>
+<BODY topMargin=0 marginheight="0"><A name=backtotop></A>
+<TABLE height=108 cellSpacing=0 cellPadding=4 width="100%" border=0>
+  <TBODY>
+  <TR><!--#include virtual="header.inc"-->
+    <TD vAlign=center align=middle width="80%" height=106>
+      <DIV class=c1 valign="bottom">
+      <H1>Bi/Tri-Linear Filtering </H1></DIV></TD></TR>
+  <TR><!--#include virtual="menu.inc"-->
+    <TD vAlign=top width="80%">
+      <HR class=c2 width="100%" SIZE=3>
+      A simple form of texture filtering, <A 
+      href="http://www.meko.co.uk/pointsamp.shtml">point sampling</A>, could be 
+      used to scale textures prior to their being mapped onto surfaces in a 3D 
+      scene. This technique could easily introduce errors by taking a too simple 
+      approach to the task.<BR><BR>Using a more sophisticated, though slower, 
+      technique called "bi-linear filtering", the colour of each pixel on the 
+      target surface is calculated by averaging the colours of four adjacent 
+      texels from the source texture. Using the example texture given in <A 
+      href="http://www.meko.co.uk/pointsamp.shtml">point sampling</A>, which 
+      consists of alternating black and white texels, the colour of the 
+      resulting pixel plotted to the target surface would be a grey halfway 
+      between black and white. This is obviously a much closer approximation to 
+      the way the texture should look after scaling than the result yielded by 
+      point sampling but it can also produce a blurred effect when the texture 
+      is applied to a surface close to the viewer. This can be seen in the 
+      accompanying screenshots from the game Turok. In the first screenshot, no 
+      filtering has been applied and the textures appear "blocky"; in the other, 
+      bi-linear filtering has been applied and the "blockiness" disappears to be 
+      replaced by a blurred, but more pleasing, effect.<BR><BR>
+      <DIV class=c1><IMG height=247 alt="without bi-linear filtering" hspace=10 
+      src="Bi-Tri-Linear%20Filtering%20-%20glossario_arquivos/turokwithoutbi.jpg" 
+      width=300 align=top vspace=10 border=0> <IMG height=247 
+      alt="with bi-linear filtering" hspace=10 
+      src="Bi-Tri-Linear%20Filtering%20-%20glossario_arquivos/turokwithbi.jpg" 
+      width=300 align=top vspace=10 border=0> </DIV><BR>In software that makes 
+      use of a <A href="http://www.meko.co.uk/mipmap.shtml">mip-map</A> , a more 
+      accurate result, though still blurred and even more costly in terms of 
+      processing power, can be obtained by using "tri-linear filtering". This 
+      makes use of two copies of the texture, stored at different scales in the 
+      mip-map, by applying bi-linear filtering to the textures with scales above 
+      and below the currently required scale. The average of these two results 
+      is then taken and applied to the target surface.<BR><BR>Bilinear and 
+      tri-linear texture filtering are certainly a big improvement on point 
+      sampling but are only really useful on surfaces that are at right-angles 
+      to the viewer. This is because they both rely on the square as their 
+      sampling area. <A 
+      href="http://www.meko.co.uk/anisofilter.shtml">Anisotropic filtering</A> 
+      is a technique more suited to texturing angled surfaces.<BR><BR>
+      <DIV class=c1>Return to <A 
+      href="http://www.meko.co.uk/wotw.shtml">Displays Glossary</A> index. 
+      </DIV><BR>
+      <HR class=c2 width="100%" SIZE=3>
+      <BR>
+      <DIV class=c1><A 
+      href="http://www.meko.co.uk/bitrilinear.shtml#backtotop">Back to Top</A> 
+      </DIV></TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,64 @@
+[PROJECT]
+Target=main.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=main
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Documentation]
+Count=5
+1=main.o
+1T=
+1E=
+1W=5
+2=C:\Documents and Settings\Proprietário\Meus documentos\micro2\projeto lcd\main.h
+2T=main.h
+2E=
+2W=0
+3=C:\Documents and Settings\Proprietário\Meus documentos\micro2\main.c
+3T=main.c
+3E=
+3W=0
+4=C:\Documents and Settings\Proprietário\Meus documentos\micro2\main.c
+4T=main.c
+4E=
+4W=0
+5=C:\Documents and Settings\Proprietário\Meus documentos\micro2\main.h
+5T=main.h
+5E=
+5W=0
+6=C:\Documents and Settings\Proprietário\Meus documentos\micro2\projeto3\main.lst
+6T=main.lst
+6E=
+6W=0
+7=C:\Documents and Settings\Proprietário\Meus documentos\micro2\projeto3\main.h
+7T=main.h
+7E=
+7W=0
+8=C:\Documents and Settings\Proprietário\Meus documentos\micro2\projeto lcd\main.h
+8T=main.h
+8E=
+8W=0
+[Opened Files]
+1=main.c
+2=main.h
+3=
+4=C:\Documents and Settings\Proprietário\Meus documentos\micro2\main.h
+5=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\Micro II\ProjetoLCD\main.c
+[Units]
+Count=1
+1=main.c (main)
+Link=0

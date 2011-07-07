@@ -1,0 +1,73 @@
+
+ROM used: 867 (11%)
+          867 (11%) including unused fragments
+
+          2 Average locations per line
+          12 Average locations per statement
+
+RAM used: 11 (3%) at main() level
+          15 (4%) worst case
+
+Stack used: 3 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  122    70 100  master.c
+   20     0   0  master.h
+  290     0   0  ..\Program Files (x86)\PICC\devices\16F876A.h
+----- -----
+  432    70 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   2   1             @delay_ms1
+0     72   8   0   248  2.3  config_master
+0      7   1   0    25  1.2  turnon_slave_1
+0      7   1   0    25  1.2  turnoff_slave_1
+0    167  19   0   500  4.1  rotina_slave_1
+0     22   3   0             @const81
+0     72   8   3             @PSTRINGC7_9600_62_63
+0      1   0   0             @const83
+0     11   1   0             @const84
+0     81   9   4             @PSTRINGCN7_9600_62_63
+0     21   2   3             @DIV88
+0     56   6   2             @PRINTF_U_9600_62_63
+0      1   0   0             @const93
+0     21   2   0    25  1.2  @const94
+0      1   0   0    25  1.2  @const95
+0     11   1   0   467  3.7  @const96
+0      1   0   0             @const97
+0      7   1   0    25  1.2  turnon_slave_2
+0      7   1   0    25  1.2  turnoff_slave_2
+0    120  14   0   467  3.7  rotina_slave_2
+0     18   2   0             @const101
+0      1   0   0   621  3.4  @const102
+0     18   2   0             @const103
+0      1   0   0             @const104
+0     25   3   0             @const105
+0     25   3   0             @const106
+0      1   0   0             @const107
+0     68   8   1   146  1.7  MAIN
+
+Program metrics:
+    Functions               12
+    Statements              70
+    Comments                70
+    Volume (V)              4146
+    Difficilty (D)          26.8
+    Effort to implement (E) 111105
+    Time to implement (T)   1 hours, 43 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   11
+    Maintainability (MI)    84
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   863  1181  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

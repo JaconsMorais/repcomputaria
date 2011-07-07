@@ -1,0 +1,4 @@
+*** Error 18 "main.c" Line 1(9,38): File can not be opened
+    Not in local "D:\Micro II\Projeto2\main.h"
+*** Error 128 "main.c" Line 4(1,5): A #DEVICE required before this line
+      2 Errors,  0 Warnings.

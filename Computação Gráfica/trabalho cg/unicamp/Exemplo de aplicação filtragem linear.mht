@@ -1,0 +1,460 @@
+From: "Salvo pelo Microsoft Internet Explorer 7"
+Subject: =?Windows-1252?Q?Exemplo_de_aplica=E7=E3o:_filtragem_linear?=
+Date: Wed, 3 Jun 2009 20:35:37 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_00A8_01C9E48A.DA0F37E0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6000.16669
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/node40.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 2K.1beta (1.47)=0A=
+original version by:  Nikos Drakos, CBLU, University of Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>Exemplo de aplica=E7=E3o: filtragem linear</TITLE>
+<META content=3D"Exemplo de aplica=E7=E3o: filtragem linear" =
+name=3Ddescription>
+<META content=3Dcurso name=3Dkeywords>
+<META content=3Ddocument name=3Dresource-type>
+<META content=3Dglobal name=3Ddistribution>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.6000.16830" name=3DGENERATOR>
+<META http-equiv=3DContent-Style-Type content=3Dtext/css><LINK=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/curso.css"=20
+rel=3DSTYLESHEET><LINK href=3D"node43.html" rel=3Dnext><LINK =
+href=3D"node37.html"=20
+rel=3Dprevious><LINK href=3D"curso.html" rel=3Dup><LINK =
+href=3D"node41.html"=20
+rel=3Dnext></HEAD>
+<BODY><!--Navigation Panel--><A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node41.html"=20
+name=3Dtex2html563><IMG height=3D24 alt=3Dnext src=3D"" width=3D37 =
+align=3Dbottom=20
+border=3D0></A> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/curso.html"=20
+name=3Dtex2html561><IMG height=3D24 alt=3Dup src=3D"" width=3D26 =
+align=3Dbottom=20
+border=3D0></A> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node39.html"=20
+name=3Dtex2html555><IMG height=3D24 alt=3Dprevious src=3D"" width=3D63 =
+align=3Dbottom=20
+border=3D0></A> <BR><B>Next:</B> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node41.html"=20
+name=3Dtex2html564>Filtros passa-baixas</A> <B>Up:</B> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/curso.html"=20
+name=3Dtex2html562>curso</A> <B>Previous:</B> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node39.html"=20
+name=3Dtex2html556>DFT: visualiza=E7=E3o e implementa=E7=E3o</A> =
+<BR><BR><!--End of Navigation Panel-->
+<H1><A name=3DSECTION000160000000000000000>Exemplo de aplica=E7=E3o: =
+filtragem=20
+linear</A> </H1>
+<P>Como mencionado anteriormente, a FT pode ser empregada em in=FAmeras =
+aplica=E7=F5es=20
+de processamento de imagens, e um exemplo t=EDpico destas aplica=E7=F5es =
+refere-se =E0=20
+<EM>filtragem</EM>. Com o objetivo de eliminar ou real=E7ar determinadas =
+
+componentes da imagem, tais como ru=EDdo ou contornos, a filtragem no =
+dom=EDnio da=20
+freq=FC=EAncia explora a caracter=EDstica revers=EDvel da FT e a =
+informa=E7=E3o contida=20
+neste dom=EDnio.=20
+<P>Os filtros <EM>passa-baixas</EM>, por exemplo, associados =E0s =
+regi=F5es=20
+homog=EAneas da imagem, "deixam passar" as componentes de baixa =
+freq=FC=EAncia,=20
+atenuando as de alta freq=FC=EAncia relacionadas com as transi=E7=F5es =
+bruscas da=20
+imagem. Estas transi=E7=F5es s=E3o representadas por ru=EDdos ou =
+contornos, o que=20
+significa que ao eliminarmos o ru=EDdo indesej=E1vel da imagem, a partir =
+de um=20
+filtro passa-baixas, estamos atenuando os seus contornos nas mesmas =
+propor=E7=F5es,=20
+caso t=EDpico do processamento linear. Os filtros <EM>passa-altas</EM>, =
+por sua=20
+vez, atenuam ou eliminam as componentes de baixas freq=FC=EAncias. O =
+efeito evidente=20
+desta filtragem =E9 a obten=E7=E3o de um realce nas zonas de alta =
+freq=FC=EAncia do sinal,=20
+isto =E9, dos seus contornos e - infelizmente - ru=EDdo.=20
+<P>Num projeto de filtros lineares podemos considerar, ainda, os filtros =
+
+<EM>passa-faixas</EM> associados =E0s regi=F5es compreendidas entre as =
+baixas e=20
+altas freq=FC=EAncias. Estes filtros s=E3o empregados, por exemplo, em =
+problemas de=20
+restaura=E7=E3o de imagens. A Fig. <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node40.html#figModeloFiltros">35</A>=20
+apresenta o modelo de filtros para o caso 1-D (uma rota=E7=E3o destas =
+fun=E7=F5es define=20
+os mesmos filtros para o caso 2-D).=20
+<P>
+<P></P>
+<DIV align=3Dcenter><A name=3DfigModeloFiltros></A><A name=3D2195></A>
+<TABLE>
+  <CAPTION align=3Dbottom><STRONG>Figura 35:</STRONG> </CAPTION>
+  <TBODY>
+  <TR>
+    <TD><IMG height=3D123=20
+      =
+alt=3D"\begin{figure}\begin{center}&#10;\mbox{\psfig{figure=3Dpreprocessa=
+mento/figModeloFiltros.ps,width=3D12.cm} }&#10;\end{center}\end{figure}" =
+
+      =
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img433.png"=20
+      width=3D540 border=3D0></TD></TR></TBODY></TABLE></DIV>
+<P></P>
+<P>O princ=EDpio geral da filtragem, no dom=EDnio da freq=FC=EAncia, =
+pode ser indicado=20
+pela seguinte transforma=E7=E3o=20
+<P><BR>
+<DIV align=3Dright><!-- MATH=0A=
+ \begin{equation}=0A=
+G(u,v) =3D H(u,v)F(u,v) ,=0A=
+\end{equation}=0A=
+ -->
+<TABLE width=3D"100%" align=3Dcenter>
+  <TBODY>
+  <TR vAlign=3Dcenter>
+    <TD noWrap align=3Dmiddle><A name=3DeqFiltroFT></A><IMG height=3D33=20
+      alt=3D"\begin{displaymath}&#10;G(u,v) =3D H(u,v)F(u,v) =
+,&#10;\end{displaymath}"=20
+      =
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img434.png"=20
+      width=3D383 border=3D0></TD>
+    <TD align=3Dright width=3D10>(61)</TD></TR></TBODY></TABLE><BR =
+clear=3Dall></DIV>
+<P></P>onde <IMG height=3D37 alt=3D$F(u,v)$=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img404.png"=20
+width=3D63 align=3Dmiddle border=3D0> =E9 a transformada de Fourier da =
+imagem de=20
+entrada, <IMG height=3D37 alt=3D$G(u,v)$=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img435.png"=20
+width=3D63 align=3Dmiddle border=3D0> =E9 a imagem de sa=EDda filtrada, =
+e <IMG height=3D37=20
+alt=3D$H(u,v)$=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img436.png"=20
+width=3D65 align=3Dmiddle border=3D0> =E9 a respectiva <EM>fun=E7=E3o de =
+transfer=EAncia</EM>=20
+do filtro. O problema consite, ent=E3o, em definir a fun=E7=E3o <IMG =
+height=3D37=20
+alt=3D$H(u,v)$=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img436.png"=20
+width=3D65 align=3Dmiddle border=3D0> que conduza =E0 imagem desejada =
+<IMG height=3D37=20
+alt=3D$G(u,v)$=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img435.png"=20
+width=3D63 align=3Dmiddle border=3D0>. A transformada inversa, <!-- MATH=0A=
+ ${\cal F}^{-1}[G(u,v)]$=0A=
+ --><IMG height=3D38=20
+alt=3D"${\cal F}^{-1}[G(u,v)]$"=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img437.png"=20
+width=3D107 align=3Dmiddle border=3D0>, define a imagem filtrada no =
+dom=EDnio espacial=20
+<IMG height=3D37 alt=3D$g(x,y)$=20
+src=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/=
+img438.png"=20
+width=3D58 align=3Dmiddle border=3D0>.=20
+<P><BR>
+<HR>
+<!--Table of Child-Links--><A =
+name=3DCHILD_LINKS><STRONG>Subsections</STRONG></A>=20
+<UL>
+  <LI><A=20
+  =
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node41.html"=20
+  name=3Dtex2html565>Filtros passa-baixas</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node42.html"=20
+  name=3Dtex2html566>Filtro passa-altas</A> </LI></UL><!--End of Table =
+of Child-Links-->
+<HR>
+<!--Navigation Panel--><A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node41.html"=20
+name=3Dtex2html563><IMG height=3D24 alt=3Dnext src=3D"" width=3D37 =
+align=3Dbottom=20
+border=3D0></A> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/curso.html"=20
+name=3Dtex2html561><IMG height=3D24 alt=3Dup src=3D"" width=3D26 =
+align=3Dbottom=20
+border=3D0></A> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node39.html"=20
+name=3Dtex2html555><IMG height=3D24 alt=3Dprevious src=3D"" width=3D63 =
+align=3Dbottom=20
+border=3D0></A> <BR><B>Next:</B> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node41.html"=20
+name=3Dtex2html564>Filtros passa-baixas</A> <B>Up:</B> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/curso.html"=20
+name=3Dtex2html562>curso</A> <B>Previous:</B> <A=20
+href=3D"http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso=
+/node39.html"=20
+name=3Dtex2html556>DFT: visualiza=E7=E3o e implementa=E7=E3o</A> <!--End =
+of Navigation Panel-->
+<ADDRESS>Alexandre Xavier Falcao 2003-08-08 </ADDRESS></BODY></HTML>
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img433.png
+
+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
+RU5ErkJggg==
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img434.png
+
+iVBORw0KGgoAAAANSUhEUgAAAX8AAAAhBAMAAAG0nobxAAAAMFBMVEWzs7OoqKicnJyQkJCEhIR4
+eHhsbGxgYGBUVFRISEg8PDwwMDAkJCQYGBgMDAwAAADqWcueAAAAAXRSTlMAQObYZgAAA8FJREFU
+eJztWEtoE0EY/rqPZBKTbo6CQvfgQUGa0IM9OmKEIEKDePEgDQiec1AQeujii1it5Che3IMHL2JV
+BKEHi148CC5eRc1RPI1Y8UER/5l9NLtNbNYasJKvpLPz/d/8/zz/HRbYInLQP/agtfY9MNMswYK7
+1RB9IIKSVRKGc5hVpekUZ80hBe9CJb+Bkgzr24BxG7rqvvCO7IMNy+YVYvhvgmjhQ51+2RizPXBZ
+/gtWw6Wfs1kDzQ2fAimzJdN3WsUFvobjdfVs6MBXA6DZDZge4Cv1WiC3YHn1Q7QAdfoz+++ZencH
+7JDJbrOl+B+xH8eihYnWz8KV9X22RNVKpNmR0n+B0zbBrQw9Ttfo7BrVKjGPqwJcb9JRvkXO8cAm
+zbSlNHrKANTKrSIrG3uIAnSy3OBFgzJcNke+O0AV3mFfw1NGoDw5Dk2jGaGT0egydFCxmcwnrqyN
+Q/c1+d+ksL5o9iKzYQ/iGie9+xFG2DLOIjqcTjcf3iP8/BFp+r5A+uERRLjj1/PMQzrT4cY3ZbUT
+adIGyNtwGmElOqMCnUwkaVN1XZNLGcBS7mQiy7mC5qFarZaA1Vrd6sqAYgki5zaUxkoZYB/OO8Kc
+on5pohkmMr1Nr2GUCzQ/UyaE3nYgNLGiNGkDMPIk/EzZbFMANYIcZIAoxebUKGXyJk3aABYmyInw
+LIzxkhmRBRSxh7Vpdlx4KpDGrypNMbqvDoiazPC6vFrY6L5hGjKHI8rhHLatNJmNLjaF3J1qA2W7
+2SX4B4PFNc6fJGw7KGNNtd6aEUYYYYR/AVOJujG4lA9sHApOXak96mBXKUGPPUsQ2vUfDrv/wt4o
+3W1L6/dW6z16G4eJsZcUsdDUNr4ti8nIxRXgdgk9pK8Da76fcYiYdSBfmHm67GUa4S3yDDIVZJcS
+0vkGjO9Q0jPh9ZPanAbmlNWsa3Gj72duuAP46RcHOcacF7ihKjsLTo7G9ZkedyxLPFb021ZrUSgp
+CVhHUrLNTboKUYffLb9B3Bj4sZJf7P4qjG/0m/lSmuG0Dp72xWcX1XfC1biUkbFM45LSRZT9izjz
+cJEGwKWVliJu9P2QcZh4C7WNJihKmTPPkZy2imma3U+ygy2JS5Idpy31yoaUkmDRv7GVuU6bZqKk
+rEgYfT8TyWP9d2F8OLEwSR2lnrPLN+/yedmRBfm1jcXPwN6nd3F17YIvbZ1cuAQpZXfk18JrZH3C
+pSpm9P1cg18ZMp4HpRZ915gcWKp1NjGuOx0eWMMvD4SE4Q4sPbqZ8QC2PX4BlF/qqg+62p8AAAAA
+SUVORK5CYII=
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img404.png
+
+iVBORw0KGgoAAAANSUhEUgAAAD8AAAAlBAMAAAFwOxyHAAAAMFBMVEWzs7OoqKicnJyQkJCEhIR4
+eHhsbGxgYGBUVFRISEg8PDwwMDAkJCQYGBgMDAwAAADqWcueAAAAAXRSTlMAQObYZgAAAXBJREFU
+eJzdU79Lw0AU/npJmmtrjP4HwbqbuUuzuGpwElwyu5jd5XCxgmLBXSIIrt1FdO3WRVy7d4laIaPv
+LndCE8Efmz7I+/Hdu/fel7sDpHiZMhPUJJBq/ikKzPwl0RhU0e8JJY8gyMmxTJHww5wCC+wnRRaF
+jQd5xwQPUuVxkCEhp4lQrvA4pH4T6sQR+gSc0wQCJ9c++CbMXq42kGS/n+VrsbS1VcviDKsaaAR6
+/tykynNxkxgp0aDRmkgJ8O5gRStiCpy2VDG/CTviLKYlrqoSn0bkSzbrrqzObiNiy3fFIdpC/Xvd
+CK50phqQ1EMz2D+QXiXmsfHuA1hT8LS6Y09bq6DrKLBfK8mHpe08sxHU+7i4wYGCWr10W8DSZ9cf
+MkF/cg6n+4Kxgnb6gRt/vKlLpSkBXmq/ltgTWjAJdlFij8BG5Imh80aHOscV4Cy+1i36ulgrby+L
+SLWThQRnpJ0jgxxXWLlBhWWN95+Vd2FlR8bwGH+TAAAAAElFTkSuQmCC
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img435.png
+
+iVBORw0KGgoAAAANSUhEUgAAAD8AAAAlBAMAAAFwOxyHAAAAMFBMVEWzs7OoqKicnJyQkJCEhIR4
+eHhsbGxgYGBUVFRISEg8PDwwMDAkJCQYGBgMDAwAAADqWcueAAAAAXRSTlMAQObYZgAAAYBJREFU
+eJzVUz1LA0EQfZfc5TZfXuwtFmNn4XVCGq8RRMELVgGb1DZeb7Oo4AkWAf9ABMHWnxCwsso10TY/
+4YgJaOfs3J3oJaCNRR7Mzuww83ZmdhfQMAJWEeYgSUbTRV7AgVNTRpjz/obat2BFEgMCUjkuGSii
+8CeSxegcjKuZPdB7kj66tJbgVvksvxEj4iNdhxwrHUlFXN87ELvIcgUncO4/ophqk9eXC6ymDkPS
+skZzirPQiEsXCKgNKq0EfV1jovAaitRNWZOZypyZnii0gbpg1gix4Tm6mw2b2ff2x1Cio85QUTx7
+jQGJjYSQoVt3vwpbZmxfgqbRynlFOzU2nwB/ABHk844TVZnoaImTOWLRYzX0ki39j9sHnLJdbgW+
+QpHvrvBBow1DaU5hNSd45oCjHWm3OYfwTuL0QQGoB+ZbQveKMrIAP4AxpPARsOXVVc+a0QOZ4g6w
+0t9qhvqycEjSxHryegu6sEr3R83WY2qcZ56rXFe2zHU51/fS4hMPeUxDR4ABqgAAAABJRU5ErkJg
+gg==
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img436.png
+
+iVBORw0KGgoAAAANSUhEUgAAAEEAAAAlBAMAAAGYu6msAAAAMFBMVEWzs7OoqKicnJyQkJCEhIR4
+eHhsbGxgYGBUVFRISEg8PDwwMDAkJCQYGBgMDAwAAADqWcueAAAAAXRSTlMAQObYZgAAAYNJREFU
+eJzdUzFLw0AU/nppkmva9Iq4G7CDYwanLu1QcNPgJLhkdsrifoigg9qCm4ira2cXSzedXMSO/oQg
+rWQRfJfkCk0rqJs+ePfy3r335X3v7oBU3Diz8LBUmFrE8r0xSheQ2ab/FcC86CSW23NV/QDUhRAS
+Wwt5Pxb2yBMMcqeWrnG578CiDmFZ6RYPBFHiLCD6HGoAPXntcfA9GcORs3JI0pDU+W033xY/tx3V
+XuKMSo08sKKWYaUxOwKX1A4FbKKk2jNsFTztYRNnHChxrsAENtCFq6qkoVCrGGEVTZcoxT6hszua
+E1G+2hrgOOA5eDqwiLSufxcChm7sf0ir4PNAf9174O8UiIol+7k1EprMK3CwAMr7ma1Ou90eAU6A
+Siuyssd1eVtOYOQPrU2ZH0CZMnbbXi2tM9ffcJgWKbmhA55kGXjBTnY13Ah9nUFoEEP6eKb7PsG4
+Yk7JWes4DZhP831tkzKfETHlNUmdcD7D1Lf9SEdOiuRsr0B2gf4fl0+YXUdt8RfYHgAAAABJRU5E
+rkJggg==
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img437.png
+
+iVBORw0KGgoAAAANSUhEUgAAAGsAAAAmBAMAAAFGUEgbAAAAMFBMVEWzs7OoqKicnJyQkJCEhIR4
+eHhsbGxgYGBUVFRISEg8PDwwMDAkJCQYGBgMDAwAAADqWcueAAAAAXRSTlMAQObYZgAAAkVJREFU
+eJztVD1oFEEU/u52djN3t5s9O0HBBdNna1NkiyuCh+SwEkTcUsFiUYRAigyXqCcKHthZWfjTCAaS
+wkL8qWwtRC2vsV/lgkdQzjc/u3uud00gVnmw82bme9/7mfdYwEiFp7R+hK9OTcwSu1vRJvCGCKbb
+pEJrhz5pPA92fMAnDFy5DGbGmCm8ClikGTnjCRfMVZ7QoG9M10BIzvtL2pqOzRFYciI/AnPa+NBk
+cbxPa0qxPm/imLmsBCqmpw6EpeBIHJmr4yBRWMvkyATbYxGvdsicg0lsv5nlv3J2AMEviHXUBcRk
+Hao29d6hOh1qjQeWOngsdTW/6crl7TjVOdtbb7BtEFfVNE/j0+tJ7D3mClqg6lXvSZgtpGtZPGIL
+2wrbGCvDhhw/H/e5HHCu+kIdQIax7z48aSIsjVmxwTzYwseCR67TUGH8twnewLcuNZA/ilJsdUy8
+HJMiexCoOv/FhMxSvcUkdiTxgViMennuNm2stcim9XEJvwVc+aS3tacbT1rXOjmtTf15HYL9Au6U
+3do0hbt6u4MHUrVImob2MoCcXKccDLib08BG+e3VUUw0d6hPfoTamcTRQ/jwubRbLmjebuvGhMM2
+FvvAWq+L1QjnlwO3r9I7/QM3laeM9uLvPNrwBSn6FRENX7AaaucJ+gXN+lB/V6axn8DJPbLsoDrE
+1xou04Odiur0C7qUJbkuUKYBK5uq6AE9algN9JgvyKtnRW1TaEYuGs2DbJPMpC29KvbXSxhFvbcz
+nXYk/1H+AFQCdqXIylX9AAAAAElFTkSuQmCC
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/img438.png
+
+iVBORw0KGgoAAAANSUhEUgAAADoAAAAlBAMAAAGWEtfDAAAAMFBMVEWzs7OoqKicnJyQkJCEhIR4
+eHhsbGxgYGBUVFRISEg8PDwwMDAkJCQYGBgMDAwAAADqWcueAAAAAXRSTlMAQObYZgAAAXVJREFU
+eJzVUz1Lw1AUPflomlbji4tzoOqo+QdmcJVmcVJp8AdocBNB3mCwgmClDrp1srh11iWiQ938AYIF
+/QFBwdn7XlI/YlUQOngCuefee959777HBSQS8auqGIBbcBP2oAzglRCS0eMYuBsbrOnDFfo3j11p
+IboacEjOgiJj4c8FvsV4ZhUnrUIflTLSgotM99AgYjHoZEo74FFkb8E8Aif/zBFKOt2mrf9x/9+Q
+v9ZOZkfzaXF+1S/DmKD7DjQpXC0z8MSHalrylZJ5llbgk6kfMyiBIFz6x4mJmxOiUSJkKvXuytKt
+htioUIdsO0Ad5SH1O2xorVwg+ujs5uWFzjs38kuBvdTsT92DeVCay80LGWi2sQ7MST7TUl5Q9VBE
+LZ2EQuUJXYgFhAO32BNZ4DyraYX6cz9bs2s+LB9r048aB3HMehYHVjLtNs1PD6qriWeiOCpVBzgV
+qZGe8UBmKVOaFL8uXhL5NCkbuYb4lxb/B14BOMtMFyfSO50AAAAASUVORK5CYII=
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Location: http://www.dcc.unicamp.br/~cpg/material-didatico/mo815/9802/curso/curso.css
+
+.MATH {
+	FONT-FAMILY: "Century Schoolbook", serif
+}
+.MATH I {
+	FONT-FAMILY: "Century Schoolbook", serif; font-shape: italic
+}
+.BOLDMATH {
+	FONT-WEIGHT: bold; FONT-FAMILY: "Century Schoolbook", serif
+}
+SMALL.XTINY {
+	FONT-SIZE: xx-small
+}
+SMALL.TINY {
+	FONT-SIZE: x-small
+}
+SMALL.SCRIPTSIZE {
+	FONT-SIZE: smaller
+}
+SMALL.FOOTNOTESIZE {
+	FONT-SIZE: small
+}
+SMALL.SMALL {
+	
+}
+BIG.LARGE {
+	
+}
+BIG.XLARGE {
+	FONT-SIZE: large
+}
+BIG.XXLARGE {
+	FONT-SIZE: x-large
+}
+BIG.HUGE {
+	FONT-SIZE: larger
+}
+BIG.XHUGE {
+	FONT-SIZE: xx-large
+}
+H1 {
+	
+}
+H2 {
+	
+}
+H3 {
+	
+}
+H4 {
+	
+}
+H5 {
+	
+}
+DIV.displaymath {
+	
+}
+TD.eqno {
+	
+}
+
+------=_NextPart_000_00A8_01C9E48A.DA0F37E0--

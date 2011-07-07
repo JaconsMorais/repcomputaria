@@ -1,0 +1,9 @@
+ÀÄmain
+   ÀÄMAIN  0/85  Ram=0
+      ÃÄ??0??
+      ÃÄesquerda  0/17  Ram=0
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÀÄdireita  0/17  Ram=0
+         ÃÄ@delay_ms1  0/21  Ram=1
+         ÀÄ@delay_ms1  0/21  Ram=1

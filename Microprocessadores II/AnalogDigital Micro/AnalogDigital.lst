@@ -1,0 +1,372 @@
+CCS PCM C Compiler, Version 4.032, 62930               01-out-09 22:41
+
+               Filename: C:\Users\cn208000729\Desktop\AnalogDigital.lst
+
+               ROM used: 877 words (11%)
+                         Largest free fragment is 2048
+               RAM used: 15 (4%) at main() level
+                         37 (10%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   2CD
+0003:  NOP
+.................... #include "C:\Users\cn208000729\Desktop\AnalogDigital.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES LP                       //Low power osc < 200 khz 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES WRT_50%                  //Lower half of Program Memory is Write Protected 
+....................  
+.................... #use delay(clock=20000000) 
+*
+0004:  MOVLW  25
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETLW  00
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8) 
+....................  
+.................... //registrador de leitura e escrita 
+.................... #BYTE PORTA_A = 0x05 
+.................... #BYTE PORTA_B = 0x06 
+.................... #BYTE PORTA_C = 0x07 
+....................  
+.................... #BYTE TRIS_A = 0x85 
+.................... #BYTE TRIS_B = 0x86 // saida de dados 
+.................... #BYTE TRIS_C = 0x87 // entrada de dados 
+....................  
+.................... #byte adresh = 0x1E 
+.................... #byte adresl = 0x9E 
+.................... #byte adcon0 = 0x1F 
+.................... #byte adcon1 = 0x9F 
+.................... #byte pir1 = 0x0C 
+.................... #byte pie1 = 0x8C 
+.................... #byte intcon = 0x8B 
+....................  
+.................... #bit adon = adcon0.0 
+.................... #bit godone = adcon0.2 
+.................... #bit adfm = adcon1.7 
+....................  
+....................  
+.................... void inicia_ad (void){ 
+....................  
+.................... /*Configure the A/D module: 
+.................... • Configure analog pins/voltage reference and 
+.................... digital I/O (ADCON1) 
+.................... • Select A/D input channel (ADCON0) 
+.................... • Select A/D conversion clock (ADCON0) 
+.................... • Turn on A/D module (ADCON0)*/ 
+....................  
+.................... adcon1 = 0b10000000; 
+0018:  MOVLW  80
+0019:  BSF    03.5
+001A:  MOVWF  1F
+.................... adcon0 = 0b00000000; 
+001B:  BCF    03.5
+001C:  CLRF   1F
+.................... adon = 1; 
+001D:  BSF    1F.0
+....................  
+.................... /*3. Wait the required acquisition time.*/ 
+....................  
+.................... delay_ms(1); 
+001E:  MOVLW  01
+001F:  MOVWF  25
+0020:  CALL   004
+....................  
+.................... } 
+0021:  BCF    0A.3
+0022:  BCF    0A.4
+0023:  GOTO   31F (RETURN)
+....................  
+.................... int16 le_ad (void){ 
+....................  
+.................... int16 a = 0; 
+0024:  CLRF   25
+0025:  CLRF   26
+....................  
+.................... /*4. Start conversion: 
+.................... • Set GO/DONE bit (ADCON0)*/ 
+....................  
+.................... godone = 1; 
+0026:  BSF    1F.2
+....................  
+.................... /*5. Wait for A/D conversion to complete, by either: 
+.................... • Polling for the GO/DONE bit to be cleared 
+.................... (with interrupts enabled); OR 
+.................... • Waiting for the A/D interrupt*/ 
+....................  
+.................... while(godone); 
+0027:  BTFSC  1F.2
+0028:  GOTO   027
+....................  
+.................... /*6. Read A/D result register pair 
+.................... (ADRESH:ADRESL), clear bit ADIF if required.*/ 
+....................  
+.................... a = adresh; 
+0029:  CLRF   26
+002A:  MOVF   1E,W
+002B:  MOVWF  25
+.................... a = a << 8; 
+002C:  MOVF   25,W
+002D:  MOVWF  26
+002E:  CLRF   25
+.................... a = a|adresl; 
+002F:  BSF    03.5
+0030:  MOVF   1E,W
+0031:  BCF    03.5
+0032:  IORWF  25,F
+....................  
+.................... /*7. For the next conversion, go to step 1 or step 2, 
+.................... as required. The A/D conversion time per bit is 
+.................... defined as TAD. A minimum wait of 2TAD is 
+.................... required before the next acquisition starts.*/ 
+....................  
+.................... return a; 
+0033:  MOVF   25,W
+0034:  MOVWF  78
+0035:  MOVF   26,W
+0036:  MOVWF  79
+....................  
+.................... } 
+0037:  BCF    0A.3
+0038:  BCF    0A.4
+0039:  GOTO   320 (RETURN)
+....................  
+.................... void verifica_tecla(void){ 
+.................... int b,c; 
+....................  
+.................... for(b=1;b<=4;b++){ 
+.................... for(c=1;c<=3;c++){ 
+....................  
+.................... } 
+.................... } 
+.................... } 
+....................  
+.................... void main() 
+.................... { 
+*
+02CD:  CLRF   04
+02CE:  BCF    03.7
+02CF:  MOVLW  1F
+02D0:  ANDWF  03,F
+02D1:  MOVLW  81
+02D2:  BSF    03.5
+02D3:  MOVWF  19
+02D4:  MOVLW  A6
+02D5:  MOVWF  18
+02D6:  MOVLW  90
+02D7:  BCF    03.5
+02D8:  MOVWF  18
+02D9:  BSF    03.5
+02DA:  BSF    1F.0
+02DB:  BSF    1F.1
+02DC:  BSF    1F.2
+02DD:  BCF    1F.3
+02DE:  MOVLW  07
+02DF:  MOVWF  1C
+....................  
+....................    float volt; 
+....................  
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+02E3:  BSF    03.5
+02E4:  BSF    1F.0
+02E5:  BSF    1F.1
+02E6:  BSF    1F.2
+02E7:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+02E8:  BCF    03.5
+02E9:  BCF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+*
+02E0:  MOVLW  FF
+02E1:  BCF    03.5
+02E2:  MOVWF  20
+*
+02EA:  BCF    14.5
+02EB:  BCF    20.5
+02EC:  MOVF   20,W
+02ED:  BSF    03.5
+02EE:  MOVWF  07
+02EF:  BCF    03.5
+02F0:  BSF    20.4
+02F1:  MOVF   20,W
+02F2:  BSF    03.5
+02F3:  MOVWF  07
+02F4:  BCF    03.5
+02F5:  BCF    20.3
+02F6:  MOVF   20,W
+02F7:  BSF    03.5
+02F8:  MOVWF  07
+02F9:  MOVLW  01
+02FA:  BCF    03.5
+02FB:  MOVWF  14
+02FC:  MOVLW  00
+02FD:  BSF    03.5
+02FE:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+02FF:  MOVF   01,W
+0300:  ANDLW  C7
+0301:  IORLW  08
+0302:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+0303:  BCF    03.5
+0304:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+0305:  MOVLW  00
+0306:  MOVWF  78
+0307:  MOVWF  12
+0308:  MOVLW  00
+0309:  BSF    03.5
+030A:  MOVWF  12
+....................    setup_comparator(NC_NC_NC_NC); 
+030B:  MOVLW  07
+030C:  MOVWF  1C
+030D:  MOVF   05,W
+030E:  MOVLW  10
+030F:  MOVWF  77
+0310:  DECFSZ 77,F
+0311:  GOTO   310
+0312:  NOP
+0313:  MOVF   1C,W
+0314:  BCF    03.5
+0315:  BCF    0D.6
+....................    setup_vref(FALSE); 
+0316:  BSF    03.5
+0317:  CLRF   1D
+....................  
+....................    // TODO: USER CODE!! 
+....................     
+....................    TRIS_A = 0xFF; 
+0318:  MOVLW  FF
+0319:  MOVWF  05
+....................    TRIS_B = 0xFF; 
+031A:  MOVWF  06
+....................    TRIS_C = 0b10111111; 
+031B:  MOVLW  BF
+031C:  MOVWF  07
+....................     
+....................    inicia_ad(); 
+031D:  BCF    03.5
+031E:  GOTO   018
+....................  
+....................     
+....................  
+....................    while(true){ 
+....................    volt = 5*(float)le_ad()/1023; 
+031F:  GOTO   024
+0320:  MOVF   79,W
+0321:  MOVWF  26
+0322:  MOVF   78,W
+0323:  MOVWF  25
+0324:  GOTO   03A
+0325:  CLRF   35
+0326:  CLRF   34
+0327:  MOVLW  20
+0328:  MOVWF  33
+0329:  MOVLW  81
+032A:  MOVWF  32
+032B:  MOVF   7A,W
+032C:  MOVWF  39
+032D:  MOVF   79,W
+032E:  MOVWF  38
+032F:  MOVF   78,W
+0330:  MOVWF  37
+0331:  MOVF   77,W
+0332:  MOVWF  36
+0333:  CALL   059
+0334:  MOVF   77,W
+0335:  MOVWF  25
+0336:  MOVF   78,W
+0337:  MOVWF  26
+0338:  MOVF   79,W
+0339:  MOVWF  27
+033A:  MOVF   7A,W
+033B:  MOVWF  28
+033C:  MOVWF  2C
+033D:  MOVF   79,W
+033E:  MOVWF  2B
+033F:  MOVF   78,W
+0340:  MOVWF  2A
+0341:  MOVF   77,W
+0342:  MOVWF  29
+0343:  CLRF   30
+0344:  MOVLW  C0
+0345:  MOVWF  2F
+0346:  MOVLW  7F
+0347:  MOVWF  2E
+0348:  MOVLW  88
+0349:  MOVWF  2D
+034A:  GOTO   0CE
+034B:  MOVF   7A,W
+034C:  MOVWF  24
+034D:  MOVF   79,W
+034E:  MOVWF  23
+034F:  MOVF   78,W
+0350:  MOVWF  22
+0351:  MOVF   77,W
+0352:  MOVWF  21
+....................    printf("\r\n%.3f",volt); 
+0353:  MOVLW  0D
+0354:  BTFSS  0C.4
+0355:  GOTO   354
+0356:  MOVWF  19
+0357:  MOVLW  0A
+0358:  BTFSS  0C.4
+0359:  GOTO   358
+035A:  MOVWF  19
+035B:  MOVLW  89
+035C:  MOVWF  04
+035D:  MOVF   24,W
+035E:  MOVWF  28
+035F:  MOVF   23,W
+0360:  MOVWF  27
+0361:  MOVF   22,W
+0362:  MOVWF  26
+0363:  MOVF   21,W
+0364:  MOVWF  25
+0365:  MOVLW  03
+0366:  MOVWF  29
+0367:  GOTO   1FD
+....................    delay_ms(100); 
+0368:  MOVLW  64
+0369:  MOVWF  25
+036A:  CALL   004
+....................    } 
+036B:  GOTO   31F
+....................  
+.................... } 
+036C:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3938   LP NOWDT NOPUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD WRT_50%

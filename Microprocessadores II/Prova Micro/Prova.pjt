@@ -1,0 +1,30 @@
+[PROJECT]
+Target=Prova.hex
+Development_Mode=
+Processor_Text=PIC16F876A
+ToolSuite=CCS
+Processor=0x876A
+[Prova]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=Prova
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\Thales\Desktop\Prova Micro\Prova.c
+2=
+3=Prova.h
+4=
+5=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\Thales\Desktop\Prova Micro\Prova.c
+[Units]
+Count=1
+1=Prova.c (main)
+Link=0

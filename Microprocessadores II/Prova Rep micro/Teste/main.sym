@@ -1,0 +1,123 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+004-005 @WRITE_PROGRAM_MEMORY.P2
+005     PORTA_A
+006     PORTA_B
+007     PORTA_C
+00C     pir1
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B-01C CCP_2
+01C     CCP_2_HIGH
+01E     adresh
+01F.0   adon
+01F     adcon0
+01F.2   godone
+020     @TRIS_C
+021-024 MAIN.volt
+025-028 MAIN.voltant
+029-02C MAIN.pot
+02D-030 MAIN.duty
+031-032 @ITOF.P1
+031     @delay_ms1.P2
+031-032 le_ad.a
+031-034 @FLT.P1
+031     MAIN.@SCRATCH
+032     MAIN.@SCRATCH
+033-036 @PRINTF_L32D_9600_62_63FPFPF.P1
+033     MAIN.@SCRATCH
+034     MAIN.@SCRATCH
+035-038 @DIVFF.P1
+035-038 @FLT.P2
+037     @PRINTF_L32D_9600_62_63FPFPF.P1
+038     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+039-03C @DIVFF.P1
+039     @FLT.@SCRATCH
+039     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+03A     @FLT.@SCRATCH
+03A     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+03B     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+03C     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+03D     @DIVFF.@SCRATCH
+03D     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+03E     @DIVFF.@SCRATCH
+03E     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+03F     @DIVFF.@SCRATCH
+03F     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH
+040-043 @MULFF.P1
+040-043 @FTOSD.P2
+040-043 @DIV3232.P3
+040     @DIVFF.@SCRATCH
+041     @DIVFF.@SCRATCH
+042     @DIVFF.@SCRATCH
+044-047 @MULFF.P1
+044-047 @DIV3232.P2
+044     @FTOSD.@SCRATCH
+048     @MULFF.@SCRATCH
+048     @DIV3232.@SCRATCH
+049     @MULFF.@SCRATCH
+049     @DIV3232.@SCRATCH
+04A     @MULFF.@SCRATCH
+04A     @DIV3232.@SCRATCH
+04B     @MULFF.@SCRATCH
+04B     @DIV3232.@SCRATCH
+04C     @MULFF.@SCRATCH
+04C     @DIV3232.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+085     TRIS_A
+086     TRIS_B
+087     TRIS_C
+08B     intcon
+08C     pie1
+09C.6   C1OUT
+09C.7   C2OUT
+09E     adresl
+09F     adcon1
+09F.7   adfm
+10D-10E @READ_PROGRAM_MEMORY.P1
+10D-10E @WRITE_PROGRAM_MEMORY.P2
+
+0025  @delay_ms1
+0039  inicia_ad
+0045  le_ad
+032B  MAIN
+005B  @ITOF
+007A  @MULFF
+00EF  @DIVFF
+01B9  @FLT
+0004  @const87
+01F8  @FTOSD
+0219  @DIV3232
+025B  @PRINTF_L32D_9600_62_63FPFPF
+032B  @cinit
+
+Project Files:
+    main.c
+    main.h
+    ..\..\..\..\..\..\..\Program Files\PICC\devices\16F876A.h
+
+Units:
+    C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.err
+    Ext Symbols: C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.esym
+    INHX8:       C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.hex
+    Symbols:     C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.sym
+    List:        C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.lst
+    Debug/COFF:  C:\Users\Thales\Desktop\Micro\Micro II\Prova Rep micro\Teste\main.cof
+    Call Tree:   main.tre
+    Statistics:  main.sta

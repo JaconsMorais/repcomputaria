@@ -1,0 +1,588 @@
+CCS PCM C Compiler, Version 4.032, 62930               14-out-09 23:13
+
+               Filename: C:\Users\Thales\Desktop\Prova Micro\Prova.lst
+
+               ROM used: 500 words (6%)
+                         Largest free fragment is 2048
+               RAM used: 19 (5%) at main() level
+                         23 (6%) worst case
+               Stack:    5 worst case (4 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   17F
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  MOVF   7B,W
+0016:  MOVWF  27
+0017:  BCF    03.7
+0018:  BCF    03.5
+0019:  BTFSS  0B.5
+001A:  GOTO   01D
+001B:  BTFSC  0B.2
+001C:  GOTO   030
+001D:  MOVF   22,W
+001E:  MOVWF  04
+001F:  MOVF   23,W
+0020:  MOVWF  77
+0021:  MOVF   24,W
+0022:  MOVWF  78
+0023:  MOVF   25,W
+0024:  MOVWF  79
+0025:  MOVF   26,W
+0026:  MOVWF  7A
+0027:  MOVF   27,W
+0028:  MOVWF  7B
+0029:  MOVF   20,W
+002A:  MOVWF  0A
+002B:  SWAPF  21,W
+002C:  MOVWF  03
+002D:  SWAPF  7F,F
+002E:  SWAPF  7F,W
+002F:  RETFIE
+0030:  BCF    0A.3
+0031:  BCF    0A.4
+0032:  GOTO   0B2
+.................... #include "C:\Users\Thales\Desktop\Prova Micro\Prova.h" 
+.................... #include <16F876A.h> 
+.................... //////// Standard Header file for the PIC16F876A device //////////////// 
+.................... #device PIC16F876A 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES XT                       //Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES NOPROTECT                //Code not protected from reading 
+.................... #FUSES NODEBUG                  //No Debug mode for ICD 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES WRT_50%                  //Lower half of Program Memory is Write Protected 
+....................  
+.................... #use delay(clock=20000000) 
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_A3,rcv=PIN_A2,bits=8) 
+*
+00C9:  BSF    03.5
+00CA:  BCF    05.3
+00CB:  BCF    03.5
+00CC:  BCF    05.3
+00CD:  MOVLW  08
+00CE:  MOVWF  78
+00CF:  GOTO   0D0
+00D0:  NOP
+00D1:  BSF    78.7
+00D2:  GOTO   0E1
+00D3:  BCF    78.7
+00D4:  RRF    2D,F
+00D5:  BTFSC  03.0
+00D6:  BSF    05.3
+00D7:  BTFSS  03.0
+00D8:  BCF    05.3
+00D9:  BSF    78.6
+00DA:  GOTO   0E1
+00DB:  BCF    78.6
+00DC:  DECFSZ 78,F
+00DD:  GOTO   0D4
+00DE:  GOTO   0DF
+00DF:  NOP
+00E0:  BSF    05.3
+00E1:  MOVLW  A7
+00E2:  MOVWF  04
+00E3:  DECFSZ 04,F
+00E4:  GOTO   0E3
+00E5:  GOTO   0E6
+00E6:  BTFSC  78.7
+00E7:  GOTO   0D3
+00E8:  BTFSC  78.6
+00E9:  GOTO   0DB
+00EA:  RETLW  00
+....................  
+.................... //endereços de memória 
+.................... //registrador de leitura e escrita 
+.................... #BYTE PORTA_A = 0x05 
+.................... #BYTE PORTA_B = 0x06 
+.................... #BYTE PORTA_C = 0x07 
+....................  
+.................... #BYTE TRIS_A = 0x85 
+.................... #BYTE TRIS_B = 0x86 // saida de dados 
+.................... #BYTE TRIS_C = 0x87 // entrada de dados 
+....................  
+.................... #byte txreg = 0x19 
+.................... #byte adresh = 0x1E 
+.................... #byte adresl = 0x9E 
+.................... #byte adcon0 = 0x1F 
+.................... #byte adcon1 = 0x9F 
+.................... #byte pir1 = 0x0C 
+.................... #byte pie1 = 0x8C 
+.................... #byte intcon = 0x8B 
+....................  
+....................  
+.................... //entradas e saídas utilizadas 
+....................  
+.................... #bit sensorp1 = PORTA_B.0 //sensores 
+.................... #bit sensora = PORTA_B.1 
+.................... #bit sensorp2 = PORTA_B.2 
+....................  
+.................... #bit botaoem = PORTA_B.3  //acionamentos 
+.................... #bit valvula = PORTA_C.0 
+.................... #bit ledfim = PORTA_C.1 
+.................... #bit motor = PORTA_C.2 
+.................... #bit sirene = PORTA_C.3 
+....................  
+.................... #bit adon = adcon0.0 
+.................... #bit godone = adcon0.2 
+.................... #bit adfm = adcon1.7 
+....................  
+....................  
+.................... int cheio,prov; 
+....................  
+.................... #INT_TIMER0 
+.................... void tempo () 
+.................... { 
+....................    int16 conta; 
+....................    set_timer0 (131 - get_timer0 ()); 
+*
+00B2:  MOVF   01,W
+00B3:  SUBLW  83
+00B4:  MOVWF  30
+00B5:  MOVF   30,W
+00B6:  MOVWF  01
+....................    conta++; 
+00B7:  INCF   2E,F
+00B8:  BTFSC  03.2
+00B9:  INCF   2F,F
+....................    if (conta == 625) 
+00BA:  MOVF   2E,W
+00BB:  SUBLW  71
+00BC:  BTFSS  03.2
+00BD:  GOTO   0C5
+00BE:  MOVF   2F,W
+00BF:  SUBLW  02
+00C0:  BTFSS  03.2
+00C1:  GOTO   0C5
+....................    { 
+....................       conta = 0; 
+00C2:  CLRF   2F
+00C3:  CLRF   2E
+....................       prov++; 
+00C4:  INCF   29,F
+....................    } 
+.................... } 
+....................  
+00C5:  BCF    0B.2
+00C6:  BCF    0A.3
+00C7:  BCF    0A.4
+00C8:  GOTO   01D
+.................... void emergencia(){ 
+....................  
+.................... txreg = printf("EMERGÊNCIA\n"); 
+*
+00EB:  CLRF   2C
+00EC:  MOVF   2C,W
+00ED:  CALL   033
+00EE:  INCF   2C,F
+00EF:  MOVWF  77
+00F0:  MOVWF  2D
+00F1:  CALL   0C9
+00F2:  MOVLW  0B
+00F3:  SUBWF  2C,W
+00F4:  BTFSS  03.2
+00F5:  GOTO   0EC
+00F6:  MOVWF  19
+....................  
+.................... while(botaoem != 0){ 
+00F7:  BTFSS  06.3
+00F8:  GOTO   0FE
+.................... sirene = 1; 
+00F9:  BSF    07.3
+.................... motor = 0; 
+00FA:  BCF    07.2
+.................... valvula = 0; 
+00FB:  BCF    07.0
+.................... ledfim = 0; 
+00FC:  BCF    07.1
+.................... } 
+00FD:  GOTO   0F7
+....................  
+.................... sirene = 0; 
+00FE:  BCF    07.3
+....................  
+.................... } 
+00FF:  RETLW  00
+....................  
+.................... void delay () 
+.................... { 
+.................... int temp; 
+....................    set_timer0 (131);   
+*
+011F:  MOVLW  83
+0120:  MOVWF  01
+....................    enable_interrupts (global | int_timer0); 
+0121:  MOVLW  E0
+0122:  IORWF  0B,F
+....................    while (prov < 15) 
+....................    { 
+0123:  MOVF   29,W
+0124:  SUBLW  0E
+0125:  BTFSS  03.0
+0126:  GOTO   135
+....................          if (botaoem == 1) 
+0127:  BTFSS  06.3
+0128:  GOTO   134
+....................          { 
+....................             disable_interrupts(GLOBAL); 
+0129:  BCF    0B.6
+012A:  BCF    0B.7
+012B:  BTFSC  0B.7
+012C:  GOTO   12A
+....................             temp = get_timer0 (); 
+012D:  MOVF   01,W
+012E:  MOVWF  2B
+....................             emergencia(); 
+012F:  CALL   0EB
+....................             set_timer0 (temp);  
+0130:  MOVF   2B,W
+0131:  MOVWF  01
+....................             enable_interrupts (global | int_timer0); 
+0132:  MOVLW  E0
+0133:  IORWF  0B,F
+....................  
+....................          } 
+....................    } 
+0134:  GOTO   123
+....................    prov = 0; 
+0135:  CLRF   29
+....................    disable_interrupts(GLOBAL); 
+0136:  BCF    0B.6
+0137:  BCF    0B.7
+0138:  BTFSC  0B.7
+0139:  GOTO   137
+.................... } 
+013A:  RETLW  00
+....................  
+.................... void ve_galao(){ 
+.................... if (sensorp1 == 0){ 
+*
+0100:  BTFSC  06.0
+0101:  GOTO   11C
+....................  
+.................... if (sensora == 0) printf("20 litros\n"); 
+0102:  BTFSC  06.1
+0103:  GOTO   110
+0104:  CLRF   2B
+0105:  MOVF   2B,W
+0106:  CALL   043
+0107:  INCF   2B,F
+0108:  MOVWF  77
+0109:  MOVWF  2D
+010A:  CALL   0C9
+010B:  MOVLW  0A
+010C:  SUBWF  2B,W
+010D:  BTFSS  03.2
+010E:  GOTO   105
+.................... else printf("10 litros\n"); 
+010F:  GOTO   11B
+0110:  CLRF   2B
+0111:  MOVF   2B,W
+0112:  CALL   052
+0113:  INCF   2B,F
+0114:  MOVWF  77
+0115:  MOVWF  2D
+0116:  CALL   0C9
+0117:  MOVLW  0A
+0118:  SUBWF  2B,W
+0119:  BTFSS  03.2
+011A:  GOTO   111
+....................  
+.................... motor = 0; 
+011B:  BCF    07.2
+.................... } 
+.................... } 
+011C:  BCF    0A.3
+011D:  BCF    0A.4
+011E:  GOTO   1F0 (RETURN)
+....................  
+.................... void encher_galao(){ 
+.................... cheio = 0; 
+*
+013B:  CLRF   28
+....................  
+....................  
+....................  
+.................... txreg = printf("enchendo galão\n"); 
+013C:  CLRF   2B
+013D:  MOVF   2B,W
+013E:  CALL   061
+013F:  INCF   2B,F
+0140:  MOVWF  77
+0141:  MOVWF  2D
+0142:  CALL   0C9
+0143:  MOVLW  0F
+0144:  SUBWF  2B,W
+0145:  BTFSS  03.2
+0146:  GOTO   13D
+0147:  MOVWF  19
+.................... valvula = 1; 
+0148:  BSF    07.0
+....................  
+.................... if (sensora == 0){  
+0149:  BTFSC  06.1
+014A:  GOTO   14E
+.................... delay(); 
+014B:  CALL   11F
+.................... delay(); 
+014C:  CALL   11F
+.................... } 
+.................... else delay(); 
+014D:  GOTO   14F
+014E:  CALL   11F
+....................  
+.................... valvula = 0; 
+014F:  BCF    07.0
+.................... txreg = printf("galão cheio\n"); 
+0150:  CLRF   2B
+0151:  MOVF   2B,W
+0152:  CALL   075
+0153:  INCF   2B,F
+0154:  MOVWF  77
+0155:  MOVWF  2D
+0156:  CALL   0C9
+0157:  MOVLW  0C
+0158:  SUBWF  2B,W
+0159:  BTFSS  03.2
+015A:  GOTO   151
+015B:  MOVWF  19
+....................  
+.................... cheio = 1; 
+015C:  MOVLW  01
+015D:  MOVWF  28
+....................  
+.................... } 
+015E:  BCF    0A.3
+015F:  BCF    0A.4
+0160:  GOTO   1F1 (RETURN)
+....................  
+.................... void retoma_esteira(){ 
+....................  
+....................  
+.................... if(botaoem == 1) emergencia(); 
+0161:  BTFSS  06.3
+0162:  GOTO   165
+0163:  CALL   0EB
+.................... else if(cheio){ 
+0164:  GOTO   17B
+0165:  MOVF   28,F
+0166:  BTFSC  03.2
+0167:  GOTO   17B
+.................... while(sensorp2 == 0){  
+0168:  BTFSC  06.2
+0169:  GOTO   16D
+....................  ledfim = 1; 
+016A:  BSF    07.1
+....................  motor = 0; 
+016B:  BCF    07.2
+.................... } 
+016C:  GOTO   168
+.................... txreg = printf("fim! recomeçando\n"); 
+016D:  CLRF   2B
+016E:  MOVF   2B,W
+016F:  CALL   086
+0170:  INCF   2B,F
+0171:  MOVWF  77
+0172:  MOVWF  2D
+0173:  CALL   0C9
+0174:  MOVLW  11
+0175:  SUBWF  2B,W
+0176:  BTFSS  03.2
+0177:  GOTO   16E
+0178:  MOVWF  19
+.................... motor = 1; 
+0179:  BSF    07.2
+.................... ledfim = 0; 
+017A:  BCF    07.1
+....................  
+.................... } 
+....................  
+.................... cheio = 0; 
+017B:  CLRF   28
+....................  
+.................... } 
+017C:  BCF    0A.3
+017D:  BCF    0A.4
+017E:  GOTO   1F2 (RETURN)
+....................  
+.................... void main() 
+.................... { 
+017F:  CLRF   04
+0180:  BCF    03.7
+0181:  MOVLW  1F
+0182:  ANDWF  03,F
+0183:  BSF    03.5
+0184:  BCF    05.3
+0185:  BCF    03.5
+0186:  BSF    05.3
+0187:  BSF    03.5
+0188:  BSF    1F.0
+0189:  BSF    1F.1
+018A:  BSF    1F.2
+018B:  BCF    1F.3
+018C:  MOVLW  07
+018D:  MOVWF  1C
+....................  
+....................    setup_adc_ports(NO_ANALOGS); 
+*
+0191:  BSF    03.5
+0192:  BSF    1F.0
+0193:  BSF    1F.1
+0194:  BSF    1F.2
+0195:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0196:  BCF    03.5
+0197:  BCF    1F.0
+....................    setup_spi(SPI_SS_DISABLED); 
+*
+018E:  MOVLW  FF
+018F:  BCF    03.5
+0190:  MOVWF  2A
+*
+0198:  BCF    14.5
+0199:  BCF    2A.5
+019A:  MOVF   2A,W
+019B:  BSF    03.5
+019C:  MOVWF  07
+019D:  BCF    03.5
+019E:  BSF    2A.4
+019F:  MOVF   2A,W
+01A0:  BSF    03.5
+01A1:  MOVWF  07
+01A2:  BCF    03.5
+01A3:  BCF    2A.3
+01A4:  MOVF   2A,W
+01A5:  BSF    03.5
+01A6:  MOVWF  07
+01A7:  MOVLW  01
+01A8:  BCF    03.5
+01A9:  MOVWF  14
+01AA:  MOVLW  00
+01AB:  BSF    03.5
+01AC:  MOVWF  14
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_32); 
+01AD:  MOVF   01,W
+01AE:  ANDLW  C0
+01AF:  IORLW  04
+01B0:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+01B1:  BCF    03.5
+01B2:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+01B3:  MOVLW  00
+01B4:  MOVWF  78
+01B5:  MOVWF  12
+01B6:  MOVLW  00
+01B7:  BSF    03.5
+01B8:  MOVWF  12
+....................    setup_comparator(NC_NC_NC_NC); 
+01B9:  MOVLW  07
+01BA:  MOVWF  1C
+01BB:  MOVF   05,W
+01BC:  MOVLW  10
+01BD:  MOVWF  77
+01BE:  DECFSZ 77,F
+01BF:  GOTO   1BE
+01C0:  NOP
+01C1:  MOVF   1C,W
+01C2:  BCF    03.5
+01C3:  BCF    0D.6
+....................    setup_vref(FALSE); 
+01C4:  BSF    03.5
+01C5:  CLRF   1D
+....................    enable_interrupts(GLOBAL); 
+01C6:  MOVLW  C0
+01C7:  BCF    03.5
+01C8:  IORWF  0B,F
+....................    enable_interrupts(INT_TIMER0); 
+01C9:  BSF    0B.5
+....................     
+....................    TRIS_A = 0xff; //porta a - entrada de dados 
+01CA:  MOVLW  FF
+01CB:  BSF    03.5
+01CC:  MOVWF  05
+....................    TRIS_B = 0xff; //porta b - entrada de dados 
+01CD:  MOVWF  06
+....................    TRIS_C = 0xf0; //porta c - saída de dados(exceto RX) 
+01CE:  MOVLW  F0
+01CF:  MOVWF  07
+....................  
+....................    while(TRUE){ 
+....................        
+....................       if(botaoem == 1) emergencia(); 
+01D0:  BCF    03.5
+01D1:  BTFSS  06.3
+01D2:  GOTO   1D5
+01D3:  CALL   0EB
+....................       else{ 
+01D4:  GOTO   1F2
+....................       txreg = printf("Aguardando galão...\n"); 
+01D5:  CLRF   2B
+01D6:  MOVF   2B,W
+01D7:  CALL   09C
+01D8:  INCF   2B,F
+01D9:  MOVWF  77
+01DA:  MOVWF  2D
+01DB:  CALL   0C9
+01DC:  MOVLW  10
+01DD:  SUBWF  2B,W
+01DE:  BTFSS  03.2
+01DF:  GOTO   1D6
+01E0:  MOVLW  03
+01E1:  MOVWF  2C
+01E2:  MOVLW  2E
+01E3:  MOVWF  2D
+01E4:  CALL   0C9
+01E5:  DECFSZ 2C,F
+01E6:  GOTO   1E2
+01E7:  MOVLW  0A
+01E8:  MOVWF  2D
+01E9:  CALL   0C9
+01EA:  MOVWF  19
+....................              
+....................       while (sensorp1 != 0) motor = 1; 
+01EB:  BTFSS  06.0
+01EC:  GOTO   1EF
+01ED:  BSF    07.2
+01EE:  GOTO   1EB
+....................       ve_galao(); 
+01EF:  GOTO   100
+....................       encher_galao(); 
+01F0:  GOTO   13B
+....................       retoma_esteira(); 
+01F1:  GOTO   161
+....................        
+....................       } 
+....................    } 
+01F2:  GOTO   1D1
+....................  
+.................... } 
+01F3:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3939   XT NOWDT NOPUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD WRT_50%
